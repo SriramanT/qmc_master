@@ -26,5 +26,41 @@
 
 \end{abstract}
 
+\section{Motivation}\paragraph{}
+
+Originally, the Hubbard model was introduced as an attempt to include electron correlation effects in the narrow $d$-bands of transition metals. It followed a trend that arose in the 50's when people were looking for a theory of correlation effects in the free electron gas.
+
+The free electron gas accurately models the conduction bands of metals and alloys. However, in transition and rare-earth metals, in addition to these conduction bands, there are partially filled $d-$ or $f-$bands which are responsible for their characteristic properties. In these narrow energy bands  correlation phenomena are particularly relevant, as opposed to the case of conduction bands. Thus, the free electron gas model does not suffice to describe these bands; we must resort to a model that includes correlations so as to also take into account the atomic nature of the solid. While for $f-$electrons of rare earth metals, a purely atomic, localized (so called Heitler-London) model might be satisfactory, the same is not true for $d-$-electrons of transition metals.
+
+First, note that the effects of correlations cannot possibly be the same in narrow energy bands and in the free electron gas. All it takes is to recall the shape of a $d-$wave function\footnote{I'm not sure whether the electronic charge density (of electrons) is well defined in terms of a squared norm of the $d-$wave function just because the band is narrow.}. In a $d-$band, the electron charge density is concentrated near the nuclei of the solid. It is much smaller between atoms so that electrons do seem to belong to individual atoms in some sense.
+
+\section{Hubbard Model and QMC simulations}\paragraph{}
+
+Let us start by making some basic remarks and establishing notation.
+
+The Hubbard model is the minimal model that encapsulates electron correlations in a solid. It allows us to make predictions about how properties like magnetism and superconductivity arise and how metal-insulator transitions occur.
+
+The Hubbard Hamiltonian may be written as a sum of kinetic, chemical and potential energy terms, respectively:
+
+\begin{equation}\label{eq:hubbard}
+\mathcal{H} = \mathcal{H}_K + \mathcal{H}_\mu + \mathcal{H}_V ,
+\end{equation}
+defined as
+
+\begin{equation}\label{eq:def_energies}
+\begin{split}
+\mathcal{H}_K &= -t \sum_{\left\langle i, j \right \rangle, \sigma} ( c_{i,\sigma} c_{j,\sigma}^\dagger + c_{j,\sigma}^\dagger c_{i,\sigma} ) \\
+\mathcal{H}_\mu &= -\mu \sum_i ( n_{i,\uparrow} + n_{i,\downarrow} ) \\
+\mathcal{H}_V &= U \sum_{i} ( n_{i,\uparrow} - \frac{1}{2} ) ( n_{i,\downarrow} - \frac{1}{2} )
+\end{split} ,
+\end{equation}
+where:
+
+\begin{itemize}
+\item $i$ and $j$ label sites on the lattice.
+\item $c_{i,\sigma}^{(\dagger)}$ is an operator that annihilates (creates) an electron with spin $\sigma$ on site $i$.
+\item $n_{i,\sigma}$ is the number operator counting the number of electrons of spin $\sigma$ on site $i$.
+\item 
+\end{itemize}
 
 \end{document}
