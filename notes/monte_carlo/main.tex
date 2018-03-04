@@ -1,0 +1,51 @@
+\documentclass[10pt, twocolumn, twoside]{article}
+\usepackage[T1]{fontenc}
+\usepackage{cuted}
+\usepackage{graphicx}
+\usepackage{bm}
+\usepackage{geometry}
+\usepackage{bbm}
+\geometry{a4paper,total={170mm,257mm},left=20mm,top=20mm,}
+\pagenumbering{arabic}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{scrextend}
+\usepackage{amsmath,amssymb}
+\usepackage{ragged2e}
+
+\author{Francisco Monteiro de Oliveira Brito}
+\title{Equilibrium Monte Carlo Simulations in Statistical Physics}
+\date{\today}
+\setlength\columnsep{3em}
+
+\makeatletter
+
+\begin{document}
+
+\begin{strip}
+\vspace*{\dimexpr-\baselineskip-\stripsep\relax}
+\centering
+\maketitle
+\vskip\baselineskip
+\noindent%\makebox[\textwidth]{\rule{1.1\paperwidth}{0.4pt}}
+\vskip\baselineskip
+\justify
+\begin{abstract}\paragraph{}
+Monte Carlo methods form the largest and arguably most important class of numerical methods used to approach statistical physics problems. In these notes we explain what Monte Carlo techniques are and why they are useful. Statistical physics often deals with computing quantities that describe the behavior of condensed matter systems. The main difficulty one faces when doing so has to do with the collective nature of these systems. Many identical components comprise these systems, and while the equations that govern the behavior of the whole may be easy to write down, their solution is in general a remarkably laborious mathematical problem. The exponentially large number of configurations of a typical condensed matter system can be daunting. Analytical solutions are more often than not hopeless and even numerical solutions are seemingly challenging. However, they give valuable information lying between theory and experiment, and connecting them.
+
+Suppose you try to sample uniformly from the probability distribution of all possible configurations of one of the aforementioned systems. Changes are your algorithm will not end before the Universe does. This is the computational complexity hurdle. A related issue is that of finite size effects. We are far from being able to simulate a macroscopically sized system. At best we can simulate a system that has only a minuscule fraction of the actual size of the corresponding real world system. Amazingly there are techniques that allow us to efficiently extract elusive information out of relatively small size simulations. Nonetheless, increasing the system size consistently improves the reliability of a simulation. Thus, the more efficient the algorithm is, the larger the system we can simulate in a fixed time.
+\end{abstract}
+\end{strip}
+
+\section{Introduction}\paragraph{}
+The sheer number of equations describing a condensed matter system, and sometimes the strong coupling between them deems the task of finding an exact solution either very tough or even impossible. It is not even clear whether an analytical solution would be of any use in many cases, and a statistical and numerical treatment often allows us to study more effectively the key properties of a system. Analytical solutions are rare. Exact solutions are an even rarer accomplishment. Not only do analytical solutions rely on approximations, but also numerical methods.
+
+On the other hand, let us emphasize the striking victory of statistical mechanics. We are able to describe a system that is governed by a macroscopically large number of equations in terms of only a few variables. The loss of information in doing so is only apparent. The statistical description is so effective because most of the possible states of the system are extremely improbable when compared to the relevant very narrow part of configuration space. The success of the field is largely attributed to the averaging out that naturally occurs when we measured a property of a macroscopic system.
+
+How do we set up a simulation of a physical system? We assume basic knowledge of statistical physics and focus only on the concepts that are essential for simulation purposes.
+
+A system in state $\mu$ makes transitions to state $\nu$ at a rate $R(\mu \rightarrow \nu)$
+
+\section{Hi}
+
+\end{document}
