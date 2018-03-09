@@ -1,0 +1,134 @@
+\documentclass[10pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{bm}
+\usepackage{geometry}
+\usepackage{bbm}
+\geometry{a4paper,total={170mm,257mm},left=20mm,top=20mm,}
+\pagenumbering{arabic}
+\usepackage{amsmath,amssymb}
+\usepackage{hyperref}
+\usepackage{scrextend}
+\usepackage{listings}
+\setcounter{tocdepth}{1}
+
+\begin{document}
+
+\title{Biased Random Walk in a box}
+\author{Francisco Monteiro de Oliveira Brito}
+\date{\today}
+\maketitle
+
+\begin{abstract}
+
+\end{abstract}
+
+\section{Simple Random Walk and Diffusive Behavior}\paragraph{}
+
+A walker takes on discrete positions on a line $X(t) \in \mathbb{Z}$. He starts at the origin: $X(0) = 0$ and at each time step $\Delta t = 1$, moves either to the left or to the right with probabilities $p_{L,R}$, respectively, so that $p_L + p_R = 1$. At a time $t = T$, the walker is at some position $X(T)$ which is not predetermined, i.e. the dynamics is intrinsically stochastic. It is then more suitable to ask the following question: how often does the walker reach $X$ after $T$ steps, given that it started the walk at $X = 0$?
+
+At each time step there are two possibilities: to go left or to go right. Thus, the trajectory of the walk is a succession of moves $\underbrace{RLLLRRLRLRLL...RL}_{T \text{ elements}}$. Note that the end position is independent of the particular sequence of moves, as long as the number of moves of each type is the fixed:
+
+\begin{equation}\label{eq:x}
+X = N_R - N_L = 2 N_R - T ,
+\end{equation}
+where $N_R$ is the number of moves to the right and $N_L$ is the number of moves to the left ($N_R + N_L = T$). A given sequence occurs with probability $p_R^{N_R} p_L^{N_L}$. Any permutation of the sequence of T steps (obtained by exchanging a $R$ move with a $L$ move) leads the walker to the same position after $T$ steps. The probability for a walker to be at $X$ is related to the probability of going to the right $N_R$ times:
+
+\begin{equation}
+P(N_R) = \frac{T!}{(T - N_R !) N_R !)} p_R^{N_R} (1 - p_R)^{T - N_R}
+\end{equation}
+
+The distribution is normalized which is easy to show using the binomial formula.
+
+\begin{equation}
+\sum_{N_R = 0}^T \frac{T!}{(T - N_R !) N_R !} p_R^{N_R} (1 - p_R)^{T - N_R} = (p_R + 1 - p_R)^T = 1
+\end{equation}
+
+Similarly, the average number of steps to the right after a time T is given by
+
+\begin{equation}\label{eq:av_nr}
+\left\langle N_R \right \rangle = \sum_{n=0}^T \frac{T!}{(T - n !) n !} p_R^n p_L^{T-n} n = p_R \frac{d (p_R + p_L)^T}{d p_R} = p_R T
+\end{equation}
+
+Moreover, the variance $\sigma_{N_R}^2 = \left\langle N_R^2 \right \rangle - \left\langle N_R \right \rangle^2$ is obtained by iterating equation (\ref{eq:av_nr}).
+
+\begin{equation}\label{eq:av_nr2}
+\left\langle N_R^2 \right \rangle = p_R d_{p_R} p_R d_{p_R} (p_R + p_L)^T = T p_R d_{p_R} \bigg[ p_R (p_R + p_L)^{T-1}\bigg] = p_R T ( 1 + p_R (T-1) )
+\end{equation}
+
+The second term cancels so that $\sigma_{N_R}^2 = p_R T - p_R^2 T =  p_R (1- p_R) T = p_R p_L T$. From equation (\ref{eq:x}), it is easy to see that a factor of 4 appears in the variance of $X$, so that
+
+\begin{equation}\label{eq:sigma_x}
+\sigma_X^2 = 4 p_R p_L T
+\end{equation}
+
+Changing the variable $N_R \rightarrow X$, we obtain the distribution
+
+\begin{equation}
+P ( X, T ) = \frac{T!}{(\frac{T+X}{2}!) (\frac{T-X}{2}!)} p_R^{(T+X)/2} p_L^{(T-X)/2} ,
+\end{equation}
+with average $\left\langle X \right\rangle = (p_R - p_L) T$. The average drifts towards $p_R \neq p_L$, while the width increases like $\sqrt{T}$, as we found in equation (\ref{eq:sigma_x}).
+
+The long time behavior of $P (X, T)$ is obtained by taking a continuum limit. The distribution is always in $[-T, T]$, but it is only significantly different from zero in a region of size $\sigma_X$ around the average. Thus, we introduce a variable $x = X / T$, which takes us to the continuum limit. Stirling's formula
+
+\begin{equation}
+\ln N! = N ln N - N + \frac{1}{2} \ln (2\pi N)
+\end{equation}
+allows us to find the desired limit.
+
+\begin{equation}
+\begin{split}
+\ln P (xT, T) &= \ln \bigg( \frac{T!}{ ( \frac{T+xT}{2} )! ( \frac{T - xT}{2} )! } p_R^{(T+xT)/2} (1 - p_R)^{(T-xT)/2} \bigg) \\
+&= -\frac{1}{2} \ln \bigg( 2\pi T \frac{1-x^2}{4} \bigg) + T f(x),
+\end{split}
+\end{equation}
+where
+
+\begin{equation}
+f(x) = \frac{1+x}{2} \ln \bigg( \frac{2 p_R}{1+x} \bigg) + \frac{1-x}{2} \ln \bigg( \frac{2 p_L}{1-x} \bigg) 
+\end{equation}
+
+In the large $T$ limit, it is equivalent to maximize the $P(X,T)$ or $f(x)$.
+
+\begin{equation}
+d_x f \rvert_{x_m} = 0 \rightarrow x_m = p_R - p_L
+\end{equation}
+which coincides with the mean $\left\langle x \right\rangle$, as it should. Developing $f(x)$ around its maximum, we obtain
+
+\begin{equation}
+f ( \left\langle x \right \rangle + \delta ) = -\frac{1}{2} \frac{\delta^2}{ 1 - ( p_R - p_L )^2 } = -\frac{\delta^2}{8 p_R p_L}
+\end{equation}
+leading to the Gaussian distribution
+
+\begin{equation}
+P (X, T) = \frac{ \exp \bigg( -\frac{(X - T ( p_R - p_L ))^2}{8p_R p_L T } \bigg)}{\sqrt{2\pi T p_R p_L}}
+\end{equation}
+
+We usually describe the behavior of this distribution in terms of a coexistence of two regimes:
+\begin{itemize}
+\item The maximum displacement characterized by a constant velocity $v = p_R - p_L$.
+\item The diffusion of the probability (which corresponds to the widening of the distribution with $\sqrt{T}$) described by a diffusion constant $D = 2 p_R p_L$.
+\end{itemize}
+
+To reach the continuum limit, we multiply by $T/2$ since in the discrete case $X$ only takes on values separated by 2.
+
+\begin{equation}
+P (x) = \frac{ \exp \bigg( -\frac{(x - \left\langle x \right \rangle)^2}{2\sigma^2} \bigg)}{\sqrt{2\pi \sigma^2}} , 
+\end{equation}
+where $\left\langle x \right\rangle = p_R - p_L$ and $\sigma^2 = 4 p_R p_L T$. In 'intensive units', the distribution function is centered in the same position, but it becomes narrower as time progresses.
+
+\section{Master equation}\paragraph{}
+
+It is possible to reformulate our problem as the time evolution of an initial probability distribution $P (X, 0) = \delta_{X, 0}$. The time evolution is defined by the conditioned probabilities $p_{L,R}$. To formalize the probabilistic concepts we used in the previous section, we introduce some notation. Let $P(X_1, t_1; X_2, t_2)$ be the probability of being at $X_1$ at time $t_1$ and $X_2$ at time $t_2$. By marginalizing with respect to either of the variables, we obtain
+
+\begin{equation}
+\sum_{X_{1(2)}} P ( X_1, t_1 ; X_2, t_2 ) = P ( X_{2(1)} , t_{2(1)} )
+\end{equation}
+
+Furthermore, the distribution is of course normalized:
+
+\begin{equation}
+\sum_{X_1, X_2} P ( X_1, t_1 ; X_2, t_2 ) = 1
+\end{equation}
+
+\end{document}
