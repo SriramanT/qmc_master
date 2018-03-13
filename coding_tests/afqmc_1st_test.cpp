@@ -4,6 +4,12 @@
 //
 //  Created by Francisco Brito on 09/03/2018.
 //
+//  This code constitutes a first attempt at simulating the Hubbard model on a 1D chain
+//  using auxiliary field quantum Monte Carlo.
+//  The notation in use is based on the lecture notes "Numerical Methods for Quantum Monte Carlo
+//  Simulations of the Hubbard Model by Zhaojun Bai, Wenbin Chen, Richard Scalettar, and
+//  Ichitaro Yamazaki
+//
 
 #include <stdio.h>
 #include <iostream>
@@ -16,120 +22,147 @@
 #include <Eigen/Dense>
 #include <unsupported/Eigen/MatrixFunctions>
 
-#define N_SITES 8
+#define NSITES 5
 
 using namespace Eigen;
 using namespace std;
 
+// Auxiliary functions
+
+MatrixXd createHoppingMatrix(MatrixXd K, int nSites)
+{
+    // Set the elements of the hopping matrix that define PBC corresponding to the ends of the 1D chain
+    K(0, 1) = 1;
+    K(0, nSites - 1) = 1;
+    K(nSites - 1, 0) = 1;
+    K(nSites - 1, nSites - 2) = 1;
+    
+    // Set the remaining ones
+    int i;
+    for (i = 1; i < nSites - 1; i++)
+    {
+        K(i, i - 1) = 1;
+        K(i, i + 1) = 1;
+    }
+    
+    return K;
+}
+
+MatrixXd fillHSmatrix(int L, MatrixXd h)
+{
+    // Fill the HS field matrix
+
+    int l;
+    int i;
+    
+    for (l = 0; l < L; l++)
+    {
+      
+      for (i = 0; i < NSITES; i++)
+      {
+          if ( h(l, i) < 0 )
+          {
+              h(l, i) = -1;
+          }
+          else
+          {
+              h(l, i) = 1;
+          }
+      }
+    }
+    
+    return h;
+}
+    
 int main()
 {
+    cout << "\nAuxiliary field QMC for 1D Hubbard chain\n" << endl;
+    
+    // Toggle prints
+    
+    int printsOn = 1;                                               // 0 - NO PRINTS, 1 - PRINTS
+    
+    //  Usual general use variables
+    
     int i;
     int j;
     int l;
     int step;
     int i_chosen;
     int l_chosen;
+
+    //  Things to do with random numbers throughout the code
     
-    int seed = 12345;                       // set a seed
+    const static int seed = 12345;                              //  set a seed
+    mt19937 gen(seed);                                          //  mt19937 algorithm to generate random numbers
+    uniform_real_distribution<> dis(0.0, 1.0);                  //  set the distribution from which to draw numbers
+    double decisionMaker;                                       //  to accept or not to accept, hence the question.
     
-    //random number to make decision
-    double decisionMaker;
+    //  Monte Carlo specific variables
     
-    mt19937 gen(seed);
-    uniform_real_distribution<> dis(0.0, 1.0);
+    const static int totalMCSteps = 30;
     
-    int totalMCSteps = 30;
-    int L = 10;                             // number of imaginary time subintervals
-    double beta = 1.;                       // imaginary time interval or equivalent maximum temperature of the (d+1) classical system
-    double dt = beta/L;                     // time subinterval width
-    double t = 1.;                          // hopping parameters
-    double U = 1.;                          // interaction energy
-    int N = 5;                              // number of sites
-    double nu = acosh( exp( U * dt / 2 ) );
+    //  Physical parameters
     
+    const static int L = 10;                                    //  number of imaginary time subintervals
+    const static double beta = 1.;                              //  imaginary time interval or equivalent maximum temperature of the (d+1) classical system
+    const static double dt = beta/L;                            //  time subinterval width
+    const static double t = 1.;                                 //  hopping parameters
+    const static double U = 50.;                                 //  interaction energy
+    double nu = acosh( exp( U * dt / 2 ) );                     //  Hubbard Stratonovich transformation parameter
     
     // Initialize the HS field at all time slices in [0, beta] with +1 and -1 randomly
     
-    MatrixXd h = MatrixXd::Random(L,N);     // HS field h_{l, i}
+    MatrixXd h = MatrixXd::Random(L,NSITES);     // HS field h_{l, i}
     
-    // Hopping matrix 1 D - 5 sites PBC
+    h = fillHSmatrix(L, h);
     
-    MatrixXd K(5,5) ;
+    MatrixXd h_new = h;     // A copy of the HS field h_{l, i} - used to make determinant updates in naive approach for future debugging
     
-    K << 0, 1, 0, 0, 1,
-         1, 0, 1, 0, 0,
-         0, 1, 0, 1, 0,
-         0, 0, 1, 0, 1,
-         1, 0, 0, 1, 0;
+    // Hopping matrix 1D chain w/ PBC
     
-    cout <<"\n\n K = \n\n" << K << "\n\n";
+    MatrixXd K = MatrixXd::Zero(NSITES, NSITES) ;
+    
+    K = createHoppingMatrix(K, NSITES);
     
     // Compute matrix 'prefactor' of the B-matrices e^{t\delta\tau K}
     
-    MatrixXd B_preFactor = t*dt*K.exp();
-    
-    cout <<"\n\n exp (t * dt * K) = \n\n" << B_preFactor << "\n\n";
-    
-    // Fill the HS field matrix
-    
-    for (l = 0; l < L; l++)
+    const static MatrixXd B_preFactor = t * dt * K.exp();
+  
+    // Some prints for debugging. Toggle them if you want at the top.
+    if (printsOn == 1)
     {
-        
-        for (i = 0; i < N; i++)
-        {
-            if ( h(l, i) < 0 )
-            {
-                h(l, i) = -1;
-            }
-            else
-            {
-                h(l, i) = 1;
-            }
-        }
+    cout <<"\n K = \n\n" << K << "\n\n";
+    cout <<"exp (t * dt * K) = \n\n" << B_preFactor << "\n\n";
+    cout << "Hubbard Stratonovich Field\n\n h = \n\n" << h << "\n\n";
     }
     
-    MatrixXd h_new = h;     // New HS field h_{l, i} - to make determinant updates
-    
-    cout << "Here's the Hubbard Stratonovich Field\n\n h = \n\n" << h << endl ;
+    // Build the B-matrices. We need a copy of each to perform the updates (naively)
     
     MatrixXd BpOld[L]; // B plus
     MatrixXd BmOld[L]; // B minus
-    
     MatrixXd BpNew[L]; // B plus
     MatrixXd BmNew[L]; // B minus
     
-    // Build the B-matrices
-    
     for (l = 0; l < L; l++)
     {
-        BpOld[l] =  MatrixXd::Identity(N,N);
-        
+        BpOld[l] =  MatrixXd::Identity(NSITES,NSITES);
         BpOld[l].diagonal() = nu * h.row(l);
-        
         BpOld[l] = B_preFactor * BpOld[l].exp();
-        
 //        cout << "\n\nHere is a B_plus matrix\n\n" << BpOld[l] << endl;
-        
-        BmOld[l] =  MatrixXd::Identity(N,N);
-        
+        BmOld[l] =  MatrixXd::Identity(NSITES,NSITES);
         BmOld[l].diagonal() = (-nu) * h.row(l);
-        
         BmOld[l] = B_preFactor * BmOld[l].exp();
-        
 //        cout << "\n\nHere is a B_minus matrix\n\n" << BmOld[l] << endl;
-        
         // The new matrices are initially set as equal to the old ones
-        
         BpNew[l] = BpOld[l];
-        
         BmNew[l] = BmOld[l];
-        
     }
     
     // Build the M-matrices
     
-    MatrixXd MPlusOld = MatrixXd::Identity(N,N);
-    MatrixXd MMinusOld = MatrixXd::Identity(N,N);
+    MatrixXd MPlusOld = MatrixXd::Identity(NSITES,NSITES);
+    MatrixXd MMinusOld = MatrixXd::Identity(NSITES,NSITES);
     MatrixXd MPlusNew;
     MatrixXd MMinusNew;
     
@@ -139,8 +172,8 @@ int main()
         MMinusOld *= BmOld[L - 1 - l];
     }
     
-    MPlusOld += MatrixXd::Identity(N,N);
-    MMinusOld += MatrixXd::Identity(N,N);
+    MPlusOld += MatrixXd::Identity(NSITES,NSITES);
+    MMinusOld += MatrixXd::Identity(NSITES,NSITES);
     
 //    cout << "\n\nHere is a M_plus matrix\n\n" << MPlusOld << endl;
 //    cout << "\n\nHere is a M_minus matrix\n\n" << MMinusOld << endl;
@@ -148,26 +181,24 @@ int main()
 //    cout << "\n\nHere is the M_plus determinant\n\n" << MPlusOld.determinant() << endl;
 //    cout << "\n\nHere is the M_minus determinant\n\n" << MMinusOld.determinant() << endl;
     
+    //  Initialize determinants and acceptance ratio
+    //  TODO:   When you accept a step, you must update the Bp and Bm matrices
+    //          corresponding to the chosen l - > Figure out a way to update this efficiently
+    
     double detOldPlus = MPlusOld.determinant();
     double detOldMinus = MMinusOld.determinant();
     double detsProdOld = detOldPlus * detOldMinus;
-    
     double detsProdNew;
-    
     double detNewPlus;
     double detNewMinus;
-    
-    // TODO: When you accept a step, you must update the Bp and Bm matrices corresponding to the chosen l - > Figure out a way to update this efficiently
-    
     double acceptanceRatio;
     
-    //inititialize chosen entry of HS field matrix
+    //  inititialize chosen entry of HS field matrix to (0, 0)
     l_chosen = 0;
     i_chosen = 0;
     
     for (step = 0; step < totalMCSteps; step++)
     {
-
 //        cout << "Chosen l: " << l_chosen << endl;
 //        cout << "Chosen i: " << i_chosen << endl;
         
@@ -176,30 +207,29 @@ int main()
         
         // rebuild B-matrices
 
-        BpNew[l_chosen] =  MatrixXd::Identity(N,N);
+        BpNew[l_chosen] =  MatrixXd::Identity(NSITES,NSITES);
     
         BpNew[l_chosen].diagonal() = nu * h_new.row(l_chosen);
         
         BpNew[l_chosen] = B_preFactor * BpNew[l_chosen].exp();
         
-//        cout << "\n\nHere is a B_plus matrix\n\n" << BpOld[l_chosen] << endl;
+//        cout << "\n\nOld B_plus matrix\n\n" << BpOld[l_chosen] << endl;
 //
-//        cout << "\n\nHere is a B_plus matrix\n\n" << BpNew[l_chosen] << endl;
+//        cout << "\n\nNew B_plus matrix\n\n" << BpNew[l_chosen] << endl;
 
-        BmNew[l_chosen] =  MatrixXd::Identity(N,N);
+        BmNew[l_chosen] =  MatrixXd::Identity(NSITES,NSITES);
 
         BmNew[l_chosen].diagonal() = (-nu) * h_new.row(l_chosen);
 
         BmNew[l_chosen] = B_preFactor * BmNew[l_chosen].exp();
         
-//        cout << "\n\nHere is a B_minus matrix\n\n" << BmOld[l_chosen] << endl;
-//
-//        cout << "\n\nHere is a B_minus matrix\n\n" << BmNew[l_chosen] << endl;
+//        cout << "\n\nOld B_minus matrix\n\n" << BmOld[l_chosen] << endl;
+//        cout << "\n\nNew B_minus matrix\n\n" << BmNew[l_chosen] << endl;
         
         // rebuild M-matrices
         
-        MPlusNew = MatrixXd::Identity(N,N);
-        MMinusNew = MatrixXd::Identity(N,N);
+        MPlusNew = MatrixXd::Identity(NSITES,NSITES);
+        MMinusNew = MatrixXd::Identity(NSITES,NSITES);
         
         for (l = 0; l < L; l++)
         {
@@ -207,22 +237,23 @@ int main()
             MMinusNew *= BmNew[L - 1 - l];
         }
 
-        MPlusNew += MatrixXd::Identity(N,N);
-        MMinusNew += MatrixXd::Identity(N,N);
+        MPlusNew += MatrixXd::Identity(NSITES,NSITES);
+        MMinusNew += MatrixXd::Identity(NSITES,NSITES);
 
-//        cout << "\n\nHere is a M_plus matrix\n\n" << MPlusNew << endl;
-//        cout << "\n\nHere is a M_minus matrix\n\n" << MMinusNew << endl;
-//
-//        cout << "\n\nHere is the M_plus determinant\n\n" << MPlusNew.determinant() << endl;
-//        cout << "\n\nHere is the M_minus determinant\n\n" << MMinusNew.determinant() << endl;
+//        cout << "\n\nNew M_plus matrix\n\n" << MPlusNew << endl;
+//        cout << "\n\nNew M_minus matrix\n\n" << MMinusNew << endl;
+//        cout << "\n\nNew M_plus determinant\n\n" << MPlusNew.determinant() << endl;
+//        cout << "\n\nNew M_minus determinant\n\n" << MMinusNew.determinant() << endl;
 
         detNewPlus = MPlusNew.determinant();
         detNewMinus = MMinusNew.determinant();
         detsProdNew = detNewPlus * detNewMinus;
-
         acceptanceRatio = detsProdNew / detsProdOld;
-
+        
+        if (printsOn == 1)
+        {
         cout << "\n\nacceptance ratio: " << acceptanceRatio << endl;
+        }
         
         if (acceptanceRatio >= 1 )
         {
@@ -240,7 +271,10 @@ int main()
             
             decisionMaker = dis(gen);
             
+            if (printsOn == 1)
+            {
             cout << "Random number decides whether or not to accept: " << decisionMaker << endl;
+            }
             
             if (decisionMaker <= acceptanceRatio) // else do nothing
             {
@@ -251,6 +285,11 @@ int main()
                 MMinusOld = MMinusNew;
                 h(l_chosen, i_chosen) = h_new(l_chosen, i_chosen);
                 detsProdOld = detsProdNew;
+                
+                if (printsOn == 1)
+                {
+                    cout << "Accepted" << endl;
+                }
             }
             else
             {
@@ -262,12 +301,12 @@ int main()
                 h_new(l_chosen, i_chosen) = h(l_chosen, i_chosen);
                 detsProdNew = detsProdOld;
             }
-            
+    
         }
         
-        // 'pick' a site in (d+1)-dimensional space
+        // 'pick' a site (spatial + HS field)
         
-        if (i_chosen < N - 1)
+        if (i_chosen < NSITES - 1)
         {
             i_chosen += 1;
             continue;
@@ -287,9 +326,7 @@ int main()
             }
         }
         
-    
     }
-    
     
     return 0;
 }
