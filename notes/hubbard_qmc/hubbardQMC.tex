@@ -5,7 +5,7 @@
 \usepackage{bm}
 \usepackage{geometry}
 \usepackage{bbm}
-\geometry{a4paper,total={170mm,257mm},left=20mm,top=20mm,}
+\geometry{a4paper,total={170mm,257mm},left=17mm,top=20mm,right=17mm}
 \pagenumbering{arabic}
 \usepackage{hyperref}
 \usepackage{url}
@@ -21,7 +21,7 @@
 \title{Quantum Monte Carlo Simulations of the Hubbard model}
 \author{Francisco Monteiro de Oliveira Brito}
 \date{\today}
-\setlength\columnsep{1em}
+\setlength\columnsep{2em}
 
 \makeatletter
 
@@ -36,19 +36,19 @@
 \vskip\baselineskip
 \justify
 \begin{abstract}\paragraph{}
-The interactions between the electrons in a solid give rise to effects that arise specifically due to the many-body nature of the system. The Hubbard model is a minimal model that encapsulates electron correlations, going beyond the periodic ionic potential perturbation or tight binding approach leading to band theory by adding the simplest possible interaction term to a tight binding Hamiltonian. It allows us to make predictions about how properties like magnetism and superconductivity arise and how metal-insulator transitions occur.
+The interactions between the electrons in a solid give rise to effects that arise specifically due to the many-body nature of the system. The Hubbard model is a minimal model that encapsulates electron correlations, going beyond the periodic ionic potential perturbation on the free electron gas or tight binding approaches, which lead to band theory. It does so by adding the simplest possible electron interaction term to a tight binding Hamiltonian, allowing us to make predictions about magnetic and superconducting behavior, an metal-insulator transitions. Quantum Monte Carlo (QMC) is a simulation method that is amply applicable to condensed matter physics problems. It is commonly used to simulate the Hubbard model. Despite the system size being constrained due to limited simulation time, the method provides reliable, unbiased, and generally accurate solutions to the often otherwise intractable quantum many-body problem. In particular, the technique allows us to capture the elusive effects of electron correlations, for example in two-dimensional graphene-like nanostructures.
 \end{abstract}
 \end{strip}
 
 \section{Introduction}\paragraph{}
 
-The Hubbard model appeared in 1963 as one of the first attempts to include electron correlation effects in a quantum mechanical description of a solid. Originally, it was introduced to explain the behavior of the electrons occupying the narrow, partially filled $d-$bands of transition metals. Correlation phenomena in these bands lead to a behavior reminiscent of the atomic picture of a solid. We have come a long way since the introduction of the Hubbard model and it is now as paradigm-defining in many-body physics as the Ising model in statistical physics.
+The Hubbard model appeared in 1963 as one of the first attempts to include electron correlation effects in a quantum mechanical description of a solid. Originally, it was introduced to explain the behavior of the electrons occupying the narrow, partially filled $d-$bands of transition metals. Correlation phenomena in these bands lead to a behavior reminiscent of the atomic picture of a solid. We have come a long way since the introduction of the Hubbard model and it is now as paradigm-defining in many-body theory as the Ising model in statistical physics.
 
-These notes aim to present the basic aspects of a numerical technique used to simulate the Hubbard model in a self-contained, tutorial form. The idea is to reduce our problem to solving a set of integrals, which we evaluate numerically through a standard stochastic procedure, known as the Monte Carlo method. These integrals are arrived at upon formulating the quantum many-body description of the system using the Schr\"odinger equation in imaginary time. Hence the name Quantum Monte Carlo.
+These notes aim to present the basic aspects of a numerical technique used to simulate the Hubbard model in a self-contained, tutorial form. The idea is to reduce our problem to solving a set of integrals, which we evaluate numerically through a standard stochastic procedure, known as the Monte Carlo method. These integrals are arrived at upon formulating the quantum many-body description of the system using the Schr\"odinger equation in imaginary time. Hence the name Quantum Monte Carlo, which is used to distinguish it from Classical Monte Carlo, in which we measure thermal averages, instead of expectations of operators, corresponding to physical observables.
 
-When Hubbard's seminal paper came out, it followed a trend that arose in the 1950's when people were working on a theory of correlation effects in the free electron gas. Hubbard devised a simple model for the seemingly intractable problem of \emph{interacting} electrons in a band. His work explained qualitatively some properties of transition and rare-earth metals in which electron correlations are non negligible. It turns out that the mathematical formulation of the interaction problem for electrons in a band is not prohibitively complicated, and is perhaps even more amenable to simple computations after some reasonable approximations are introduced. Notably, it is particularly adapted to computer simulations because of its simple approximate Hamiltonian. Moreover, it has been shown to be very relevant in the description of high $T_c$ superconductors. The Hubbard model is clearly very relevant; nonetheless, even the simplified picture it offers is in general difficult to approach analytically. There exists an exact solution in one dimension via Bethe ansatz, but the more general higher dimensional case is often solved numerically. This is the approach we will follow.
+When Hubbard's seminal paper came out, it followed a trend that arose in the 1950's when people were working on a theory of correlation effects in the free electron gas. Hubbard devised a simple model for the seemingly intractable problem of interacting electrons in a band. His work explained qualitatively some properties of transition and rare-earth metals in which electron correlations are non negligible. It turns out that the mathematical formulation of the interaction problem for electrons in a band is not prohibitively complicated, and is perhaps even more amenable to simple computations after some reasonable approximations are introduced. Notably, it is particularly adapted to computer simulations because of its simple approximate Hamiltonian. Moreover, it has been shown to be very relevant in the description of high $T_c$ superconductors. The Hubbard model is clearly very relevant; nonetheless, even the simplified picture it offers is in general difficult to approach analytically. There exists an exact solution in one dimension via Bethe ansatz, but the more general higher dimensional case is often solved numerically. This is the approach we will follow.
 
-Our goal is to apply a QMC technique to simulate electron correlations in a transition metal dichalcogenide (TMD) nanoribbon, a two-dimensional nanostructure made out of some graphene-like compound. The structure is much longer on one direction than on the other, resembling a ribbon, hence its name. The electronic states that accumulate on the edges of this ribbon might lead to interesting magnetic behavior in these TMD nanostructures and this possibility remains unexplored numerically. Moreover, there is some interest in exploring the phase diagram of these systems because recent studies point at the possibility of topological superconductivity. To summarize, we aim to study a two-dimensional strongly correlated graphene-like nanostructure using QMC, a state of the art, unbiased numerical method that allows one to capture the elusive effects of electron correlations.
+Our goal is to apply a QMC technique to simulate electron correlations in a transition metal dichalcogenide (TMD) nanoribbon, a two-dimensional nanostructure made out of some graphene-like compound. The structure is much longer on one direction than on the other, resembling a ribbon, hence its name. The electronic states that accumulate on the edges of this ribbon might lead to interesting magnetic behavior in these TMD nanostructures and this possibility remains unexplored numerically. Moreover, there is some interest in exploring the phase diagram of these systems because recent studies point at the possibility of topological superconductivity.
 
 \section{Hubbard model}\paragraph{}
 
@@ -82,7 +82,7 @@ In short, electrons hop rapidly from atom to atom in a band-like fashion, but th
 
 A theory of electron correlations in a narrow energy band should reduce to an atomic model in the appropriate limit, for example atoms that are so far apart on a lattice that they interact only very weakly. Although we always keep in mind that we are focusing on $d-$electrons, we shall consider $s-$electrons in what follows for the sake of simplicity. The important conclusions will not differ significantly. We will use the atomicity of the electronic distribution to introduce an approximate representation of the electron interaction. It turns out that this representation is mathematically much simpler to handle than the Coulomb interaction itself.
 
-\subsection{Hubbard Hamiltonian}\paragraph{}
+\subsection{Hubbard Hamiltonian}\label{hubbardHamiltonian}\paragraph{}
 
 Imagine a partially filled narrow $s-$band with $n$ electrons per atom. Suppose you have obtained Bloch wave functions $\psi_{\bm k}$ corresponding to energies $\varepsilon_{\bm k}$ by solving the Schr\"odinger equation for some spin-independent mean field Hartree-Fock potential that accounts for the average interaction of the $s-$band electrons with electrons on other bands, and the interaction with the other $s-$electrons. The electrons on the band evolve according to the Hamiltonian (in a suitable unit system):
 
@@ -260,7 +260,7 @@ Band theory was found to be flawed soon after it was introduced. The picture it 
 \begin{equation}\label{eq:schrodinger}
 \bigg[ -\frac{\hbar^2}{2m} \nabla^2 + U(\bm r) \bigg] \psi (\bm r) = \varepsilon \psi (\bm r)
 \end{equation}
-are given by Bloch's theorem: $\psi_{\bm k} (\bm r) = e^{i\bm k \cdot \bm r} u_{\bm k} (\bm r)$. Replacing this wave function in equation (\ref{eq:schrodinger}), we obtain a differential equation for $u_{\bm k} (\bm r)$, which has in general an infinite number of solutions. We label them with an index $n$, which we call the band index. To each solution there corresponds a function $\varepsilon_{n\bm k}$. The set of these functions is known as the band structure. Since electrons are taken to be independent in band theory, the N-electron eigenstates are obtained by placing an electron in each quantum state. Each state is labelled by its energy $\varepsilon_{n\bm k \sigma}$. Since our model Hamiltonian does not couple spins (via an electron interaction, for example) and assuming there is no external magnetic field and that the system has an inversion center, $\varepsilon_{n\bm k \uparrow} = \varepsilon_{n\bm k \downarrow}$. Note that in general there might energies for which there is no corresponding $\varepsilon_{n\bm k \sigma}$. These form intervals called forbidden bands\footnote{We disregard surface states.}. Thus, the ground state of our model may normally be obtained by filling the energy levels starting from the lowest energy state. Two cases are particularly relevant:
+are given by Bloch's theorem: $\psi_{\bm k} (\bm r) = e^{i\bm k \cdot \bm r} u_{\bm k} (\bm r)$. Replacing this wave function in equation (\ref{eq:schrodinger}), we obtain a differential equation for $u_{\bm k} (\bm r)$, which has in general an infinite number of solutions. We label them with an index $n$, which we call the band index. To each solution there corresponds a function $\varepsilon_{n\bm k}$. The set of these functions is known as the band structure. Since electrons are taken to be independent in band theory, the N-electron eigenstates are obtained by placing an electron in each quantum state. Each state is labelled by its energy $\varepsilon_{n\bm k \sigma}$. Since our model Hamiltonian does not couple spins (via an electron interaction, for example) and assuming there is no external magnetic field and that the system has an inversion center, $\varepsilon_{n\bm k \uparrow} = \varepsilon_{n\bm k \downarrow}$. Note that in general there might energies for which there is no corresponding $\varepsilon_{n\bm k \sigma}$. These form intervals called forbidden bands\footnote{We disregard surface states that may have energies that fall in the forbidden bands.}. Thus, the ground state of our model may normally be obtained by filling the energy levels starting from the lowest energy state. Two cases are particularly relevant:
 \begin{itemize}
 \item Every band is either fully occupied or empty. The first excited state differs from the ground state by $\Delta$, the separation between the last fully occupied band and the first empty band. It is then impossible to induce the motion of the electrons by applying an arbitrarily small voltage. This is what it means to be an \emph{insulator}. Since there $2N$ states per band, this is not possible unless the number of electrons per unit cell is an even integer.
 \item One or more of the bands are partially filled. The energy of occupied state of higher energy is named the Fermi energy $\varepsilon_F$. In this case, the separation between the ground state and the first excited state tends to $0$ in the thermodynamic limit, $N \rightarrow \infty$. The system may then respond to infinitesimal excitations, which is the very definition of a metal!
@@ -272,7 +272,7 @@ The success of band theory rests crucially on the independent electron approxima
 
 \subsection{Effective Hamiltonian}\paragraph{}
 
-\subsection{Exact solutions for simple cases}\paragraph{}
+\subsection{Exact solutions for simple cases}\label{exactSolutions}\paragraph{}
 
 If we relax the condition of fixed number of particles, there is an extra energy term $-\mu N$ in the Hamiltonian (compared to equation (\ref{eq:hubbard_hamiltonian})), where $\mu$ is the chemical potential, and $N$ is the total number of particles. The Hubbard Hamiltonian may then be written as a sum of kinetic, chemical and potential energy terms, respectively:
 
@@ -306,7 +306,7 @@ A given physical observable of interest $\mathcal{O}$, such as the spin-spin cor
 \end{equation}
 where
 
-\begin{equation}
+\begin{equation}\label{eq:projection}
 \mathcal{P} \equiv \frac{1}{Z} e^{-\beta \mathcal{H} } , \text{ with } Z = Tr ( e^{-\beta \mathcal{H} } )
 \end{equation}
 
@@ -330,10 +330,460 @@ U (n_{i\uparrow} - \frac{1}{2} ) ( n_{i\downarrow} - \frac{1}{2} )
 
 Singly occupied states ($\left|\uparrow \right\rangle$, $\left|\downarrow\right \rangle$) have lower energy and are thus more likely to occur. They correspond to nonzero magnetization $m = n_{\uparrow} - n_{\downarrow}$, which is favored by the Hubbard interaction $U$. A relevant question is whether or not the spins order in space when $t \neq 0$.
 
-\section{Simulations}\label{hubbQMC}
+Let us now establish our notations for second quantized operators to introduce a different representation of electronic states on the lattice. The fermionic annihilation and creation operators anticommute.
+
+\begin{equation}
+\{ c_{j\sigma} , c_{l \sigma'}^\dagger \} = \delta_{jl} \delta_{\sigma\sigma'}
+\end{equation}
+
+The $c$-operator algebra is further defined by the vanishing of all other anticommutators.
+
+\begin{equation}\label{eq:fermion_anticom}
+\{ c_{j\sigma}^{(\dagger)} , c_{l \sigma'}^{(\dagger)} \} = 0
+\end{equation}
+
+Note that taking $l = j$ and $\sigma = \sigma'$ in equation (\ref{eq:fermion_anticom}), we recover Pauli's exclusion principle since $(c_{j\sigma}^\dagger)^2 = 0$. If we omit the site index $i$ and spin $\sigma$, a convenient way of specifying states on the lattice is
+
+\begin{equation}
+\begin{split}
+&\left| 0 \right\rangle : \text{unoccupied state - no electron} \\
+&\left| 1 \right\rangle : \text{occupied state - one electron}
+\end{split}
+\end{equation}
+so that a generic state may be written as a product of the states above $\otimes_{i=1}^N \otimes_{\sigma = \pm 1/2} \left| n \right\rangle_{i, \sigma}$ at each site for each spin state, where $n= 0, 1$. For example, one such state is
+
+\begin{equation}
+\left| 0 \right\rangle_{1, 1/2} \left| 1 \right\rangle_{1, -1/2} \left| 0 \right\rangle_{2, 1/2} \left| 0 \right\rangle_{2, -1/2} ... \left| 0 \right\rangle_{N, 1/2} \left| 1 \right\rangle_{N, -1/2} 
+\end{equation}
+
+The creation and annihilation operators act as follows
+
+\begin{equation}
+c \left| 0 \right\rangle = 0 \quad c^\dagger \left| 0 \right\rangle = \left| 1 \right\rangle \quad c \left| 1 \right\rangle = \left| 0 \right\rangle \quad c^\dagger \left| 1 \right\rangle = 0
+\end{equation}
+
+Thus, the eigenstates of the number operator are $\left| 0 \right\rangle, \left| 1 \right\rangle$:
+
+\begin{equation}
+n \left| 0 \right\rangle = 0 \quad n \left| 1 \right\rangle = \left| 1 \right\rangle
+\end{equation}
+
+Moreover, the operator $c_i^\dagger c_{i+1}^\dagger$, corresponding to the hopping from site $i+1$ to $i$, i.e. to the kinetic energy of the electrons on neighboring sites, acts as follows (ignoring spin):
+
+\begin{equation}
+c_i^\dagger c_{i+1}^\dagger \begin{cases}
+\left|0 0 \right\rangle = 0 \\
+\left|1 0 \right\rangle =  0 \\
+\left|0 1 \right\rangle =  \left| 1 0 \right\rangle \\
+\left|1 1 \right\rangle =  c_i^\dagger \left| 1 0  \right\rangle = 0 \\
+\end{cases}
+\end{equation}
+
+The operator annihilates the particle at $i+1$ and creates it back at $i$, i.e. the electron hops from $i+1$ to $i$.
+
+\subsection{The purely atomic $\frac{t}{U} = 0$ limit}\paragraph{}
+
+The Hamiltonian reduces to 
+
+\begin{equation}
+\mathcal{H} = U (n_\uparrow - \frac{1}{2} ) (n_\downarrow - \frac{1}{2} ) - \mu ( n_\uparrow + n_\downarrow )
+\end{equation}
+which acts as follows (using the eigenstates of $n_\sigma$)
+
+\begin{equation}
+\mathcal{H} \begin{cases}
+\left| \,\, \right\rangle = \frac{U}{4} \\
+\left| \uparrow \right\rangle = \bigg( \frac{U}{4} - (\mu + \frac{U}{2} ) \bigg) \left| \uparrow \right\rangle \\
+\left| \downarrow \right\rangle = \bigg( \frac{U}{4} - (\mu + \frac{U}{2} ) \bigg) \left| \downarrow \right\rangle \\
+\left| \uparrow \downarrow \right\rangle = \bigg( \frac{U}{4} - 2 \mu \bigg) \left| \uparrow \downarrow \right\rangle
+\end{cases}
+\end{equation}
+
+Thus, the Hamiltonian is diagonal in the basis $\{\left| \psi_i \right\rangle \}$:
+
+\begin{equation}
+\begin{split}
+&\bigg[ \mathcal{H}_{ij} \bigg] = \bigg[ \left\langle \psi_i \left| \mathcal{H} \right| \psi_j \right\rangle \bigg] \\
+&= \text{diag}\bigg(\frac{U}{4}, \frac{U}{4} - (\mu + \frac{U}{2} ), \frac{U}{4} - (\mu + \frac{U}{2} ), \frac{U}{4} - 2 \mu \bigg)
+\end{split}
+\end{equation}
+which means that $e^{-\beta \mathcal{H} }$ is also diagonal:
+
+\begin{equation}
+e^{-\beta \mathcal{H} } = e^{-\beta U / 4}  \text{diag}\bigg(1,  e^{\beta(\mu + \frac{U}{2})}, e^{\beta(\mu + \frac{U}{2})},  e^{2\beta \mu} \bigg)
+\end{equation}
+and this is one of the rare situations in which it is possible to explicitly write down a closed form for the partition function.
+
+\begin{equation}
+\begin{split}
+Z &= Tr ( e^{-\beta\mathcal{H} } ) = \sum_i \left\langle \psi_i \left|e^{-\beta \mathcal{H} } \right| \psi_i \right\rangle \\
+&= e^{-\beta U / 4} \bigg(1 + 2 e^{\beta(\mu + \frac{U}{2})} + e^{2 \beta \mu} \bigg)
+\end{split}
+\end{equation}
+
+Moreover, some of the observables that were mentioned before are explicitly computable. This is because due to the diagonal form of $\mathcal{H}$, the expressions defining these observables greatly simplify.
+
+\begin{equation}
+\begin{split}
+\mathcal{H} e^{-\beta\mathcal{H} } &\mapsto e^{-\beta U / 4}  \text{diag}\bigg(\frac{U}{4}, (-\mu - \frac{U}{4})  e^{\beta(\mu + \frac{U}{2})}, \\ 
+&(-\mu - \frac{U}{4}) e^{\beta(\mu + \frac{U}{2})}, (\frac{U}{4} - 2\mu ) e^{2\beta \mu} \bigg) \\
+n_{\uparrow} e^{-\beta\mathcal{H} } &\mapsto e^{-\beta U / 4}  \text{diag}\bigg(0, e^{\beta(\mu + \frac{U}{2})}, 0,  e^{2\beta \mu} \bigg) \\
+n_{\downarrow} e^{-\beta\mathcal{H} } &\mapsto e^{-\beta U / 4}  \text{diag}\bigg(0, 0, e^{\beta(\mu + \frac{U}{2})},   e^{2\beta \mu} \bigg) \\
+n_{\uparrow} n_{\downarrow} e^{-\beta\mathcal{H} } &\mapsto e^{-\beta U / 4}  \text{diag}\bigg(0, 0, 0,   e^{2\beta \mu} \bigg) \\
+\end{split}
+\end{equation}
+
+From these we can compute some useful traces
+
+\begin{equation}
+\begin{split}
+&Tr \bigg( \mathcal{H} e^{-\beta\mathcal{H} } \bigg) = e^{-\beta U / 4} \bigg(\frac{U}{4} + 2 (-\mu - \frac{U}{4})  e^{\beta(\mu + \frac{U}{2})} \\
+& + (\frac{U}{4} - 2\mu ) e^{2\beta \mu} \bigg) \\
+&Tr \bigg( (n_\uparrow + n_\downarrow ) e^{-\beta\mathcal{H} } \bigg) = e^{-\beta U / 4} \bigg(2 (-\mu - \frac{U}{4})  e^{\beta(\mu + \frac{U}{2})} \\
+& + (\frac{U}{4} - 2\mu ) e^{2\beta \mu} \bigg) \\
+&Tr \bigg( n_\uparrow n_\downarrow \bigg) = e^{-\beta U/4} e^{2\beta\mu}
+\end{split}
+\end{equation}
+
+The bottom line is that we are able to obtain \emph{exact} expressions for
+
+\begin{enumerate}
+\item the one-site density $\rho = \left\langle n_\uparrow \right\rangle + \left\langle n_\downarrow \right\rangle$, measuring the average occupation of each site.
+\begin{equation}
+\begin{split}
+\rho &= \frac{Tr \big[ (n_\uparrow + n_\downarrow ) e^{-\beta\mathcal{H}} \big]}{Z} \\
+&= \frac{2 e^{\beta(\frac{U}{2} + \mu)} + 2 e^{2\beta\mu}}{1 + 2 e^{\beta(\mu + \frac{U}{2})} + e^{2 \beta \mu}}
+\end{split}
+\end{equation}
+
+Note that when there is no chemical potential $\mu = 0$, we have $\rho = 1$ for any $U$, or $\beta$. This corresponds to half filling: the density of electrons is half its maximum possible value.
+
+\item the one-site energy $E = \left\langle \mathcal{H} \right\rangle$.
+\begin{equation}
+\begin{split}
+E &= \frac{Tr\bigg( \mathcal{H}e^{-\beta\mathcal{H} } \bigg)}{Z} \\
+&= \frac{ \frac{U}{4} + 2 ( -\mu - \frac{U}{4} ) e^{\beta(\frac{U}{2} + \mu )} + (\frac{U}{4} - 2\mu ) e^{2\beta\mu}}{1 + 2 e^{\beta (\frac{U}{2} + \mu )} + e^{2\beta\mu} } \\
+&= \frac{ \frac{U}{4} ( 1 + 2 e^{\beta (\frac{U}{2} + \mu )} + e^{2\beta\mu} )}{1 + 2 e^{\beta (\frac{U}{2} + \mu )} + e^{2\beta\mu} } \\
+&+ \frac{2(-\mu - \frac{U}{4}) e^{\beta(\frac{U}{2} + \mu)} - 2\mu e^{2\beta\mu} - 2\frac{U}{4} e^{\beta (\frac{U}{2} + \mu)} }{1 + 2 e^{\beta (\frac{U}{2} + \mu )} + e^{2\beta\mu}} \\
+&= \frac{U}{4} - \frac{ (2\mu - U) e^{\beta(\frac{U}{2} + \mu) } + 2\mu e^{2\beta\mu} }{1 + 2 e^{\beta (\frac{U}{2} + \mu )} + e^{2\beta\mu} }
+\end{split}
+\end{equation}
+which at half filling becomes
+
+\begin{equation}
+E = \frac{U}{4} - \frac{U}{2 ( 1 + e^{-\beta U /2} )}
+\end{equation}
+
+\item the double occupancy $\left\langle n_\uparrow n_\downarrow \right\rangle$.
+
+\begin{equation}
+\left\langle n_\uparrow n_\downarrow \right\rangle = \frac{Tr \big[ n_\uparrow n_\downarrow \big]}{Z} = \frac{e^{2\beta\mu}}{1 + 2 e^{\beta (\frac{U}{2} + \mu )} + e^{2\beta\mu}}
+\end{equation}
+which, at half filling, simplifies to
+
+\begin{equation}
+\left\langle n_\uparrow n_\downarrow \right\rangle = \frac{1}{2 ( 1 + e^{\beta U/2} )}
+\end{equation}
+
+Note that as either $U$ or $\beta$ increases the double occupancy tends to zero.
+\end{enumerate}
+
+\subsection{The non-interacting $\frac{t}{U} \rightarrow \infty$ limit}\paragraph{}
+
+In the $\frac{t}{U} \rightarrow \infty$ limit, the spin spaces become independent, and they may be considered separately. Thus we omit them in the Hamiltonian:
+
+\begin{equation}
+\mathcal{H} = -t \sum_{\left\langle i j \right\rangle} \big( c_i^\dagger c_j + c_j^\dagger c_i \big) - \mu \sum_i n_i
+\end{equation}
+which may be recast as a bilinear form
+
+\begin{equation}
+\mathcal{H} = \bm c^\dagger ( -t \bm K - \mu \bm I ) \bm c ,
+\end{equation}
+where
+
+\begin{equation}
+\bm c = \bigg[ c_1 \,\, c_2 \,\, ... \,\, c_N \bigg]^T \quad \bm c^\dagger = \bigg[c_1^\dagger \,\, c_2^\dagger \,\, ... c_N^\dagger \bigg]
+\end{equation}
+and $\bm I$ is the identity matrix. We also defined a matrix of zeros and ones specifying the hopping geometry $\bm K$. When writing down $\bm K$, we must specify the boundary conditions. Periodic boundary conditions (PBC) preserve a system's translational invariance and are advantageous because they reduce finite size effects. An example of a quantity which is measured more accurately is energy. In the thermodynamic limit, $N \rightarrow \infty$, the measured energy differs from the actual value by a correction of order $\mathcal{O}(\frac{1}{N^2})$ with PBC, while for open boundary conditions (OBC), the correction is of order $\mathcal{O}(\frac{1}{N})$. PBC have the property of giving site independent observables. For example, the electron density per site does not vary with PBC, but it varies with the distance to the edges of the lattice when we use OBC.
+
+Consider a rectangular two-dimensional lattice with $N_x \times N_y$ sites. Then, we have $\dim(\bm K) = N_x N_y \times N_x N_y $, and
+
+\begin{equation}
+\bm K = \bm I_y \otimes \bm K_x + \bm I_x \otimes \bm K_y ,
+\end{equation}
+where $\bm I_{x, y}$ are identity matrices of dimension $N_{x, y}$, respectively.
+
+For lattices in 1D or 2D, it is possible to find an exact eigendecomposition
+
+\begin{equation}
+\bm K = \bm F^T \bm \Lambda \bm F \quad \text{with}  \quad \bm F^T \bm F = \bm I ,
+\end{equation}
+where $\bm \Lambda = \text{diag}(\lambda_k)_{k = 1}^{N_x N_y}$ is a diagonal matrix of eigenvalues of $\bm K$. The Hamiltonian is diagonalized:
+
+\begin{equation}\label{eq:quadraticH}
+\mathcal{H} =\tilde{\bm c}^\dagger \big( -t \bm K - \mu \bm I \big) \tilde{\bm c} = \sum_k \varepsilon_k \tilde{n}_k ,
+\end{equation}
+where $\tilde{\bm c} = \bm F \bm c$ and $\tilde{\bm c}^\dagger = (\bm F \bm c)^\dagger$, and
+
+\begin{equation}
+\varepsilon_k = -t \lambda_k - \mu \quad \tilde{n}_k = \tilde{c}_k^\dagger \tilde{c}_k
+\end{equation}
+
+The $\tilde{c}$-operators are equally valid electron creation/annihilation operators, obeying the same anticommutation relations as the original operators $c_i$. While the original operators create/annihilate particles at specific (spatial) sites, the new ones create/annihilate particles with momentum $k$. Both sets of operators describe the same physics, however the interaction term in the Hubbard model is fairly complex to write in momentum space.
+
+\bigskip
+
+Now, it turns out that it is easy to evaluate the partition function for quadratic Hamiltonians. If $\mathcal{H} = \bm c^\dagger \bm H \bm c$, where $\bm H$ is a $N \times N$ Hermitian matrix, then we have that
+
+\begin{equation}\label{eq:trace_quadratic}
+Tr \big[ e^{-\beta \mathcal{H} } \big] = \prod_{i=1}^N ( 1 + e^{-\beta \lambda_{k_i} } ) ,
+\end{equation}
+where $\lambda_{k_i}$ are the eigenvalues of $\bm H$.
+
+\bigskip
+
+Thus, we would like to devise some approximation to transform the quartic term of the Hubbard model in a quadratic form. This will come shortly. Let us first finish the solution of the non-interacting case. We proceed by proving equation (\ref{eq:trace_quadratic}). Without loss of generality, let us consider $\bm H$ to be diagonal. Then, its eigenvalues coincide with the diagonal entries, so that $\bm H = \text{diag}(\lambda_{k_i} )$. The quadratic Hamiltonian may then be  diagonalized
+
+\begin{equation}
+\mathcal{H} = {\bm c}^\dagger \text{diag} (\lambda_{k_1}, \lambda_{k_2}, .., \lambda_{k_N}) \bm c = \sum_{i=1}^N \lambda_{k_i} n_{k_i}
+\end{equation}
+
+We continue by induction. When $N=1$, we have
+
+\begin{equation}
+\begin{split}
+Tr (e^{-\beta\mathcal{H} } ) &= \left\langle 0 \left| e^{-\beta \lambda_{k_1} n_{k_1}}  \right| 0 \right\rangle + \left\langle 1 \left| e^{-\beta \lambda_{k_1} n_{k_1}}   \right| 1 \right\rangle \\
+&= 1 + e^{-\beta \lambda_{k_1} }
+\end{split}
+\end{equation}
+
+Assuming that for $N-1$:
+
+\begin{equation}
+Tr \big[ e^{-\beta \sum_{i=1}^{N-1} \lambda_{k_i} n_{k_i} } \big] = \prod_{i=1}^{N-1} ( 1 + e^{-\beta \lambda_{k_i} } )
+\end{equation}
+we compute the trace for $i$ going up to $N$.
+
+\begin{equation}
+\begin{split}
+&Tr \big[ e^{-\beta \sum_{i=1}^{N-1} \lambda_{k_i} n_{k_i} } \big] = \\
+& \sum_{\{ k_i \}_{i=1}^{N} } \left\langle \psi_1^{k_1} \psi_2^{k_2} ... \psi_N^{k_N} \left| e^{-\beta \sum_{i=1}^N \lambda_{k_i} n_{k_i}}  \right| \psi_1^{k_1} \psi_2^{k_2} ... \psi_N^{k_N} \right\rangle = \\
+& \sum_{\{ k_i \}_{i=1}^{N-1} } \bigg( \left\langle \{\psi_i^{k_i}\} 0 \left| e^{-\beta \sum_{i=1}^N \lambda_{k_i} n_{k_i}} e^{-\beta \lambda_{k_N} n_{k_N}} \right| \{\psi_i^{k_i}\} 0 \right\rangle \\
+&+ \left\langle \{\psi_i^{k_i}\} 1 \left| e^{-\beta \sum_{i=1}^N \lambda_{k_i} n_{k_i}} e^{-\beta \lambda_{k_N} n_{k_N}} \right| \{\psi_i^{k_i}\} 1 \right\rangle \bigg) \\
+&= (1 + e^{-\beta \lambda_{k_N} } ) \sum_{\{ k_i \}_{i=1}^{N-1} } \left\langle \{\psi_i^{k_i}\} \left| e^{-\beta \lambda_{k_i} n_{k_i}} \right| \{\psi_i^{k_i}\} \right\rangle \\
+&= (1 + e^{-\beta \lambda_{k_N} } ) \prod_{i=1}^{N-1} (1 + e^{-\beta \lambda_{k_i} } ) \\
+&= \prod_{i=1}^{N} (1 + e^{-\beta \lambda_{k_i} } )
+\end{split}
+\end{equation}
+
+To complete the proof we note that for any $\bm H$, there exists a unitary matrix $\bm Q$, such that $\bm Q^T \bm H \bm Q = \bm \Lambda = \text{diag}(\lambda_{k_i})$. Let $\tilde{\bm c} = \bm Q \bm c$, and $\tilde{n_i} = \tilde{c_i}^\dagger \tilde{c_i}$. Then, we find
+
+\begin{equation}
+\mathcal{H} = \bm c^\dagger \bm H \bm c = \bm \tilde{\bm c}^\dagger \bm \Lambda \tilde{\bm c} = \sum_{i=1}^N \lambda_{k_i} \tilde{n}_{k_i}
+\end{equation}
+
+The trace is independent of the choice of basis functions. Thus, we have
+
+\begin{equation}
+\begin{split}
+Tr ( e^{-\beta \mathcal{H} } ) &= Tr \bigg( \prod_{i=1}^N e^{-\beta \lambda_{k_i} \tilde{n}_{k_i} } \bigg) \\
+&= \prod_{i=1}^N \bigg( 1 + e^{-\beta \lambda_{k_i} } \bigg)
+\end{split}
+\end{equation}
+
+This result may be applied to compute the partition corresponding to the quadratic Hamiltonian defined in equation (\ref{eq:quadraticH}).
+
+\begin{equation}
+Z = \prod_k ( 1 + e^{-\beta \varepsilon_k} )
+\end{equation}
+and it is again possible to find closed form expressions for observables of interest.
+
+\begin{enumerate}
+\item the density, or average occupation of each site, $\rho$.
+
+\begin{equation}
+\rho = \left\langle n \right\rangle = \left\langle \tilde{n} \right\rangle = \frac{1}{N} \sum_{k=1}^N \left\langle \tilde{n}_k \right\rangle  = \frac{1}{N} \sum_{k=1}^N  \frac{1}{1 + e^{\beta\varepsilon_k}}
+\end{equation}
+
+\item the energy $E = \left\langle \mathcal{H} \right\rangle$.
+
+\begin{equation}
+E = \frac{1}{N} \sum_k \frac{\varepsilon_k}{1 + \varepsilon_k}
+\end{equation}
+
+\item the Green function, which plays a key role in computing other quantities, such as correlation functions.
+
+\begin{equation}
+G_{lj} = \left\langle c_l c_j^\dagger \right\rangle = \frac{1}{N} \sum_k e^{ i k \cdot ( l - j ) } ( 1 - f_k ),
+\end{equation}
+where $f_k = \big(1 + e^{\beta(\varepsilon_k - \mu)} \big)^{-1}$ is the Fermi-Dirac distribution. Note that the Green function, like the Hamiltonian, is translationally invariant: $G_{lj} = G_{l-j}$. When using PBC, no site is singled out, they are all equivalent.
+\end{enumerate}
+
+\section{Simulations}\label{hubbQMC}\paragraph{}
+
+The Monte Carlo method is ubiquitous. Its central idea is to use randomness to produce accurate estimates of deterministic integrals. The term was coined by Nicolas Metropolis in 1949, first appearing in a seminal paper, in which it was described as a \say{statistical approach to the study of differential equations, or more generally, of integro-differential equations that occur in various branches of sciences}\cite{metropolis}. Although it was used as early as 1777 in an experiment known as Buffon's needle - where one obtains an estimate of the constant $\pi$ by repeatedly throwing  a needle randomly onto a sheet of paper with evenly spaced lines - it was crucially developed in the Los Alamos National Laboratory during World War II where the development of the first atomic bomb was completed, the primary objective of the Manhattan Project. The method is particularly useful when one wants to sample from a probability distribution in an exponentially large state space. In fact, it can in principle be used to solve any problem allowing a probabilistic formulation.
+
+\subsection{Classical vs Monte Carlo}\paragraph{}
+
+The law of large numbers affords an approximation to integrals which can be written as an expectation of a random variable. Upon drawing enough independent samples from the corresponding distribution, the sample mean gets arbitrarily close to the integral at stake.
+
+\begin{equation}\label{eq:int_mean}
+\mathbb{E} [f(X)] = \int dx f(x) p(x),
+\end{equation}
+where $p(x)$ is the distribution of $X$. 
+
+We could simply draw $M$ independent and identically distributed samples $x_{1,...M}$ from $p(x)$ and approximate the integral as
+
+\begin{equation}
+\frac{1}{M} \sum_{k=1}^M f (x_k) , 
+\end{equation}
+which in most cases converges to the desired expectation, as long as $M$ is large enough. How large?
+
+\begin{equation}\label{eq:variance}
+\text{Var}\bigg( \frac{1}{M} \sum_{k=1}^M f(x_k) \bigg) = \frac{1}{M} \text{Var}\bigg( f(x_1) \bigg) \sim \mathcal{O}\bigg(\frac{1}{M}\bigg)
+\end{equation}
+
+Thus, the correction to the sample mean is of order $\mathcal{O}(M^{-1/2})$.
+
+How do we sample from an arbitrary distribution $p(X)$? The idea is to first make an educated choice of a Markov Chain with the prescribed stationary distribution from which we ultimately desire to sample from, $p(X)$. After a sufficiently high number of steps, a Markov Chain Monte Carlo (MCMC) algorithm generates samples from the target distribution. Imposing some conditions on this Markov Chain, namely that it should be irreducible, aperiodic and positive recurrent, the ergodic theorem guarantees that the empirical measures of the aforementioned sampler approach the target stationary distribution. Another important condition to impose on this Markov Chain is detailed balance. Let the transition matrix be $\bm P = [p_{ij}]$, and the state space $\Omega$ be $\{\pi_i | i=1, ..., |\Omega| \}$, where $|\Omega|$ is the total number of possible states. Then, the condition of detailed balance is defined for all $i, j$ as
+
+\begin{equation}
+p_{ij} \pi_j = p_{ji} \pi_i
+\end{equation}
+
+Crucially, Monte Carlo methods employ \emph{importance sampling}. It turns out that we can improve upon our estimate of $\mathbb{E} [f(X)]$ by introducing a separate distribution $q(x)$, and defining the weight function as $w(x) = p(x)/ q(x)$. Then, we can rewrite equation (\ref{eq:int_mean}):
+
+\begin{equation}
+\mathbb{E} [f(X)] = \int dx f(x) q(x) w(x) = \mathbb{E} [f(Y) w(Y)],
+\end{equation}
+with $Y \sim q$, i.e. the random variable $Y$ follows the distribution $q(Y)$
+
+It appears as though we haven't done anything. However, by choosing $q$ wisely, we can actually reduce the variance we computed in equation (\ref{eq:variance}):
+
+\begin{equation}
+\text{Var}\bigg( \frac{1}{M} \sum_{k=1}^M f(y_k) w(y_k \bigg) = \frac{1}{M} \text{Var}\bigg( f(y_1) w(y_1) \bigg)
+\end{equation}
+
+Since we didn't make any assumptions about $q(Y)$, it may be chosen so as to minimize the variance, hence the error of the Monte Carlo estimator, improving the approximation of the expectation. However, note that the error remains of order $\mathcal{O}\big(\frac{1}{\sqrt{M}}\big)$.
+
+The idea of the Quantum (Classical) Monte Carlo method is to simulate the random quantum (thermal) fluctuations of the system, as it oscillates between states in a given time frame \cite{newman_barkema}. Instead of visiting these states uniformly, the algorithm applies \emph{importance sampling}: the most relevant part of the phase space is sampled more frequently, overcoming the seemingly exponential complexity of computing a sample mean numerically. Even though only a small fraction of the system's states are sampled, we obtain an accurate estimate of physical quantities of interest, namely energy, and correlation functions.
+
+QMC generally provides an accurate approximation of the solution of the quantum many-body problem. When relativistic effects are negligible, which is the case of most condensed matter systems, any physical system can be described by a many-body Schr\"odinger equation. The issue is that the many-body wave function lives in the corresponding Hilbert space that is  exponentially large in the number of particles. For example, the number of possible states of a physical system whose configuration space rests on a two-dimensional lattice is exponentially large. The method described above is applied to approximate the multidimensional integrals arising upon formulating the quantum many-body problem in this space.
+
+One can set up a na\"ive mean field theory in which the many body wave function is approximated by an antisymmetric function of one body wave functions\footnote{This corresponds to the Hartree-Fock approximation that we used to derive the Hubbard Hamiltonian in section \ref{hubbardHamiltonian}.}. One of the drawbacks of this approach is that the effect of  correlations is not captured. Fermionic QMC goes beyond mean field theory,  capturing the phenomena occuring within strongly correlated electronic systems. For non-frustrated boson systems, a polynomially scaling algorithm leads to an exact solution. For a fermionic system, such as the TMD nanoribbon, the algorithm usually provides an accurate yet not exact solution, which would in general require exponential computing time. This is due to the so called sign problem. We will discuss this numerical issue later. 
+
+\subsection{Variational Techniques}\paragraph{}
+
+It is natural to combine a sampling scheme, such as the Metropolis algorithm, with a variational principle. The goal then becomes that of finding a variational many-fermion wave function which can be optimized so that ultimately we obtain as accurate as possible an estimate of the ground state of the system and then use it to evaluate averages of physical observables for zero temperature, $T=0$.
+
+The parameters $[\alpha_i]$ of a trial wave function $\phi(\bm r)$ are optimized according to the variational principle
+
+\begin{equation}
+E[\alpha_i] = \frac{\left\langle \phi \left| \mathcal{H} \right| \phi \right\rangle}{\left\langle \phi | \phi \right\rangle} \ge E_0,
+\end{equation}
+where $E_0$ is the ground state energy.
+
+In fact, expanding in terms of the eigenstates of the hamiltonian $\{ \psi_n (\bm r) \}$, a complete basis set:
+
+\begin{equation}
+\phi (\bm r) = \sum_{n= 0}^{\infty} a_n \psi_n (\bm r) ,
+\end{equation}
+and plugging it back into the variational principle, subject to $E_n \ge E_0 ,\, n > 0$ and $<\psi_n | \psi_m> = \delta_{nm}$ we obtain
+
+\begin{equation}
+E[\alpha_i] = \frac{\sum_n a_n^2 E_n}{\sum_n a_n^2 } \ge E_0
+\end{equation}
+
+The expectation is the integral
+
+\begin{equation}
+E[\alpha_i] = \frac{\int \phi^\star (\bm r) \mathcal{H} \phi (\bm r) d\bm r}{\int | \phi (\bm r') |^2 d\bm r'} \equiv \int W(\bm r) E_L(\bm r) d\bm r ,
+\end{equation}
+where the integrand is a quantity which may be regarded as a distribution function 
+
+\begin{equation}
+W(\bm r) = \frac{|\phi (\bm r)|^2}{\int |\phi(\bm r')|^2 d\bm r'}
+\end{equation}
+multiplied by a local energy of the system at $\bm r$:
+
+\begin{equation}
+ E_L(\bm r) = \frac{\mathcal{H}\phi(\bm r)}{\phi (\bm r)}
+\end{equation}
+
+Given $W(\bm r)$ and $E_L(\bm r)$, one can in principle evaluate $E[\alpha_i]$. In practice, $\phi (\bm r) $ is parametrized depending on the physical model at play, and the variational parameters $\{\alpha_i\}$ in the trial wave function are optimized by minimizing $E[\alpha_i]$.\par
+
+The Metropolis algorithm, for instance, may be used to sample a set of points $\{\bm r_k\}_{i=1}^M$, where $M$ is the number of Monte Carlo \say{measurements}, and the evaluation of the expectation value $E[\alpha_i]$ in each QMC step for each set of variational parameters is the equivalent of computing an average of a classical quantity at a given temperature in classical Monte Carlo. Systematically, we optimize the wave function based on the Euler-Lagrange equation
+
+\begin{equation}
+\frac{\delta E[\alpha_i]}{\delta \alpha_j} = 0
+\end{equation}
+
+\subsection{Diffusion Monte Carlo}\label{subsec:dmc}\paragraph{}
+
+The variational approach is limited by the use of a trial wave function $\phi (\bm r)$: we may not have enough information to even construct a reliable variational wave function in the first place. 
+
+Diffusion Quantum Monte Carlo (DQMC) allows the simulation of a many-body system even when having only a limited \emph{a priori} knowledge of the system's physical properties. The problem is that while it is exact for many-boson systems, it is only approximate for many-fermion systems. The idea is to map the Schr\"odinger equation onto  an imaginary-time diffusion equation. Excited states are then filtered out by a diffusion process as time passes. In imaginary-time $\tau = - i t$, the solution to Schr\"odinger's equation in terms of a formal series expansion in the eigenfunctions of the hamiltonian becomes a series of transients $e^{-E_n \tau}, \, n \in \mathbb{N}$. The longest lasting of these is the ground state. \cite{kosztin} \par
+
+The idea of DQMC is to generate samples using the exact ground state wave function $\phi_0 (\bm r)$ \cite{vmc}. The associated exact energy $E_0$ is the matrix element of the hamiltonian calculated using a trial wave function and the ground state wave function.
+
+\begin{equation}
+\begin{split}
+&E_0 = \frac{ \left\langle \phi_0 | E_0 | \phi \right\rangle}{< \phi_0 | \phi >} = \\
+&= \frac{\left\langle \phi_0 | \mathcal{H} | \phi \right\rangle}{ \left\langle\phi_0 | \phi \right\rangle} = \frac{\int d\bm r \phi_0^\star (\bm r) \phi (\bm r) E_L (\bm r)}{\int d\bm r\phi_0^\star (\bm r) \phi (\bm r)}
+\end{split}
+\end{equation}
+
+Note that using this trick we avoid the computation of $\mathcal{H} \phi_0 = E_0 \phi_0$, that is, the ground state energy. Instead, we approximate the integral by considering $M$ configuration samples $\bm r_{k = 1,..., M}$ in a similar spirit to that of variational QMC. Notice that the integral consists of a local energy of the trial wave function $E_L (\bm r) = \frac{\mathcal{H} \phi (\bm r)}{\phi (\bm r)}$ averaged over a mixed distribution from which we draw a sample of points $\bm r_{k=1,...M}$.
+
+\begin{equation}
+f(\bm r) = \frac{\phi_0^\star (\bm r) \phi (\bm r) }{ \int d\bm r  \phi_0 (\bm r) \phi (\bm r)}
+\end{equation}
+
+Take a single particle in 1D. Performing a Wick rotation - effectively going to imaginary time - and shifting the energy, Schr\"odinger's equation becomes
+
+\begin{equation}
+\partial_\tau \psi = -\frac{1}{2m} \partial^2_x \psi - \bigg[ V(x) - E_T \bigg] \psi
+\end{equation}
+
+The exact ground state wave function $\phi_0$ is obtained as the longest lasting transient state in imaginary time; we are interested in the asymptotic behavior of the series expansion constituting the formal solution of Schr\"odinger's equation
+
+\begin{equation}
+\psi (x, \tau) = \sum_{n=0}^{\infty} c_n \Phi_n (x) e^{-(E_n - E_T)\tau}
+\end{equation}
+
+Imaginary time evolution is governed by
+
+\begin{equation}\label{eq:im_ev}
+\begin{split}
+&| \psi (t) > = \lim_{\tau \rightarrow \infty} \sum_i e^{-(E_i - E_T) \tau} |\psi_i > <\psi_i | \psi > = \\
+&= \lim_{\tau \rightarrow \infty} e^{-(E_0 - E_T)\tau} | \phi_0 >< \phi_0 | \psi > 
+\end{split}
+\end{equation}
+
+
+If $E_T > E_0$ the wave function diverges exponentially fast: $\lim_{\tau \rightarrow \infty} \psi ( x, \tau) = \infty$. Similarly, for $E_T < E_0$ it vanishes exponentially fast: $
+\lim_{\tau \rightarrow \infty} \psi ( x, \tau) = 0$. However, if $E_T = E_0$ the wave function converges to the ground state one up to a constant factor.
+
+\begin{equation}\label{eq:dmc}
+\lim_{\tau \rightarrow \infty} \psi ( x, \tau) = c_0 \phi_0 (x)
+\end{equation}
+
+DQMC makes use of equation (\ref{eq:dmc}), approximating $\phi_0(x)$ by $\psi (x, \tau)$ for sufficiently long time. The only requirement is that $\psi (x, \tau)$ and $\phi_0(x)$ overlap significantly so that $c_0$ is large enough to be numerically measurable, and we can always center a positive trial wave function in a region where $\phi_0(x)$ is large enough. This is always possible for a single particle,  but note that it might fail for a many-fermion system for which the wave function crosses a number of nodes due to its antisymmetric nature. This is an example of the sign problem.\par
+
 
 \subsection{Auxiliary field QMC}\paragraph{}
 
-We will now discuss a numerical method to simulate the Hubbard model: auxiliary field quantum Monte Carlo. This technique allows us to circumvent the sign problem. The sign problem is due to the antisymmetry of the many-electron wave function leading to oscillations in the sign of the quantities that we are interested in measuring. These oscillations deem the algorithm exponentially complex in the size of the system, in general, but it possible to overcome this hurdle for a class of models.
+We will now discuss a numerical method to simulate the Hubbard model. Among the various methods belonging to the family of QMC methods, auxiliary field QMC allows us to circumvent the sign problem for the half filled Hubbard model. The sign problem is an uncontrolled numerical error due to the antisymmetry of the many-electron wave function, leading to oscillations in the sign of the quantities that we are interested in measuring. These oscillations deem the algorithm exponentially complex in the size of the system, in general, but it possible to overcome this hurdle for a class of models, namely the Hubbard model at half filling. The difficulty lies in computing averages of quantities that are very close to zero, on average, but have a large variance, i.e. $\sigma_X / \left\langle X \right\rangle \gg 1$.
+
+We seek a computable approximation of the projection operator $\mathcal{P}$ defined in equation (\ref{eq:projection}). As we shall see, it is found by using a discrete Hubbard-Stratonovich transformation. This transformation introduces an auxiliary field, and we use Monte Carlo to sample configurations from the distribution corresponding to this extended phase space.
+
+For now, let us assume half filling $\mu = 0$, so that there is no sign problem. In fact, many interesting phenomena occur at half filling, for example magnetic ordering and the Mott metal-insulator transition.
+
+\subsection{Hubbard-Stratonovich transformation}\paragraph{}
+
+In section \ref{exactSolutions}, we found exact solutions for particular instances of the Hubbard model by finding a closed form a closed form for the partition function. When devising a numerical method, a good sanity check is to verify that it satisfactorily approximates the partition function.
+
+The operators $\mathcal{H}_K$ and $\mathcal{H}_V$ of equation (\ref{eq:hubbard}) do not commute. This impedes us from factorizing the exponential of their sum $e^{-\beta (\mathcal{H}_K + \mathcal{H}_V)}$ exactly. The Trotter-Suzuki decomposition leads to the sought approximate factorization. 
 
 \end{document}
