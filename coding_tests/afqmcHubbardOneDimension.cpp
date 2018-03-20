@@ -1,5 +1,5 @@
 //
-//  afqmc_1st_test.cpp
+//  afqmcHubbardOneDimension.cpp
 //  
 //
 //  Created by Francisco Brito on 09/03/2018.
@@ -187,7 +187,7 @@ int main()
     
     double detOldPlus = MPlusOld.determinant();
     double detOldMinus = MMinusOld.determinant();
-    double detsProdOld = detOldPlus * detOldMinus;
+    double detsProdOld = abs( detOldPlus * detOldMinus );
     double detsProdNew;
     double detNewPlus;
     double detNewMinus;
@@ -247,7 +247,7 @@ int main()
 
         detNewPlus = MPlusNew.determinant();
         detNewMinus = MMinusNew.determinant();
-        detsProdNew = detNewPlus * detNewMinus;
+        detsProdNew = abs(detNewPlus * detNewMinus);
         acceptanceRatio = detsProdNew / detsProdOld;
         
         if (printsOn == 1)
@@ -257,6 +257,10 @@ int main()
         
         if (acceptanceRatio >= 1 )
         {
+            if (printsOn == 1)
+            {
+                cout << "Accepted\n" << endl;
+            }
             // revert changes
             BpNew[l_chosen] = BpOld[l_chosen];
             BmNew[l_chosen] = BmOld[l_chosen];
@@ -273,7 +277,7 @@ int main()
             
             if (printsOn == 1)
             {
-            cout << "Random number decides whether or not to accept: " << decisionMaker << endl;
+            cout << "\nRandom number decides whether or not to accept: " << decisionMaker << endl;
             }
             
             if (decisionMaker <= acceptanceRatio) // else do nothing
@@ -288,7 +292,7 @@ int main()
                 
                 if (printsOn == 1)
                 {
-                    cout << "Accepted" << endl;
+                    cout << "Accepted\n" << endl;
                 }
             }
             else
