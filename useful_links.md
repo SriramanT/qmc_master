@@ -84,4 +84,12 @@ Superconductivity in graphene.
 
 Overview of QMC methods.
 
+## Trotter Suzuki decomposition. Wikipedia has a very interesting page on it
+
+https://en.wikipedia.org/wiki/Time-evolving_block_decimation#Errors_coming_from_the_Suzuki-Trotter_expansion
+
+## Zassenhaus formula
+
+https://en.wikipedia.org/wiki/Baker%E2%80%93Campbell%E2%80%93Hausdorff_formula
+
 

@@ -258,7 +258,7 @@ Let's suppose we have the simplest uniform nearest neighbor hopping model. Going
 Band theory was found to be flawed soon after it was introduced. The picture it proposes is simple and generally works pretty well. The solutions of the Schr\"odinger for free electrons in a periodic potential $U(\bm r)$, such that $U(\bm r) = U(\bm r + \bm R)$,
 
 \begin{equation}\label{eq:schrodinger}
-\bigg[ -\frac{\hbar^2}{2m} \nabla^2 + U(\bm r) \bigg] \psi (\bm r) = \varepsilon \psi (\bm r)
+\bigg[ -\frac{1}{2m} \nabla^2 + U(\bm r) \bigg] \psi (\bm r) = \varepsilon \psi (\bm r)
 \end{equation}
 are given by Bloch's theorem: $\psi_{\bm k} (\bm r) = e^{i\bm k \cdot \bm r} u_{\bm k} (\bm r)$. Replacing this wave function in equation (\ref{eq:schrodinger}), we obtain a differential equation for $u_{\bm k} (\bm r)$, which has in general an infinite number of solutions. We label them with an index $n$, which we call the band index. To each solution there corresponds a function $\varepsilon_{n\bm k}$. The set of these functions is known as the band structure. Since electrons are taken to be independent in band theory, the N-electron eigenstates are obtained by placing an electron in each quantum state. Each state is labelled by its energy $\varepsilon_{n\bm k \sigma}$. Since our model Hamiltonian does not couple spins (via an electron interaction, for example) and assuming there is no external magnetic field and that the system has an inversion center, $\varepsilon_{n\bm k \uparrow} = \varepsilon_{n\bm k \downarrow}$. Note that in general there might energies for which there is no corresponding $\varepsilon_{n\bm k \sigma}$. These form intervals called forbidden bands\footnote{We disregard surface states that may have energies that fall in the forbidden bands.}. Thus, the ground state of our model may normally be obtained by filling the energy levels starting from the lowest energy state. Two cases are particularly relevant:
 \begin{itemize}
@@ -302,18 +302,18 @@ where:
 A given physical observable of interest $\mathcal{O}$, such as the spin-spin correlation, or the magnetic susceptibility may be computed formally by
 
 \begin{equation}
-\left\langle \mathcal{O} \right\rangle = Tr ( \mathcal{O} \mathcal{P} )
+\left\langle \mathcal{O} \right\rangle = \text{Tr} ( \mathcal{O} \mathcal{P} )
 \end{equation}
 where
 
 \begin{equation}\label{eq:projection}
-\mathcal{P} \equiv \frac{1}{Z} e^{-\beta \mathcal{H} } , \text{ with } Z = Tr ( e^{-\beta \mathcal{H} } )
+\mathcal{P} \equiv \frac{1}{Z} e^{-\beta \mathcal{H} } , \text{ with } Z = \text{Tr} ( e^{-\beta \mathcal{H} } )
 \end{equation}
 
 The trace is taken over the Hilbert space corresponding to all possible configurations of the lattice occupation. Defining an orthonormal basis of this Hilbert space $\{ | \psi_i \rangle | i = 1, ... D \} $, where $D$ is the dimension of the Hilbert space, the partition function reads
 
-\begin{equation}
-Tr ( e^{-\beta \mathcal{H} } )= \sum_i \left\langle \psi_i | e^{-\beta \mathcal{H} } | \psi_i \right\rangle
+\begin{equation}\label{eq:z_asEigen}
+\text{Tr} ( e^{-\beta \mathcal{H} } )= \sum_i \left\langle \psi_i | e^{-\beta \mathcal{H} } | \psi_i \right\rangle
 \end{equation}
 
 There are four possible states at each site in the Hubbard model: $\left| \,\, \right\rangle$, $\left|\uparrow \right\rangle$, $\left|\downarrow\right \rangle$, $\left|\uparrow \downarrow \right\rangle $, corresponding, respectively, to no electron, spin up or spin down electron, and two electrons occupying the site. The potential energy operator acts as follows
@@ -416,7 +416,7 @@ and this is one of the rare situations in which it is possible to explicitly wri
 
 \begin{equation}
 \begin{split}
-Z &= Tr ( e^{-\beta\mathcal{H} } ) = \sum_i \left\langle \psi_i \left|e^{-\beta \mathcal{H} } \right| \psi_i \right\rangle \\
+Z &= \text{Tr} ( e^{-\beta\mathcal{H} } ) = \sum_i \left\langle \psi_i \left|e^{-\beta \mathcal{H} } \right| \psi_i \right\rangle \\
 &= e^{-\beta U / 4} \bigg(1 + 2 e^{\beta(\mu + \frac{U}{2})} + e^{2 \beta \mu} \bigg)
 \end{split}
 \end{equation}
@@ -437,11 +437,11 @@ From these we can compute some useful traces
 
 \begin{equation}
 \begin{split}
-&Tr \bigg( \mathcal{H} e^{-\beta\mathcal{H} } \bigg) = e^{-\beta U / 4} \bigg(\frac{U}{4} + 2 (-\mu - \frac{U}{4})  e^{\beta(\mu + \frac{U}{2})} \\
+&\text{Tr} \bigg( \mathcal{H} e^{-\beta\mathcal{H} } \bigg) = e^{-\beta U / 4} \bigg(\frac{U}{4} + 2 (-\mu - \frac{U}{4})  e^{\beta(\mu + \frac{U}{2})} \\
 & + (\frac{U}{4} - 2\mu ) e^{2\beta \mu} \bigg) \\
-&Tr \bigg( (n_\uparrow + n_\downarrow ) e^{-\beta\mathcal{H} } \bigg) = e^{-\beta U / 4} \bigg(2 (-\mu - \frac{U}{4})  e^{\beta(\mu + \frac{U}{2})} \\
+&\text{Tr} \bigg( (n_\uparrow + n_\downarrow ) e^{-\beta\mathcal{H} } \bigg) = e^{-\beta U / 4} \bigg(2 (-\mu - \frac{U}{4})  e^{\beta(\mu + \frac{U}{2})} \\
 & + (\frac{U}{4} - 2\mu ) e^{2\beta \mu} \bigg) \\
-&Tr \bigg( n_\uparrow n_\downarrow \bigg) = e^{-\beta U/4} e^{2\beta\mu}
+&\text{Tr} \bigg( n_\uparrow n_\downarrow \bigg) = e^{-\beta U/4} e^{2\beta\mu}
 \end{split}
 \end{equation}
 
@@ -451,7 +451,7 @@ The bottom line is that we are able to obtain \emph{exact} expressions for
 \item the one-site density $\rho = \left\langle n_\uparrow \right\rangle + \left\langle n_\downarrow \right\rangle$, measuring the average occupation of each site.
 \begin{equation}
 \begin{split}
-\rho &= \frac{Tr \big[ (n_\uparrow + n_\downarrow ) e^{-\beta\mathcal{H}} \big]}{Z} \\
+\rho &= \frac{\text{Tr} \big[ (n_\uparrow + n_\downarrow ) e^{-\beta\mathcal{H}} \big]}{Z} \\
 &= \frac{2 e^{\beta(\frac{U}{2} + \mu)} + 2 e^{2\beta\mu}}{1 + 2 e^{\beta(\mu + \frac{U}{2})} + e^{2 \beta \mu}}
 \end{split}
 \end{equation}
@@ -461,7 +461,7 @@ Note that when there is no chemical potential $\mu = 0$, we have $\rho = 1$ for 
 \item the one-site energy $E = \left\langle \mathcal{H} \right\rangle$.
 \begin{equation}
 \begin{split}
-E &= \frac{Tr\bigg( \mathcal{H}e^{-\beta\mathcal{H} } \bigg)}{Z} \\
+E &= \frac{\text{Tr}\bigg( \mathcal{H}e^{-\beta\mathcal{H} } \bigg)}{Z} \\
 &= \frac{ \frac{U}{4} + 2 ( -\mu - \frac{U}{4} ) e^{\beta(\frac{U}{2} + \mu )} + (\frac{U}{4} - 2\mu ) e^{2\beta\mu}}{1 + 2 e^{\beta (\frac{U}{2} + \mu )} + e^{2\beta\mu} } \\
 &= \frac{ \frac{U}{4} ( 1 + 2 e^{\beta (\frac{U}{2} + \mu )} + e^{2\beta\mu} )}{1 + 2 e^{\beta (\frac{U}{2} + \mu )} + e^{2\beta\mu} } \\
 &+ \frac{2(-\mu - \frac{U}{4}) e^{\beta(\frac{U}{2} + \mu)} - 2\mu e^{2\beta\mu} - 2\frac{U}{4} e^{\beta (\frac{U}{2} + \mu)} }{1 + 2 e^{\beta (\frac{U}{2} + \mu )} + e^{2\beta\mu}} \\
@@ -477,7 +477,7 @@ E = \frac{U}{4} - \frac{U}{2 ( 1 + e^{-\beta U /2} )}
 \item the double occupancy $\left\langle n_\uparrow n_\downarrow \right\rangle$.
 
 \begin{equation}
-\left\langle n_\uparrow n_\downarrow \right\rangle = \frac{Tr \big[ n_\uparrow n_\downarrow \big]}{Z} = \frac{e^{2\beta\mu}}{1 + 2 e^{\beta (\frac{U}{2} + \mu )} + e^{2\beta\mu}}
+\left\langle n_\uparrow n_\downarrow \right\rangle = \frac{\text{Tr} \big[ n_\uparrow n_\downarrow \big]}{Z} = \frac{e^{2\beta\mu}}{1 + 2 e^{\beta (\frac{U}{2} + \mu )} + e^{2\beta\mu}}
 \end{equation}
 which, at half filling, simplifies to
 
@@ -537,7 +537,7 @@ The $\tilde{c}$-operators are equally valid electron creation/annihilation opera
 Now, it turns out that it is easy to evaluate the partition function for quadratic Hamiltonians. If $\mathcal{H} = \bm c^\dagger \bm H \bm c$, where $\bm H$ is a $N \times N$ Hermitian matrix, then we have that
 
 \begin{equation}\label{eq:trace_quadratic}
-Tr \big[ e^{-\beta \mathcal{H} } \big] = \prod_{i=1}^N ( 1 + e^{-\beta \lambda_{k_i} } ) ,
+\text{Tr} \big[ e^{-\beta \mathcal{H} } \big] = \prod_{i=1}^N ( 1 + e^{-\beta \lambda_{k_i} } ) ,
 \end{equation}
 where $\lambda_{k_i}$ are the eigenvalues of $\bm H$.
 
@@ -553,7 +553,7 @@ We continue by induction. When $N=1$, we have
 
 \begin{equation}
 \begin{split}
-Tr (e^{-\beta\mathcal{H} } ) &= \left\langle 0 \left| e^{-\beta \lambda_{k_1} n_{k_1}}  \right| 0 \right\rangle + \left\langle 1 \left| e^{-\beta \lambda_{k_1} n_{k_1}}   \right| 1 \right\rangle \\
+\text{Tr} (e^{-\beta\mathcal{H} } ) &= \left\langle 0 \left| e^{-\beta \lambda_{k_1} n_{k_1}}  \right| 0 \right\rangle + \left\langle 1 \left| e^{-\beta \lambda_{k_1} n_{k_1}}   \right| 1 \right\rangle \\
 &= 1 + e^{-\beta \lambda_{k_1} }
 \end{split}
 \end{equation}
@@ -561,13 +561,13 @@ Tr (e^{-\beta\mathcal{H} } ) &= \left\langle 0 \left| e^{-\beta \lambda_{k_1} n_
 Assuming that for $N-1$:
 
 \begin{equation}
-Tr \big[ e^{-\beta \sum_{i=1}^{N-1} \lambda_{k_i} n_{k_i} } \big] = \prod_{i=1}^{N-1} ( 1 + e^{-\beta \lambda_{k_i} } )
+\text{Tr} \big[ e^{-\beta \sum_{i=1}^{N-1} \lambda_{k_i} n_{k_i} } \big] = \prod_{i=1}^{N-1} ( 1 + e^{-\beta \lambda_{k_i} } )
 \end{equation}
 we compute the trace for $i$ going up to $N$.
 
 \begin{equation}
 \begin{split}
-&Tr \big[ e^{-\beta \sum_{i=1}^{N-1} \lambda_{k_i} n_{k_i} } \big] = \\
+&\text{Tr} \big[ e^{-\beta \sum_{i=1}^{N-1} \lambda_{k_i} n_{k_i} } \big] = \\
 & \sum_{\{ k_i \}_{i=1}^{N} } \left\langle \psi_1^{k_1} \psi_2^{k_2} ... \psi_N^{k_N} \left| e^{-\beta \sum_{i=1}^N \lambda_{k_i} n_{k_i}}  \right| \psi_1^{k_1} \psi_2^{k_2} ... \psi_N^{k_N} \right\rangle = \\
 & \sum_{\{ k_i \}_{i=1}^{N-1} } \bigg( \left\langle \{\psi_i^{k_i}\} 0 \left| e^{-\beta \sum_{i=1}^N \lambda_{k_i} n_{k_i}} e^{-\beta \lambda_{k_N} n_{k_N}} \right| \{\psi_i^{k_i}\} 0 \right\rangle \\
 &+ \left\langle \{\psi_i^{k_i}\} 1 \left| e^{-\beta \sum_{i=1}^N \lambda_{k_i} n_{k_i}} e^{-\beta \lambda_{k_N} n_{k_N}} \right| \{\psi_i^{k_i}\} 1 \right\rangle \bigg) \\
@@ -587,7 +587,7 @@ The trace is independent of the choice of basis functions. Thus, we have
 
 \begin{equation}
 \begin{split}
-Tr ( e^{-\beta \mathcal{H} } ) &= Tr \bigg( \prod_{i=1}^N e^{-\beta \lambda_{k_i} \tilde{n}_{k_i} } \bigg) \\
+\text{Tr} ( e^{-\beta \mathcal{H} } ) &= \text{Tr} \bigg( \prod_{i=1}^N e^{-\beta \lambda_{k_i} \tilde{n}_{k_i} } \bigg) \\
 &= \prod_{i=1}^N \bigg( 1 + e^{-\beta \lambda_{k_i} } \bigg)
 \end{split}
 \end{equation}
@@ -609,7 +609,7 @@ and it is again possible to find closed form expressions for observables of inte
 \item the energy $E = \left\langle \mathcal{H} \right\rangle$.
 
 \begin{equation}
-E = \frac{1}{N} \sum_k \frac{\varepsilon_k}{1 + \varepsilon_k}
+E = \frac{1}{N} \sum_k \frac{\varepsilon_k}{1 + e^{\beta\varepsilon_k}}
 \end{equation}
 
 \item the Green function, which plays a key role in computing other quantities, such as correlation functions.
@@ -649,7 +649,7 @@ Thus, the correction to the sample mean is of order $\mathcal{O}(M^{-1/2})$.
 How do we sample from an arbitrary distribution $p(X)$? The idea is to first make an educated choice of a Markov Chain with the prescribed stationary distribution from which we ultimately desire to sample from, $p(X)$. After a sufficiently high number of steps, a Markov Chain Monte Carlo (MCMC) algorithm generates samples from the target distribution. Imposing some conditions on this Markov Chain, namely that it should be irreducible, aperiodic and positive recurrent, the ergodic theorem guarantees that the empirical measures of the aforementioned sampler approach the target stationary distribution. Another important condition to impose on this Markov Chain is detailed balance. Let the transition matrix be $\bm P = [p_{ij}]$, and the state space $\Omega$ be $\{\pi_i | i=1, ..., |\Omega| \}$, where $|\Omega|$ is the total number of possible states. Then, the condition of detailed balance is defined for all $i, j$ as
 
 \begin{equation}
-p_{ij} \pi_j = p_{ji} \pi_i
+\pi_i p_{ij} = p_{ji} \pi_j 
 \end{equation}
 
 Crucially, Monte Carlo methods employ \emph{importance sampling}. It turns out that we can improve upon our estimate of $\mathbb{E} [f(X)]$ by introducing a separate distribution $q(x)$, and defining the weight function as $w(x) = p(x)/ q(x)$. Then, we can rewrite equation (\ref{eq:int_mean}):
@@ -659,10 +659,10 @@ Crucially, Monte Carlo methods employ \emph{importance sampling}. It turns out t
 \end{equation}
 with $Y \sim q$, i.e. the random variable $Y$ follows the distribution $q(Y)$
 
-It appears as though we haven't done anything. However, by choosing $q$ wisely, we can actually reduce the variance we computed in equation (\ref{eq:variance}):
+It appears as though we didn't gain anything. However, by choosing $q$ wisely, we can actually reduce the variance we computed in equation (\ref{eq:variance}):
 
 \begin{equation}
-\text{Var}\bigg( \frac{1}{M} \sum_{k=1}^M f(y_k) w(y_k \bigg) = \frac{1}{M} \text{Var}\bigg( f(y_1) w(y_1) \bigg)
+\text{Var}\bigg( \frac{1}{M} \sum_{k=1}^M f(y_k) w(y_k) \bigg) = \frac{1}{M} \text{Var}\bigg( f(y_1) w(y_1) \bigg)
 \end{equation}
 
 Since we didn't make any assumptions about $q(Y)$, it may be chosen so as to minimize the variance, hence the error of the Monte Carlo estimator, improving the approximation of the expectation. However, note that the error remains of order $\mathcal{O}\big(\frac{1}{\sqrt{M}}\big)$.
@@ -671,7 +671,7 @@ The idea of the Quantum (Classical) Monte Carlo method is to simulate the random
 
 QMC generally provides an accurate approximation of the solution of the quantum many-body problem. When relativistic effects are negligible, which is the case of most condensed matter systems, any physical system can be described by a many-body Schr\"odinger equation. The issue is that the many-body wave function lives in the corresponding Hilbert space that is  exponentially large in the number of particles. For example, the number of possible states of a physical system whose configuration space rests on a two-dimensional lattice is exponentially large. The method described above is applied to approximate the multidimensional integrals arising upon formulating the quantum many-body problem in this space.
 
-One can set up a na\"ive mean field theory in which the many body wave function is approximated by an antisymmetric function of one body wave functions\footnote{This corresponds to the Hartree-Fock approximation that we used to derive the Hubbard Hamiltonian in section \ref{hubbardHamiltonian}.}. One of the drawbacks of this approach is that the effect of  correlations is not captured. Fermionic QMC goes beyond mean field theory,  capturing the phenomena occuring within strongly correlated electronic systems. For non-frustrated boson systems, a polynomially scaling algorithm leads to an exact solution. For a fermionic system, such as the TMD nanoribbon, the algorithm usually provides an accurate yet not exact solution, which would in general require exponential computing time. This is due to the so called sign problem. We will discuss this numerical issue later. 
+One can set up a na\"ive mean field theory in which the many body wave function is approximated by an antisymmetric function of one body wave functions\footnote{This corresponds to the Hartree-Fock approximation that we used to derive the Hubbard Hamiltonian in section \ref{hubbardHamiltonian}.}. One of the drawbacks of this approach is that the effect of  correlations is not captured. Fermionic QMC goes beyond mean field theory,  capturing the phenomena occuring within strongly correlated electronic systems. For non-frustrated boson systems, a polynomially scaling algorithm leads to an exact solution. For a fermionic system, such as the TMD nanoribbon, the existing algorithms usually provide accurate yet not exact solutions, which would in general require exponential computing time. This is due to the so called sign problem. We will discuss this numerical issue later. 
 
 \subsection{Variational Techniques}\paragraph{}
 
@@ -689,7 +689,7 @@ In fact, expanding in terms of the eigenstates of the hamiltonian $\{ \psi_n (\b
 \begin{equation}
 \phi (\bm r) = \sum_{n= 0}^{\infty} a_n \psi_n (\bm r) ,
 \end{equation}
-and plugging it back into the variational principle, subject to $E_n \ge E_0 ,\, n > 0$ and $<\psi_n | \psi_m> = \delta_{nm}$ we obtain
+and plugging it back into the variational principle, subject to $E_n \ge E_0 ,\, n > 0$ and $\left\langle \psi_n | \psi_m \right\rangle = \delta_{nm}$ we obtain
 
 \begin{equation}
 E[\alpha_i] = \frac{\sum_n a_n^2 E_n}{\sum_n a_n^2 } \ge E_0
@@ -729,7 +729,7 @@ The idea of DQMC is to generate samples using the exact ground state wave functi
 
 \begin{equation}
 \begin{split}
-&E_0 = \frac{ \left\langle \phi_0 | E_0 | \phi \right\rangle}{< \phi_0 | \phi >} = \\
+&E_0 = \frac{ \left\langle \phi_0 | E_0 | \phi \right\rangle}{\left\langle \phi_0 | \phi \right\rangle} = \\
 &= \frac{\left\langle \phi_0 | \mathcal{H} | \phi \right\rangle}{ \left\langle\phi_0 | \phi \right\rangle} = \frac{\int d\bm r \phi_0^\star (\bm r) \phi (\bm r) E_L (\bm r)}{\int d\bm r\phi_0^\star (\bm r) \phi (\bm r)}
 \end{split}
 \end{equation}
@@ -756,8 +756,8 @@ Imaginary time evolution is governed by
 
 \begin{equation}\label{eq:im_ev}
 \begin{split}
-&| \psi (t) > = \lim_{\tau \rightarrow \infty} \sum_i e^{-(E_i - E_T) \tau} |\psi_i > <\psi_i | \psi > = \\
-&= \lim_{\tau \rightarrow \infty} e^{-(E_0 - E_T)\tau} | \phi_0 >< \phi_0 | \psi > 
+&\left| \psi (t) \right\rangle = \lim_{\tau \rightarrow \infty} \sum_i e^{-(E_i - E_T) \tau} \left| \psi_i \right\rangle \left\langle\psi_i | \psi \right\rangle = \\
+&= \lim_{\tau \rightarrow \infty} e^{-(E_0 - E_T)\tau} \left| \phi_0 \right\rangle \left\langle \phi_0 | \psi \right\rangle
 \end{split}
 \end{equation}
 
@@ -771,7 +771,6 @@ If $E_T > E_0$ the wave function diverges exponentially fast: $\lim_{\tau \right
 
 DQMC makes use of equation (\ref{eq:dmc}), approximating $\phi_0(x)$ by $\psi (x, \tau)$ for sufficiently long time. The only requirement is that $\psi (x, \tau)$ and $\phi_0(x)$ overlap significantly so that $c_0$ is large enough to be numerically measurable, and we can always center a positive trial wave function in a region where $\phi_0(x)$ is large enough. This is always possible for a single particle,  but note that it might fail for a many-fermion system for which the wave function crosses a number of nodes due to its antisymmetric nature. This is an example of the sign problem.\par
 
-
 \subsection{Auxiliary field QMC}\paragraph{}
 
 We will now discuss a numerical method to simulate the Hubbard model. Among the various methods belonging to the family of QMC methods, auxiliary field QMC allows us to circumvent the sign problem for the half filled Hubbard model. The sign problem is an uncontrolled numerical error due to the antisymmetry of the many-electron wave function, leading to oscillations in the sign of the quantities that we are interested in measuring. These oscillations deem the algorithm exponentially complex in the size of the system, in general, but it possible to overcome this hurdle for a class of models, namely the Hubbard model at half filling. The difficulty lies in computing averages of quantities that are very close to zero, on average, but have a large variance, i.e. $\sigma_X / \left\langle X \right\rangle \gg 1$.
@@ -780,10 +779,190 @@ We seek a computable approximation of the projection operator $\mathcal{P}$ defi
 
 For now, let us assume half filling $\mu = 0$, so that there is no sign problem. In fact, many interesting phenomena occur at half filling, for example magnetic ordering and the Mott metal-insulator transition.
 
-\subsection{Hubbard-Stratonovich transformation}\paragraph{}
+\subsubsection{Hubbard-Stratonovich transformation}\paragraph{}
 
 In section \ref{exactSolutions}, we found exact solutions for particular instances of the Hubbard model by finding a closed form a closed form for the partition function. When devising a numerical method, a good sanity check is to verify that it satisfactorily approximates the partition function.
 
-The operators $\mathcal{H}_K$ and $\mathcal{H}_V$ of equation (\ref{eq:hubbard}) do not commute. This impedes us from factorizing the exponential of their sum $e^{-\beta (\mathcal{H}_K + \mathcal{H}_V)}$ exactly. The Trotter-Suzuki decomposition leads to the sought approximate factorization. 
+The operators $\mathcal{H}_K$ and $\mathcal{H}_V$ of equation (\ref{eq:hubbard}) do not commute. This impedes us from factorizing the exponential of their sum $e^{-\beta (\mathcal{H}_K + \mathcal{H}_V)}$ exactly. The Trotter-Suzuki decomposition leads to the sought approximate factorization that is used to approximate the partition function. Quantum states evolve according to
+
+\begin{equation}
+\left| \psi (\tau) \right\rangle = e^{-\tau \mathcal{H} } \left| \psi (0) \right\rangle ,
+\end{equation}
+where $\tau = it$ is the imaginary time.
+
+Taking the scalar product with a position eigenstate $ \left\langle \bm x \right|$, we obtain $\psi (\bm x, \tau) = \left\langle \bm x | \psi (\tau) \right\rangle$. Using the closure relation $\int d\bm y \left| \bm y \right\rangle  \left\langle \bm y \right| = 1$, we get
+
+\begin{equation}
+\psi ( \bm x , \tau ) = \int d\bm y \left\langle \bm x | e^{-\tau \mathcal{H}} | \bm y \right\rangle \psi (\bm y, 0)
+\end{equation}
+
+The wave function at position $\bm x$ and time $t$ may be obtained by this equation as long as we know the wave function at $\tau = 0$, $\psi (\bm y, 0)$ for all points in space $\bm y$. The evolution operator matrix element, or Green function, 
+
+\begin{equation}
+G ( \bm x, \tau | \bm 0, 0 ) \equiv \left\langle \bm x | e^{-\tau \mathcal{H}} | \bm y \right\rangle ,
+\end{equation}
+as the wave function, satisfies the Schr\"odinger equation, with the initial condition $\delta ( \bm x - \bm y )$. It is then the probability of presence at $\bm x, t$ of a wave packet centered at $\bm y$ at $t = 0$. Note that the solution of the Schr\"odinger equation is then analogous to that of a diffusion equation (that in turn one may obtain as the continuum limit of a random walk). We may write $G$ as a linear combination of the eigenstates of the Hamiltonian
+
+\begin{equation}
+G (\bm x, t | \bm 0, 0) = \sum_\alpha \psi_\alpha^\star (\bm y) \psi_\alpha (\bm x) e^{-E_\alpha \tau} ,
+\end{equation}
+where we immediately note a striking similarity with equation (\ref{eq:z_asEigen}). We might as well take $G \mapsto Z$, and $\tau \mapsto \beta$ to make direct use of the results we obtained in section \ref{exactSolutions}.
+
+\begin{equation}
+Z = \text{Tr} \big( e^{-\beta \mathcal{H} } \big)
+\end{equation}
+in a notation that is reminiscent of the finite temperature case. But remember that now $\beta$ represents the imaginary time, and $Z$ corresponds to the Green function of the zero temperature system.
+ 
+This expression is not very amenable to numerical computation since it contains an exponential of a sum of operators $\mathcal{H}_K + \mathcal{H}_V$, which is not factorizable and involves computing an infinite number of commutators containing these two operators, as per the Zassenhaus formula, valid for any two generic operators $X$ and $Y$:
+
+\begin{equation}\label{eq:zassenhaus}
+\begin{split}
+&e^{t(X+Y)}=e^{tX} e^{tY} e^{-{\frac {t^{2}}{2}}[X,Y]} e^{{\frac {t^{3}}{6}}(2[Y,[X,Y]]+[X,[X,Y]])} \\
+&e^{{\frac {-t^{4}}{24}}([[[X,Y],X],X]+3[[[X,Y],X],Y]+3[[[X,Y],Y],Y])} \, ... , 
+\end{split}
+\end{equation}
+where $t \in \mathbb{C}$ is an expansion parameter.
+
+Dividing the imaginary time interval $[0, \beta ]$ into $L$ equal sub-intervals of width $\Delta \tau = \beta / L$, we obtain
+
+\begin{equation}
+Z = \text{Tr} \bigg( \prod_{l=1}^L e^{-\Delta\tau \mathcal{H} } \bigg) ,
+\end{equation}
+which is now a product of exponentials of operators multiplied by a constant that can be made small by increasing $L$. The Trotter-Suzuki decomposition follows from truncating equation (\ref{eq:zassenhaus}), and keeping only the first order term in $t$, i.e. the one in $\Delta \tau$ in our case.
+
+\begin{equation}\label{eq:Z_propagator}
+Z = \text{Tr} \bigg( \prod_{l=1}^L e^{-\Delta\tau \mathcal{H}_K } e^{-\Delta\tau \mathcal{H}_V } \bigg) + \mathcal{O}(\Delta \tau^2) 
+\end{equation}
+
+The kinetic energy term is quadratic in the fermion operators, and is spin-independent and thus may be separated into spin up and spin down components
+
+\begin{equation}
+e^{-\tau \mathcal{H}_K} = e^{-\tau \mathcal{H}_{K_\uparrow}} e^{-\tau \mathcal{H}_{K_\downarrow}} ,
+\end{equation}
+where $\mathcal{H}_{K_\sigma} = -t \bm c_\sigma^\dagger \bm K  \bm c_\sigma$.
+
+The potential energy term, however, is quartic. Surprisingly, it is possible to express it in quadratic form by introducing an extra degree of freedom, the so called \emph{Hubbard-Stratonovich (HS) field} $\{h_i\}_{i=1}^N$. First, note that number operators on different sites commute, so that we have
+
+\begin{equation}
+\begin{split}
+e^{-\tau \mathcal{H}_V} &= e^{-U \Delta\tau \sum_{i=1}^N (n_{i\uparrow} - 1/2 ) (n_{i\downarrow} - 1/2 )} \\
+&= \prod_i e^{-U \Delta\tau (n_{i\uparrow} - 1/2 ) (n_{i\downarrow} - 1/2 )}
+\end{split}
+\end{equation}
+
+Now we introduce the discrete Hubbard Stratonovich transformation for $U > 0$ that allows us to recast the equation above in terms of a non-interacting quadratic term $(n_{i\uparrow} - (n_{i\downarrow} )$.
+
+\begin{equation}\label{eq:discreteHS}
+e^{-U \Delta\tau (n_{i\uparrow} - 1/2 ) (n_{i\downarrow} - 1/2 )} = c_U \sum_{h_i = \pm 1} e^{\nu h_i (n_{i\uparrow} - n_{i\downarrow} )},
+\end{equation}
+where $c_U = \frac{1}{2} e{-\frac{U\Delta \tau}{4}}$ and $\nu = \text{arcosh} ( e^{\frac{U\Delta\tau}{2}})$.
+
+To prove this identity, let us write down how the operators  $(n_{i\uparrow} - 1/2 ) (n_{i\downarrow} - 1/2 )$ and $(n_{i\uparrow} - n_{i\downarrow} )$ act on a Hubbard state on a given site.
+
+\begin{equation}
+\begin{split}
+(n_{i\uparrow} - 1/2 ) (n_{i\downarrow} - 1/2 )&
+\begin{cases}
+\left| \, \, \right\rangle = \frac{1}{4} \left| \, \, \right\rangle \\
+\left| \uparrow \right\rangle = -\frac{1}{4} \left| \uparrow \right\rangle \\
+\left| \downarrow \right\rangle = -\frac{1}{4} \left| \downarrow \right\rangle \\
+\left| \uparrow \downarrow \right\rangle = \frac{1}{4} \left| \uparrow \downarrow \right\rangle
+\end{cases}\\
+(n_{i\uparrow} - n_{i\downarrow} )&
+\begin{cases}
+\left| \, \, \right\rangle = 0\left| \, \, \right\rangle \\
+\left| \uparrow \right\rangle = \left| \uparrow \right\rangle \\
+\left| \downarrow \right\rangle = \left| \downarrow \right\rangle \\
+\left| \uparrow \downarrow \right\rangle = 0 \left| \uparrow \downarrow \right\rangle
+\end{cases}
+\end{split}
+\end{equation}
+
+Now we simply compare the action of the operators on the left hand side and on the right hand side of equation (\ref{eq:discreteHS}) and find the desired relation by defining
+
+\begin{equation}
+\cosh \nu =  \frac{e^\nu + e^{-\nu} }{2} \equiv e^{\frac{U\Delta \tau}{2}}
+\end{equation}
+
+\begin{equation}
+\begin{split}
+&e^{-U \Delta\tau (n_{i\uparrow} - 1/2 ) (n_{i\downarrow} - 1/2 )} \left| \psi \right\rangle = e^{-\frac{U\Delta \tau}{4}} \left| \psi \right\rangle \, , \left| \psi \right\rangle = \left| \, \, \right\rangle, \left| \uparrow \downarrow \right\rangle \\
+&e^{-U \Delta\tau (n_{i\uparrow} - 1/2 ) (n_{i\downarrow} - 1/2 )} \left| \uparrow (\downarrow) \right\rangle = e^{\frac{U\Delta \tau}{4}} \left| \uparrow (\downarrow) \right\rangle \\
+&c_U \sum_{h_i = \pm 1} e^{\nu h_i (n_{i\uparrow} - n_{i\downarrow} )} \left| \psi \right\rangle = e^{-\frac{U\Delta \tau}{4}} \left| \psi \right\rangle \, , \left| \psi \right\rangle = \left| \, \, \right\rangle, \left| \uparrow \downarrow \right\rangle \\
+&c_U \sum_{h_i = \pm 1} e^{\nu h_i (n_{i\uparrow} - n_{i\downarrow} )} \left| \uparrow (\downarrow) \right\rangle= \frac{e^\nu + e^{-\nu}}{2} e^{-\frac{U\Delta \tau}{4}}  \left| \uparrow (\downarrow) \right\rangle
+\end{split}
+\end{equation}
+
+Note that we require $U > 0$ so that there exists $\nu \in \mathbb{R}$ such that $\cosh \nu = e^{U\Delta \tau / 2}$. A similar reasoning could be made for $U < 0$, and other transformations that recast quartic terms in terms of quadratic ones exist too. This is the one we will use throughout.
+
+We have now made progress. At the expense of introducing an extra $N$-dimensional HS-field $\bm h$, we obtained an \emph{exact} representation of the quartic term in terms of quadratic terms.
+
+\begin{equation} 
+ e^{-\tau \mathcal{H}_V} = \prod_{i=1}^N \bigg( c_U \sum_{h_i = \pm 1} e^{\nu h_i ( n_{i\uparrow} - n_{i\downarrow} )} \bigg),
+\end{equation} 
+which can be manipulated to arrive at a more compact form.
+
+\begin{equation}\label{eq:exp_quartic}
+\begin{split}
+&e^{-\Delta\tau \mathcal{H}_V} =  (c_U)^N \sum_{h_i = \pm 1} e^{\nu h_i ( n_{1\uparrow} - n_{1\downarrow} )} \sum_{h_i = \pm 1} e^{\nu h_i ( n_{2\uparrow} - n_{2\downarrow} )}  \\
+&... \sum_{h_i = \pm 1} e^{\nu h_i ( n_{N\uparrow} - n_{N\downarrow} )} \\
+&= (c_U)^N \sum_{h_i = \pm 1} e^{\sum_{i=1}^N [(\nu h_i ( n_{i\uparrow} - n_{i\downarrow} ) ]} \\
+&\equiv (c_U)^N \text{Tr}_h e^{\sum_{i=1}^N [(\nu h_i ( n_{i\uparrow} - n_{i\downarrow} ) ]} \\
+&= (c_U)^N \text{Tr}_h e^{\sum_{i=1}^N \nu h_i n_{i\uparrow}} e^{-\sum_{i=1}^N \nu h_i n_{i\uparrow}} \\
+&= (c_U)^N \text{Tr}_h ( e^{\mathcal{H}_{V_\uparrow}} e^{\mathcal{H}_{V_\downarrow}} ) ,
+\end{split}
+\end{equation}
+where the spin up and spin down operators $\mathcal{H}_{V_\sigma}$ are defined as follows
+
+\begin{equation}
+\mathcal{H}_{V\sigma} = \sum_{i=1}^N \nu h_i n_{i\sigma} = \sigma \nu \bm c_\sigma^\dagger \bm V(\bm h) \bm c_\sigma,
+\end{equation}
+with $\bm V(\bm h)$ being simply the HS-field put into a diagonal $N\times N$ matrix: $\bm V(\bm h) \equiv \text{diag}(h_1, h_2, ..., h_N)$.
+
+For each imaginary time slice $l=1,...,L$ we may define a HS-field $\bm h_l$, which in turn specifies $\bm V_l$ and $\mathcal{H}_{V_\sigma}^l$. We may now replace the result of equation (\ref{eq:exp_quartic}) in equation (\ref{eq:Z_propagator}), and exchange the traces to obtain
+
+\begin{equation}\label{eq:Z_quadratic}
+\begin{split}
+&Z_h = (c_U)^{NL} \text{Tr}_{\bm h} \text{Tr} \bigg[ \prod_{l=1}^L \underbrace{\bigg( e^{-\Delta\tau  \mathcal{H}_{K_\uparrow}} e^{\mathcal{H}_{V_\uparrow}^l} \bigg)}_{B_{l, \uparrow}(\bm h_l)} \\
+&\underbrace{\bigg( e^{-\Delta\tau  \mathcal{H}_{K_\downarrow}} e^{\mathcal{H}_{V_\downarrow}^l} \bigg)}_{B_{l, \downarrow}(\bm h_l)} \bigg],
+\end{split}
+\end{equation}
+where all operators are now quadratic in the fermion operators:
+
+\begin{equation}
+\begin{split}
+&\mathcal{H}_{K_\sigma} = - t \bm c_\sigma^\dagger \bm K \bm c_\sigma \\
+&\mathcal{H}_{V_\sigma}^l = \sigma \nu \bm c_\sigma^\dagger \bm V_l (\bm h_l) \bm c_\sigma
+\end{split}
+\end{equation}
+for $\sigma = \pm 1$ and $\bm V_l ( \bm h_l ) = \text{diag} ( h_{l, 1} , h_{l, 2}, ... , h_{l, N} )$.
+
+Furthermore, we have defined the $\bm B$-matrices
+
+\begin{equation}
+\bm B_{l, \sigma} ( \bm h_l ) = e^{t \Delta \tau \bm K} e^{\sigma \nu \bm V_l (\bm h_l)}
+\end{equation}
+
+Note that the argument of the first exponential is positive since $\bm K$ is defined so that its entries are 0's and 1's; otherwise (defining $\bm K$ with 0's and $-1$'s) it would be negative.
+
+The problem of computing the partition has been reduced to computing the trace of a product of exponentials of quadratic forms. Thus, we may still rewrite equation (\ref{eq:Z_quadratic}) by making use of the following identity.
+
+Let $\mathcal{H}_l$ be quadratic forms of the fermion operators:
+
+\begin{equation}
+\mathcal{H}_l = c_i^\dagger (\mathcal{H}_l)_{ij} c_j,
+\end{equation}
+where the summation is implied, and where $\mathcal{H}_l$ are real matrices. Then, we have the identity
+
+\begin{equation}
+\text{Tr} \big[ e^{-\mathcal{H}_1 } e^{-\mathcal{H}_2 } ... e^{-\mathcal{H}_L } \big] = \text{det} ( \bm I + e^{-\mathcal{H}_L} e^{-\mathcal{H}_{L-1}} ... e^{-\mathcal{H}_1} )
+\end{equation}
+
+%We present a simpler case,. The 
+
+%\begin{equation}
+%\text{Tr} \bigg[ e^{-c_i^\dagger A_{ij} c_j} e^{-c_i^\dagger B_{ij} c_j} \bigg] = \text{det} ( 1 + e^{-A} e^{-B} )
+%\end{equation}
+
 
 \end{document}
