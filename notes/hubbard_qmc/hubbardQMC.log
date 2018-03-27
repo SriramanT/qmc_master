@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.25)  21 MAR 2018 17:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.25)  27 MAR 2018 17:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -325,26 +325,38 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2015/03/04 v2.20.2
+\thm@style=\toks22
+\thm@bodyfont=\toks23
+\thm@headfont=\toks24
+\thm@notefont=\toks25
+\thm@headpunct=\toks26
+\thm@preskip=\skip51
+\thm@postskip=\skip52
+\thm@headsep=\skip53
+\dth@everypar=\toks27
+)
 (/usr/local/texlive/2017/texmf-dist/tex/latex/ms/ragged2e.sty
 Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/ms/everysel.sty
 Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 )
-\CenteringLeftskip=\skip51
-\RaggedLeftLeftskip=\skip52
-\RaggedRightLeftskip=\skip53
-\CenteringRightskip=\skip54
-\RaggedLeftRightskip=\skip55
-\RaggedRightRightskip=\skip56
-\CenteringParfillskip=\skip57
-\RaggedLeftParfillskip=\skip58
-\RaggedRightParfillskip=\skip59
-\JustifyingParfillskip=\skip60
-\CenteringParindent=\skip61
-\RaggedLeftParindent=\skip62
-\RaggedRightParindent=\skip63
-\JustifyingParindent=\skip64
+\CenteringLeftskip=\skip54
+\RaggedLeftLeftskip=\skip55
+\RaggedRightLeftskip=\skip56
+\CenteringRightskip=\skip57
+\RaggedLeftRightskip=\skip58
+\RaggedRightRightskip=\skip59
+\CenteringParfillskip=\skip60
+\RaggedLeftParfillskip=\skip61
+\RaggedRightParfillskip=\skip62
+\JustifyingParfillskip=\skip63
+\CenteringParindent=\skip64
+\RaggedLeftParindent=\skip65
+\RaggedRightParindent=\skip66
+\JustifyingParindent=\skip67
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
@@ -371,37 +383,114 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \c@dirtytalk@qdepth=\count114
 )
-(./hubbardQMC.aux)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count115
+\float@exts=\toks28
+\float@box=\box33
+\@float@everytoks=\toks29
+\@floatcapt=\box34
+)
+\@float@every@algorithm=\toks30
+\c@algorithm=\count116
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/algorithms/algorithmic.sty
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+\c@ALC@unique=\count117
+\c@ALC@line=\count118
+\c@ALC@rem=\count119
+\c@ALC@depth=\count120
+\ALC@tlm=\skip68
+\algorithmicindent=\skip69
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
+\c@tracingmulticols=\count121
+
+
+Package multicol Warning: May not work with the twocolumn option on input line 
+134.
+
+\mult@box=\box35
+\multicol@leftmargin=\dimen127
+\c@unbalance=\count122
+\c@collectmore=\count123
+\doublecol@number=\count124
+\multicoltolerance=\count125
+\multicolpretolerance=\count126
+\full@width=\dimen128
+\page@free=\dimen129
+\premulticols=\dimen130
+\postmulticols=\dimen131
+\multicolsep=\skip70
+\multicolbaselineskip=\skip71
+\partial@page=\box36
+\last@line=\box37
+\maxbalancingoverflow=\dimen132
+\mult@rightbox=\box38
+\mult@grightbox=\box39
+\mult@gfirstbox=\box40
+\mult@firstbox=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\@tempa=\box51
+\@tempa=\box52
+\@tempa=\box53
+\@tempa=\box54
+\@tempa=\box55
+\@tempa=\box56
+\@tempa=\box57
+\@tempa=\box58
+\c@columnbadness=\count127
+\c@finalcolumnbadness=\count128
+\last@try=\dimen133
+\multicolovershoot=\dimen134
+\multicolundershoot=\dimen135
+\mult@nat@firstbox=\box59
+\colbreak@box=\box60
+\mc@col@check@num=\count129
+) (./hubbardQMC.aux)
 \openout1 = `hubbardQMC.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
 
 (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count115
-\scratchdimen=\dimen127
-\scratchbox=\box33
-\nofMPsegments=\count116
-\nofMParguments=\count117
-\everyMPshowfont=\toks22
-\MPscratchCnt=\count118
-\MPscratchDim=\dimen128
-\MPnumerator=\count119
-\makeMPintoPDFobject=\count120
-\everyMPtoPDFconversion=\toks23
+\scratchcounter=\count130
+\scratchdimen=\dimen136
+\scratchbox=\box61
+\nofMPsegments=\count131
+\nofMParguments=\count132
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count133
+\MPscratchDim=\dimen137
+\MPnumerator=\count134
+\makeMPintoPDFobject=\count135
+\everyMPtoPDFconversion=\toks32
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -453,32 +542,32 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\AtBeginShipoutBox=\box34
-Package hyperref Info: Link coloring OFF on input line 28.
+\AtBeginShipoutBox=\box62
+Package hyperref Info: Link coloring OFF on input line 30.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
 (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count121
+\c@section@level=\count136
 )
-LaTeX Info: Redefining \ref on input line 28.
-LaTeX Info: Redefining \pageref on input line 28.
-LaTeX Info: Redefining \nameref on input line 28.
+LaTeX Info: Redefining \ref on input line 30.
+LaTeX Info: Redefining \pageref on input line 30.
+LaTeX Info: Redefining \nameref on input line 30.
 
 (./hubbardQMC.out) (./hubbardQMC.out)
 \@outlinefile=\write3
 \openout3 = `hubbardQMC.out'.
 
  ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 28.
-LaTeX Font Info:    Try loading font information for U+msa on input line 34.
+LaTeX Info: Redefining \selectfont on input line 30.
+LaTeX Font Info:    Try loading font information for U+msa on input line 36.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 34.
+LaTeX Font Info:    Try loading font information for U+msb on input line 36.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -489,10 +578,54 @@ Extra height:0.0pt when 0.0pt
 Left:0.0pt
 Right:0.0pt
 Output:0.0pt
+
+
+LaTeX Warning: Citation `hubbard' on page 1 undefined on input line 53.
+
+
+LaTeX Warning: Citation `someManyBodyBooks' on page 1 undefined on input line 5
+3.
+
+
+LaTeX Warning: Citation `referencesThereInHubbard)' on page 1 undefined on inpu
+t line 57.
+
+
+LaTeX Warning: Citation `examplesOfThis' on page 1 undefined on input line 57.
+
+
+LaTeX Warning: Citation `BetheHubbard' on page 1 undefined on input line 57.
+
+
+LaTeX Warning: Citation `examplesOfNumericalSolutions' on page 1 undefined on i
+nput line 57.
+
+
+LaTeX Warning: Citation `TMDstuff' on page 1 undefined on input line 59.
+
+
+LaTeX Warning: Citation `magneticTMD' on page 1 undefined on input line 59.
+
+
+LaTeX Warning: Citation `topoSuper' on page 1 undefined on input line 59.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [1
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 5147) in paragraph at lines 61--61
+
+LaTeX Warning: Citation `ashcroft' on page 2 undefined on input line 65.
+
+
+LaTeX Warning: Citation `Mott' on page 2 undefined on input line 65.
+
+
+LaTeX Warning: Citation `heitlerLondon' on page 2 undefined on input line 67.
+
+
+Underfull \hbox (badness 5147) in paragraph at lines 69--69
 []\T1/cmr/bx/n/12 Electron cor-re-la-tions in nar-row
  []
 
@@ -500,120 +633,150 @@ Underfull \hbox (badness 5147) in paragraph at lines 61--61
 File: Hydrogen_Density_Plots.png Graphic file (type png)
 
 <use Hydrogen_Density_Plots.png>
-Package pdftex.def Info: Hydrogen_Density_Plots.png used on input line 67.
+Package pdftex.def Info: Hydrogen_Density_Plots.png used on input line 75.
 (pdftex.def)             Requested size: 233.3125pt x 157.66997pt.
 
-Underfull \hbox (badness 1688) in paragraph at lines 71--72
+Underfull \hbox (badness 1688) in paragraph at lines 79--80
 []\T1/cmr/m/n/10 Experimentally, $\OML/cmm/m/it/10 d\OMS/cmsy/m/n/10 ^^@$\T1/cm
 r/m/n/10 electrons of tran-si-tion met-als
  []
 
-[2 <./Hydrogen_Density_Plots.png>] [3] [4]
-Underfull \vbox (badness 1400) has occurred while \output is active []
+[2pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) 
+has been already used, duplicate ignored
 
- [5]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 265.
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.80 
+      <./Hydrogen_Density_Plots.png>] [3] [4]
 
+LaTeX Warning: Citation `hubbard' on page 5 undefined on input line 224.
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
+[5]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 274.
+
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 265.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 274.
 
-Underfull \hbox (badness 1490) in paragraph at lines 269--270
+Underfull \hbox (badness 1490) in paragraph at lines 278--279
 []\T1/cmr/m/n/10 Band the-ory made it made pos-si-ble to pre-dict
  []
 
 [6] [7]
-Underfull \hbox (badness 2359) in paragraph at lines 533--534
+Underfull \hbox (badness 2359) in paragraph at lines 540--541
 []\T1/cmr/m/n/10 The $[]$-operators are equally valid elec-tron cre-
  []
 
 [8]
-Overfull \hbox (1.66359pt too wide) in paragraph at lines 578--578
+Overfull \hbox (1.66359pt too wide) in paragraph at lines 585--585
 [] 
  []
 
 
-LaTeX Warning: Citation `metropolis' on page 9 undefined on input line 625.
+LaTeX Warning: Citation `metropolis' on page 9 undefined on input line 632.
 
 [9]
 
-LaTeX Warning: Citation `newman_barkema' on page 10 undefined on input line 670
+LaTeX Warning: Citation `newman_barkema' on page 10 undefined on input line 677
 .
 
 [10]
 
-LaTeX Warning: Citation `kosztin' on page 11 undefined on input line 726.
+LaTeX Warning: Citation `kosztin' on page 11 undefined on input line 733.
 
 
-LaTeX Warning: Citation `vmc' on page 11 undefined on input line 728.
+LaTeX Warning: Citation `vmc' on page 11 undefined on input line 735.
 
 [11] [12]
-Overfull \hbox (0.72491pt too wide) in paragraph at lines 894--894
+Overfull \hbox (0.72491pt too wide) in paragraph at lines 903--903
 [] 
  []
 
+
+LaTeX Warning: Citation `discreteHS' on page 13 undefined on input line 905.
+
 [13]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 968.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 968.
- [14
+LaTeX Font Info:    Try loading font information for U+bbm on input line 1019.
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/bbm-macros/ubbm.fd
+File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
+) [14]
+[15]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 1169.
+
+Overfull \hbox (5.04219pt too wide) in paragraph at lines 1180--1181
+[]$[]$
+ []
+
+[16]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1259.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1259.
+ [17
 
 ] (./hubbardQMC.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 968.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 968.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1259.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1259.
+
 Package rerunfilecheck Info: File `hubbardQMC.out' has not changed.
 (rerunfilecheck)             Checksum: 7ABFDFC4B4FD0866D98682621E1194CF;141.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 968.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1259.
  ) 
 Here is how much of TeX's memory you used:
- 8298 strings out of 492995
- 120142 string characters out of 6132703
- 254341 words of memory out of 5000000
- 11545 multiletter control sequences out of 15000+600000
- 24650 words of font info for 70 fonts, out of 8000000 for 9000
+ 8843 strings out of 492995
+ 127997 string characters out of 6132703
+ 263225 words of memory out of 5000000
+ 12002 multiletter control sequences out of 15000+600000
+ 26085 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 33i,26n,39p,1536b,427s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 33i,26n,39p,1528b,751s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
-</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
-/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
-usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb
-></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
-</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
-/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></u
-sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
-/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/l
-ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/l
-ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></u
-sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
-/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/l
-ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/loca
-l/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/t
-exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
-xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texl
-ive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texliv
-e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/
-2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texl
-ive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/t
-exlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/tex
-live/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texli
-ve/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive
-/2017/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2
-017/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/201
-7/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2017/
-texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2017/te
-xmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2017/texm
-f-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2017/texmf-
-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on hubbardQMC.pdf (14 pages, 1222695 bytes).
+ </Users/franciscobrito/Library/texlive/2017/texmf-var/fonts/pk/ljfour/public/b
+bm/bbm10.600pk></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmex10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm
+extra/cmex7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmmi5.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib1
+0.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cmextra/c
+mmib5.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cmext
+ra/cmmib7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/c
+mextra/cmmib8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr5.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8
+.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.
+pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pf
+b></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb>
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></
+usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></us
+r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.p
+fb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx0800.pfb
+></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><
+/usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></u
+sr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr
+/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/l
+ocal/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/loc
+al/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local
+/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/t
+exlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/tex
+live/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texli
+ve/2017/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
+Output written on hubbardQMC.pdf (17 pages, 1313698 bytes).
 PDF statistics:
- 419 PDF objects out of 1000 (max. 8388607)
- 367 compressed objects within 4 object streams
- 165 named destinations out of 1000 (max. 500000)
+ 546 PDF objects out of 1000 (max. 8388607)
+ 483 compressed objects within 5 object streams
+ 226 named destinations out of 1000 (max. 500000)
  30 words of extra memory for PDF output out of 10000 (max. 10000000)
 

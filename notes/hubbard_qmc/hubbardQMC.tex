@@ -10,10 +10,12 @@
 \usepackage{hyperref}
 \usepackage{url}
 \usepackage{scrextend}
-\usepackage{amsmath,amssymb}
+\usepackage{amsmath,amssymb,amsthm}
 \usepackage{ragged2e}
 \usepackage{xcolor}
 \usepackage{dirtytalk}
+\usepackage{algorithm, algorithmic}
+\usepackage{multicol}
 \setcounter{tocdepth}{1}
 %\usepackage[backend=biber,style=nature,sorting=nyt]{biblatex}
 %\addbibresource{su4.bib}
@@ -35,32 +37,38 @@
 \noindent%\makebox[\textwidth]{\rule{1.1\paperwidth}{0.4pt}}
 \vskip\baselineskip
 \justify
+
+%		TO DO LIST
+
+% Missing citations - specified as [?], finish QUEST's document up to first algorithm, finish part on Mott insulators and Heisenberg as effective Hamiltonian based on EPFL's notes}
+
+
 \begin{abstract}\paragraph{}
-The interactions between the electrons in a solid give rise to effects that arise specifically due to the many-body nature of the system. The Hubbard model is a minimal model that encapsulates electron correlations, going beyond the periodic ionic potential perturbation on the free electron gas or tight binding approaches, which lead to band theory. It does so by adding the simplest possible electron interaction term to a tight binding Hamiltonian, allowing us to make predictions about magnetic and superconducting behavior, an metal-insulator transitions. Quantum Monte Carlo (QMC) is a simulation method that is amply applicable to condensed matter physics problems. It is commonly used to simulate the Hubbard model. Despite the system size being constrained due to limited simulation time, the method provides reliable, unbiased, and generally accurate solutions to the often otherwise intractable quantum many-body problem. In particular, the technique allows us to capture the elusive effects of electron correlations, for example in two-dimensional graphene-like nanostructures.
+The interactions between the electrons in a solid give rise to effects that arise specifically due to the many-body nature of the system. The Hubbard model is a minimal model that encapsulates electron correlations, going beyond the periodic ionic potential perturbation on the free electron gas or tight binding approaches, which lead to band theory. It does so by adding the simplest possible electron interaction term to a tight binding Hamiltonian, allowing us to make predictions about magnetic and superconducting behavior, and metal-insulator transitions. On the other hand, Quantum Monte Carlo (QMC) is a simulation method that is amply applicable to condensed matter physics problems. It is commonly used to simulate the Hubbard model. Despite the system size being constrained due to limited simulation time, the method provides reliable, unbiased, and generally accurate solutions to the often otherwise intractable quantum many-body problem. In particular, the technique allows us to capture the elusive effects of electron correlations, for example in two-dimensional graphene-like nanostructures.
 \end{abstract}
 \end{strip}
 
 \section{Introduction}\paragraph{}
 
-The Hubbard model appeared in 1963 as one of the first attempts to include electron correlation effects in a quantum mechanical description of a solid. Originally, it was introduced to explain the behavior of the electrons occupying the narrow, partially filled $d-$bands of transition metals. Correlation phenomena in these bands lead to a behavior reminiscent of the atomic picture of a solid. We have come a long way since the introduction of the Hubbard model and it is now as paradigm-defining in many-body theory as the Ising model in statistical physics.
+The Hubbard model appeared in 1963 as one of the first attempts to include electron correlation effects in a quantum mechanical description of a solid \cite{hubbard}. Originally, it was introduced to explain the behavior of the electrons occupying the narrow, partially filled $d-$bands of transition metals. Correlation phenomena in these bands lead to a behavior reminiscent of the atomic picture of a solid. We have come a long way since the introduction of the Hubbard model and it is now as paradigm-defining in many-body theory as the Ising model in statistical physics\cite{someManyBodyBooks}.
 
-These notes aim to present the basic aspects of a numerical technique used to simulate the Hubbard model in a self-contained, tutorial form. The idea is to reduce our problem to solving a set of integrals, which we evaluate numerically through a standard stochastic procedure, known as the Monte Carlo method. These integrals are arrived at upon formulating the quantum many-body description of the system using the Schr\"odinger equation in imaginary time. Hence the name Quantum Monte Carlo, which is used to distinguish it from Classical Monte Carlo, in which we measure thermal averages, instead of expectations of operators, corresponding to physical observables.
+These notes aim to present the basic aspects of a numerical technique used to simulate the Hubbard model in a self-contained, tutorial form. The idea is to reduce our problem to solving a set of integrals, which we evaluate numerically through a standard stochastic procedure, known as the Monte Carlo method. These integrals are arrived at upon formulating the quantum many-body description of the system using the Schr\"odinger equation in imaginary time. Hence the name Quantum Monte Carlo, which is used to distinguish it from Classical Monte Carlo, in which we measure thermal averages, instead of expectations of operators over the Hilbert space of the system, corresponding to physical observables that fluctuate with a dynamics given by Schr\"odinger's equation.
 
-When Hubbard's seminal paper came out, it followed a trend that arose in the 1950's when people were working on a theory of correlation effects in the free electron gas. Hubbard devised a simple model for the seemingly intractable problem of interacting electrons in a band. His work explained qualitatively some properties of transition and rare-earth metals in which electron correlations are non negligible. It turns out that the mathematical formulation of the interaction problem for electrons in a band is not prohibitively complicated, and is perhaps even more amenable to simple computations after some reasonable approximations are introduced. Notably, it is particularly adapted to computer simulations because of its simple approximate Hamiltonian. Moreover, it has been shown to be very relevant in the description of high $T_c$ superconductors. The Hubbard model is clearly very relevant; nonetheless, even the simplified picture it offers is in general difficult to approach analytically. There exists an exact solution in one dimension via Bethe ansatz, but the more general higher dimensional case is often solved numerically. This is the approach we will follow.
+When Hubbard's seminal paper came out, it followed a trend that arose in the 1950's when people were working on a theory of correlation effects in the free electron gas\cite{referencesThereInHubbard)}. Hubbard devised a simple model for the seemingly intractable problem of interacting electrons in a band. His work explained qualitatively some properties of transition and rare-earth metals in which electron correlations are non negligible. It turns out that the mathematical formulation of the interaction problem for correlated electrons in a band is not prohibitively complicated, and is perhaps even more amenable to simple computations after some reasonable approximations are introduced. Notably, it is particularly adapted to computer simulations because of its simple approximate Hamiltonian. Moreover, it has been shown to be very relevant in the description of high $T_c$ superconductors. The Hubbard model has found many applications,  describing successfully a variety of quantum systems\cite{examplesOfThis}; nonetheless, even the simplified picture it offers is in general difficult to approach analytically. There exists an exact solution in one dimension via Bethe ansatz\cite{BetheHubbard}, but the more general higher dimensional case is often solved numerically\cite{examplesOfNumericalSolutions}. This is the approach we will follow.
 
-Our goal is to apply a QMC technique to simulate electron correlations in a transition metal dichalcogenide (TMD) nanoribbon, a two-dimensional nanostructure made out of some graphene-like compound. The structure is much longer on one direction than on the other, resembling a ribbon, hence its name. The electronic states that accumulate on the edges of this ribbon might lead to interesting magnetic behavior in these TMD nanostructures and this possibility remains unexplored numerically. Moreover, there is some interest in exploring the phase diagram of these systems because recent studies point at the possibility of topological superconductivity.
+An example of an application of a QMC technique is the simulation of electron correlations in a transition metal dichalcogenide (TMD) nanoribbon, a two-dimensional nanostructure made out of some graphene-like compound \cite{TMDstuff}. The structure is much longer on one direction than on the other, resembling a ribbon, hence its name. The electronic states that accumulate on the edges of this ribbon might lead to interesting magnetic behavior in these TMD nanostructures and this possibility remains unexplored numerically\cite{magneticTMD}. Moreover, there is some interest in exploring the phase diagram of these systems because recent studies point at the possibility of topological superconductivity \cite{topoSuper}.
 
 \section{Hubbard model}\paragraph{}
 
 We start with an overview of the Hubbard model and in section \ref{hubbQMC} we provide details on how to simulate it numerically using quantum Monte Carlo. In particular, we discuss the original motivation to introduce the model and show how the Hubbard Hamiltonian arises as an approximate representation of the Coulomb repulsion between electrons. Finally, we present exact solutions for particular limiting cases, which can be used to crosscheck our simulations.
 
-The nearly free electron gas models the conduction bands of metals and alloys fairly accurately. The high mobility of the electrons compared to the ions justifies an approximate treatment that may be approached in two equivalent ways. The first idea is to treat the periodic potential created by the \emph{virtually} fixed ions (compared to the electrons) as a perturbation on the free electron gas. Another way of arriving at similar results is to imagine that conduction electrons hop from atom to atom. Both these approaches lead to band theory, a framework which allows us to predict whether a material is a conductor or a insulator. The atomic energy levels are broadened, and the electron in the solid occupy energy bands. The highest energy partially filled band is called the conduction band, since it is the band that conduction electrons hopping from atom to atom occupy. However, in transition and rare-earth metals, in addition to the conduction bands, there are partially filled $d-$ or $f-$bands which are responsible for the characteristic properties of these solids. Some of these properties are not explained by band theory, namely the Mott metal-insulator transition.
+The nearly free electron gas models the conduction bands of metals and alloys fairly accurately. The high mobility of the electrons compared to the ions justifies two equivalent approximations, both giving essentially the same results\cite{ashcroft}. The first idea is to treat the periodic potential created by the \emph{virtually} fixed ions (compared to the electrons) as a perturbation on the free electron gas. The other way of arriving at similar results is to imagine the system as a collection of tightly bond atoms, in which the higher energy conduction electrons hop from atom to atom. Both these approaches lead to band theory, a framework which allows us to predict whether a material is a conductor or a insulator. From the tight binding point of view, the effect of the electron mobility is the broadening of the atomic energy levels: the electrons in the solid occupy energy bands, rather than levels. The partially filled band of highest energy is called the conduction band, since it is the band occupied by conduction electrons hopping from atom to atom. However, in transition and rare-earth metals, there are partially filled bands other than to the conduction bands: $d-$ or $f-$bands. The partial filling of these bands and the electron correlations within them are responsible for the characteristic properties of these solids. Some of these properties are not explained by band theory, namely the Mott metal-insulator transition\cite{Mott}
 
-Take Molybdenum, a transition metal. Its electronic configuration is $[Kr] 4d^5 5s^1$. The $s$-orbital is higher in energy than the $d$-orbital. Thus, the corresponding partially filled band is closer to the Fermi energy. It is then the conduction band. However, the $d$-band will be only partially filled as well, leading to the effects mentioned in the previous paragraph. In Gadolinium, for which the electronic configuration is $[Xe] 4f^7 5d^1 6s^2$, the $d$-level will broaden and correspond to a conduction band when in a solid. However, the partially filled $f$-level will also broaden into a lower energy partially filled band. Platinum is yet another example, with electronic configuration $[Xe]4f^{14} 5d^9 6s^1 $, where the $5d$ level in only partially filled. In these partially filled narrow energy bands correlation phenomena are particularly relevant, as opposed to the case of conduction bands. Thus, the nearly free electron gas model does not suffice to describe the electrons in these bands; we must turn to a model that includes correlations. While for $f-$electrons of rare earth metals, a purely atomic, localized model - such as the Heitler-London model - might be satisfactory, the same cannot be said for $d-$electrons of transition metals because the band they occupy is narrower and correlations should be more relevant since the electronic states within the band are closer in energy.
+Take Molybdenum, a transition metal. Its electronic configuration is $[Kr] 5s^1 4d^5$. The $s$-orbital is higher in energy than the $d$-orbital. Thus, the Fermi energy lies in the corresponding partially filled $s-$band, which is then the conduction band. However, the $d$-band will be only partially filled as well, leading to the effects mentioned in the previous paragraph. In Gadolinium, for which the electronic configuration is $[Xe] 4f^7 5d^1 6s^2$, the $d$-level will broaden and correspond to a conduction band when in a solid. However, the partially filled $f$-level will also broaden into a lower energy partially filled band. Platinum is yet another example, with electronic configuration $[Xe]4f^{14} 5d^9 6s^1 $, where the $5d$ level in only partially filled. In these partially filled narrow energy bands correlation phenomena are particularly relevant, as opposed to the case of conduction bands. Thus, the nearly free electron gas model does not suffice to describe the electrons in these bands; we must turn to a model that includes correlations. While for $f-$electrons of rare earth metals, a purely atomic, localized model - such as the Heitler-London model \cite{heitlerLondon} - might be satisfactory, the same cannot be said for $d-$electrons of transition metals because the band they occupy is narrower and correlations should be more relevant since the electronic states within the band are closer in energy.
 
 \subsection{Electron correlations in narrow $d-$bands}\paragraph{}
 
-First, note that the effects of correlations cannot possibly be the same in narrow energy bands and in the nearly free electron gas. To see this, we may simply  recall the shape of a $d-$wave function. In a $d-$orbital, the electron charge density is concentrated near the nucleus. In a solid the electronic charge density should then also be concentrated near the nuclei, as long as the atomic description is useful, even if not completely correct\footnote{The electronic charge density is, of course, not actually defined in terms of a squared norm of the $d-$wave function for a narrow band. There is some broadening of the corresponding atomic energy level, and the wave function describing an electron is a Bloch wave function. Since the band is narrow, we assume that the atomic wave function description is still somewhat useful in a given range and we use it to provide a heuristic motivation for the non validity of the free electron assumption.}. It is much smaller between atoms so that electrons do seem to belong to individual atoms in some sense. For a $d-$band, we assume that the case is not so different since the band is narrow. The fact that we may speak with some meaning of an electron belonging to a particular atom motivates an atomic description, in spite of the fact that the bandwidth of a $d-$band is still appreciable. The point is that electrons in $d-$bands are certainly not well described by a free electron gas, which cannot possibly account for atomic-like behavior.
+First, note that the effects of correlations cannot possibly be the same in narrow energy bands and in the free electron gas. To see this, we may simply recall the shape of a $d-$wave function. In a $d-$orbital, the electron charge density is concentrated near the nucleus. In a solid the electronic charge density should then also be concentrated near the nuclei, as long as the atomic description is useful, even if not completely correct\footnote{The electronic charge density is, of course, not actually defined in terms of a squared norm of the $d-$wave function for a narrow band. There is some broadening of the corresponding atomic energy level, and the wave function describing an electron is a Bloch wave function. Since the band is narrow, we assume that the atomic wave function description is still somewhat useful in a given range and we use it to provide a heuristic motivation for the non validity of the free electron assumption.}. It is much smaller between atoms so that electrons do seem to belong to individual atoms in some sense. For a $d-$band, we assume that the case is not so different since the band is narrow. The fact that we may speak with some meaning of an electron belonging to a particular atom motivates an atomic description, in spite of the fact that the bandwidth of a $d-$band is still appreciable. The point is that electrons in $d-$bands are certainly not well described by a free electron gas, which cannot possibly account for atomic-like behavior.
 
 \begin{figure}[ht!]\label{fig:hydrogenWF}
 \centering
@@ -68,7 +76,7 @@ First, note that the effects of correlations cannot possibly be the same in narr
 \caption{Probability density plots for different hydrogen orbital wave functions corresponding to quantum numbers $(n, l, m)$ for $n = 3$. d-wave functions correspond to $l=2$. Note that the probability density is always higher in a region near the nucleus, and has a complicated shape, which will lead to a non-uniform distribution of electronic charge, as opposed to the case of the free electron gas.}
 \end{figure}
 
-Experimentally, $d-$electrons of transition metals show a hybrid behavior: sometimes they are accurately described by an ordinary band model, but there are occasions in which the atomic model is better. For example, we see spin wave phenomena in ferromagnetic transition metals, and the susceptibilities of some of these metals depend strongly on temperature. This is characteristic of an atomic (Heisenberg) model. On the other hand, the $d-$electrons contribute significantly to the low temperature specific heat and sometimes the magnetic moments per atom of some transition metal ferromagnets are not integer multiples of the Bohr magneton. This is characteristic of band theory. Our theory of correlations should describe this balance between band-like and atomic-like behavior.
+Experimentally, $d-$electrons of transition metals show a hybrid behavior: sometimes they are accurately described by an ordinary band model, but there are occasions in which the atomic model is better. For example, we see spin wave phenomena in ferromagnetic transition metals, and the susceptibilities of some of these metals depend strongly on temperature. This is characteristic of an atomic (Heisenberg) model. On the other hand, the $d-$electrons contribute significantly to the low temperature specific heat and sometimes the magnetic moments per atom of some transition metal ferromagnets are not integer multiples of the Bohr magneton. This is characteristic of band theory\footnote{Think, for example, of a tight binding model. Electrons hop from atom to atom, and in general the spin of each atom depends on the particular electrons \say{belonging} to it at a given time. If we take an average of the total spin of each atom, we will in general not obtain necessarily an integer multiple of the Bohr magneton. If we simply had a collection of atoms, Hund's rule would apply, and each atom would its spin aligned in a given direction. The average spin would then tend to be an integer multiple of the Bohr magneton.}. Our theory of correlations should describe this balance between band-like and atomic-like behavior.
 
 The atomic picture of a solid consists of an electron gas where ions are immersed. The ions then interact in much the same way as they do in salts. This extreme scenario is surely not even close to the true state of affairs since the number of $d-$electrons per atom is in general not an integer. This motivates us to introduce a less restrictive model, which is not too far from the atomic model. We shall assume that while $d-$electrons still have some band motion, they are strongly correlated with each other so that the metal retains some atomic-like behavior. The correlations between electrons on different atoms are likely much weaker and we neglect them.
 
@@ -78,13 +86,13 @@ How do the electron interactions affect this picture? We start by recalling Hund
 
 If the interactions between atoms are strong enough, the correlations become considerable, and to state it more precisely, the total spin of an atom will persist for a time that is long compared with the $d-$electron hopping time. Note that it is not the localization of the electrons that causes the spin state of the atom to persist. The specific electrons belonging to a given atom change all the time as long as their spin is consistent with the total spin requirement imposed by Hund's rule. For strong enough correlations, we may think of the spin as being associated to each atom, which opens up the possibility to describe the system using an atomic Heisenberg model.
 
-In short, electrons hop rapidly from atom to atom in a band-like fashion, but their motion is correlated in such a way that atomic characteristics emerge. The extent of atomic behavior depends, of course, on the strength of the interaction.
-
 A theory of electron correlations in a narrow energy band should reduce to an atomic model in the appropriate limit, for example atoms that are so far apart on a lattice that they interact only very weakly. Although we always keep in mind that we are focusing on $d-$electrons, we shall consider $s-$electrons in what follows for the sake of simplicity. The important conclusions will not differ significantly. We will use the atomicity of the electronic distribution to introduce an approximate representation of the electron interaction. It turns out that this representation is mathematically much simpler to handle than the Coulomb interaction itself.
+
+In short, electrons hop rapidly from atom to atom in a band-like fashion, but their motion is correlated in such a way that atomic characteristics emerge. The extent of atomic behavior depends, of course, on the strength of the interaction.
 
 \subsection{Hubbard Hamiltonian}\label{hubbardHamiltonian}\paragraph{}
 
-Imagine a partially filled narrow $s-$band with $n$ electrons per atom. Suppose you have obtained Bloch wave functions $\psi_{\bm k}$ corresponding to energies $\varepsilon_{\bm k}$ by solving the Schr\"odinger equation for some spin-independent mean field Hartree-Fock potential that accounts for the average interaction of the $s-$band electrons with electrons on other bands, and the interaction with the other $s-$electrons. The electrons on the band evolve according to the Hamiltonian (in a suitable unit system):
+Imagine a hypothetical partially filled narrow $s-$band with $n$ electrons per atom. Suppose you have obtained Bloch wave functions $\psi_{\bm k}$ corresponding to energies $\varepsilon_{\bm k}$ by solving the Schr\"odinger equation for some spin-independent mean field Hartree-Fock potential that accounts for the average interaction of the $s-$band electrons with electrons on other bands, and the interaction with the other $s-$electrons. The electrons on the band evolve according to the Hamiltonian (in a suitable unit system):
 
 \begin{equation}\label{eq:startingHamiltonian}
 \begin{split}
@@ -108,8 +116,9 @@ The first term represents the band energies of the electrons and the second term
 The term that we subtract in equation ($\ref{eq:startingHamiltonian}$) corresponds to the part of the interaction term which is already accounted for by the first diagonal mean field term. Thus, it corresponds to the mean field expansion of the interaction term (i.e. the second term), which is generically written
 
 \begin{equation}
-V_{\text{int}} = \frac{1}{2} V^{\nu\mu}_{\nu'\mu'} c_\nu^\dagger c_\mu^\dagger c^{\mu'} c^{\nu'}
+V_{\text{int}} = \frac{1}{2} V^{\nu\mu}_{\nu'\mu'} c_\nu^\dagger c_\mu^\dagger c^{\mu'} c^{\nu'} ,
 \end{equation}
+where the summation over repeated indices is implied.
 
 We start by noting that in mean field, this quartic term becomes a sum of all possible 2-body terms (note that terms of the type $\left\langle cc \right\rangle$ and $\left\langle c^\dagger c^\dagger \right\rangle$ vanish.
 
@@ -119,7 +128,7 @@ We start by noting that in mean field, this quartic term becomes a sum of all po
 &+ \left\langle c_{\nu}^\dagger c_{\nu'} \right\rangle  c_{\mu}^\dagger c_{\mu'} + \left\langle c_{\mu}^\dagger c_{\mu'} \right\rangle  c_{\nu}^\dagger c_{\nu'} ,
 \end{split}
 \end{equation}
-where we ignored the constant terms which are unimportant in the Hamiltonian. This Hartree-Fock mean field approximation is slightly tricky to show. It requires one to be precise about what the meaning of the mean field approximation is in terms of creation and annihilation operators. In mean field theory, we assume that the operator
+where we ignored the constant terms which are unimportant in the Hamiltonian, in what concerns the dynamics. This Hartree-Fock mean field approximation is slightly tricky to show. It requires one to be precise about what the meaning of the mean field approximation is in terms of creation and annihilation operators. In mean field theory, we assume that the operator
 
 \begin{equation}
 \rho_{\mu\mu'} = c_{\mu}^\dagger c_{\mu'}
@@ -130,7 +139,7 @@ is close to its average, so that we neglect second order terms in the fluctuatio
 c_{\nu}^\dagger \bigg( c_\mu^\dagger c_{\mu'} - \left\langle c_\mu^\dagger c_{\mu'} \right\rangle \bigg) c_{\nu'} + c_{\nu}^\dagger c_{\nu'} \left\langle c_\nu^\dagger c_{\nu'} \right\rangle
 \end{equation}
 
-Then we note that if $\nu' \neq \mu$, we can commute $c_{\nu'}$ with the parenthesis. But this is true except in a set of measure zero. In the thermodynamic limit $N \rightarrow \infty$, the number of allowed $\bm k$-states is very large, and if we imagine the set of possible $\bm k$-states to be continuous, then the commutation becomes exact. Repeating the procedure of writing (\ref{eq:hartree}) with $c_\nu^\dagger c_{\nu'} - \left\langle c_\nu^\dagger c_{\nu'} \right\rangle + \left\langle c_\nu^\dagger c_{\nu'} \right\rangle $, we obtain
+Then we note that if $\nu' \neq \mu$, we can commute $c_{\nu'}$ with the parenthesis. But this is true except in a set of measure zero. In the thermodynamic limit $N \rightarrow \infty$, the number of allowed $\bm k$-states is very large, and if we take a continuum limit in which the set of possible $\bm k$-states becomes dense, then the commutation becomes exact. Repeating the procedure of writing (\ref{eq:hartree}) replacing $c_\nu^\dagger c_{\nu'} \mapsto c_\nu^\dagger c_{\nu'} - \left\langle c_\nu^\dagger c_{\nu'} \right\rangle + \left\langle c_\nu^\dagger c_{\nu'} \right\rangle $, we obtain
 
 \begin{equation}
 \begin{split}
@@ -153,7 +162,7 @@ Then we proceed in exactly the same manner as before. The result is analogous, b
 
 Ignoring the constant terms of the type $\left\langle c^\dagger c \right\rangle \left\langle c^\dagger c \right\rangle$, we recover equation (\ref{eq:c_mft}).
 
-Now we can simply substitute the mean field expansion of equation (\ref{eq:c_mft}) in the second term to  obtain the last term that is subtracted in equation (\ref{eq:startingHamiltonian}) (we omit the boldface on the $\bm k_i^{(')}$'s solely in the following equation, but keep in mind that they are vectors):
+Now we can simply substitute the mean field expansion of equation (\ref{eq:c_mft}) in the second term to  obtain the last term that is subtracted in equation (\ref{eq:startingHamiltonian}) (we omit the boldface on the $\bm k$'s solely in the following equation, but keep in mind that they are vectors):
 
 \begin{equation}\label{eq:mean_field}
 \begin{split}
@@ -212,7 +221,7 @@ and
 \nu_{j l} = N^{-1} \sum_{\bm k} e^{i \bm k \cdot ( \bm R_j - \bm R_l) }
 \end{equation}
 
-Now comes the crucial approximation. For a narrow energy band, the Wannier functions $\phi$ nearly coincide with atomic $s-$functions. For small bandwidth these $s-$functions form an atomic shell whose radius is small compared with the spacing between atoms (or lattice constant). Thus, the integral $U = \left\langle i i \big| e^2 / r \big| i i \right\rangle$ should be much larger than all other integrals. This suggests the seemingly crude approximation of neglecting all other integrals. It turns out that this approximation is not so radical as it could seem at first sight since the other integrals are indeed much smaller than $U$. In fact, they are smaller by about two orders of magnitude. We end up with
+Now comes the crucial approximation. For a narrow energy band, the Wannier functions $\phi$ nearly coincide with atomic $s-$functions. For small bandwidth these $s-$functions form an atomic shell whose radius is small compared with the spacing between atoms (or lattice constant). Thus, the integral $U = \left\langle i i \big| e^2 / r \big| i i \right\rangle$ should be much larger than all other integrals. This suggests the seemingly crude approximation of neglecting all other integrals. It turns out that this approximation is not so radical as it could seem at first sight since the other integrals are indeed much smaller than $U$. In fact, they are smaller by about two orders of magnitude for $3d$ electrons of transition metals \cite{hubbard}. We end up with
 
 \begin{equation}
 \mathcal{H} = \sum_{i, j, \sigma} K_{ij} c_{i\sigma}^\dagger c_{j\sigma} + \frac{U}{2} \sum_{i\sigma} n_{i\sigma} n_{i, -\sigma} - U \sum_{i, \sigma} \nu_{i, i} n_{i, \sigma}
@@ -260,15 +269,13 @@ Band theory was found to be flawed soon after it was introduced. The picture it 
 \begin{equation}\label{eq:schrodinger}
 \bigg[ -\frac{1}{2m} \nabla^2 + U(\bm r) \bigg] \psi (\bm r) = \varepsilon \psi (\bm r)
 \end{equation}
-are given by Bloch's theorem: $\psi_{\bm k} (\bm r) = e^{i\bm k \cdot \bm r} u_{\bm k} (\bm r)$. Replacing this wave function in equation (\ref{eq:schrodinger}), we obtain a differential equation for $u_{\bm k} (\bm r)$, which has in general an infinite number of solutions. We label them with an index $n$, which we call the band index. To each solution there corresponds a function $\varepsilon_{n\bm k}$. The set of these functions is known as the band structure. Since electrons are taken to be independent in band theory, the N-electron eigenstates are obtained by placing an electron in each quantum state. Each state is labelled by its energy $\varepsilon_{n\bm k \sigma}$. Since our model Hamiltonian does not couple spins (via an electron interaction, for example) and assuming there is no external magnetic field and that the system has an inversion center, $\varepsilon_{n\bm k \uparrow} = \varepsilon_{n\bm k \downarrow}$. Note that in general there might energies for which there is no corresponding $\varepsilon_{n\bm k \sigma}$. These form intervals called forbidden bands\footnote{We disregard surface states that may have energies that fall in the forbidden bands.}. Thus, the ground state of our model may normally be obtained by filling the energy levels starting from the lowest energy state. Two cases are particularly relevant:
+are given by Bloch's theorem: $\psi_{\bm k} (\bm r) = e^{i\bm k \cdot \bm r} u_{\bm k} (\bm r)$. Note that we made $\hbar = 1$. Replacing this wave function in equation (\ref{eq:schrodinger}), we obtain a differential equation for $u_{\bm k} (\bm r)$, which has in general an infinite number of solutions. We label them with an index $n$, which we call the band index. To each solution there corresponds a function $\varepsilon_{n\bm k}$. The set of these functions is known as the band structure. Since electrons are taken to be independent in band theory, the N-electron eigenstates are obtained by placing an electron in each quantum state. Each state is labelled by its energy $\varepsilon_{n\bm k \sigma}$. Since our model Hamiltonian does not couple spins (via an electron interaction, for example) and assuming there is no external magnetic field and that the system has an inversion center, we have $\varepsilon_{n\bm k \uparrow} = \varepsilon_{n\bm k \downarrow}$. In general there might energies for which there is no corresponding $\varepsilon_{n\bm k \sigma}$. These form intervals called forbidden bands\footnote{We disregard surface states that may have energies that fall in the forbidden bands.}. Thus, the ground state of our model may normally be obtained by filling the energy levels starting from the lowest energy state. Two cases are particularly relevant:
 \begin{itemize}
 \item Every band is either fully occupied or empty. The first excited state differs from the ground state by $\Delta$, the separation between the last fully occupied band and the first empty band. It is then impossible to induce the motion of the electrons by applying an arbitrarily small voltage. This is what it means to be an \emph{insulator}. Since there $2N$ states per band, this is not possible unless the number of electrons per unit cell is an even integer.
-\item One or more of the bands are partially filled. The energy of occupied state of higher energy is named the Fermi energy $\varepsilon_F$. In this case, the separation between the ground state and the first excited state tends to $0$ in the thermodynamic limit, $N \rightarrow \infty$. The system may then respond to infinitesimal excitations, which is the very definition of a metal!
+\item One or more of the bands are partially filled. The energy of occupied state of higher energy is named the Fermi energy $\varepsilon_F$. In this case, the separation between the ground state and the first excited state tends to $0$ in the thermodynamic limit, $N \rightarrow \infty$. The system may then respond to infinitesimal excitations, which is the very definition of a metal.
 \end{itemize}
 
-Band theory made it made possible to predict whether a solid would be a metal or an insulator.
-
-The success of band theory rests crucially on the independent electron approximation. Thus, it is not surprising that for compounds with strongly correlated electrons the theory might fail. 
+Band theory made it made possible to predict whether a solid would be a metal or an insulator. However, its success of band theory rests crucially on the independent electron approximation. Thus, it is not surprising that for compounds with strongly correlated electrons the theory might fail. 
 
 \subsection{Effective Hamiltonian}\paragraph{}
 
@@ -781,14 +788,14 @@ For now, let us assume half filling $\mu = 0$, so that there is no sign problem.
 
 \subsubsection{Hubbard-Stratonovich transformation}\paragraph{}
 
-In section \ref{exactSolutions}, we found exact solutions for particular instances of the Hubbard model by finding a closed form a closed form for the partition function. When devising a numerical method, a good sanity check is to verify that it satisfactorily approximates the partition function.
+In section \ref{exactSolutions}, we found exact solutions for particular instances of the Hubbard model by finding a closed form for the partition function. When devising a numerical method, a good sanity check is to verify that it satisfactorily approximates the partition function.
 
 The operators $\mathcal{H}_K$ and $\mathcal{H}_V$ of equation (\ref{eq:hubbard}) do not commute. This impedes us from factorizing the exponential of their sum $e^{-\beta (\mathcal{H}_K + \mathcal{H}_V)}$ exactly. The Trotter-Suzuki decomposition leads to the sought approximate factorization that is used to approximate the partition function. Quantum states evolve according to
 
 \begin{equation}
 \left| \psi (\tau) \right\rangle = e^{-\tau \mathcal{H} } \left| \psi (0) \right\rangle ,
 \end{equation}
-where $\tau = it$ is the imaginary time.
+where $\tau = it$ is the imaginary time. Recall that Diffusion Monte Carlo is based on this imaginary time evolution, filtering out the ground state as the state that takes longer to vanish exponentially. We now seek a finite temperature method. To find it, we invoke an analogy with the evolution of a quantum system according to the previous equation.
 
 Taking the scalar product with a position eigenstate $ \left\langle \bm x \right|$, we obtain $\psi (\bm x, \tau) = \left\langle \bm x | \psi (\tau) \right\rangle$. Using the closure relation $\int d\bm y \left| \bm y \right\rangle  \left\langle \bm y \right| = 1$, we get
 
@@ -799,29 +806,31 @@ Taking the scalar product with a position eigenstate $ \left\langle \bm x \right
 The wave function at position $\bm x$ and time $t$ may be obtained by this equation as long as we know the wave function at $\tau = 0$, $\psi (\bm y, 0)$ for all points in space $\bm y$. The evolution operator matrix element, or Green function, 
 
 \begin{equation}
-G ( \bm x, \tau | \bm 0, 0 ) \equiv \left\langle \bm x | e^{-\tau \mathcal{H}} | \bm y \right\rangle ,
+G ( \bm x, \tau | \bm y, 0 ) \equiv \left\langle \bm x | e^{-\tau \mathcal{H}} | \bm y \right\rangle ,
 \end{equation}
-as the wave function, satisfies the Schr\"odinger equation, with the initial condition $\delta ( \bm x - \bm y )$. It is then the probability of presence at $\bm x, t$ of a wave packet centered at $\bm y$ at $t = 0$. Note that the solution of the Schr\"odinger equation is then analogous to that of a diffusion equation (that in turn one may obtain as the continuum limit of a random walk). We may write $G$ as a linear combination of the eigenstates of the Hamiltonian
+as the wave function, satisfies the Schr\"odinger equation, with the initial condition $\psi (\bm y, 0) = \delta (\bm x - \bm y )$. It is then the probability of presence at $\bm x, t$ of a wave packet centered at $\bm y$ at $t = 0$. Note that the solution of the Schr\"odinger equation is then analogous to that of a diffusion equation (that in turn one may obtain as the continuum limit of a random walk). We may write $G$ as a linear combination of the eigenstates of the Hamiltonian
 
 \begin{equation}
-G (\bm x, t | \bm 0, 0) = \sum_\alpha \psi_\alpha^\star (\bm y) \psi_\alpha (\bm x) e^{-E_\alpha \tau} ,
+G (\bm x, \tau | \bm y, 0) = \sum_\alpha \psi_\alpha^\star (\bm y) \psi_\alpha (\bm x) e^{-E_\alpha \tau} ,
 \end{equation}
-where we immediately note a striking similarity with equation (\ref{eq:z_asEigen}). We might as well take $G \mapsto Z$, and $\tau \mapsto \beta$ to make direct use of the results we obtained in section \ref{exactSolutions}.
+where we immediately note a striking similarity with equation (\ref{eq:z_asEigen}). The correspondence $\psi (\bm x, \tau) \mapsto Z_\beta$, where $\tau \mapsto \beta$, with respect to section \ref{exactSolutions} makes the analogy evident. $\bm x$ has no correspondence because it is not a parameter, it is just an arbitrary position that we fixed for the sake of the argument.
+
+Computing the partition function at finite temperature
 
 \begin{equation}
-Z = \text{Tr} \big( e^{-\beta \mathcal{H} } \big)
+Z_\beta = \text{Tr} \big( e^{-\beta \mathcal{H} } \big)
 \end{equation}
-in a notation that is reminiscent of the finite temperature case. But remember that now $\beta$ represents the imaginary time, and $Z$ corresponds to the Green function of the zero temperature system.
+is analogous to computing the Green function of a quantum system evolving in imaginary time. The inverse temperature $\beta$ now represents the imaginary time $\tau = it$, and $Z_\beta$ may be simply thought of as the Green function of the analogous quantum system at imaginary time (temperature) $\beta$.
  
 This expression is not very amenable to numerical computation since it contains an exponential of a sum of operators $\mathcal{H}_K + \mathcal{H}_V$, which is not factorizable and involves computing an infinite number of commutators containing these two operators, as per the Zassenhaus formula, valid for any two generic operators $X$ and $Y$:
 
 \begin{equation}\label{eq:zassenhaus}
 \begin{split}
-&e^{t(X+Y)}=e^{tX} e^{tY} e^{-{\frac {t^{2}}{2}}[X,Y]} e^{{\frac {t^{3}}{6}}(2[Y,[X,Y]]+[X,[X,Y]])} \\
-&e^{{\frac {-t^{4}}{24}}([[[X,Y],X],X]+3[[[X,Y],X],Y]+3[[[X,Y],Y],Y])} \, ... , 
+&e^{\delta (X+Y)}=e^{\delta X} e^{\delta Y} e^{-{\frac {\delta^{2}}{2}}[X,Y]} e^{{\frac {\delta^{3}}{6}}(2[Y,[X,Y]]+[X,[X,Y]])} \\
+&e^{{\frac {-\delta^{4}}{24}}([[[X,Y],X],X]+3[[[X,Y],X],Y]+3[[[X,Y],Y],Y])} \, ... , 
 \end{split}
 \end{equation}
-where $t \in \mathbb{C}$ is an expansion parameter.
+where $\delta \in \mathbb{C}$ is an expansion parameter.
 
 Dividing the imaginary time interval $[0, \beta ]$ into $L$ equal sub-intervals of width $\Delta \tau = \beta / L$, we obtain
 
@@ -841,7 +850,7 @@ e^{-\tau \mathcal{H}_K} = e^{-\tau \mathcal{H}_{K_\uparrow}} e^{-\tau \mathcal{H
 \end{equation}
 where $\mathcal{H}_{K_\sigma} = -t \bm c_\sigma^\dagger \bm K  \bm c_\sigma$.
 
-The potential energy term, however, is quartic. Surprisingly, it is possible to express it in quadratic form by introducing an extra degree of freedom, the so called \emph{Hubbard-Stratonovich (HS) field} $\{h_i\}_{i=1}^N$. First, note that number operators on different sites commute, so that we have
+The potential energy term, however, is quartic. Surprisingly, it is possible to express it in quadratic form by introducing an extra degree of freedom, the so called \emph{Hubbard-Stratonovich (HS) field} $\bm h \equiv (h_i)_{i=1}^N$, in which each element is essentially an Ising spin. First, note that number operators on different sites commute, so that we have
 
 \begin{equation}
 \begin{split}
@@ -850,14 +859,14 @@ e^{-\tau \mathcal{H}_V} &= e^{-U \Delta\tau \sum_{i=1}^N (n_{i\uparrow} - 1/2 ) 
 \end{split}
 \end{equation}
 
-Now we introduce the discrete Hubbard Stratonovich transformation for $U > 0$ that allows us to recast the equation above in terms of a non-interacting quadratic term $(n_{i\uparrow} - (n_{i\downarrow} )$.
+Now we introduce the discrete Hubbard Stratonovich transformation for $U > 0$ that allows us to recast the equation above in terms of a non-interacting quadratic term $(n_{i\uparrow} - n_{i\downarrow} )$.
 
 \begin{equation}\label{eq:discreteHS}
 e^{-U \Delta\tau (n_{i\uparrow} - 1/2 ) (n_{i\downarrow} - 1/2 )} = c_U \sum_{h_i = \pm 1} e^{\nu h_i (n_{i\uparrow} - n_{i\downarrow} )},
 \end{equation}
 where $c_U = \frac{1}{2} e{-\frac{U\Delta \tau}{4}}$ and $\nu = \text{arcosh} ( e^{\frac{U\Delta\tau}{2}})$.
 
-To prove this identity, let us write down how the operators  $(n_{i\uparrow} - 1/2 ) (n_{i\downarrow} - 1/2 )$ and $(n_{i\uparrow} - n_{i\downarrow} )$ act on a Hubbard state on a given site.
+To prove this identity, let us write down how the operators  $(n_{i\uparrow} - 1/2 ) (n_{i\downarrow} - 1/2 )$ and $(n_{i\uparrow} - n_{i\downarrow} )$ act on a state on a given site.
 
 \begin{equation}
 \begin{split}
@@ -893,7 +902,7 @@ Now we simply compare the action of the operators on the left hand side and on t
 \end{split}
 \end{equation}
 
-Note that we require $U > 0$ so that there exists $\nu \in \mathbb{R}$ such that $\cosh \nu = e^{U\Delta \tau / 2}$. A similar reasoning could be made for $U < 0$, and other transformations that recast quartic terms in terms of quadratic ones exist too. This is the one we will use throughout.
+Note that we require $U > 0$ so that there exists $\nu \in \mathbb{R}$ such that $\cosh \nu = e^{U\Delta \tau / 2}$. A similar reasoning could be made for $U < 0$, and also other transformations that recast quartic terms in terms of quadratic ones exist too\cite{discreteHS}. The transformation one we derived is the one we will use throughout.
 
 We have now made progress. At the expense of introducing an extra $N$-dimensional HS-field $\bm h$, we obtained an \emph{exact} representation of the quartic term in terms of quadratic terms.
 
@@ -919,7 +928,7 @@ where the spin up and spin down operators $\mathcal{H}_{V_\sigma}$ are defined a
 \end{equation}
 with $\bm V(\bm h)$ being simply the HS-field put into a diagonal $N\times N$ matrix: $\bm V(\bm h) \equiv \text{diag}(h_1, h_2, ..., h_N)$.
 
-For each imaginary time slice $l=1,...,L$ we may define a HS-field $\bm h_l$, which in turn specifies $\bm V_l$ and $\mathcal{H}_{V_\sigma}^l$. We may now replace the result of equation (\ref{eq:exp_quartic}) in equation (\ref{eq:Z_propagator}), and exchange the traces to obtain
+For each imaginary time slice $l$ (where $l \in [1, L]$) we may define a HS-field $\bm h_l$, which in turn specifies $\bm V_l$ and $\mathcal{H}_{V_\sigma}^l$. We may now replace the result of equation (\ref{eq:exp_quartic}) in equation (\ref{eq:Z_propagator}), and exchange the traces to obtain
 
 \begin{equation}\label{eq:Z_quadratic}
 \begin{split}
@@ -950,19 +959,307 @@ The problem of computing the partition has been reduced to computing the trace o
 Let $\mathcal{H}_l$ be quadratic forms of the fermion operators:
 
 \begin{equation}
-\mathcal{H}_l = c_i^\dagger (\mathcal{H}_l)_{ij} c_j,
+\mathcal{H}_l = c_i^\dagger (H_l)_{ij} c_j,
 \end{equation}
-where the summation is implied, and where $\mathcal{H}_l$ are real matrices. Then, we have the identity
+where the summation is implied, and where $H_l$ are real matrices. Then, the following identity holds
+
+\begin{equation}\label{eq:quadraticIdentity}
+\text{Tr} \big[ e^{-\mathcal{H}_1 } e^{-\mathcal{H}_2 } ... e^{-\mathcal{H}_L } \big] = \text{det} ( \bm I + e^{-H_L} e^{-H_{L-1}} ... e^{-H_1} )
+\end{equation}
+
+For simplicity, we present the proof for a simpler case, corresponding to a single $\bm B$-matrix, i.e. a product of exponentials of two quadratic operators. It could then be easily extended to the more general case. Let the two arbitrary real matrices be $\bm M$ and $\bm N$. Then, a particular case of the previous identity is
+
+\begin{equation}\label{eq:particularIdentity}
+\text{Tr} \big[ e^{-c_i^\dagger M_{ij} c_j} e^{-c_i^\dagger N_{ij} c_j} \big] = \text{det} ( \bm I + e^{-{\bm M}} e^{-{\bm N}} ) ,
+\end{equation}
+where a summation over repeated indices is implied, as it wil be throughout this proof.
+
+To prove this identity, we start by proving that
+
+\begin{equation}\label{eq:identity_prod_exps}
+e^{-c_i^\dagger M_{ij} c_j}  e^{-c_i^\dagger N_{ij} c_j} = e^{-\sum_\nu c_\nu^\dagger \rho_\nu c_\nu} ,
+\end{equation}
+where $\lambda_\nu = e^{-\rho_\nu}$ are the eigenvalues of the matrix $e^{-{\bm M}} e^{-{\bm N}}$.
+
+The proof consists of showing that any many-particle state are propagated in the same way when acted upon by any of these two operators, i.e. the LHS operator leads the system to the same state as the RHS operator.
+
+A generic single-particle state reads
 
 \begin{equation}
-\text{Tr} \big[ e^{-\mathcal{H}_1 } e^{-\mathcal{H}_2 } ... e^{-\mathcal{H}_L } \big] = \text{det} ( \bm I + e^{-\mathcal{H}_L} e^{-\mathcal{H}_{L-1}} ... e^{-\mathcal{H}_1} )
+\left| \phi \right\rangle = \sum_j a_j c_j^\dagger \left| 0 \right\rangle ,
+\end{equation}
+where $a_j$ are arbitrary coefficients, and $\left| 0 \right\rangle$ is the vacuum state.
+
+Let $\{\left| \mu \right\rangle \}$ be the basis in which the matrix $\bm N$ is diagonal. Using Dirac notation, we then have
+
+\begin{equation}
+\bm N = \sum_{\mu} \left| \mu \right\rangle n_\mu \left\langle \mu \right|
 \end{equation}
 
-%We present a simpler case,. The 
+Defining new fermionic operators
 
-%\begin{equation}
-%\text{Tr} \bigg[ e^{-c_i^\dagger A_{ij} c_j} e^{-c_i^\dagger B_{ij} c_j} \bigg] = \text{det} ( 1 + e^{-A} e^{-B} )
-%\end{equation}
+\begin{equation}
+\begin{split}
+c_\mu &= \sum_j \left\langle \mu | j \right\rangle c_j \\
+c_\mu^\dagger &= \sum_j \left\langle j | \mu \right\rangle c_j^\dagger ,
+\end{split}
+\end{equation}
+which may be inverted to obtain
 
+\begin{equation}
+\begin{split}
+c_j &= \sum_\mu \left\langle j | \mu \right\rangle c_\mu \\
+c_j^\dagger &= \sum_\mu \left\langle \mu | j \right\rangle c_\mu^\dagger ,
+\end{split}
+\end{equation}
+
+Now we prove yet another identity that goes into proving equation (\ref{eq:identity_prod_exps}).
+
+\begin{equation}\label{eq:LHS_identity}
+e^{-c_i^\dagger N_{ij} c_j} = \prod_\mu \big[ \mathbbm{1} + ( e^{-n_\mu} - 1 ) c_\mu^\dagger c_\mu \big]
+\end{equation}
+
+\begin{equation*}
+\begin{split}
+&\exp({-c_i^\dagger N_{ij} c_j}) = \exp({ - \sum_{\mu\nu} \left\langle \mu | i \right\rangle c_\mu^\dagger N_{ij} \left\langle j | \nu \right\rangle c_\nu }) \\
+&= \exp({-\sum_{ij}\sum_{ \mu\nu\sigma} \left\langle \mu | i \right\rangle  \left\langle i | \sigma \right\rangle c_\mu^\dagger n_\sigma \left\langle \sigma | j \right\rangle \left\langle j | \nu \right\rangle c_\nu }) , \\
+& \text{(using the closure relation} \sum_i \left| i \right\rangle \left\langle i \right|= \mathbbm{1} \text{)} \\
+&= \exp({-\sum_{ \mu\nu\sigma} \overbrace{\left\langle \mu | \sigma \right\rangle}^{\delta_{\mu\sigma}}  c_\mu^\dagger n_\sigma \overbrace{\left\langle \sigma | \nu \right\rangle}^{\delta_{\sigma\nu}} c_\nu }) \\
+&= \exp({-\sum_\mu c_\mu^\dagger n_\mu c_\mu}) \\
+&= \prod_\mu e^{-n_\mu \hat{n}_\mu} \\
+&= \prod_\mu [ \mathbbm{1} + ( - n_\mu \hat{n}_\mu + \frac{n_\mu^2}{2!} \hat{n}_\mu^2 - \frac{n_\mu^3}{3!} \hat{n}_\mu^3 + ... ] \\
+&= \prod_\mu [ \mathbbm{1} + ( - n_\mu + \frac{n_\mu^2}{2!} - \frac{n_\mu^3}{3!} + ... ) \hat{n}_\mu ] \\
+& \text{(since  } \hat{n} = \hat{n}^k \text{  for all  } k \in \mathbb{N} \text{  for fermions since  } n = 0, 1 ) \\
+&= \prod_\mu [ \mathbbm{1} + ( e^{-n_\mu} - 1 ) c_\mu^\dagger c_\mu ] \quad\quad \qedsymbol
+\end{split}
+\end{equation*}
+
+Let
+
+\begin{equation}
+\left| \phi \right\rangle = \sum_j a_j c_j^\dagger \left| 0 \right\rangle
+\end{equation}
+be an arbitrary many-particle state. 
+
+Now we use the previous identity to prove that applying the operator of equation (\ref{eq:LHS_identity}) to $\left| \phi \right\rangle$ we obtain
+
+\begin{equation}
+e^{-c_i^\dagger N_{ij} c_j} \left| \phi \right\rangle = \sum_j a_j' c_j^\dagger \left| 0 \right\rangle , 
+\end{equation}
+with
+\begin{equation}
+a_j' = \sum_{i} (e^{-B})_{ji} a_i
+\end{equation}
+
+We start by writing $\left| \phi \right\rangle$ in the basis $\{ \left| \mu \right\rangle \}$ (in which $\bm N$ is diagonal).
+
+\begin{equation}
+\left| \phi \right\rangle = \sum_{i,\mu} a_i \left\langle \mu | i \right\rangle c_\mu^\dagger \left| 0 \right\rangle
+\end{equation}
+
+Then, we apply the RHS of equation (\ref{eq:LHS_identity}) to $\left| \phi \right\rangle$ written in this basis.
+
+\begin{equation}\label{eq:proofAuxIdentity}
+\begin{split}
+&\sum_\nu \bigg[ \mathbbm{1} + ( e^{-n_\mu} - 1 ) c_\nu^\dagger c_\nu \bigg] c_\mu^\dagger \left| 0 \right\rangle \\
+=&\bigg[ \mathbbm{1} + ( e^{-n_\mu} - 1 ) c_\mu^\dagger c_\mu \bigg] c_\mu^\dagger \left| 0 \right\rangle \\
+=& c_\mu^\dagger \left| 0 \right\rangle + (e^{-n_\mu - 1} - 1) c_\mu^\dagger \left| 0 \right\rangle \\
+=& c_\mu^\dagger e^{-n_\mu} \left| 0 \right\rangle
+\end{split}
+\end{equation}
+
+\begin{equation}
+\begin{split}
+&\sum_\nu \bigg[ \mathbbm{1} + ( e^{-n_\mu} - 1 ) c_\nu^\dagger c_\nu \bigg] \left| \phi \right\rangle \\
+=& \sum_{i\mu} \left\langle \mu | i \right\rangle a_i e^{-n_\mu} c_\mu^\dagger \\
+=& \sum_{j\mu i} \left\langle j | \mu \right\rangle e^{-n_\mu} \left\langle \mu | i \right\rangle a_i \left| j \right\rangle \\
+=& \sum_{j i} \underbrace{\sum_{\mu\nu} \left\langle j | \mu \right\rangle e^{-N_{\mu\nu}} \left\langle \nu | i \right\rangle}_{(e^{-\bm N})_{ji}} a_i \left| j \right\rangle \\
+=& \sum_j a_j' c_j^\dagger \left| 0 \right\rangle
+\end{split}
+\end{equation}
+
+Similarly, by repeating the procedure performing a change of basis to the eigenbasis of $\bm M$, we obtain the more general relation
+
+\begin{equation}\label{eq:propagation_exps}
+\begin{split}
+&e^{-c_i^\dagger M_{ij} c_j} e^{-c_i^\dagger N_{ij} c_j} \left| \phi \right\rangle = \sum_j a_j'' c_j^\dagger \left| 0 \right\rangle \\
+& a_j'' = \sum_i ( e^{-\bm M} e^{-\bm N} )_{ji} a_i
+\end{split}
+\end{equation}
+
+The amplitude of a propagated state is given by multiplying the initial amplitude by the matrix $e^{-\bm M} e^{-\bm N}$, whichever the basis we choose. Then, since equation (\ref{eq:propagation_exps}) holds in particular for the choice of the eigenbasis of $e^{-\bm M}e^{-\bm N}$ as our basis of single-particle states, if we start with an eigenstate
+
+\begin{equation}
+\left| \phi \right\rangle = c_\nu^\dagger \left| 0 \right\rangle ,
+\end{equation}
+then the amplitude of the propagated state will be given by
+
+\begin{equation}
+(e^{-\bm M} e^{-\bm N} )_{\nu\nu} = e^{-\rho_\nu} ,
+\end{equation}
+the same as we would obtain from equation (\ref{eq:identity_prod_exps}). Clearly, if we start with a state that is an arbitrary combination of states of the eigenbasis, we would obtain the identity (\ref{eq:identity_prod_exps}).
+
+The identity was proven for a single-particle state. Does it generalize to more than one particle? As we did before, we start with propagation by a single factor $e^{-\bm N}$. Take a two-particle state
+
+\begin{equation}
+\left| \phi \right\rangle = c_{\mu_1}^\dagger c_{\mu_2}^\dagger \left| 0 \right\rangle
+\end{equation}
+
+Now propagate it with $\bm N$, i.e. 
+
+\begin{equation}
+\begin{split}
+&e^{-c_i^\dagger N_{ij} c_j} \left| \phi \right\rangle = \prod_\mu \bigg[ 1 + (e^{-n_\mu} -1 ) c_\mu^\dagger c_\mu \bigg] c_{\mu_1}^\dagger c_{\mu_2}^\dagger \left| 0 \right\rangle \\
+&= e^{-n_{\mu_1}} e^{-n_{\mu_2}} c_{\mu_1}^\dagger c_{\mu_2}^\dagger \left| 0 \right\rangle ,
+\end{split}
+\end{equation}
+where we simply note that by similar reasoning to the previous case, we would in equation (\ref{eq:proofAuxIdentity}) keep two terms corresponding to $\mu_1 \neq \mu_2$. If $\mu_1 = \mu_2$, then both sides are equal to zero due to Pauli's exclusion principle and the equality holds trivially. This reasoning clearly generalizes to an arbitrary superposition of many-particle states. Moreover, we proved the result for a product of two factors $e^{-\bm M} e^{-\bm N}$, but it is also easy to see that by successive changes of basis, we could extend our result to an arbitrary number of factors.
+
+To complete our proof of the identity (\ref{eq:particularIdentity}) that is so crucial in formulating AFQMC, we use the auxiliar identity we just proved (\ref{eq:identity_prod_exps}).
+
+\begin{equation}
+\begin{split}
+&\text{Tr} \bigg[ e^{-\sum_\nu c_\nu^\dagger \rho_\nu c_\nu} \bigg] = \text{Tr} \bigg[ \prod_\nu e^{-c_\nu^\dagger \rho_\nu c_\nu } \bigg] \text{  since  } [\hat{n}_\mu, \hat{n}_\nu] = 0 \\
+&= \prod_\nu ( 1 + e^{-\rho_\nu} ) = \text{det} [ \bm I + e^{-\bm M} e^{-\bm N} ], \quad\quad \qedsymbol
+\end{split}
+\end{equation}
+where the last equality stems from the fact that the determinant of a diagonal matrix is just the product of the eigenvalues.
+
+When applied to our problem, equation (\ref{eq:quadraticIdentity}) essentially makes the computation of the trace possible! Note that if we were to compute it naively, we would soon run out of memory. The dimension of the Hilbert space of the Hubbard model is $4^N$, where $N$ is the number of lattice sites. The determinant is calculated for a matrix whose size is polynomial in $N$. 
+
+Equation (\ref{eq:quadraticIdentity}) allows us to write the partition function (\ref{eq:Z_quadratic}) in computable form
+
+\begin{equation}
+Z_{\bm h} = (c_U)^{NL} \text{Tr}_{\bm h} \text{det} [ \bm M_\uparrow (\bm h) \bm M_\downarrow (\bm h) ] ,
+\end{equation}
+where the fermion matrices $\bm M_\sigma$ are defined in terms of the $\bm B$-matrices for a given spin $\sigma$ and a given HS-field $\bm h$:
+
+\begin{equation}
+\bm M_\sigma (\bm h) = \bm I + \bm B_{L,\sigma} ( h_L) \bm B_{L-1,\sigma} ( h_{L-1}) ... \bm B_{1\sigma} ( h_1)
+\end{equation}
+
+The computable approximation of the distribution operator $\mathcal{P}$ corresponding to this partition function is
+
+\begin{equation}
+P(\bm h) = \frac{A}{Z_h} \det [ M_{\uparrow}(\bm h) ] \det [ M_{\downarrow}(\bm h) ] ,
+\end{equation}
+where $A = (c_U)^{NL}$ is a normalization constant. This is now a distribution function over configurations $\bm h$ since the problem is classical!
+
+For the particular case of no interactions $U = 0$, we have that $\nu = 0$, and $\bm M_\sigma (\bm h)$ are constant matrices, independent of the HS-field. The Trotter-Suzuki approximation then becomes exact and the Hubbard Hamiltonian may be simulated exactly after evaluating $\bm M_\sigma (\bm h)$ a single time. No updates are required.
+
+As a final remark, note that we managed to map a quantum problem to a classical problem in higher dimension. The degrees of freedom of the quantum problem correspond to the $i$ indices  of the $c$-operators. In our formulation, an additional imaginary time slice index $l$ was introduced, leading to a mapping that is not specific to the Hubbard model, but that actually applies very generally for any quantum system.
+
+\subsubsection{Monte Carlo sampling of the HS-field}\paragraph{}
+
+The computational problem is now that of sampling configurations of the $\bm h$ field drawn from the distribution $P(\bm h)$ using \emph{Classical} Monte Carlo. The size of the state space has been (hopefully) reduced to $2^{NL}$ (assuming that $L < N$).
+
+It remains to choose a dynamics and a sampling scheme. The simplest strategy to change from a configuration $\bm h$ to a new one $\bm h'$ is single spin-flip dynamics. We choose a random point $(l, i)$, and we flip the spin at that \say{site}
+
+\begin{equation}
+h_{l, i}' = - h_{l, i},
+\end{equation}
+keeping all others unchanged.
+
+The most common scheme to ensure that the distribution of the accepted sample is $P(\bm h)$ is the Metropolis-Hastings algorithm.
+
+After the warm-up steps, i.e. after we ensure that we are correctly sampling from the required distribution, we may perform measurements, waiting for some (Monte Carlo) time before each of them to ensure that the correlations within the sample are negligible. Let the total number of Monte Carlo steps (warm-up $W$ + measurement $M$) be $S = W + M$. The idea is that we run the algorithm for $W$ steps, before starting the measurements. Then we measure the state of the system every $2\tau$ steps, where $\tau$ is the correlation time, i.e. the time it takes for some representative correlation function to drop to $e^{-1}$ its original value.
+
+
+\begin{algorithm}
+\caption{Auxiliary Field Quantum Monte Carlo}
+\label{afqmcSampling}
+\begin{multicols}{2}
+\begin{algorithmic}[5]
+  \STATE Initialize HS field $\bm h$  \\
+  \STATE Initialize hoppings $\bm K$  \\
+  \STATE  $(h_{l, i}) = (\pm 1)_{l=1, i = 1}^{L, N}$
+  \STATE $(l, i) \leftarrow (1, 1)$
+  \FOR{$\text{step} = 1$ to $S$}
+  \STATE \footnotesize{Propose new configuration by flipping a spin} \\ \normalsize{$h_{l, i}' = - h_{l, i}$} 
+  \STATE \footnotesize{Compute the acceptance ratio $a_{l, i}$} \\
+  \normalsize{$\frac{\text{det}[\bm M_\uparrow (\bm h')]\text{det}[\bm M_\downarrow (\bm h')]}{\text{det}[\bm M_\uparrow (\bm h)]\text{det}[\bm M_\downarrow (\bm h)]}$}
+  \STATE \normalsize{Metropolis step}
+  \STATE \footnotesize{Draw random number $r \in [0,1]$}
+  \IF{$r \le \min(1, a_{l, i})$}
+  \STATE $\bm h = \bm h'$
+  \ELSE
+  \STATE $\bm h = \bm h$
+  \ENDIF
+  \STATE Next site
+  \IF{$i < N$}
+  \STATE $l = l$ , $i = i +1 $
+  \ELSE
+  \IF {$l < L$}
+  \STATE $l = l+1$ , $i = 1 $
+  \ENDIF
+  \IF {$l = L$}
+  \STATE $l = l$ , $i=1$
+  \ENDIF
+  \ENDIF
+  \ENDFOR
+\end{algorithmic}
+\end{multicols}
+\end{algorithm}
+
+The Metropolis acceptance/rejection scheme leads to a rank-one update of the matrices $\bm M_\sigma (\bm h)$, which affords an efficient evaluation of the acceptance ratio $a_{l, i}$.
+
+Consider two matrices $\bm A_1$, $\bm A_2$ written in the form
+
+\begin{equation}
+\bm A_{1,2} = \bm I + \bm F \bm V_{1,2} ,
+\end{equation}
+where $\bm F$ is some matrix. $\bm V_{1,2}$ are diagonal and non-singular and differ only in the $(1,1)$ entry, so that
+
+\begin{equation}
+\bm V_1^{-1} \bm V_2 = \bm I + \alpha_1 \bm e_1 \bm e_1^T ,
+\end{equation}
+where $\bm e_1$ is a vector corresponding to the first column of the identity matrix $\bm I$, and
+
+\begin{equation*}
+\alpha_1 = \frac{V_2(1,1)}{V_1(1,1)} - 1
+\end{equation*}
+
+Then, $\bm A_2$ is clearly a rank-one update of $\bm A_1$.
+
+\begin{equation*}
+\begin{split}
+\bm A_2 &= \bm I + \bm F \bm V_1 + \bm F \bm V_1 ( \bm V_1^{-1} \bm V_2 - \bm I ) \\
+&= \bm A_1 + \alpha_1 ( \bm A_1 - \bm I ) \bm e_1 \bm e_1^T \\
+&= \bm A_1 [ \bm I + \alpha_1 ( \bm I - \bm A_1^{-1} )\bm e_1 \bm e_1^T ]
+\end{split}
+\end{equation*}
+
+Using the identity $\text{det}[\bm I + \bm x \bm y^T] = \bm I + \bm y^T \bm x$ for any two column vectors, we may write the ratio of the determinants of matrices $\bm A_1$ and $\bm A_2$ as
+
+\begin{equation}\label{eq:efRatio}
+r_1 = \frac{\text{det}[\bm A_2]}{\text{det}[\bm A_1]} = 1 + \alpha_1 ( 1 - \bm e_1^T \bm A_1^{-1} \bm e_1 ) ,
+\end{equation}
+which reduces the computation of the ratio $r_1$ to computing the $(1,1)$ entry of $\bm A^{-1}$.
+
+Now we generalize this idea for a sequence of matrices $\bm A_1, \bm A_2, ..., \bm A_i, ..., \bm A_n$ generated by successive rank-one updates: $\bm A_{i+1} = \bm I + \bm F \bm V_{i+1}, \, i = 1, 2, ..., N-1$, with
+
+\begin{equation}
+\bm V_i^{-1} \bm V_{i+1} = \bm I + \alpha_i \bm e_i \bm e_i^T \quad \alpha_i = \frac{\bm V_{i+1}(1,1)}{\bm V_i (1,1)} -1
+\end{equation}
+
+The Sherman-Morrison-Woodbury formula gives an expression for the inverse of $\bm A_2$ as a rank-one update of $\bm A_1^{-1}$.
+
+\begin{equation}
+\begin{split}
+\bm A_2^{-1} &= \bigg[ \bm I - \frac{\alpha_1}{r_1} ( \bm I - \bm A_1^{-1} ) \bm e_1 \bm e_1^T  \bigg] \bm A_1^T \\
+&= \bm A_1^{-1} - \frac{\alpha_1}{r_1} \bm u_1 \bm w_1^T ,
+\end{split}
+\end{equation}
+where
+
+\begin{equation*}
+\bm u_1 = (\bm I - \bm A_1^{-1} ) \bm e_1 \quad \bm w_1 = (\bm A_1^{-1})^T \bm e_1
+\end{equation*}
+
+Using equation (\ref{eq:efRatio}), we find the updates
+
+\begin{equation}
+
+\end{equation}
 
 \end{document}

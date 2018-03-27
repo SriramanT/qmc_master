@@ -104,7 +104,7 @@ int main()
     
     //  Physical parameters
     
-    const static int L = 10;                                    //  number of imaginary time subintervals
+    const static int L = 5;                                    //  number of imaginary time subintervals
     const static double beta = 1.;                              //  imaginary time interval or equivalent maximum temperature of the (d+1) classical system
     const static double dt = beta/L;                            //  time subinterval width
     const static double t = 1.;                                 //  hopping parameters
@@ -297,6 +297,10 @@ int main()
             }
             else
             {
+                if (printsOn == 1)
+                {
+                    cout << "Rejected\n" << endl;
+                }
                 // revert changes
                 BpNew[l_chosen] = BpOld[l_chosen];
                 BmNew[l_chosen] = BmOld[l_chosen];
