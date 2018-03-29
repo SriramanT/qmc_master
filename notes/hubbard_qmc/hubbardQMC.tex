@@ -6,6 +6,7 @@
 \usepackage{geometry}
 \usepackage{bbm}
 \geometry{a4paper,total={170mm,257mm},left=17mm,top=20mm,right=17mm}
+\usepackage{setspace}
 \pagenumbering{arabic}
 \usepackage{hyperref}
 \usepackage{url}
@@ -41,7 +42,7 @@
 %		TO DO LIST
 
 % Missing citations - specified as [?], finish QUEST's document up to first algorithm, finish part on Mott insulators and Heisenberg as effective Hamiltonian based on EPFL's notes}
-
+\onehalfspacing
 
 \begin{abstract}\paragraph{}
 The interactions between the electrons in a solid give rise to effects that arise specifically due to the many-body nature of the system. The Hubbard model is a minimal model that encapsulates electron correlations, going beyond the periodic ionic potential perturbation on the free electron gas or tight binding approaches, which lead to band theory. It does so by adding the simplest possible electron interaction term to a tight binding Hamiltonian, allowing us to make predictions about magnetic and superconducting behavior, and metal-insulator transitions. On the other hand, Quantum Monte Carlo (QMC) is a simulation method that is amply applicable to condensed matter physics problems. It is commonly used to simulate the Hubbard model. Despite the system size being constrained due to limited simulation time, the method provides reliable, unbiased, and generally accurate solutions to the often otherwise intractable quantum many-body problem. In particular, the technique allows us to capture the elusive effects of electron correlations, for example in two-dimensional graphene-like nanostructures.
@@ -49,6 +50,7 @@ The interactions between the electrons in a solid give rise to effects that aris
 \end{strip}
 
 \section{Introduction}\paragraph{}
+\onehalfspacing
 
 The Hubbard model appeared in 1963 as one of the first attempts to include electron correlation effects in a quantum mechanical description of a solid \cite{hubbard}. Originally, it was introduced to explain the behavior of the electrons occupying the narrow, partially filled $d-$bands of transition metals. Correlation phenomena in these bands lead to a behavior reminiscent of the atomic picture of a solid. We have come a long way since the introduction of the Hubbard model and it is now as paradigm-defining in many-body theory as the Ising model in statistical physics\cite{someManyBodyBooks}.
 
@@ -264,20 +266,60 @@ Let's suppose we have the simplest uniform nearest neighbor hopping model. Going
 
 \subsection{Mott insulators}\paragraph{}
 
-Band theory was found to be flawed soon after it was introduced. The picture it proposes is simple and generally works pretty well. The solutions of the Schr\"odinger for free electrons in a periodic potential $U(\bm r)$, such that $U(\bm r) = U(\bm r + \bm R)$,
+Band theory was found to be flawed soon after it was introduced. The picture it proposes is simple and generally works pretty well. It is based on considering the electrons to be independently moving under the constant background potential created by the ions. The solutions of the Schr\"odinger for free electrons in a periodic potential $U(\bm r)$, such that $U(\bm r) = U(\bm r + \bm R)$,
 
 \begin{equation}\label{eq:schrodinger}
 \bigg[ -\frac{1}{2m} \nabla^2 + U(\bm r) \bigg] \psi (\bm r) = \varepsilon \psi (\bm r)
 \end{equation}
-are given by Bloch's theorem: $\psi_{\bm k} (\bm r) = e^{i\bm k \cdot \bm r} u_{\bm k} (\bm r)$. Note that we made $\hbar = 1$. Replacing this wave function in equation (\ref{eq:schrodinger}), we obtain a differential equation for $u_{\bm k} (\bm r)$, which has in general an infinite number of solutions. We label them with an index $n$, which we call the band index. To each solution there corresponds a function $\varepsilon_{n\bm k}$. The set of these functions is known as the band structure. Since electrons are taken to be independent in band theory, the N-electron eigenstates are obtained by placing an electron in each quantum state. Each state is labelled by its energy $\varepsilon_{n\bm k \sigma}$. Since our model Hamiltonian does not couple spins (via an electron interaction, for example) and assuming there is no external magnetic field and that the system has an inversion center, we have $\varepsilon_{n\bm k \uparrow} = \varepsilon_{n\bm k \downarrow}$. In general there might energies for which there is no corresponding $\varepsilon_{n\bm k \sigma}$. These form intervals called forbidden bands\footnote{We disregard surface states that may have energies that fall in the forbidden bands.}. Thus, the ground state of our model may normally be obtained by filling the energy levels starting from the lowest energy state. Two cases are particularly relevant:
+are given by Bloch's theorem: $\psi_{\bm k} (\bm r) = e^{i\bm k \cdot \bm r} u_{\bm k} (\bm r)$. Note that we made $\hbar = 1$. Replacing this wave function in equation (\ref{eq:schrodinger}), we obtain a differential equation for $u_{\bm k} (\bm r)$, which has in general an infinite number of solutions. We label them with an index $n$, which we call the band index. To each solution there corresponds a function $\varepsilon_{n\bm k}$. The set of these functions is known as the band structure. Since electrons are taken to be independent in band theory, the N-electron eigenstates are obtained by placing an electron in each quantum state. Each state is labelled by its energy $\varepsilon_{n\bm k \sigma}$. Since our model Hamiltonian does not couple spins (via an electron interaction, for example) and assuming there is no external magnetic field and that the system has an inversion center, we have $\varepsilon_{n\bm k \uparrow} = \varepsilon_{n\bm k \downarrow}$. In general there might be energies for which there is no corresponding $\varepsilon_{n\bm k \sigma}$. These form intervals called forbidden bands\footnote{We disregard surface states that may have energies that fall in the forbidden bands.}. Thus, the ground state of our model may normally be obtained by filling the energy levels starting from the lowest energy state. Two cases are particularly relevant:
 \begin{itemize}
 \item Every band is either fully occupied or empty. The first excited state differs from the ground state by $\Delta$, the separation between the last fully occupied band and the first empty band. It is then impossible to induce the motion of the electrons by applying an arbitrarily small voltage. This is what it means to be an \emph{insulator}. Since there $2N$ states per band, this is not possible unless the number of electrons per unit cell is an even integer.
 \item One or more of the bands are partially filled. The energy of occupied state of higher energy is named the Fermi energy $\varepsilon_F$. In this case, the separation between the ground state and the first excited state tends to $0$ in the thermodynamic limit, $N \rightarrow \infty$. The system may then respond to infinitesimal excitations, which is the very definition of a metal.
 \end{itemize}
 
-Band theory made it made possible to predict whether a solid would be a metal or an insulator. However, its success of band theory rests crucially on the independent electron approximation. Thus, it is not surprising that for compounds with strongly correlated electrons the theory might fail. 
+Band theory made it made possible to predict whether a solid would be a metal or an insulator. However, the success of band theory rests crucially on the independent electron approximation. Thus, it is not surprising that for compounds with strongly correlated electrons the theory might fail. The Coulomb interaction is in general non negligible, and the effects it leads to are not captured by a mean field approach. One must resort to many-body theory. An example of a many-body effect that band theory doesn't capture is superconductivity. However, a superconducting phase arises due to an instability of a state that is itself well described by band theory. A far greater failure of band theory is that predicts certain compounds with an odd number of electrons per unit cell, such as $NiO$ and $La_2 Cu O_4$,  to be metals, while in fact  they turn out to be (Mott) insulators. Mott devised a simple argument to justify this failure. It is based on considering the elementary electronic excitations of a solid composed by hydrogen atoms as a function of the distance between atoms.
 
-\subsection{Effective Hamiltonian}\paragraph{}
+Consider a hypothetical solid consisting of a square lattice with hydrogen atoms on its points. Each unit cell has one hydrogen atom, and consequently one electron. Band theory would predict such a solid to be a metal. However, if the lattice parameter $a$ is large enough, the solid cannot remain a metal. There must be some value of the lattice parameter $a = a_c$ for which the system becomes an insulator. When current flows through a sample of this solid, electrons hop consecutively, reaching positions that can be quite far on the lattice. For a metal, this process occurs even when exciting the system with an infinitesimal amount of energy. How much energy do we need to provide for this process to occur?
+
+If $a$ is large, we have essentially one electron per site at the start. When an electron is displaced, we end up with a hole and a doubly occupied site. The potential energy of such a state is
+
+\begin{equation}
+E_{H^-} + E_{H^+} - 2 E_H 
+\end{equation}
+
+Due to the Coulomb repulsion between the two electrons in $H^-$, this quantity is strictly positive. Call it $U > 0$. On the other hand, the system also has kinetic energy: both the hole and the doubly occupied site can delocalize. Let $W$ be the bandwidth corresponding to the delocalization of an electron on the lattice. Both the hole and the doubly occupied will stay at the bottom of the band and gain an energy $W/2$ (assuming that this delocalization is of the same order of magnitude). The dominant transfer integral $-t$ is between nearest neighbors. The dispersion relation then reads
+
+\begin{equation}
+\varepsilon_{\bm k} = -2 t ( \cos k_x + \cos k_y ) 
+\end{equation}
+
+The bandwidth is then $W = 8 t$. The energy of a configuration with a hole and a doubly occupied site is
+
+\begin{equation}
+\Delta_c = U - W ,
+\end{equation}
+where $U$ is virtually independent of the lattice parameter $a$. The bandwidth $W$, however, depends strongly on $a$. When $a \gg a_0$, where $a_0$ is the Bohr radius, the transfer integral is exponentially small, because only the exponential tails of the wave functions are relevant. In this limit, $\Delta_c \approx U$ is a large, positive number, and the system is an insulator. This type of insulator is called a Mott insulator, and $\Delta_c$ is called the charge gap. As $a$ decreases, $t$ increases, and there must be a critical value $a_c \sim a_0$, for which $U = W$. Below this value, the computation of $\Delta_c$ is not valid anymore because the gap cannot be negative. Thus, there must be a metal-insulator transition. It is possible to see this transition if we apply enough pressure to a Mott insulator so as to decrease $a$ and increase $t$. A transition of this type was first seen in the 1970's for $V_2 O_3$\footnote{Of course, the transition is not so easy to describe. However, this simple argument provides an intuitive picture.}. There is a fundamental difference between a band insulator and a Mott insulator. While we must pay an energy $\Delta_c$ to make a charge excitation, this is not the cost of a spin excitation: we can flip the spin of an electron without creating a doubly occupied site. The fluctuations of both charge and spin due to the electron interactions may then lead to magnetism.
+
+\subsection{Effective Heisenberg Hamiltonian}\paragraph{}
+
+Mott insulators allow low energy magnetic excitations (spin flips). The insulating phase corresponds to a configuration where each atom has an odd number of electrons, let's say one. This electron may have its spin up or down. In the purely atomic limit $\frac{t}{U} \rightarrow 0$, the atoms are infinitely far, and the excitation spectrum is very simple. The ground state is highly degenerate: every configuration with one electron per site is a ground state. In fact, it is $2^N$-fold degenerate. Let us set the energy of the ground state to be zero. The first excited state corresponds to configurations with a hole and a doubly occupied site. The energy of these configurations is $U$, and there are $N(N-1)2^{N-2}$ of them. This process of generating higher energy excitations may be continued.
+
+When the atoms are brought together, the first effect is the lifting of the degeneracy of the ground state, i.e. the subspace of energy $E = 0$. The effective hamiltonian describing the lifting of the degeneracy of the lowest energy band is obtain by applying degenerate perturbation theory to the kinetic term of the Hubbard Hamiltonian.
+
+\begin{equation}
+\mathcal{H}_0 = - t \sum_{\left\langle i, j \right\rangle, \sigma} ( c_{i\sigma}^\dagger c_{j\sigma} + c_{j\sigma}^\dagger c_{i\sigma} ) 
+\end{equation}
+
+\subsubsection{Two-site calculation}\paragraph{}
+
+The effect of the hopping term is best understood in a minimal two-site example. There are four one-particle quantum states, represented by the action of the operators $c_{1,\uparrow}^\dagger$, $c_{1,\downarrow}^\dagger$, $c_{2,\uparrow}^\dagger$, $c_{2,\downarrow}^\dagger$ on the vacuum state. There are six two-particle states in the Fock space $\left| n_{1\uparrow} \,  n_{1\downarrow} \,  n_{2\uparrow} \, n_{2\downarrow} \right\rangle$:
+
+\begin{equation}
+\begin{split}
+\left| 1 \right\rangle &\equiv \left| 1, 0, 1, 0 \right\rangle = c_{1\uparrow}^\dagger c_{2\uparrow}^\dagger \left| 0 \right\rangle \\
+\left| 2 \right\rangle &\equiv \left| 0, 1, 0, 1 \right\rangle = c_{1\downarrow}^\dagger c_{2\downarrow}^\dagger \left| 0 \right\rangle \\
+\end{split}
+\end{equation}
 
 \subsection{Exact solutions for simple cases}\label{exactSolutions}\paragraph{}
 
@@ -998,7 +1040,7 @@ Let $\{\left| \mu \right\rangle \}$ be the basis in which the matrix $\bm N$ is 
 
 Defining new fermionic operators
 
-\begin{equation}
+\begin{equation}\label{eq:changeBasis1}
 \begin{split}
 c_\mu &= \sum_j \left\langle \mu | j \right\rangle c_j \\
 c_\mu^\dagger &= \sum_j \left\langle j | \mu \right\rangle c_j^\dagger ,
@@ -1006,7 +1048,7 @@ c_\mu^\dagger &= \sum_j \left\langle j | \mu \right\rangle c_j^\dagger ,
 \end{equation}
 which may be inverted to obtain
 
-\begin{equation}
+\begin{equation}\label{eq:changeBasis2}
 \begin{split}
 c_j &= \sum_\mu \left\langle j | \mu \right\rangle c_\mu \\
 c_j^\dagger &= \sum_\mu \left\langle \mu | j \right\rangle c_\mu^\dagger ,
@@ -1117,7 +1159,7 @@ where we simply note that by similar reasoning to the previous case, we would in
 
 To complete our proof of the identity (\ref{eq:particularIdentity}) that is so crucial in formulating AFQMC, we use the auxiliar identity we just proved (\ref{eq:identity_prod_exps}).
 
-\begin{equation}
+\begin{equation}\label{eq:completeProof}
 \begin{split}
 &\text{Tr} \bigg[ e^{-\sum_\nu c_\nu^\dagger \rho_\nu c_\nu} \bigg] = \text{Tr} \bigg[ \prod_\nu e^{-c_\nu^\dagger \rho_\nu c_\nu } \bigg] \text{  since  } [\hat{n}_\mu, \hat{n}_\nu] = 0 \\
 &= \prod_\nu ( 1 + e^{-\rho_\nu} ) = \text{det} [ \bm I + e^{-\bm M} e^{-\bm N} ], \quad\quad \qedsymbol
@@ -1129,8 +1171,11 @@ When applied to our problem, equation (\ref{eq:quadraticIdentity}) essentially m
 
 Equation (\ref{eq:quadraticIdentity}) allows us to write the partition function (\ref{eq:Z_quadratic}) in computable form
 
-\begin{equation}
-Z_{\bm h} = (c_U)^{NL} \text{Tr}_{\bm h} \text{det} [ \bm M_\uparrow (\bm h) \bm M_\downarrow (\bm h) ] ,
+\begin{equation}\label{eq:effectiveDensityMatrix}
+\begin{split}
+Z_{\bm h} &=  \text{Tr}_{\bm h} \bigg[ (c_U)^{NL} \text{det} [ \bm M_\uparrow (\bm h)] \text{det} [  \bm M_\downarrow (\bm h) ] \bigg] \\
+&\equiv  \text{Tr}_{\bm h} \bigg[  \hat{\rho}_{\text{eff}} (\bm h) \bigg] ,
+\end{split}
 \end{equation}
 where the fermion matrices $\bm M_\sigma$ are defined in terms of the $\bm B$-matrices for a given spin $\sigma$ and a given HS-field $\bm h$:
 
@@ -1138,10 +1183,12 @@ where the fermion matrices $\bm M_\sigma$ are defined in terms of the $\bm B$-ma
 \bm M_\sigma (\bm h) = \bm I + \bm B_{L,\sigma} ( h_L) \bm B_{L-1,\sigma} ( h_{L-1}) ... \bm B_{1\sigma} ( h_1)
 \end{equation}
 
+Equation (\ref{eq:effectiveDensityMatrix}) defines an effective density matrix (now a function!) $\hat{\rho}_{\text{eff}} (\bm h)$ in the HS-field space.
+
 The computable approximation of the distribution operator $\mathcal{P}$ corresponding to this partition function is
 
 \begin{equation}
-P(\bm h) = \frac{A}{Z_h} \det [ M_{\uparrow}(\bm h) ] \det [ M_{\downarrow}(\bm h) ] ,
+P(\bm h) = \frac{A}{Z_h} \det [ \bm M_{\uparrow}(\bm h) ] \det [ \bm M_{\downarrow}(\bm h) ] ,
 \end{equation}
 where $A = (c_U)^{NL}$ is a normalization constant. This is now a distribution function over configurations $\bm h$ since the problem is classical!
 
@@ -1236,7 +1283,7 @@ r_1 = \frac{\text{det}[\bm A_2]}{\text{det}[\bm A_1]} = 1 + \alpha_1 ( 1 - \bm e
 \end{equation}
 which reduces the computation of the ratio $r_1$ to computing the $(1,1)$ entry of $\bm A^{-1}$.
 
-Now we generalize this idea for a sequence of matrices $\bm A_1, \bm A_2, ..., \bm A_i, ..., \bm A_n$ generated by successive rank-one updates: $\bm A_{i+1} = \bm I + \bm F \bm V_{i+1}, \, i = 1, 2, ..., N-1$, with
+Now we generalize this idea for a sequence of matrices $\bm A_1, \bm A_2, ..., \bm A_i, ..., \bm A_n$ generated by successive rank-one updates: $\bm A_{i+1} = \bm I + \bm F \bm V_{i+1}, \, i = 1, 2, ..., n-1$, with
 
 \begin{equation}
 \bm V_i^{-1} \bm V_{i+1} = \bm I + \alpha_i \bm e_i \bm e_i^T \quad \alpha_i = \frac{\bm V_{i+1}(1,1)}{\bm V_i (1,1)} -1
@@ -1259,7 +1306,140 @@ where
 Using equation (\ref{eq:efRatio}), we find the updates
 
 \begin{equation}
-
+\begin{split}
+r_i &= \frac{\text{det}[\bm M_{i+1}]}{\text{det}[\bm M_{i}]} = 1 + \alpha_i ( 1 - \bm e_i^T \bm A_i^{-1}  \bm e_i ) \, and \\
+\bm M_{i+1}^{-1} &= \bm M_i^{-1} - \frac{\alpha_i}{r_i} \bm u_i \bm w_i^T ,
+\end{split}
 \end{equation}
+where $\bm u_i = (\bm I - \bm A_i^{-1} ) \bm e_i$ and $\bm w_i = (\bm A_i^{-1})^T \bm e_i$.
+
+It is possible to generalize this procedure to compute the inverse of $\bm M_k$ as a rank$-(k-1)$ update of $\bm A_1^{-1}$:
+
+\begin{equation}
+\bm M_k^{-1} = \bm M_1^{-1} - \bm U_{k-1} \bm D_k \bm W_{k-1}^T ,
+\end{equation}
+where
+
+\begin{equation}
+\bm U_k = [ \bm u_1 , \bm u_2, ..., \bm u_{k-1} ] \quad \text{and} \quad \bm W = [ \bm w_1, \bm w_2, ..., \bm w_{k-1} ] ,
+\end{equation}
+and $\bm D_k = \text{diag}(\alpha_1 / r_1, \alpha_2 / r_2, ..., \alpha_{k-1} / r_{k-1})$.
+
+\subsubsection{Making measurements}\paragraph{}
+
+In QMC simulations, physical observables are extracted by measuring them directly over the course of the sampling of the  configuration space. The single-particle (equal time) Green's Function is useful to obtain quantities such as density and kinetic energy. It turns out that it is simply the inverse of the $\bm M$-matrix that we already compute to obtain the acceptance ratio at each step.
+
+\begin{equation}
+\begin{split}
+G_{ij}^\sigma &= \left\langle c_{i\sigma} c_{j\sigma}^\dagger \right\rangle_{\bm h} \\
+&= \bigg( M_\sigma^{-1} (\bm h) \bigg)_{ij} \\
+&= \bigg( [\bm I + \bm B_{L,\sigma} ( h_L ) \bm B_{L-1,\sigma} ( h_{L-1} ) ... \bm B_{1,\sigma} ( h_1 ) ]^{-1} \bigg)_{ij}
+\end{split}
+\end{equation}
+
+The equal time Green's function is a fermion average for a given HS-field configuration. The corresponding thermal average is given by
+
+\begin{equation}
+\begin{split}
+&\left\langle c_i c_j^\dagger \right\rangle = \frac{1}{Z} \text{Tr} \bigg[ e^{-\beta \mathcal{H}} c_i c_j^\dagger \bigg] \\
+&= \frac{1}{Z} \text{Tr}_{\bm h} \text{Tr} \bigg[ c_{i\sigma} c_{j\sigma}^\dagger \prod_{l=1}^L  B_{l, \uparrow}(\bm h_l) 
+B_{l, \downarrow}(\bm h_l) \bigg],
+\end{split}
+\end{equation}
+
+The density matrix $e^{-\beta\mathcal{H} }$ may be written as a trace over HS-field configurations of a product of L factors corresponding to each imaginary time slice. Recall equation (\ref{eq:Z_quadratic}): the partition function Z is just the trace over the Hilbert space of the aforementioned density matrix. Equivalently, it may be thought of as a trace over HS-field configurations of the effective density matrix $\hat{\rho}_{\text{eff}}(\bm h)$ defined in equation (\ref{eq:effectiveDensityMatrix}).
+
+The Green's function is defined for fixed $\bm h$. Omitting the spin index $\sigma$, without loss of generality, we obtain 
+
+\begin{equation}
+\begin{split}
+G_{ij}&\equiv \left\langle c_i c_j^\dagger \right\rangle_{\bm h} = \frac{\text{Tr}[\bm B_L(h_l) \bm B_{L-1}(h_{l-1}) ... \bm B_1 (h_1) c_i c_j^\dagger]}{\hat{\rho}_{\text{eff}}} \\
+&= \frac{\text{Tr}[\bm B_L \bm B_{L-1} ... \bm B_1 c_i c_j^\dagger] }{\text{Tr} [\bm B_L \bm B_{L-1} ... \bm B_1] }
+\end{split}
+\end{equation}
+
+The trace is evaluated by changing to a basis $\{\left|\alpha\right\rangle\}$, where $c_i$ is diagonal and then repeating the procedure for $c_j^\dagger$, now changing again to a basis $\{\left|\beta\right\rangle\}$, where $c_j^\dagger$ is diagonal. Using equation (\ref{eq:changeBasis2}), we obtain
+
+\begin{equation}
+\left\langle c_i c_j^\dagger \right\rangle_{\bm h} = \frac{\sum_{\alpha, \beta} \left\langle i | \alpha \right\rangle \left\langle \beta | j \right\rangle \text{Tr}[c_{\alpha} c_\beta^\dagger \bm B_L \bm B_{L-1} ... \bm B_1] }{\text{Tr} [\bm B_L \bm B_{L-1} ... \bm B_1] } 
+\end{equation}
+
+After taking the trace, (on the diagonal basis) the only nonzero contribution will be for $\alpha = \beta$. When $c_\alpha c_\beta^\dagger$ acts on the bra to its left, only that term survives in the sum since $c_\alpha$ is a diagonal operator in the basis $\{\left|\alpha\right\rangle\}$. On the other hand, the second equality in equation (\ref{eq:completeProof}) gives the contribution to the trace of the exponential of $c_\alpha^\dagger c_\alpha$ appearing in the $\bm B$-matrices. 
+
+\begin{equation}
+\text{Tr} [\bm B_L \bm B_{L-1} ... \bm B_1] = \prod_{\alpha} ( 1 + e^{-\rho_\alpha} ) ,
+\end{equation}
+
+since $\{\left|\alpha\right\rangle\}$ happens to be the basis in which the product of the $\bm B$'s is diagonal.
+
+\begin{equation}
+\begin{split}
+&\left\langle c_i c_j^\dagger \right\rangle_{\bm h} =\sum_{\alpha} | \alpha \rangle \langle i | \frac{ \text{Tr}[c_{\alpha} c_\alpha^\dagger \bm B_L \bm B_{L-1} ... \bm B_1] }{\text{Tr} [\bm B_L \bm B_{L-1} ... \bm B_1] } | j \rangle \langle \alpha | \\
+&=\sum_{\alpha} | \alpha \rangle \langle i | \frac{ \text{Tr}[( \mathbbm{1} - c_{\alpha}^\dagger c_\alpha) \bm B_L \bm B_{L-1} ... \bm B_1] }{\text{Tr} [\bm B_L \bm B_{L-1} ... \bm B_1] } | j \rangle \langle \alpha | \\
+&= \sum_{\alpha} | \alpha \rangle \langle i | 1 -  \frac{ \text{Tr}[c_{\alpha}^\dagger c_\alpha e^{-\Delta \tau \hat{h}_{\text{eff}}}]}{\text{Tr} [e^{-\Delta \tau \hat{h}_{\text{eff}}}] } | j \rangle \langle \alpha | \\
+&= \sum_{\alpha} | \alpha \rangle \langle i | 1 -  \frac{1}{1 + e^{-\Delta\tau \varepsilon_\alpha}} | j \rangle \langle \alpha | \\
+&= \sum_{\alpha} | \alpha \rangle \langle i | \frac{e^{\Delta\tau \varepsilon_\alpha}}{1 + e^{\Delta\tau \varepsilon_\alpha}} | j \rangle \langle \alpha | \\
+&= \sum_{\alpha} | \alpha \rangle \langle i | \frac{1}{1 + e^{-\Delta\tau \varepsilon_\alpha}} | j \rangle \langle \alpha | \\
+&= \bigg[ \frac{1}{\bm B_L \bm B_{L-1} ... \bm B_{1}} \bigg]_{ij} ,
+\end{split}
+\end{equation}
+where in the fourth equality we used an analogy with the Fermi function defined as 
+
+\begin{equation}
+f_\alpha = \frac{\text{Tr}[e^{-\beta\mathcal{H}} \hat{n}_\alpha]}{\text{Tr}[e^{-\beta\mathcal{H}} ]} = \big(1 + e^{\beta(\varepsilon_\alpha - \mu)} \big)^{-1}
+\end{equation}
+with $\mu = 0$ and $\beta \mapsto \Delta \tau$. The product of $\bm B$-matrices was written as the exponential $e^{-\Delta \tau \hat{h}_{\text{eff}}}$, which can be done because we have shown before that it is possible to diagonalize the product.
+
+The electron density may be obtained from the Green function
+
+\begin{equation}
+\rho_{i\sigma} = \left\langle c_{i\sigma}^\dagger c_{i\sigma} \right\rangle = 1 - \left\langle c_{i\sigma} c_{i\sigma}^\dagger \right\rangle = 1 - G_{ii}^\sigma ,
+\end{equation}
+
+It is natural to think of averaging this over the lattice, and over the spins. This is justified by the fact that the Hubbard Hamiltonian is translationally invariant. Thus, $\rho_{i\sigma}$ should be independent of the spatial site. This statement is strict when exactly solving the model, but it becomes only approximate, i.e. valid only on average in our simulations. Thus, we take the average
+
+\begin{equation}
+\rho = \frac{1}{2N} \sum_\sigma \sum_{i=1}^N \rho_{i\sigma}
+\end{equation}
+in an attempt to reduce statistical errors.
+
+One must pay attention to the symmetry of the model at hand, since a similar model for a disordered system including randomness would not be translationally symmetric anymore. Moreover, it is implicit that $\rho_{i\sigma}$ is already averaged over the HS-field configurations that were sampled through the simulation.
+
+The average kinetic energy is similarly obtained.
+
+\begin{equation}
+\begin{split}
+\left\langle \mathcal{H}_K \right\rangle &= - t  \sum_{\left\langle i, j \right\rangle , \sigma} \left\langle ( c_{i\sigma}^\dagger c_{j\sigma} + c_{j\sigma}^\dagger c_{i\sigma} ) \right\rangle \\
+&= t \sum_{\left\langle i, j \right\rangle , \sigma} ( G_{ij}^\sigma + G_{ji}^\sigma ) ,
+\end{split}
+\end{equation}
+where the minus sign is due to the switching of the order of the operators bringing the $c^\dagger$ to the right.
+
+\subsubsection{Correlation functions}\paragraph{}
+
+One of the most important goals of QMC simulations is to inspect the system for order of various types, and to find  associated phase transitions. This is done by computing correlation functions $C (j) $, measuring how correlated two sites separated by a distance $j$ are.
+
+\begin{equation}
+C(j) = \big\langle \mathcal{O}_{i+j} \mathcal{O}_{i}^\dagger \big\rangle - \langle \mathcal{O}_{i+j} \big\rangle\big\langle\mathcal{O}_{i}^\dagger \big\rangle ,
+\end{equation}
+where $\mathcal{O}$ is an operator corresponding to the order parameter of the phase transition. For example, we might be looking for magnetic order, in which case the relevant operators are $\mathcal{O}_i = n_{i\uparrow} - n_{i\downarrow} \, , \, \mathcal{O}_i^\dagger = n_{i\uparrow} - n_{i\downarrow}$, or superconductivity, where we would like to measure correlations in fermion pair formation: $\mathcal{O}_i = c_{i\downarrow} c_{i\uparrow} \, , \, \mathcal{O}_i^\dagger = c_{i\uparrow}^\dagger c_{i\downarrow}^\dagger$.
+
+In general, we expect a high temperature disordered phase, for which correlations decay exponentially $C(j) \propto e^{-j/\xi}$, where $\xi$ is a characteristic length called the correlation length. At some point, there can be a transition to a low temperature phase, where $C(j) \propto m^2$, where $m$ is the order parameter for the transition. Right at the transition, that is at $T = T_c$, there might be singular behavior. In continuous phase transitions, the correlation length diverges $\xi \propto (T-T_c)^{-\nu}$, and the correlations decay slower (in fact algebraically): $C(j) \propto j^{-\eta}$, in an intermediate behavior between exponential decay and a constant. The \emph{critical} exponents $\nu$, and $\eta$ are characteristic of the transition, or more accurately, of the universality class it belongs to.
+
+The behavior of all these quantities on finite lattices does not precisely correspond to the infinite system behavior. The tails of the functions, i.e. the $j\rightarrow \infty$ limit is not well captured. Finite-size scaling is a method to improve on these predictions.
+
+To evaluate correlation functions we use Wick's theorem. Expectations of more than two fermion creation and annihilation operators reduce to products of expectations of pairs of creation and annihilation operators. For example, for pair order:
+
+\begin{equation}
+\big\langle C(j) \big\rangle = \big\langle c_{i+j, \downarrow} c_{i+j, \uparrow} c_{i, \uparrow}^\dagger c_{i, \downarrow}^\dagger \big\rangle
+\end{equation}
+
+How would one measure a correlation function experimentally? Fortunately, there is a quantity that is easy to measure called structure factor, which is just the Fourier transform of the correlation function
+
+\begin{equation}
+S(q) = \sum_j e^{iqj} C(j) 
+\end{equation}
+
+The accuracy of QMC simulations can be evaluated by comparing the results for correlation functions with the corresponding structure factors, which can be measured experimentally.
 
 \end{document}
