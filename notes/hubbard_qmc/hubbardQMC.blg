@@ -1,0 +1,38 @@
+[0] Config.pm:354> INFO - This is Biber 2.7
+[0] Config.pm:357> INFO - Logfile is 'hubbardQMC.blg'
+[48] biber-darwin:303> INFO - === Tue Apr  3, 2018, 17:09:00
+[74] Biber.pm:359> INFO - Reading 'hubbardQMC.bcf'
+[176] Biber.pm:835> INFO - Found 35 citekeys in bib section 0
+[190] Biber.pm:3670> INFO - Processing section 0
+[208] Biber.pm:3840> INFO - Looking for bibtex format file 'hubbardQMC_references.bib' for section 0
+[216] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
+[234] bibtex.pm:1292> INFO - Found BibTeX data source 'hubbardQMC_references.bib'
+[241] Utils.pm:164> WARN - Duplicate entry key: 'Santos2003' in file 'hubbardQMC_references.bib', skipping ...
+[272] Utils.pm:164> WARN - ISBN '1536-6065' in entry 'Bohm1953' is invalid - run biber with '--validate_datamodel' for details.
+[278] Utils.pm:164> WARN - ISBN '0080-4630' in entry 'Hubbard1958' is invalid - run biber with '--validate_datamodel' for details.
+[281] Utils.pm:164> WARN - ISBN '1745-2473' in entry 'Editorial2013' is invalid - run biber with '--validate_datamodel' for details.
+[282] Utils.pm:164> WARN - month field 'Jun' in entry 'Lieb1968' is not an integer - this will probably not sort properly.
+[294] Utils.pm:164> WARN - ISBN '1521-3889' in entry 'Roldan2014' is invalid - run biber with '--validate_datamodel' for details.
+[297] Utils.pm:164> WARN - ISBN '2041-1723' in entry 'Chen2017' is invalid - run biber with '--validate_datamodel' for details.
+[299] Utils.pm:164> WARN - ISBN '1748-3387' in entry 'Wang2012' is invalid - run biber with '--validate_datamodel' for details.
+[304] Utils.pm:164> WARN - ISBN '0034-4885' in entry 'Yazyev2010' is invalid - run biber with '--validate_datamodel' for details.
+[306] Utils.pm:164> WARN - ISBN '0031-9007' in entry 'Feldner2011' is invalid - run biber with '--validate_datamodel' for details.
+[308] Utils.pm:164> WARN - ISBN '1098-0121' in entry 'Golor2013' is invalid - run biber with '--validate_datamodel' for details.
+[321] Utils.pm:164> WARN - ISBN '0002-9505' in entry 'Kosztin1996' is invalid - run biber with '--validate_datamodel' for details.
+[328] Utils.pm:164> WARN - ISBN '0163-1829' in entry 'Hirsch1983' is invalid - run biber with '--validate_datamodel' for details.
+[329] Utils.pm:164> WARN - ISBN '0103-9733 UL - http://www.scielo.br/scielo.php?script=sci{\_}arttext{\&}pid=S0103-97332003000100003{\&}nrm=iso' in entry 'Santos2003' is invalid - run biber with '--validate_datamodel' for details.
+[356] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[356] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[356] Biber.pm:3499> INFO - Sorting list 'none/global/' of type 'entry' with scheme 'none' and locale 'en-US'
+[356] Biber.pm:3505> INFO - No sort tailoring available for locale 'en-US'
+[383] bbl.pm:608> INFO - Writing 'hubbardQMC.bbl' with encoding 'ascii'
+[388] Utils.pm:164> WARN - The entry 'Bohm1953' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
+[391] Utils.pm:164> WARN - The entry 'Gell-Mann1957' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
+[394] Utils.pm:164> WARN - The entry 'Nozieres1958' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
+[399] Utils.pm:164> WARN - The entry 'Roldan2014' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
+[402] Utils.pm:164> WARN - The entry 'Braz2017' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
+[404] Utils.pm:164> WARN - The entry 'Feldner2011' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
+[407] Utils.pm:164> WARN - The entry 'Mila2007' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
+[410] Utils.pm:164> WARN - The entry 'Toulouse2016' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
+[412] bbl.pm:712> INFO - Output to hubbardQMC.bbl
+[412] Biber.pm:109> INFO - WARNINGS: 22

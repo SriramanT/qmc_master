@@ -18,8 +18,8 @@
 \usepackage{algorithm, algorithmic}
 \usepackage{multicol}
 \setcounter{tocdepth}{1}
-%\usepackage[backend=biber,style=nature,sorting=nyt]{biblatex}
-%\addbibresource{su4.bib}
+\usepackage[backend=biber,style=nature,sorting=none]{biblatex}
+\addbibresource{hubbardQMC_references.bib}
 
 \title{Quantum Monte Carlo Simulations of the Hubbard model}
 \author{Francisco Monteiro de Oliveira Brito}
@@ -39,9 +39,6 @@
 \vskip\baselineskip
 \justify
 
-%		TO DO LIST
-
-% Missing citations - specified as [?], finish part on  Heisenberg as effective Hamiltonian based on EPFL's notes}
 \onehalfspacing
 
 \begin{abstract}\paragraph{}
@@ -52,21 +49,21 @@ The interactions between the electrons in a solid give rise to effects that aris
 \section{Introduction}\paragraph{}
 \onehalfspacing
 
-The Hubbard model appeared in 1963 as one of the first attempts to include electron correlation effects in a quantum mechanical description of a solid \cite{hubbard}. Originally, it was introduced to explain the behavior of the electrons occupying the narrow, partially filled $d-$bands of transition metals. Correlation phenomena in these bands lead to a behavior reminiscent of the atomic picture of a solid. We have come a long way since the introduction of the Hubbard model and it is now as paradigm-defining in many-body theory as the Ising model in statistical physics\cite{someManyBodyBooks}.
+The Hubbard model appeared in 1963 as one of the first attempts to include electron correlation effects in a quantum mechanical description of a solid \cite{Hubbard1963}. Originally, it was introduced to explain the behavior of the electrons occupying the narrow, partially filled $d-$bands of transition metals. Correlation phenomena in these bands lead to a behavior reminiscent of the atomic picture of a solid. We have come a long way since the introduction of the Hubbard model and it is now as paradigm-defining in many-body theory as the Ising model in statistical physics\cite{Mahan2000}.
 
 These notes aim to present the basic aspects of a numerical technique used to simulate the Hubbard model in a self-contained, tutorial form. The idea is to reduce our problem to solving a set of integrals, which we evaluate numerically through a standard stochastic procedure, known as the Monte Carlo method. These integrals are arrived at upon formulating the quantum many-body description of the system using the Schr\"odinger equation. Hence the name Quantum Monte Carlo, which is used to distinguish it from Classical Monte Carlo. In the classical version, one measures thermal averages. In the quantum version, one measures expectations of operators over the Hilbert space of the system, corresponding to physical observables that fluctuate with a dynamics given by Schr\"odinger's equation.
 
-When Hubbard's seminal paper came out, it followed a trend that arose in the 1950's when people were working on a theory of correlation effects in the free electron gas\cite{referencesThereInHubbard)}. Hubbard devised a simple model for the seemingly intractable problem of interacting electrons in a band. His work explained qualitatively some properties of transition and rare-earth metals in which electron correlations are non negligible. It turns out that the mathematical formulation of the interaction problem for correlated electrons in a band is not prohibitively complicated, and is amenable to both analytical and numerical computations after some reasonable approximations are introduced. Notably, the model is particularly adapted to computer simulations because of its simple approximate Hamiltonian. Moreover, it has been shown to be very relevant in the description of Mott insulators, and high $T_c$ superconductors. In fact, the Hubbard model has found many applications, describing successfully a variety of quantum systems\cite{examplesOfThis}; nonetheless, even the simplified picture it offers is in general difficult to approach analytically. There exists an exact solution in one dimension via Bethe ansatz\cite{BetheHubbard}, but the more general higher dimensional case is often solved numerically\cite{examplesOfNumericalSolutions}. This is the approach we will follow.
+When Hubbard's seminal paper came out, it followed a trend that arose in the 1950's when people were working on a theory of correlation effects in the free electron gas \cite{Bohm1953, Gell-Mann1957, Sawada1957, Hubbard1957, Hubbard1958, Nozieres1958}. Hubbard devised a simple model for the seemingly intractable problem of interacting electrons in a band. His work explained qualitatively some properties of transition and rare-earth metals in which electron correlations are non negligible. It turns out that the mathematical formulation of the interaction problem for correlated electrons in a band is not prohibitively complicated, and is amenable to both analytical and numerical computations after some reasonable approximations are introduced. Notably, the model is particularly adapted to computer simulations because of its simple approximate Hamiltonian. Moreover, it has been shown to be very relevant in the description of Mott insulators, and high $T_c$ superconductors. In fact, the Hubbard model has found many applications, describing successfully a variety of quantum systems\cite{Editorial2013}; nonetheless, even the simplified picture it offers is in general difficult to approach analytically. There exists an exact solution in one dimension via Bethe ansatz\cite{Lieb1968}, but the more general higher dimensional case is often solved numerically. An example of particular relevance here is the study carried out by Hirsch \cite{Hirsch1985}. In what follows we will discuss how to simulate the Hubbard model using a similar numerical approach.
 
-An example of an application of a QMC technique is the simulation of electron correlations in a transition metal dichalcogenide (TMD) nanoribbon, a two-dimensional nanostructure made out of some graphene-like compound \cite{TMDstuff}. The structure is much longer on one direction than on the other, resembling a ribbon, hence its name. The electronic states that accumulate on the edges of this ribbon might lead to interesting magnetic behavior in these TMD nanostructures and this possibility remains unexplored numerically\cite{magneticTMD}. Moreover, there is some interest in exploring the phase diagram of these systems because recent studies point at the possibility of topological superconductivity \cite{topoSuper}.
+An example of an application of a QMC technique is the simulation of electron correlations in a transition metal dichalcogenide (TMD) nanoribbon, a two-dimensional nanostructure made out of some graphene-like compound \cite{Yang2017, Raczkowski2017, Chen2017, Wang2012, Braz2017}. The structure is much longer on one direction than on the other, resembling a ribbon, hence its name. The electronic states that accumulate on the edges of this ribbon might lead to interesting magnetic behavior in these TMD nanostructures (as they do in the analogous graphene nanostructures\cite{Yazyev2010}) and this possibility remains unexplored numerically\cite{Feldner2011, Golor2013}. Moreover, there is some interest in exploring the phase diagram of these systems because recent studies point at the possibility of topological superconductivity \cite{Hsu2017}.
 
 \section{Hubbard model}\paragraph{}
 
 We start with an overview of the Hubbard model and in section \ref{hubbQMC} we provide details on how to simulate it numerically using quantum Monte Carlo. In particular, we discuss the original motivation to introduce the model and show how the Hubbard Hamiltonian arises as an approximate representation of the Coulomb repulsion between electrons. Finally, we present exact solutions for particular limiting cases, which can be used to crosscheck our simulations.
 
-The nearly free electron gas models the conduction bands of metals and alloys fairly accurately. The high mobility of the electrons compared to the ions justifies two equivalent approximations, both giving essentially the same results\cite{ashcroft}. The first idea is to treat the periodic potential created by the \emph{virtually} fixed ions (compared to the electrons) as a perturbation on the free electron gas. The other way of arriving at similar results is to imagine the system as a collection of tightly bond atoms, in which the higher energy conduction electrons hop from atom to atom. Both these approaches lead to band theory, a framework which allows us to predict whether a material is a conductor or a insulator. From the tight binding point of view, the effect of the electron mobility is the broadening of the atomic energy levels: the electrons in the solid occupy energy bands, rather than levels. The partially filled band of highest energy is called the conduction band, since it is the band occupied by conduction electrons hopping from atom to atom. However, in transition and rare-earth metals, there are partially filled bands other than to the conduction bands: $d-$ or $f-$bands. The partial filling of these bands and the electron correlations within them are responsible for the characteristic properties of these solids. Some of these properties are not explained by band theory, namely the Mott metal-insulator transition\cite{Mott}
+The nearly free electron gas models the conduction bands of metals and alloys fairly accurately. The high mobility of the electrons compared to the ions justifies two equivalent approximations, both giving essentially the same results\cite{Ashcroft1976}. The first idea is to treat the periodic potential created by the \emph{virtually} fixed ions (compared to the electrons) as a perturbation on the free electron gas. The other way of arriving at similar results is to imagine the system as a collection of tightly bond atoms, in which the higher energy conduction electrons hop from atom to atom. Both these approaches lead to band theory, a framework which allows us to predict whether a material is a conductor or a insulator. From the tight binding point of view, the effect of the electron mobility is the broadening of the atomic energy levels: the electrons in the solid occupy energy bands, rather than levels. The partially filled band of highest energy is called the conduction band, since it is the band occupied by conduction electrons hopping from atom to atom. However, in transition and rare-earth metals, there are partially filled bands other than to the conduction bands: $d-$ or $f-$bands. The partial filling of these bands and the electron correlations within them are responsible for the characteristic properties of these solids. Some of these properties are not explained by band theory, namely the Mott metal-insulator transition\cite{Boer1937, Mott1939, Mott1949}
 
-Take Molybdenum, a transition metal. Its electronic configuration is $[Kr] 5s^1 4d^5$. The $s$-orbital is higher in energy than the $d$-orbital. Thus, the Fermi energy lies in the corresponding partially filled $s-$band, which is then the conduction band. However, the $d$-band will be only partially filled as well, leading to the effects mentioned in the previous paragraph. Platinum is yet another example, with electronic configuration $[Xe]4f^{14} 5d^9 6s^1 $, where the $5d$ level in only partially filled. In these partially filled narrow energy bands correlation phenomena are particularly relevant, as opposed to the case of conduction bands. Thus, the nearly free electron gas model does not suffice to describe the electrons in these bands; we must turn to a model that includes correlations. While for $f-$electrons of rare earth metals, a purely atomic, localized model - such as the Heitler-London model \cite{heitlerLondon} - might be satisfactory, the same cannot be said for $d-$electrons of transition metals because the band they occupy is narrower and correlations should be more relevant since the electronic states within the band are closer in energy.
+Take Molybdenum, a transition metal. Its electronic configuration is $[Kr] 5s^1 4d^5$. The $s$-orbital is higher in energy than the $d$-orbital. Thus, the Fermi energy lies in the corresponding partially filled $s-$band, which is then the conduction band. However, the $d$-band will be only partially filled as well, leading to the effects mentioned in the previous paragraph. Platinum is yet another example, with electronic configuration $[Xe]4f^{14} 5d^9 6s^1 $, where the $5d$ level in only partially filled. In these partially filled narrow energy bands correlation phenomena are particularly relevant, as opposed to the case of conduction bands. Thus, the nearly free electron gas model does not suffice to describe the electrons in these bands; we must turn to a model that includes correlations. While for $f-$electrons of rare earth metals, a purely atomic, localized model - such as the Heitler-London model - might be satisfactory, the same cannot be said for $d-$electrons of transition metals because the band they occupy is narrower and correlations should be more relevant since the electronic states within the band are closer in energy.
 
 \subsection{Electron correlations in narrow $d-$bands}\paragraph{}
 
@@ -223,7 +220,7 @@ and
 \nu_{j l} = N^{-1} \sum_{\bm k} e^{i \bm k \cdot ( \bm R_j - \bm R_l) }
 \end{equation}
 
-Now comes the crucial approximation. For a narrow energy band, the Wannier functions $\phi$ nearly coincide with atomic $s-$functions. For small bandwidth these $s-$functions form an atomic shell whose radius is small compared with the spacing between atoms (or lattice constant). Thus, the integral $U = \left\langle i i \big| e^2 / r \big| i i \right\rangle$ should be much larger than all other integrals. This suggests the seemingly crude approximation of neglecting all other integrals. It turns out that this approximation is not so radical as it could seem at first sight since the other integrals are indeed much smaller than $U$. In fact, they are smaller by about two orders of magnitude for $3d$ electrons of transition metals \cite{hubbard}. We end up with
+Now comes the crucial approximation. For a narrow energy band, the Wannier functions $\phi$ nearly coincide with atomic $s-$functions. For small bandwidth these $s-$functions form an atomic shell whose radius is small compared with the spacing between atoms (or lattice constant). Thus, the integral $U = \left\langle i i \big| e^2 / r \big| i i \right\rangle$ should be much larger than all other integrals. This suggests the seemingly crude approximation of neglecting all other integrals. It turns out that this approximation is not so radical as it could seem at first sight since the other integrals are indeed much smaller than $U$. In fact, they are smaller by about two orders of magnitude for $3d$ electrons of transition metals \cite{Hubbard1963}. We end up with
 
 \begin{equation}
 \mathcal{H} = \sum_{i, j, \sigma} K_{ij} c_{i\sigma}^\dagger c_{j\sigma} + \frac{U}{2} \sum_{i\sigma} n_{i\sigma} n_{i, -\sigma} - U \sum_{i, \sigma} \nu_{i, i} n_{i, \sigma}
@@ -277,7 +274,7 @@ are given by Bloch's theorem: $\psi_{\bm k} (\bm r) = e^{i\bm k \cdot \bm r} u_{
 \item One or more of the bands are partially filled. The energy of occupied state of higher energy is named the Fermi energy $\varepsilon_F$. In this case, the separation between the ground state and the first excited state tends to $0$ in the thermodynamic limit, $N \rightarrow \infty$. The system may then respond to infinitesimal excitations, which is the  definition of a metal.
 \end{itemize}
 
-Band theory made it possible to predict whether a solid would be a metal or an insulator. However, its success rests crucially on the independent electron approximation. Thus, it is not surprising that for compounds with strongly correlated electrons the theory might fail. The Coulomb interaction is in general non negligible, and the effects it leads to are not captured by a mean field approach. One must resort to many-body theory. An example of a many-body effect that band theory doesn't capture is superconductivity. However, a superconducting phase arises due to an instability of a state that is itself well described by band theory. A far greater failure of band theory is that predicts certain compounds with an odd number of electrons per unit cell, such as $NiO$ and $La_2 Cu O_4$,  to be metals, while in fact  they turn out to be (Mott) insulators. Mott devised a simple argument to justify this failure. It is based on considering the elementary electronic excitations of a solid composed by hydrogen atoms as a function of the distance between atoms.
+Band theory made it possible to predict whether a solid would be a metal or an insulator. However, its success rests crucially on the independent electron approximation. Thus, it is not surprising that for compounds with strongly correlated electrons the theory might fai l\cite{Mila2007}. The Coulomb interaction is in general non negligible, and the effects it leads to are not captured by a mean field approach. One must resort to many-body theory. An example of a many-body effect that band theory doesn't capture is superconductivity. However, a superconducting phase arises due to an instability of a state that is itself well described by band theory. A far greater failure of band theory is that predicts certain compounds with an odd number of electrons per unit cell, such as $NiO$ and $La_2 Cu O_4$,  to be metals, while in fact  they turn out to be (Mott) insulators. Mott devised a simple argument to justify this failure. It is based on considering the elementary electronic excitations of a solid composed by hydrogen atoms as a function of the distance between atoms.
 
 Consider a hypothetical solid consisting of a square lattice with hydrogen atoms on its points. Each unit cell has one hydrogen atom, and consequently one electron. Band theory would predict such a solid to be a metal. However, if the lattice parameter $a$ is large enough, the solid cannot remain a metal. There must be some value of the lattice parameter $a = a_c$ for which the system becomes an insulator. When current flows through a sample of this solid, electrons hop consecutively, reaching positions that can be quite far on the lattice. For a metal, this process occurs even when exciting the system with an infinitesimal amount of energy. How much energy do we need to provide for this process to occur?
 
@@ -310,7 +307,7 @@ where $U$ is practically independent of the lattice parameter $a$. The bandwidth
 
 Mott insulators allow low energy magnetic excitations (spin flips). The insulating phase corresponds to a configuration where each atom has an odd number of electrons, let's say one. This electron may have its spin up or down. In the purely atomic limit $\frac{t}{U} \rightarrow 0$, the atoms are infinitely far, and the excitation spectrum is very simple. The ground state is highly degenerate: every configuration with one electron per site is a ground state. As a matter of fact, the ground state is $2^N$-fold degenerate. The first excited state corresponds to configurations with a hole and a doubly occupied site. Let us set the energy of the ground state to zero in our conventions.  The energy of these configurations is then $U$, and there are $N(N-1)2^{N-2}$ of them. This process of generating higher energy excitations may be continued.
 
-When the atoms are brought together, the first effect is the lifting of the degeneracy of the ground state, i.e. the splitting of the subspace of energy $E = 0$ in more subspaces. The effective hamiltonian describing the lifting of the degeneracy of the lowest energy band is obtained by applying degenerate perturbation theory to the kinetic term of the Hubbard Hamiltonian\footnote{An alternative method would be to use a canonical transformation technique.}
+When the atoms are brought together, the first effect is the lifting of the degeneracy of the ground state, i.e. the splitting of the subspace of energy $E = 0$ in more subspaces. The effective hamiltonian describing the lifting of the degeneracy of the lowest energy band is obtained by applying degenerate perturbation theory \cite{Mila2007} to the kinetic term of the Hubbard Hamiltonian\footnote{An alternative method would be to use a canonical transformation technique.}
 
 \begin{equation}
 \mathcal{H}_0 = - t \sum_{\left\langle i, j \right\rangle, \sigma} ( c_{i\sigma}^\dagger c_{j\sigma} + c_{j\sigma}^\dagger c_{i\sigma} ) 
@@ -915,7 +912,7 @@ where $f_k = \big(1 + e^{\beta(\varepsilon_k - \mu)} \big)^{-1}$ is the Fermi-Di
 
 \section{Simulations}\label{hubbQMC}\paragraph{}
 
-The Monte Carlo method is ubiquitous. Its central idea is to use randomness to produce accurate estimates of deterministic integrals. The term was coined by Nicolas Metropolis in 1949, first appearing in a seminal paper, in which it was described as a \say{statistical approach to the study of differential equations, or more generally, of integro-differential equations that occur in various branches of sciences}\cite{metropolis}. Although it was used as early as 1777 in an experiment known as Buffon's needle - where one obtains an estimate of the constant $\pi$ by repeatedly throwing  a needle randomly onto a sheet of paper with evenly spaced lines - it was crucially developed in the Los Alamos National Laboratory during World War II where the development of the first atomic bomb was completed, the primary objective of the Manhattan Project. The method is particularly useful when one wants to sample from a probability distribution in an exponentially large state space. In fact, it can in principle be used to solve any problem allowing a probabilistic formulation.
+The Monte Carlo method is ubiquitous. Its central idea is to use randomness to produce accurate estimates of deterministic integrals. The term was coined by Nicolas Metropolis in 1949, first appearing in a seminal paper, in which it was described as a \say{statistical approach to the study of differential equations, or more generally, of integro-differential equations that occur in various branches of sciences}\cite{Metropolis1949}. Although it was used as early as 1777 in an experiment known as Buffon's needle - where one obtains an estimate of the constant $\pi$ by repeatedly throwing  a needle randomly onto a sheet of paper with evenly spaced lines - it was crucially developed in the Los Alamos National Laboratory during World War II where the development of the first atomic bomb was completed, the primary objective of the Manhattan Project. The method is particularly useful when one wants to sample from a probability distribution in an exponentially large state space. In fact, it can in principle be used to solve any problem allowing a probabilistic formulation.
 
 \subsection{Classical vs Monte Carlo}\paragraph{}
 
@@ -960,7 +957,7 @@ It appears as though we didn't gain anything. However, by choosing $q$ wisely, w
 
 Since we didn't make any assumptions about $q(Y)$, it may be chosen so as to minimize the variance, hence the error of the Monte Carlo estimator, improving the approximation of the expectation. However, note that the error remains of order $\mathcal{O}\big(\frac{1}{\sqrt{M}}\big)$.
 
-The idea of the Quantum (Classical) Monte Carlo method is to simulate the random quantum (thermal) fluctuations of the system, as it oscillates between states in a given time frame \cite{newman_barkema}. Instead of visiting these states uniformly, the algorithm applies \emph{importance sampling}: the most relevant part of the phase space is sampled more frequently, overcoming the seemingly exponential complexity of computing a sample mean numerically. Even though only a small fraction of the system's states are sampled, we obtain an accurate estimate of physical quantities of interest, namely energy, and correlation functions.
+The idea of the Quantum (Classical) Monte Carlo method is to simulate the random quantum (thermal) fluctuations of the system, as it oscillates between states in a given time frame \cite{Newman1999}. Instead of visiting these states uniformly, the algorithm applies \emph{importance sampling}: the most relevant part of the phase space is sampled more frequently, overcoming the seemingly exponential complexity of computing a sample mean numerically. Even though only a small fraction of the system's states are sampled, we obtain an accurate estimate of physical quantities of interest, namely energy, and correlation functions.
 
 QMC generally provides an accurate approximation of the solution to the quantum many-body problem. When relativistic effects are negligible, which is the case of most condensed matter systems, any physical system can be described by a many-body Schr\"odinger equation. The issue is that the many-body wave function lives in the corresponding Hilbert space that is  exponentially large in the number of particles. For example, the number of possible states of a physical system whose configuration space rests on a two-dimensional lattice is exponentially large. The method described above is applied to approximate the multidimensional integrals arising upon formulating the quantum many-body problem in this space.
 
@@ -1016,9 +1013,9 @@ The Metropolis algorithm, for instance, may be used to sample a set of points $\
 
 The variational approach is limited by the use of a trial wave function $\phi (\bm r)$: we may not have enough information to even construct a reliable variational wave function in the first place. 
 
-Diffusion Quantum Monte Carlo (DQMC) allows the simulation of a many-body system even when having only a limited \emph{a priori} knowledge of the system's physical properties. The problem is that while it is exact for many-boson systems, it is only approximate for many-fermion systems. The idea is to map the Schr\"odinger equation onto  an imaginary-time diffusion equation. Excited states are then filtered out by a diffusion process as time passes. In imaginary-time $\tau =  i t$, the solution to Schr\"odinger's equation in terms of a formal series expansion in the eigenfunctions of the hamiltonian becomes a series of transients $e^{-E_n \tau}, \, n \in \mathbb{N}$. The longest lasting of these is the ground state. \cite{kosztin} \par
+Diffusion Quantum Monte Carlo (DQMC) allows the simulation of a many-body system even when having only a limited \emph{a priori} knowledge of the system's physical properties. The problem is that while it is exact for many-boson systems, it is only approximate for many-fermion systems. The idea is to map the Schr\"odinger equation onto  an imaginary-time diffusion equation. Excited states are then filtered out by a diffusion process as time passes. In imaginary-time $\tau =  i t$, the solution to Schr\"odinger's equation in terms of a formal series expansion in the eigenfunctions of the hamiltonian becomes a series of transients $e^{-E_n \tau}, \, n \in \mathbb{N}$. The longest lasting of these is the ground state. \cite{Kosztin1996} \par
 
-The idea of DQMC is to generate samples using the exact ground state wave function $\phi_0 (\bm r)$ \cite{vmc}. The associated exact energy $E_0$ is the matrix element of the hamiltonian calculated using a trial wave function and the ground state wave function.
+The idea of DQMC is to generate samples using the exact ground state wave function $\phi_0 (\bm r)$ \cite{Toulouse2016, Pang2016}. The associated exact energy $E_0$ is the matrix element of the hamiltonian calculated using a trial wave function and the ground state wave function.
 
 \begin{equation}
 \begin{split}
@@ -1074,7 +1071,7 @@ For now, let us assume half filling $\mu = 0$, so that there is no sign problem.
 
 \subsubsection{Hubbard-Stratonovich transformation}\paragraph{}
 
-In section \ref{exactSolutions}, we found exact solutions for particular instances of the Hubbard model by finding a closed form for the partition function. When devising a numerical method, a good sanity check is to verify that it satisfactorily approximates the partition function.
+In section \ref{exactSolutions}, we found exact solutions for particular instances of the Hubbard model by finding a closed form for the partition function \cite{Bai2006}. When devising a numerical method, a good sanity check is to verify that it satisfactorily approximates the partition function.
 
 The operators $\mathcal{H}_K$ and $\mathcal{H}_V$ of equation (\ref{eq:hubbard}) do not commute. This impedes us from factorizing the exponential of their sum $e^{-\beta (\mathcal{H}_K + \mathcal{H}_V)}$ exactly. The Trotter-Suzuki decomposition leads to the sought approximate factorization that is used to approximate the partition function. Quantum states evolve according to
 
@@ -1188,9 +1185,9 @@ Now we simply compare the action of the operators on the left hand side and on t
 \end{split}
 \end{equation}
 
-Note that we require $U > 0$ so that there exists $\nu \in \mathbb{R}$ such that $\cosh \nu = e^{U\Delta \tau / 2}$. A similar reasoning could be made for $U < 0$. Additionaly, other transformations that recast other types of quartic terms in terms of quadratic ones exist, but we shall not need them in what follows \cite{discreteHS}. The transformation we derived is the one we will use throughout.
+Note that we require $U > 0$ so that there exists $\nu \in \mathbb{R}$ such that $\cosh \nu = e^{U\Delta \tau / 2}$. A similar reasoning could be made for $U < 0$. Additionaly, other transformations that recast other types of quartic terms in terms of quadratic ones exist, but we shall not need them in what follows \cite{Hirsch1983}. The transformation we derived is the one we will use throughout.
 
-We have now made progress. At the expense of introducing an extra $N$-dimensional HS-field $\bm h$, we obtained an \emph{exact} representation of the quartic term in terms of quadratic terms.
+We have now made progress. At the expense of introducing an extra $N$-dimensional HS-field $\bm h$, we obtained an \emph{exact} representation of the quartic term in terms of quadratic terms \cite{Bai2006}.
 
 \begin{equation} 
  e^{-\Delta\tau \mathcal{H}_V} = \prod_{i=1}^N \bigg( c_U \sum_{h_i = \pm 1} e^{\nu h_i ( n_{i\uparrow} - n_{i\downarrow} )} \bigg),
@@ -1253,7 +1250,7 @@ where the summation is implied, and where $H_l$ are real matrices. Then, the fol
 \text{Tr} \big[ e^{-\mathcal{H}_1 } e^{-\mathcal{H}_2 } ... e^{-\mathcal{H}_L } \big] = \text{det} ( \bm I + e^{-H_L} e^{-H_{L-1}} ... e^{-H_1} )
 \end{equation}
 
-For simplicity, we present the proof for a simpler case, corresponding to a single $\bm B$-matrix, i.e. a product of exponentials of two quadratic operators. It could then be easily extended to the more general case. Let the two arbitrary real matrices be $\bm M$ and $\bm N$. Then, a particular case of the previous identity is
+For simplicity, we present the proof for a simpler case, corresponding to a single $\bm B$-matrix, i.e. a product of exponentials of two quadratic operators \cite{Hirsch1985}. It could then be easily extended to the more general case. Let the two arbitrary real matrices be $\bm M$ and $\bm N$. Then, a particular case of the previous identity is
 
 \begin{equation}\label{eq:particularIdentity}
 \text{Tr} \big[ e^{-c_i^\dagger M_{ij} c_j} e^{-c_i^\dagger N_{ij} c_j} \big] = \text{det} ( \bm I + e^{-{\bm M}} e^{-{\bm N}} ) ,
@@ -1492,7 +1489,7 @@ After the warm-up steps, i.e. after we ensure that we are correctly sampling fro
 \end{multicols}
 \end{algorithm}
 
-The Metropolis acceptance/rejection scheme leads to a rank-one update of the matrices $\bm M_\sigma (\bm h)$, which affords an efficient evaluation of the acceptance ratio $a_{l, i}$.
+The Metropolis acceptance/rejection scheme leads to a rank-one update of the matrices $\bm M_\sigma (\bm h)$, which affords an efficient evaluation of the acceptance ratio $a_{l, i}$ \cite{Bai2006}.
 
 Consider two matrices $\bm A_1$, $\bm A_2$ written in the form
 
@@ -1581,7 +1578,7 @@ G_{ij}^\sigma &= \left\langle c_{i\sigma} c_{j\sigma}^\dagger \right\rangle_{\bm
 \end{split}
 \end{equation}
 
-The equal time Green's function is a fermion average for a given HS-field configuration. The corresponding thermal average is given by
+The equal time Green's function is a fermion average for a given HS-field configuration \cite{Santos2003}. The corresponding thermal average is given by
 
 \begin{equation}
 \begin{split}
@@ -1633,7 +1630,7 @@ f_\alpha = \frac{\text{Tr}[e^{-\beta\mathcal{H}} \hat{n}_\alpha]}{\text{Tr}[e^{-
 \end{equation}
 for $\mu = 0$ and with $\beta \mapsto \Delta \tau$. The product of $\bm B$-matrices was written as the exponential $e^{-\Delta \tau \hat{h}}$, which can be done because we have shown before that it is possible to diagonalize the product in a basis in which the trace amounts to the simple form of equation (\ref{eq:traceExp}).
 
-An alternative way of arriving to this result is to note that in the expression we obtain in the second equality, only the term $\nu = \alpha$ from equation (\ref{eq:traceExp}) contributes, leading to the final result with $\rho_\alpha = \Delta\tau \varepsilon_\alpha$.
+An alternative way of arriving to this result is to note that in the expression we obtain in the second equality, only the term $\nu = \alpha$ from equation (\ref{eq:traceExp}) contributes \cite{Santos2003}, leading to the final result with $\rho_\alpha = \Delta\tau \varepsilon_\alpha$.
 
 The electron density may be obtained from the Green function
 
@@ -1686,5 +1683,7 @@ S(q) = \sum_j e^{iqj} C(j)
 \end{equation}
 
 The accuracy of QMC simulations can be evaluated by comparing the results for correlation functions with the corresponding structure factors, which can be measured experimentally.
+
+\printbibliography
 
 \end{document}

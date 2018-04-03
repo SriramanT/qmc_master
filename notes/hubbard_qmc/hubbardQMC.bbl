@@ -1,0 +1,1360 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{none/global/}
+    \entry{Hubbard1963}{article}{}
+      \name{author}{1}{}{%
+        {{hash=df44506ac19a4ea61bc214b80e55dc9b}{%
+           family={Hubbard},
+           familyi={H\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{df44506ac19a4ea61bc214b80e55dc9b}
+      \strng{fullhash}{df44506ac19a4ea61bc214b80e55dc9b}
+      \strng{authornamehash}{df44506ac19a4ea61bc214b80e55dc9b}
+      \strng{authorfullhash}{df44506ac19a4ea61bc214b80e55dc9b}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{It is pointed out that one of the main effects of correlation phenomena in d- and f-bands is to give rise to behaviour characteristic of the atomic or Heitler-London model. To investigate this situation a simple, approximate model for the interaction of electrons in narrow energy bands is introduced. The results of applying the Hartree-Fock approximation to this model are examined. Using a Green function technique an approximate solution of the correlation problem for this model is obtained. This solution has the property of reducing to the exact atomic solution in the appropriate limit and to the ordinary uncorrelated band picture in the opposite limit. The condition for ferromagnetism of this solution is discussed. To clarify the physical meaning of the solution a two-electron example is examined.}
+      \field{eprinttype}{arXiv}
+      \field{isbn}{2819631126}
+      \field{issn}{1364-5021}
+      \field{journaltitle}{Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences}
+      \field{number}{1365}
+      \field{title}{{Electron Correlations in Narrow Energy Bands}}
+      \field{volume}{276}
+      \field{year}{1963}
+      \field{pages}{238\bibrangedash 257}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1098/rspa.1963.0204
+      \endverb
+      \verb{eprint}
+      \verb arXiv:1205.0516v2
+      \endverb
+      \verb{url}
+      \verb http://rspa.royalsocietypublishing.org/cgi/doi/10.1098/rspa.1963.0204
+      \endverb
+    \endentry
+    \entry{Mahan2000}{book}{}
+      \name{author}{1}{}{%
+        {{hash=c1d5d4e41688cfe898f810b1ed4d4270}{%
+           family={Mahan},
+           familyi={M\bibinitperiod},
+           given={Gerald\bibnamedelima D.},
+           giveni={G\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer US}%
+      }
+      \strng{namehash}{c1d5d4e41688cfe898f810b1ed4d4270}
+      \strng{fullhash}{c1d5d4e41688cfe898f810b1ed4d4270}
+      \strng{authornamehash}{c1d5d4e41688cfe898f810b1ed4d4270}
+      \strng{authorfullhash}{c1d5d4e41688cfe898f810b1ed4d4270}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3}
+      \field{title}{{Many-Particle Physics}}
+      \field{year}{2000}
+      \field{pages}{XII\bibrangessep 785}
+      \range{pages}{2}
+    \endentry
+    \entry{Bohm1953}{article}{}
+      \name{author}{2}{}{%
+        {{hash=f9ef65b246ff9ae37555f758f986fe69}{%
+           family={Bohm},
+           familyi={B\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=87c3b294dd6bf3aa6b54221f9c1efa91}{%
+           family={Pines},
+           familyi={P\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{d22d4cc06dfee838c20df34ac58a7545}
+      \strng{fullhash}{d22d4cc06dfee838c20df34ac58a7545}
+      \strng{authornamehash}{d22d4cc06dfee838c20df34ac58a7545}
+      \strng{authorfullhash}{d22d4cc06dfee838c20df34ac58a7545}
+      \field{sortinit}{3}
+      \field{sortinithash}{197da6d6c34c6b20ce45c4d4baace5a4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The behavior of the electrons in a dense electron gas is analyzed quantum-mechanically by a series of canonical transformations. The usual Hamiltonian corresponding to a system of individual electrons with Coulomb interactions is first re-expressed in such a way that the long-range part of the Coulomb interactions between the electrons is described in terms of collective fields, representing organized "plasma" oscillation of the system as a whole. The Hamiltonian then describes these collective fields plus a set of individual electrons which interact with the collective fields and with one another via short-range screened Coulomb interactions. There is, in addition, a set of subsidiary conditions on the system wave function which relate the field and particle variables. The field-particle interaction is eliminated to a high degree of approximation by a further canonical transformation to a new representation in which the Hamiltonian describes independent collective fields, with n\x{fffd}\x{fffd}\x{fffd}{<}math{>}{<}mrow{>}{<}msup{>}{<}mrow{>}{<}mi{>}n{<}/mi{>}{<}/mrow{>}{<}mrow{>}{<}mo{>}\x{fffd}\x{fffd}\x{fffd}{<}/mo{>}{<}/mrow{>}{<}/msup{>}{<}/mrow{>}{<}/math{>} degrees of freedom, plus the system of electrons interacting via screened Coulomb forces with a range of the order of the inter electronic distance. The new subsidiary conditions act only on the electronic wave functions; they strongly inhibit long wavelength electronic density fluctuations and act to reduce the number of individual electronic degrees of freedom by n\x{fffd}\x{fffd}\x{fffd}{<}math{>}{<}mrow{>}{<}msup{>}{<}mrow{>}{<}mi{>}n{<}/mi{>}{<}/mrow{>}{<}mrow{>}{<}mo{>}\x{fffd}\x{fffd}\x{fffd}{<}/mo{>}{<}/mrow{>}{<}/msup{>}{<}/mrow{>}{<}/math{>}. The general properties of this system are discussed, and the methods and results obtained are related to the classical density fluctuation approach and Tomonaga's one-dimensional treatment of the degenerate Fermi gas.}
+      \field{isbn}{1536-6065}
+      \field{issn}{0031899X}
+      \field{journaltitle}{Physical Review}
+      \field{number}{3}
+      \field{title}{{A collective description of electron interactions: III. Coulomb interactions in a degenerate electron gas}}
+      \field{volume}{92}
+      \field{year}{1953}
+      \field{pages}{609\bibrangedash 625}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1103/PhysRev.92.609
+      \endverb
+    \endentry
+    \entry{Gell-Mann1957}{article}{}
+      \name{author}{2}{}{%
+        {{hash=08ade17a88f1c8420c2a5e5f980bed7e}{%
+           family={Gell-Mann},
+           familyi={G\bibinithyphendelim M\bibinitperiod},
+           given={Murray},
+           giveni={M\bibinitperiod}}}%
+        {{hash=c728c094304c47e93ddea6c4de00a3cd}{%
+           family={Brueckner},
+           familyi={B\bibinitperiod},
+           given={Keith\bibnamedelima A.},
+           giveni={K\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{efa343a1cfe1c8f601ccfc17f08329b5}
+      \strng{fullhash}{efa343a1cfe1c8f601ccfc17f08329b5}
+      \strng{authornamehash}{efa343a1cfe1c8f601ccfc17f08329b5}
+      \strng{authorfullhash}{efa343a1cfe1c8f601ccfc17f08329b5}
+      \field{sortinit}{3}
+      \field{sortinithash}{197da6d6c34c6b20ce45c4d4baace5a4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The quantity $\epsilon$c{<}math{>}{<}mrow{>}{<}msub{>}{<}mrow{>}{<}mi{>}$\epsilon${<}/mi{>}{<}/mrow{>}{<}mrow{>}{<}mi{>}c{<}/mi{>}{<}/mrow{>}{<}/msub{>}{<}/mrow{>}{<}/math{>} is defined as the correlation energy per particle of an electron gas expressed in rydbergs. It is a function of the conventional dimensionless parameter rs{<}math{>}{<}mrow{>}{<}msub{>}{<}mrow{>}{<}mi{>}r{<}/mi{>}{<}/mrow{>}{<}mrow{>}{<}mi{>}s{<}/mi{>}{<}/mrow{>}{<}/msub{>}{<}/mrow{>}{<}/math{>}, where rs\x{fffd}\x{fffd}\x{fffd}3{<}math{>}{<}mrow{>}{<}msup{>}{<}mrow{>}{<}mrow{>}{<}msub{>}{<}mrow{>}{<}mi{>}r{<}/mi{>}{<}/mrow{>}{<}mrow{>}{<}mi{>}s{<}/mi{>}{<}/mrow{>}{<}/msub{>}{<}/mrow{>}{<}/mrow{>}{<}mrow{>}{<}mo{>}-{<}/mo{>}{<}mn{>}3{<}/mn{>}{<}mn{>}{<}/mn{>}{<}/mrow{>}{<}/msup{>}{<}/mrow{>}{<}/math{>} is proportional to the electron density. Here $\epsilon$c{<}math{>}{<}mrow{>}{<}msub{>}{<}mrow{>}{<}mi{>}$\epsilon${<}/mi{>}{<}/mrow{>}{<}mrow{>}{<}mi{>}c{<}/mi{>}{<}/mrow{>}{<}/msub{>}{<}/mrow{>}{<}/math{>} is computed for small values of rs{<}math{>}{<}mrow{>}{<}msub{>}{<}mrow{>}{<}mi{>}r{<}/mi{>}{<}/mrow{>}{<}mrow{>}{<}mi{>}s{<}/mi{>}{<}/mrow{>}{<}/msub{>}{<}/mrow{>}{<}/math{>} (high density) and found to be given by $\epsilon$c=Alnrs+C+O(rs){<}math{>}{<}mrow{>}{<}msub{>}{<}mrow{>}{<}mi{>}$\epsilon${<}/mi{>}{<}/mrow{>}{<}mrow{>}{<}mi{>}c{<}/mi{>}{<}/mrow{>}{<}/msub{>}{<}/mrow{>}{<}mo{>}={<}/mo{>}{<}mi{>}A{<}/mi{>}{<}mi mathvariant="normal"{>}ln{<}/mi{>}{<}mrow{>}{<}msub{>}{<}mrow{>}{<}mi{>}r{<}/mi{>}{<}/mrow{>}{<}mrow{>}{<}mi{>}s{<}/mi{>}{<}/mrow{>}{<}/msub{>}{<}/mrow{>}{<}mo{>}+{<}/mo{>}{<}mi{>}C{<}/mi{>}{<}mo{>}+{<}/mo{>}{<}mi{>}O{<}/mi{>}{<}mo{>}({<}/mo{>}{<}mrow{>}{<}msub{>}{<}mrow{>}{<}mi{>}r{<}/mi{>}{<}/mrow{>}{<}mrow{>}{<}mi{>}s{<}/mi{>}{<}/mrow{>}{<}/msub{>}{<}/mrow{>}{<}mo{>}){<}/mo{>}{<}/math{>}. The value of A{<}math{>}{<}mi{>}A{<}/mi{>}{<}/math{>} is found to be 0.0622, a result that could be deduced from previous work of Wigner, Macke, and Pines. An exact formula for the constant C{<}math{>}{<}mi{>}C{<}/mi{>}{<}/math{>} is given here for the first time; earlier workers had made only approximate calculations of C{<}math{>}{<}mi{>}C{<}/mi{>}{<}/math{>}. Further, it is shown how the next correction in rs{<}math{>}{<}mrow{>}{<}msub{>}{<}mrow{>}{<}mi{>}r{<}/mi{>}{<}/mrow{>}{<}mrow{>}{<}mi{>}s{<}/mi{>}{<}/mrow{>}{<}/msub{>}{<}/mrow{>}{<}/math{>} can be computed. The method is based on summing the most highly divergent terms of the perturbation series under the integral sign to give a convergent result. The summation is performed by a technique similar to Feynman's methods in field theory.}
+      \field{issn}{0031899X}
+      \field{journaltitle}{Physical Review}
+      \field{number}{2}
+      \field{title}{{Correlation energy of an electron gas at high density}}
+      \field{volume}{106}
+      \field{year}{1957}
+      \field{pages}{364\bibrangedash 368}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1103/PhysRev.106.364
+      \endverb
+    \endentry
+    \entry{Sawada1957}{article}{}
+      \name{author}{4}{}{%
+        {{hash=461a4d6054aa7d3d034415d6e47ac5c6}{%
+           family={Sawada},
+           familyi={S\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+        {{hash=4711bc279e8ff3e6a856fa6fd68d5ab3}{%
+           family={Brueckner},
+           familyi={B\bibinitperiod},
+           given={K.\bibnamedelimi A.},
+           giveni={K\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=9c738cf05a6d6d8e81d3e2eb40310355}{%
+           family={Fukuda},
+           familyi={F\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+        {{hash=60c1f5d52b49ebe043b8c82733a0b356}{%
+           family={Brout},
+           familyi={B\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{95d2613e2827b85f3628fc4c219d13fb}
+      \strng{fullhash}{7e83115efaecadce81fb5a4a9a881ade}
+      \strng{authornamehash}{95d2613e2827b85f3628fc4c219d13fb}
+      \strng{authorfullhash}{7e83115efaecadce81fb5a4a9a881ade}
+      \field{sortinit}{3}
+      \field{sortinithash}{197da6d6c34c6b20ce45c4d4baace5a4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0031899X}
+      \field{journaltitle}{Physical Review}
+      \field{number}{3}
+      \field{title}{{Correlation energy of an electron gas at high density: Plasma oscillations}}
+      \field{volume}{108}
+      \field{year}{1957}
+      \field{pages}{507\bibrangedash 514}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1103/PhysRev.108.507
+      \endverb
+    \endentry
+    \entry{Hubbard1957}{article}{}
+      \name{author}{1}{}{%
+        {{hash=df44506ac19a4ea61bc214b80e55dc9b}{%
+           family={Hubbard},
+           familyi={H\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{df44506ac19a4ea61bc214b80e55dc9b}
+      \strng{fullhash}{df44506ac19a4ea61bc214b80e55dc9b}
+      \strng{authornamehash}{df44506ac19a4ea61bc214b80e55dc9b}
+      \strng{authorfullhash}{df44506ac19a4ea61bc214b80e55dc9b}
+      \field{sortinit}{3}
+      \field{sortinithash}{197da6d6c34c6b20ce45c4d4baace5a4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this and a succeeding paper it is shown how a theory equivalent to the Bohm {\&} Pines collective motion theory of the electron plasma can be derived directly from a perturbation series which gives in principle an exact solution of the many-body problem. This result is attained by making use of a diagrammatic method of analysis of the perturbation series. By a process analogous to the elimination of photon self-energy parts from the electrodynamic S matrix it is found possible to simplify the perturbation series, introducing a modified interaction between the particles. A useful integral equation for this modified interaction can be set up, and it is shown how the energy of the system can be expressed in terms of the modified interaction. The close connexion between this approach and the dielectric theory of plasma oscillations is indicated.}
+      \field{isbn}{2819580114}
+      \field{issn}{1364-5021}
+      \field{journaltitle}{Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences}
+      \field{number}{1234}
+      \field{title}{{The Description of Collective Motions in Terms of Many-Body Perturbation Theory. II. The Correlation Energy of a Free-Electron Gas}}
+      \field{volume}{243}
+      \field{year}{1958}
+      \field{pages}{336\bibrangedash 352}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1098/rspa.1958.0003
+      \endverb
+      \verb{url}
+      \verb http://rspa.royalsocietypublishing.org/cgi/doi/10.1098/rspa.1958.0003
+      \endverb
+    \endentry
+    \entry{Hubbard1958}{article}{}
+      \name{author}{1}{}{%
+        {{hash=df44506ac19a4ea61bc214b80e55dc9b}{%
+           family={Hubbard},
+           familyi={H\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{df44506ac19a4ea61bc214b80e55dc9b}
+      \strng{fullhash}{df44506ac19a4ea61bc214b80e55dc9b}
+      \strng{authornamehash}{df44506ac19a4ea61bc214b80e55dc9b}
+      \strng{authorfullhash}{df44506ac19a4ea61bc214b80e55dc9b}
+      \field{sortinit}{3}
+      \field{sortinithash}{197da6d6c34c6b20ce45c4d4baace5a4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this paper it is assumed that the disturbing effect of turbulence$\backslash$non boundary layers is due to the pressure gradients which accompany$\backslash$nvariations of pressure in turbulent flow. When the Reynolds number$\backslash$nof turbulence is high the pressure gradient depends on the length$\backslash$nlambda which occurs in the theory of dissipation of energy in turbulent$\backslash$nmotion. The theory leads to the conclusion that the critical Reynolds$\backslash$nnumber, R}
+      \field{eprinttype}{arXiv}
+      \field{isbn}{0080-4630}
+      \field{issn}{1364-5021}
+      \field{journaltitle}{Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences}
+      \field{number}{1237}
+      \field{title}{{The Description of Collective Motions in Terms of Many-Body Perturbation Theory. III. The Extension of the Theory to the Non-Uniform Gas}}
+      \field{volume}{244}
+      \field{year}{1958}
+      \field{pages}{199\bibrangedash 211}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1098/rspa.1958.0036
+      \endverb
+      \verb{eprint}
+      \verb arXiv:1205.0516v2
+      \endverb
+      \verb{url}
+      \verb http://rspa.royalsocietypublishing.org/cgi/doi/10.1098/rspa.1958.0036
+      \endverb
+      \keyw{hydrodynamics}
+    \endentry
+    \entry{Nozieres1958}{article}{}
+      \name{author}{2}{}{%
+        {{hash=4161cdfea60a2be901e3c2b874332064}{%
+           family={Nozieres},
+           familyi={N\bibinitperiod},
+           given={P},
+           giveni={P\bibinitperiod}}}%
+        {{hash=ab1de5a36a85bae0e14ca2e1406f09c9}{%
+           family={Pines},
+           familyi={P\bibinitperiod},
+           given={D},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{ee9884a1463dd74a91233626dc5a6dda}
+      \strng{fullhash}{ee9884a1463dd74a91233626dc5a6dda}
+      \strng{authornamehash}{ee9884a1463dd74a91233626dc5a6dda}
+      \strng{authorfullhash}{ee9884a1463dd74a91233626dc5a6dda}
+      \field{sortinit}{3}
+      \field{sortinithash}{197da6d6c34c6b20ce45c4d4baace5a4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The limits of validity of the correla, tion-energy calculations in the regions of high density, low density, and actual metallic electron densities are discussed. Simple physical arguments are given which show that the high-density calculation of Gell-Mann and Brueckner is valid for r,{\&}1 while the low-density calculation of Wigner is valid for r, 20. For actual metallic densities it is shown that the contribution to the correlation energy from longwavelength momentum transfers (k {\&}Pko {\&}0.47r.{\&}k{\&}) may be accurately calculated in the random phase approximation. This contribution is calculated using the Bohm-Pines extended Hamiltonian, and is shown to be V4 z(yj =(\x{fffd}\x{fffd}\x{fffd}04M\x{fffd}\x{fffd}\x{fffd}+0.M\x{fffd}\x{fffd}\x{fffd}098\x{fffd}\x{fffd}\x{fffd}, rs r8 O4 +0.019\x{fffd}\x{fffd}\x{fffd}+0.706 +{\~{}} {\~{}} {\~{}} ry. r 5/2 An identical result is obtained by a suitable expansion of the result of Gell-Mann and Brueckner; the validity of the Bohm-Pines neglect of subsidiary conditions in the calculation of the groundstate energy is thereby explicitly established. The contribution to the correlation energy from suSciently high momentum transfers (k{\&}ko) will arise only from the interaction between electrons of antiparallel spin, and may be estimated using second-order perturbation theory. The contribution arising from intermediate momentum transfers (0 47r,{\&}.k k {\&}ko) cannot be calculated analytically; the interpolation procedures for this domain proposed by Pines and Hubbard are shown to be nearly identical, and their accuracy is estimated as 15'Po; The result for the over-all correlation energy using the interpolation procedure of Pines is E,=(\x{fffd}\x{fffd}\x{fffd}0.115+0.031 lnr, ) ry.}
+      \field{issn}{0031-899X}
+      \field{journaltitle}{Phys. Rev.}
+      \field{number}{2}
+      \field{title}{{Correlation Energy of a Free Electron Gas}}
+      \field{volume}{111}
+      \field{year}{1958}
+      \field{pages}{442\bibrangedash 454}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1103/PhysRev.111.442
+      \endverb
+    \endentry
+    \entry{Editorial2013}{article}{}
+      \name{author}{1}{}{%
+        {{hash=33be2fab88f08eabfdfcdbd13561dbeb}{%
+           family={Editorial},
+           familyi={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{33be2fab88f08eabfdfcdbd13561dbeb}
+      \strng{fullhash}{33be2fab88f08eabfdfcdbd13561dbeb}
+      \strng{authornamehash}{33be2fab88f08eabfdfcdbd13561dbeb}
+      \strng{authorfullhash}{33be2fab88f08eabfdfcdbd13561dbeb}
+      \field{sortinit}{4}
+      \field{sortinithash}{d221becdd544034cf9082056cd6e6d2d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Models are abundant in virtually all branches of physics, with some achieving iconic status. The Hubbard model, celebrating its golden jubilee this year, continues to be one of the most popular contrivances of theoretical condensed-matter physics.}
+      \field{isbn}{1745-2473}
+      \field{issn}{1745-2473}
+      \field{journaltitle}{Nature Physics}
+      \field{number}{9}
+      \field{title}{{The Hubbard model at half a century}}
+      \field{volume}{9}
+      \field{year}{2013}
+      \field{pages}{523\bibrangedash 523}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1038/nphys2759
+      \endverb
+      \verb{url}
+      \verb http://www.nature.com/doifinder/10.1038/nphys2759
+      \endverb
+    \endentry
+    \entry{Lieb1968}{article}{}
+      \name{author}{2}{}{%
+        {{hash=6a5ead2b42d126b86fd1b55478d0eedc}{%
+           family={Lieb},
+           familyi={L\bibinitperiod},
+           given={Elliott\bibnamedelima H.},
+           giveni={E\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=c364c98325fb2ac37fd894a7160b141c}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={F.\bibnamedelimi Y.},
+           giveni={F\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{a4c41d463cda06966e7cca815b7fc4c2}
+      \strng{fullhash}{a4c41d463cda06966e7cca815b7fc4c2}
+      \strng{authornamehash}{a4c41d463cda06966e7cca815b7fc4c2}
+      \strng{authorfullhash}{a4c41d463cda06966e7cca815b7fc4c2}
+      \field{sortinit}{5}
+      \field{sortinithash}{c9df3c9fb8f555dd9201cedc5e343021}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{25}
+      \field{journaltitle}{Phys. Rev. Lett.}
+      \field{month}{6}
+      \field{title}{Absence of Mott Transition in an Exact Solution of the Short-Range, One-Band Model in One Dimension}
+      \field{volume}{20}
+      \field{year}{1968}
+      \field{pages}{1445\bibrangedash 1448}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1103/PhysRevLett.20.1445
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevLett.20.1445
+      \endverb
+    \endentry
+    \entry{Hirsch1985}{article}{}
+      \name{author}{1}{}{%
+        {{hash=537f584322a8f8159a0278d408a869d7}{%
+           family={Hirsch},
+           familyi={H\bibinitperiod},
+           given={J\bibnamedelima E},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{537f584322a8f8159a0278d408a869d7}
+      \strng{fullhash}{537f584322a8f8159a0278d408a869d7}
+      \strng{authornamehash}{537f584322a8f8159a0278d408a869d7}
+      \strng{authorfullhash}{537f584322a8f8159a0278d408a869d7}
+      \field{sortinit}{6}
+      \field{sortinithash}{02bbed3ed82f61ae046619460488516d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We have studied the two-dimensional Hubbard model on a square lattice with nearest-neighbor hopping. We first discuss the properties of the model within the mean-field approximation: Be-cause of the form of the band structure, some peculiar features are found. We then discuss the simulation algorithm used and compare simulation results with exact results for 6-site chains to test the reliability of the approach. We present results for thermodynamic properties and correlation functions for lattices up to 8{\&}{\&}8 in spatial size. The system is found to be an antiferromagnetic in-sulator for all values of the coupling constant at zero temperature in the half-filled-band case, but the long-range order is much smaller than predicted by mean-field theory. We perform a finite-size-scaling analysis to determine the character of the transition at zero coupling. For non-half-filled-band cases, our results suggest that the system is always paramagnetic, in contradiction with Hartree-Fock predictions. The system does not show tendency to ferromagnetism nor triplet super-conductivity in the parameter range studied. We also discuss some properties of the attractive Hub-bard model in the half-filled-band case.}
+      \field{issn}{01631829}
+      \field{journaltitle}{Phys. Rev. B}
+      \field{number}{7}
+      \field{title}{{Two-dimensional Hubbard model: Numerical simulation study}}
+      \field{volume}{31}
+      \field{year}{1985}
+      \field{pages}{4403\bibrangedash 4419}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1103/PhysRevB.31.4403
+      \endverb
+    \endentry
+    \entry{Yang2017}{article}{}
+      \name{author}{5}{}{%
+        {{hash=11a33b1aa9e89479e304318dff521b9c}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Guang},
+           giveni={G\bibinitperiod}}}%
+        {{hash=27ab7330fbd30c8559533dab86a5490b}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Baoyue},
+           giveni={B\bibinitperiod}}}%
+        {{hash=25bbf4047d900f3760c65b01ee899dba}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod}}}%
+        {{hash=f18c66e037df1194674c380d8ae5adae}{%
+           family={Ye},
+           familyi={Y\bibinitperiod},
+           given={Miao},
+           giveni={M\bibinitperiod}}}%
+        {{hash=632e04dac7b45b0ae3587e0001f4d5a6}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Tianxing},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{f417e8a65f8cc3f417c43e53877ac454}
+      \strng{fullhash}{c7a4370bebc051bb90cc0d25db16b320}
+      \strng{authornamehash}{f417e8a65f8cc3f417c43e53877ac454}
+      \strng{authorfullhash}{c7a4370bebc051bb90cc0d25db16b320}
+      \field{sortinit}{7}
+      \field{sortinithash}{6ac7fe70cdec8cba8f65694411ce2532}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Using the determinant quantum Monte-Carlo method, we elucidate the strain tuning of edge magnetism in zigzag graphene nanoribbons. Our intensive numerical results show that a relatively weak Coulomb interaction may induce a ferromagnetic-like behaviour with a proper strain, and the edge magnetism can be enhanced greatly as the strain along the zigzag edge increases, which provides another way to control graphene magnetism even at room temperature.}
+      \field{eprinttype}{arXiv}
+      \field{issn}{1361648X}
+      \field{journaltitle}{Journal of Physics Condensed Matter}
+      \field{number}{36}
+      \field{title}{{Strain-tuning of edge magnetism in zigzag graphene nanoribbons}}
+      \field{volume}{29}
+      \field{year}{2017}
+      \verb{doi}
+      \verb 10.1088/1361-648X/aa7dc1
+      \endverb
+      \verb{eprint}
+      \verb 1707.02049
+      \endverb
+      \keyw{graphene nanoribbon,magnetism,strain}
+    \endentry
+    \entry{Davelou2017}{article}{}
+      \name{author}{4}{}{%
+        {{hash=1a6826e0e3a42e54a924a3c69fa31cee}{%
+           family={Davelou},
+           familyi={D\bibinitperiod},
+           given={Daphne},
+           giveni={D\bibinitperiod}}}%
+        {{hash=94deb1a78fead484181809f1bcb24372}{%
+           family={Kopidakis},
+           familyi={K\bibinitperiod},
+           given={Georgios},
+           giveni={G\bibinitperiod}}}%
+        {{hash=a54e5ea13c0cb48a4212aee979629c7e}{%
+           family={Kaxiras},
+           familyi={K\bibinitperiod},
+           given={Efthimios},
+           giveni={E\bibinitperiod}}}%
+        {{hash=15bdbef1aa6693cc6588cd5d6a2d9e99}{%
+           family={Remediakis},
+           familyi={R\bibinitperiod},
+           given={Ioannis\bibnamedelima N.},
+           giveni={I\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+      }
+      \strng{namehash}{efc1d474fa907f73e3ca75297ab15694}
+      \strng{fullhash}{15c9d77773dac1a20b39f11c246ecd4a}
+      \strng{authornamehash}{efc1d474fa907f73e3ca75297ab15694}
+      \strng{authorfullhash}{15c9d77773dac1a20b39f11c246ecd4a}
+      \field{sortinit}{7}
+      \field{sortinithash}{6ac7fe70cdec8cba8f65694411ce2532}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Author(s): Daphne Davelou, Georgios Kopidakis, Efthimios Kaxiras, and Ioannis N. RemediakisNanoribbons of molybdenum disulfide ({\$}{\{}\backslashmathrm{\{}MoS{\}}{\}}{\_}{\{}2{\}}{\$}) are interesting one-dimensional (1D) nanostructures with intriguing electronic properties, consisting of a semiconducting bulk bounded by edges with metallic character. Edges of similar character can also be expected in other transition-meta...[Phys. Rev. B 96, 165436] Published Fri Oct 27, 2017}
+      \field{issn}{24699969}
+      \field{journaltitle}{Physical Review B}
+      \field{number}{16}
+      \field{title}{{Nanoribbon edges of transition-metal dichalcogenides: Stability and electronic properties}}
+      \field{volume}{96}
+      \field{year}{2017}
+      \verb{doi}
+      \verb 10.1103/PhysRevB.96.165436
+      \endverb
+    \endentry
+    \entry{Raczkowski2017}{article}{}
+      \name{author}{2}{}{%
+        {{hash=329d70389aac124790e479f64cc9abe4}{%
+           family={Raczkowski},
+           familyi={R\bibinitperiod},
+           given={Marcin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=f7a4b116051e5e414c553aabeeb069fe}{%
+           family={Assaad},
+           familyi={A\bibinitperiod},
+           given={Fakher\bibnamedelima F.},
+           giveni={F\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \strng{namehash}{13c37595f84604ddea6882d758b089d7}
+      \strng{fullhash}{13c37595f84604ddea6882d758b089d7}
+      \strng{authornamehash}{13c37595f84604ddea6882d758b089d7}
+      \strng{authorfullhash}{13c37595f84604ddea6882d758b089d7}
+      \field{sortinit}{7}
+      \field{sortinithash}{6ac7fe70cdec8cba8f65694411ce2532}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We perform projective quantum Monte Carlo simulations of zigzag graphene nanoribbons within a realistic model with long-range Coulomb interactions. Increasing the relative strength of nonlocal interactions with respect to the on-site repulsion does not generate a phase transition but has a number of nontrivial effects. At the single-particle level we observe a marked enhancement of the Fermi velocity at the Dirac points. At the two-particle level, spin- and charge-density-wave fluctuations compete. As a consequence, the edge magnetic moment is reduced but the edge dispersion relation increases in the sense that the single-particle gap at momentum {\$}q=\backslashpi/|{\{}\backslashpmb a{\}}{\_}1|{\$} grows. We attribute this to nonlocal charge fluctuations which assist the spin fluctuations to generate the aforementioned gap. In contrast, the net result of the interaction-induced renormalization of different energy scales is a constant spin-wave velocity of the edge modes. However, since the particle-hole continuum is shifted to higher energies---due to the renormalization of the Fermi velocity---Landau damping is reduced. As a result, a roughly linear spin-wave-like mode at the edge spreads out through a larger part of the Brillouin zone.}
+      \field{eprinttype}{arXiv}
+      \field{issn}{24699969}
+      \field{journaltitle}{Physical Review B}
+      \field{number}{11}
+      \field{title}{{Interplay between the edge-state magnetism and long-range Coulomb interaction in zigzag graphene nanoribbons: Quantum Monte Carlo study}}
+      \field{volume}{96}
+      \field{year}{2017}
+      \verb{doi}
+      \verb 10.1103/PhysRevB.96.115155
+      \endverb
+      \verb{eprint}
+      \verb 1707.02065
+      \endverb
+    \endentry
+    \entry{Roldan2014}{misc}{}
+      \name{author}{6}{}{%
+        {{hash=81380064cdd29a1a2fe59d560cc7da31}{%
+           family={Rold\'{a}n},
+           familyi={R\bibinitperiod},
+           given={Rafael},
+           giveni={R\bibinitperiod}}}%
+        {{hash=6fc1808536c47f308f82cb79ae30ff25}{%
+           family={Silva-Guill\'{e}n},
+           familyi={S\bibinithyphendelim G\bibinitperiod},
+           given={Jose\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=ffd5ddcd4b6bbc83a6ef9276907a7994}{%
+           family={L\'{o}pez-Sancho},
+           familyi={L\bibinithyphendelim S\bibinitperiod},
+           given={M.\bibnamedelimi Pilar},
+           giveni={M\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=c9231fa5e008c1129681a9dab96cfbb3}{%
+           family={Guinea},
+           familyi={G\bibinitperiod},
+           given={Francisco},
+           giveni={F\bibinitperiod}}}%
+        {{hash=9dd9bf976f04fcaaa62ed92c8b1e564b}{%
+           family={Cappelluti},
+           familyi={C\bibinitperiod},
+           given={Emmanuele},
+           giveni={E\bibinitperiod}}}%
+        {{hash=3923014e591a1544e3db6eae60c7dba6}{%
+           family={Ordej\'{o}n},
+           familyi={O\bibinitperiod},
+           given={Pablo},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{448ff02c2207587570adb2ab2fc743b2}
+      \strng{fullhash}{27470439a203d2c081e2ed477d1a0e82}
+      \strng{authornamehash}{448ff02c2207587570adb2ab2fc743b2}
+      \strng{authorfullhash}{27470439a203d2c081e2ed477d1a0e82}
+      \field{sortinit}{7}
+      \field{sortinithash}{6ac7fe70cdec8cba8f65694411ce2532}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Single- and few-layer transition metal dichalcogenides have recently emerged as a new family of layered crystals with great interest , not only from the fundamental point of view, but also because of their potential application in ultrathin devices. Here the electronic properties of semiconducting MX2, where M =Mo or W and X = S or Se, are reviewed. Based on of density functional theory calculations, which include the effect of spin-orbit interaction, the band structure of single-layer, bilayer and bulk compounds is discussed. The band structure of these compounds is highly sensitive to elastic deformations, and it is reviewed how strain engineering can be used to manipulate and tune the electronic and optical properties of those materials. Further, the effect of disorder and imperfections in the lattice structure and their effect on the optical and transport properties of MX2 is discussed. The superconducting transition in these compounds, which has been observed experimentally, is analyzed, as well as the different mechanisms proposed so far to explain the pairing. Finally, a discussion on the excitonic effects which are present in these systems is included.}
+      \field{booktitle}{Annalen der Physik}
+      \field{eprinttype}{arXiv}
+      \field{isbn}{1521-3889}
+      \field{issn}{15213889}
+      \field{number}{9-10}
+      \field{title}{{Electronic properties of single-layer and multilayer transition metal dichalcogenides MX2 (M = Mo, W and X = S, Se)}}
+      \field{volume}{526}
+      \field{year}{2014}
+      \field{pages}{347\bibrangedash 357}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1002/andp.201400128
+      \endverb
+      \verb{eprint}
+      \verb 1410.2154
+      \endverb
+    \endentry
+    \entry{Chen2017}{article}{}
+      \name{author}{7}{}{%
+        {{hash=6ef5e83f2df66e076ce95e343216ee14}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Yuxuan},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=605009b41c70e69d4086c598301434d0}{%
+           family={Cui},
+           familyi={C\bibinitperiod},
+           given={Ping},
+           giveni={P\bibinitperiod}}}%
+        {{hash=6d60fe7dd3ff2b279d78f278b85d197e}{%
+           family={Ren},
+           familyi={R\bibinitperiod},
+           given={Xibiao},
+           giveni={X\bibinitperiod}}}%
+        {{hash=07917f676e2fa0e61e529ba5ff1a0922}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Chendong},
+           giveni={C\bibinitperiod}}}%
+        {{hash=3c2666c644e86fa9ed1d657175acb19f}{%
+           family={Jin},
+           familyi={J\bibinitperiod},
+           given={Chuanhong},
+           giveni={C\bibinitperiod}}}%
+        {{hash=6fab509a575563dcce94d6d45f8bbd26}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Zhenyu},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=7938ba02cce02f004c92a4dc3e564678}{%
+           family={Shih},
+           familyi={S\bibinitperiod},
+           given={Chih\bibnamedelima Kang},
+           giveni={C\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \strng{namehash}{6df7867741141bdec88cb9c3fb541baa}
+      \strng{fullhash}{0567d706633fcb4a6bbde9dcf64ffcc0}
+      \strng{authornamehash}{6df7867741141bdec88cb9c3fb541baa}
+      \strng{authorfullhash}{0567d706633fcb4a6bbde9dcf64ffcc0}
+      \field{sortinit}{7}
+      \field{sortinithash}{6ac7fe70cdec8cba8f65694411ce2532}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Transition metal dichalcogenides (TMDs) are a family of van der Waals layered materials exhibiting unique electronic, optical, magnetic and transport properties. Their technological potentials hinge critically on the ability to achieve controlled fabrication of desirable nanostructures, such as nanoribbons and nanodots. To date, nanodots/nanoislands have been regularly observed, while controlled fabrication of TMD nanoribbons remains challenging. Here we report a bottom-up fabrication of MoSe2 nanoribbons using molecular beam epitaxy, via an unexpected temperature-induced morphological phase transition from the nanodot to nanoribbon regime. Such nanoribbons are of zigzag nature, characterized by distinct chemical and electronic properties along the edges. The phase space for nanoribbon growth is narrowly defined by proper Se:Mo ratios, as corroborated experimentally using different Se fluxes, and supported theoretically using first-principles calculations that establish the crucial role of the morphological reconstruction of the bare Mo-terminated edge. The growth mechanism revealed should be applicable to other TMD systems.}
+      \field{isbn}{2041-1723}
+      \field{issn}{20411723}
+      \field{journaltitle}{Nature Communications}
+      \field{title}{{Fabrication of MoSe2 nanoribbons via an unusual morphological phase transition}}
+      \field{volume}{8}
+      \field{year}{2017}
+      \verb{doi}
+      \verb 10.1038/ncomms15135
+      \endverb
+    \endentry
+    \entry{Wang2012}{article}{}
+      \name{author}{5}{}{%
+        {{hash=6a60c2a339ec4b82a3b41a706bf017db}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Qing\bibnamedelima Hua},
+           giveni={Q\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=d7d5a635cc192cda2f463996876b9fd0}{%
+           family={Kalantar-Zadeh},
+           familyi={K\bibinithyphendelim Z\bibinitperiod},
+           given={Kourosh},
+           giveni={K\bibinitperiod}}}%
+        {{hash=0d65d8b35c25b1f6df1c09159676aab6}{%
+           family={Kis},
+           familyi={K\bibinitperiod},
+           given={Andras},
+           giveni={A\bibinitperiod}}}%
+        {{hash=06a617fb886d81b7caf97bfbb4b4bc30}{%
+           family={Coleman},
+           familyi={C\bibinitperiod},
+           given={Jonathan\bibnamedelima N},
+           giveni={J\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=898e8599bec78da45fc850f7bec962dc}{%
+           family={Strano},
+           familyi={S\bibinitperiod},
+           given={Michael\bibnamedelima S},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{2ccdb6c0006be4c33122a9af1b6ce751}
+      \strng{fullhash}{f65a9702ecbbe84687dc52793003791e}
+      \strng{authornamehash}{2ccdb6c0006be4c33122a9af1b6ce751}
+      \strng{authorfullhash}{f65a9702ecbbe84687dc52793003791e}
+      \field{sortinit}{7}
+      \field{sortinithash}{6ac7fe70cdec8cba8f65694411ce2532}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The remarkable properties of graphene have renewed interest in inorganic, two-dimensional materials with unique electronic and optical attributes. Transition metal dichalcogenides (TMDCs) are layered materials with strong in-plane bonding and weak out-of-plane interactions enabling exfoliation into two-dimensional layers of single unit cell thickness. Although TMDCs have been studied for decades, recent advances in nanoscale materials characterization and device fabrication have opened up new opportunities for two-dimensional layers of thin TMDCs in nanoelectronics and optoelectronics. TMDCs such as MoS(2), MoSe(2), WS(2) and WSe(2) have sizable bandgaps that change from indirect to direct in single layers, allowing applications such as transistors, photodetectors and electroluminescent devices. We review the historical development of TMDCs, methods for preparing atomically thin layers, their electronic and optical properties, and prospects for future advances in electronics and optoelectronics.}
+      \field{eprinttype}{arXiv}
+      \field{isbn}{1748-3387}
+      \field{issn}{1748-3387}
+      \field{journaltitle}{Nat. Nanotechnol.}
+      \field{number}{11}
+      \field{title}{{Electronics and optoelectronics of two-dimensional transition metal dichalcogenides}}
+      \field{volume}{7}
+      \field{year}{2012}
+      \field{pages}{699\bibrangedash 712}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1038/nnano.2012.193
+      \endverb
+      \verb{eprint}
+      \verb 1205.1822
+      \endverb
+      \verb{url}
+      \verb http://www.ncbi.nlm.nih.gov/pubmed/23132225%7B%5C%%7D5Cnhttp://www.nature.com/doifinder/10.1038/nnano.2012.193%7B%5C%%7D5Cnhttp://www.nature.com/doifinder/10.1038/nnano.2012.193
+      \endverb
+      \keyw{Chalcogens,Chalcogens: chemistry,Electronics,Electronics: instrumentation,Equipment Design,Models,Molecular,Optics and Photonics,Optics and Photonics: instrumentation,Semiconductors,Semiconductors: instrumentation,Transition Elements,Transition Elements: chemistry}
+    \endentry
+    \entry{Braz2017}{unpublished}{}
+      \name{author}{3}{}{%
+        {{hash=b9211131a82f1c961d420974f215a79a}{%
+           family={Braz},
+           familyi={B\bibinitperiod},
+           given={Jo\~{a}o\bibnamedelimb E.\bibnamedelimi H.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=f7dd42edbdd14541e4d191e96cb0465b}{%
+           family={Amorim},
+           familyi={A\bibinitperiod},
+           given={Bruno},
+           giveni={B\bibinitperiod}}}%
+        {{hash=432678602c810d7c331dbc6b850c2598}{%
+           family={Castro},
+           familyi={C\bibinitperiod},
+           given={Eduardo\bibnamedelima V.},
+           giveni={E\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \strng{namehash}{08f71198ce2c97cbae2a5aa79965e898}
+      \strng{fullhash}{9bce4cec6f3f5f6c9e771f1184478c92}
+      \strng{authornamehash}{08f71198ce2c97cbae2a5aa79965e898}
+      \strng{authorfullhash}{9bce4cec6f3f5f6c9e771f1184478c92}
+      \field{sortinit}{7}
+      \field{sortinithash}{6ac7fe70cdec8cba8f65694411ce2532}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We compute the valley/magnetic phase diagram of mono layers of transition metal dichalcogenides in the hole doped region where spin-orbit effects are particularly relevant. Taking into account the moderate to high local electron-electron interactions due to the presence of transition metal atoms, we show that the system is unstable to an itinerant ferromagnetic phase where all charge carriers are spin and valley polarized. This phase shows an anomalous charge Hall and anomalous spin-Hall response, and may thus be detected experimentally.}
+      \field{title}{{Valley polarized magnetic state in hole-doped mono layers of transition metal dichalcogenides}}
+      \field{year}{2017}
+      \field{pages}{5}
+      \range{pages}{1}
+      \verb{url}
+      \verb arxiv:1712.07157v1
+      \endverb
+    \endentry
+    \entry{Yazyev2010}{article}{}
+      \name{author}{1}{}{%
+        {{hash=c832631f272c4d169abd3fae565dd149}{%
+           family={Yazyev},
+           familyi={Y\bibinitperiod},
+           given={Oleg\bibnamedelima V.},
+           giveni={O\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \strng{namehash}{c832631f272c4d169abd3fae565dd149}
+      \strng{fullhash}{c832631f272c4d169abd3fae565dd149}
+      \strng{authornamehash}{c832631f272c4d169abd3fae565dd149}
+      \strng{authorfullhash}{c832631f272c4d169abd3fae565dd149}
+      \field{sortinit}{8}
+      \field{sortinithash}{2f1b0e69e7617f99664f1cd00bb9603c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Magnetic materials and nanostructures based on carbon offer unique opportunities for future technological applications such as spintronics. This article reviews graphene-derived systems in which magnetic correlations emerge as a result of reduced dimensions, disorder and other possible scenarios. In particular, zero-dimensional graphene nanofragments, one-dimensional graphene nanoribbons, and defect-induced magnetism in graphene and graphite are covered. Possible physical mechanisms of the emergence of magnetism in these systems are illustrated with the help of computational examples based on simple model Hamiltonians. In addition, this review covers spin transport properties, proposed designs of graphene-based spintronic devices, magnetic ordering at finite temperatures as well as the most recent experimental achievements.}
+      \field{eprinttype}{arXiv}
+      \field{isbn}{0034-4885}
+      \field{issn}{00344885}
+      \field{journaltitle}{Reports on Progress in Physics}
+      \field{number}{5}
+      \field{title}{{Emergence of magnetism in graphene materials and nanostructures}}
+      \field{volume}{73}
+      \field{year}{2010}
+      \verb{doi}
+      \verb 10.1088/0034-4885/73/5/056501
+      \endverb
+      \verb{eprint}
+      \verb 1004.2034
+      \endverb
+    \endentry
+    \entry{Feldner2011}{article}{}
+      \name{author}{6}{}{%
+        {{hash=504331015369150db40c6f862d8cf8f7}{%
+           family={Feldner},
+           familyi={F\bibinitperiod},
+           given={H\'{e}l\`{e}ne},
+           giveni={H\bibinitperiod}}}%
+        {{hash=6ee0d31a67f4d947a2dee2c06c77e4dd}{%
+           family={Meng},
+           familyi={M\bibinitperiod},
+           given={Zi\bibnamedelima Yang},
+           giveni={Z\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+        {{hash=4d7ed7ad40607d73d7f7674f23c48d1f}{%
+           family={Lang},
+           familyi={L\bibinitperiod},
+           given={Thomas\bibnamedelima C.},
+           giveni={T\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=f7a4b116051e5e414c553aabeeb069fe}{%
+           family={Assaad},
+           familyi={A\bibinitperiod},
+           given={Fakher\bibnamedelima F.},
+           giveni={F\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=83b6f28cea7f5150b33a4e5eca11b51a}{%
+           family={Wessel},
+           familyi={W\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=882a8883e463c92e9f0fbc40517b2c8f}{%
+           family={Honecker},
+           familyi={H\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{820792bdc4142c3fb0c3458609fec7ef}
+      \strng{fullhash}{e26703082ce1d3764b14620a1bf8215a}
+      \strng{authornamehash}{820792bdc4142c3fb0c3458609fec7ef}
+      \strng{authorfullhash}{e26703082ce1d3764b14620a1bf8215a}
+      \field{sortinit}{9}
+      \field{sortinithash}{2999ebab86052e6d71b434385f8b4ed2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We investigate the edge-state magnetism of graphene nanoribbons using projective quantum Monte Carlo simulations and a self-consistent mean-field approximation of the Hubbard model. The static magnetic correlations are found to be short ranged. Nevertheless, the correlation length increases with the width of the ribbon such that already for ribbons of moderate widths we observe a strong trend towards mean-field-type ferromagnetic correlations at a zigzag edge. These correlations are accompanied by a dominant low-energy peak in the local spectral function and we propose that this can be used to detect edge-state magnetism by scanning tunneling microscopy. The dynamic spin structure factor at the edge of a ribbon exhibits an approximately linearly dispersing collective magnonlike mode at low energies that decays into Stoner modes beyond the energy scale where it merges into the particle-hole continuum.}
+      \field{eprinttype}{arXiv}
+      \field{isbn}{0031-9007}
+      \field{issn}{00319007}
+      \field{journaltitle}{Physical Review Letters}
+      \field{number}{22}
+      \field{title}{{Dynamical signatures of edge-state magnetism on graphene nanoribbons}}
+      \field{volume}{106}
+      \field{year}{2011}
+      \verb{doi}
+      \verb 10.1103/PhysRevLett.106.226401
+      \endverb
+      \verb{eprint}
+      \verb 1101.1882
+      \endverb
+    \endentry
+    \entry{Golor2013}{article}{}
+      \name{author}{3}{}{%
+        {{hash=171f52bd0614b4176c51cc0882262404}{%
+           family={Golor},
+           familyi={G\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=4d7ed7ad40607d73d7f7674f23c48d1f}{%
+           family={Lang},
+           familyi={L\bibinitperiod},
+           given={Thomas\bibnamedelima C.},
+           giveni={T\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=83b6f28cea7f5150b33a4e5eca11b51a}{%
+           family={Wessel},
+           familyi={W\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{c24596cf1a502db47fec1177c7bbe3fe}
+      \strng{fullhash}{91a2338725147d198a0a035732c60259}
+      \strng{authornamehash}{c24596cf1a502db47fec1177c7bbe3fe}
+      \strng{authorfullhash}{91a2338725147d198a0a035732c60259}
+      \field{sortinit}{9}
+      \field{sortinithash}{2999ebab86052e6d71b434385f8b4ed2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We investigate chiral graphene nanoribbons using projective quantum Monte Carlo simulations within the local Hubbard model description and study the effects of electron-electron interactions on the electronic and magnetic properties at the ribbon edges. Static and dynamical properties are analyzed for nanoribbons of varying width and edge chirality, and compared to a self-consistent Hartee-Fock mean-field approximation. Our results show that for chiral ribbons of sufficient width, the spin correlations exhibit exceedingly long correlation lengths, even between zigzag segments that are well separated by periodic armchair regions. Characteristic enhancements in the magnetic correlations for distinct ribbon widths and chiralities are associated with energy gaps in the tight-binding limit of such ribbons. We identify specific signatures in the local density of states and low- energy modes in the local spectral function which directly relate to enhanced electronic correlations along graphene nanoribbons and which can be accessed scanning tunneling spectroscopy.}
+      \field{eprinttype}{arXiv}
+      \field{isbn}{1098-0121}
+      \field{issn}{10980121}
+      \field{journaltitle}{Physical Review B - Condensed Matter and Materials Physics}
+      \field{number}{15}
+      \field{title}{{Quantum Monte Carlo studies of edge magnetism in chiral graphene nanoribbons}}
+      \field{volume}{87}
+      \field{year}{2013}
+      \verb{doi}
+      \verb 10.1103/PhysRevB.87.155441
+      \endverb
+      \verb{eprint}
+      \verb 1303.4259
+      \endverb
+    \endentry
+    \entry{Hsu2017}{article}{}
+      \name{author}{4}{}{%
+        {{hash=8436a2732e3c8b3731867b8d7e0af3e4}{%
+           family={Hsu},
+           familyi={H\bibinitperiod},
+           given={Yi\bibnamedelima Ting},
+           giveni={Y\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=de44a36fb8c53cc03308e8b50cc4ccb9}{%
+           family={Vaezi},
+           familyi={V\bibinitperiod},
+           given={Abolhassan},
+           giveni={A\bibinitperiod}}}%
+        {{hash=bfed96bed37cdae52840edc5054a09d9}{%
+           family={Fischer},
+           familyi={F\bibinitperiod},
+           given={Mark\bibnamedelima H.},
+           giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=170d3d0aa573d30f4c7da4eea2dfcb3e}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Eun\bibnamedelima Ah},
+           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{6e942868cb5123df172f5b7188befd47}
+      \strng{fullhash}{fbc32a651644f0e9c2cdf82e0f4cc178}
+      \strng{authornamehash}{6e942868cb5123df172f5b7188befd47}
+      \strng{authorfullhash}{fbc32a651644f0e9c2cdf82e0f4cc178}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Theoretically it has been known that breaking spin-degeneracy and effectively realizing 'spinless fermions' is a promising path to topological superconductors. Yet, topological superconductors are rare to date. Here, we propose to realize spinless fermions by splitting the spin-degeneracy in momentum space. Specifically, we identify monolayer hole-doped transition metal dichalcogenide (TMD)s as candidates for topological superconductors out of such momentum-space-split spinless fermions. Although electron-doped TMDs have recently been found superconducting, the observed superconductivity is unlikely topological due to the near spin-degeneracy. Meanwhile, hole-doped TMDs with momentum-space-split spinless fermions remain unexplored. Employing a renormalization group analysis, we propose that the unusual spin-valley locking in hole-doped TMDs together with repulsive interactions selectively favors two topological superconducting states: inter-pocket paired state with Chern number 2 and intra-pocket paired state with finite pair-momentum. A confirmation of our predictions will open up possibilities for manipulating topological superconductors on the device friendly platform of monolayer TMDs.}
+      \field{eprinttype}{arXiv}
+      \field{issn}{20411723}
+      \field{journaltitle}{Nature Communications}
+      \field{title}{{Topological superconductivity in monolayer transition metal dichalcogenides}}
+      \field{volume}{8}
+      \field{year}{2017}
+      \verb{doi}
+      \verb 10.1038/ncomms14985
+      \endverb
+      \verb{eprint}
+      \verb 1606.00857
+      \endverb
+    \endentry
+    \entry{Ashcroft1976}{book}{}
+      \name{author}{2}{}{%
+        {{hash=0561494cb251a6b3232fc6452d305040}{%
+           family={Ashcroft},
+           familyi={A\bibinitperiod},
+           given={Neil\bibnamedelima W},
+           giveni={N\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=e57dc8e9c288c940d9bda885fdb36ca3}{%
+           family={Mermin},
+           familyi={M\bibinitperiod},
+           given={N\bibnamedelima David},
+           giveni={N\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{62ca54533c47b92e987d34d8f2ef9a66}
+      \strng{fullhash}{62ca54533c47b92e987d34d8f2ef9a66}
+      \strng{authornamehash}{62ca54533c47b92e987d34d8f2ef9a66}
+      \strng{authorfullhash}{62ca54533c47b92e987d34d8f2ef9a66}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Great Job in explaining this "hairy" matter. Reading the book as an theoretical Physisist there is some stuff missing when it gets to the theoretical aspects. And this is not what the authors intended. The book rather explains in "simple" words and formulas a deep physical understanding of all fields of solid state physics. It has everything a good text book needs. Great Job by the athors Fun to read.}
+      \field{booktitle}{Solid State Physics}
+      \field{isbn}{0030839939}
+      \field{issn}{00319228}
+      \field{number}{ISBN 0-471-92805-4}
+      \field{title}{{Solid State Physics}}
+      \field{volume}{2}
+      \field{year}{1976}
+      \field{pages}{848}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/0038-1101(66)90069-4
+      \endverb
+      \verb{url}
+      \verb http://www.amazon.com/Solid-State-Physics-Neil-Ashcroft/dp/0030839939
+      \endverb
+    \endentry
+    \entry{Boer1937}{article}{}
+      \name{author}{2}{}{%
+        {{hash=00a80ac359104e968711042c6d1841c6}{%
+           family={Boer},
+           familyi={B\bibinitperiod},
+           given={J\bibnamedelima H},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+        {{hash=20ba04de0b7444a37a8b59a5dc443cf8}{%
+           family={Verwey},
+           familyi={V\bibinitperiod},
+           given={E\bibnamedelima J\bibnamedelima W},
+           giveni={E\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{2b0cadb1351371e0444833c8dda59de0}
+      \strng{fullhash}{2b0cadb1351371e0444833c8dda59de0}
+      \strng{authornamehash}{2b0cadb1351371e0444833c8dda59de0}
+      \strng{authorfullhash}{2b0cadb1351371e0444833c8dda59de0}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Attention is drawn to a class of semi-conductors or insulators with incompletely filled 3 d bands. Their lack of conductivity, if the number of electrons per atom is an integer, is explained by the circumstance that a moving electron will have a large probability of being withdrawn to the initial atom, if only the potential barriers to be penetrated are sufficiently high to reduce the frequency of transition below a certain limit. This inhibiting factor disappears, if for ions of equal electronic levels the number of electrons per atom differs from an integer. In the case of NiO this condition is fulfilled if an electron is brought by thermal excitation from the lattice 3 d band into the somewhat raised and less occupied levels a, a ' (figure 1); these levels belong to Ni ions adjacent to a vacant Ni lattice point introduced by the deviations from stoichiometry, and two of these Ni ions are at the absolute zero Ni 3+ ions. An analogous conduction mechanism holds for non-stoichiometric Cu 2 O, with a completely filled 3 d band (figure 2). Photoconductivity is generally observed with substances with completely filled zones and never with substances of the NiO type. A tentative explanation is given for this fact on the basis of the model of figure 1 and figure 2. In non-stoechiometric ZnO vacant oxygen lattice points are assumed (figure 3); in that case the calculation of the lattice levels shows that at the lattice holes one Zn 2+ is converted into Zn, whereas in the lattice the additional electrons form Zn + ions, as will be the case after thermal transitions of the electrons belonging to these Zn atoms into the lattice 4 s band.}
+      \field{journaltitle}{Proceedings of the Physical Society}
+      \field{number}{4S}
+      \field{title}{Semi-conductors with partially and with completely filled 3 d -lattice bands}
+      \field{volume}{49}
+      \field{year}{1937}
+      \field{pages}{59}
+      \range{pages}{1}
+      \verb{url}
+      \verb http://stacks.iop.org/0959-5309/49/i=4S/a=307
+      \endverb
+    \endentry
+    \entry{Mott1939}{article}{}
+      \name{author}{2}{}{%
+        {{hash=1638ef5a5e93e73733dd03c2e0aabf3b}{%
+           family={{Mott}},
+           familyi={M\bibinitperiod},
+           given={N.\bibnamedelimi F.},
+           giveni={N\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=4d8055559580656277f9ac07d17d4bf4}{%
+           family={{Peierls}},
+           familyi={P\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{d23ac3fa0b220eb6a29cc6bf3949f081}
+      \strng{fullhash}{d23ac3fa0b220eb6a29cc6bf3949f081}
+      \strng{authornamehash}{d23ac3fa0b220eb6a29cc6bf3949f081}
+      \strng{authorfullhash}{d23ac3fa0b220eb6a29cc6bf3949f081}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the Physical Society}
+      \field{month}{8}
+      \field{title}{{Discussion of the paper by de Boer and Verwey}}
+      \field{volume}{49}
+      \field{year}{1937}
+      \field{pages}{72\bibrangedash 73}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.1088/0959-5309/49/4S/308
+      \endverb
+    \endentry
+    \entry{Mott1949}{article}{}
+      \name{author}{1}{}{%
+        {{hash=a119e0d37db44eb2842a2575e3a5eeab}{%
+           family={Mott},
+           familyi={M\bibinitperiod},
+           given={N\bibnamedelima F},
+           giveni={N\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \strng{namehash}{a119e0d37db44eb2842a2575e3a5eeab}
+      \strng{fullhash}{a119e0d37db44eb2842a2575e3a5eeab}
+      \strng{authornamehash}{a119e0d37db44eb2842a2575e3a5eeab}
+      \strng{authorfullhash}{a119e0d37db44eb2842a2575e3a5eeab}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{It is shown that the collective electron and London-Heitler models are not to be regarded as different approximations to the same exact wave function for solids in which, according to the former model, there is a partially filled zone of energy levels. It can thus be shown why nickel oxide in the pure state is a non-conductor, although it contains an incomplete zone. The properties of the metals nickel, palladium and platinum are discussed in the light of these results; platinum differs from nickel in that the orbital contribution to the moment of the elementary magnets is not quenched. A discussion is given of x-ray absorption edges, and it is shown why exciton lines are absent for metals.}
+      \field{journaltitle}{Proceedings of the Physical Society. Section A}
+      \field{number}{7}
+      \field{title}{The Basis of the Electron Theory of Metals, with Special Reference to the Transition Metals}
+      \field{volume}{62}
+      \field{year}{1949}
+      \field{pages}{416}
+      \range{pages}{1}
+      \verb{url}
+      \verb http://stacks.iop.org/0370-1298/62/i=7/a=303
+      \endverb
+    \endentry
+    \entry{Mila2007}{unpublished}{}
+      \name{author}{1}{}{%
+        {{hash=5ecae643825cd4b71c24d994dbd4253a}{%
+           family={Mila},
+           familyi={M\bibinitperiod},
+           given={Fr\'{e}d\'{e}ric},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {\'{E}cole Polytechnique F\'{e}d\'{e}rale de Lausanne}%
+      }
+      \strng{namehash}{5ecae643825cd4b71c24d994dbd4253a}
+      \strng{fullhash}{5ecae643825cd4b71c24d994dbd4253a}
+      \strng{authornamehash}{5ecae643825cd4b71c24d994dbd4253a}
+      \strng{authorfullhash}{5ecae643825cd4b71c24d994dbd4253a}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Physique du Solide III et IV}}
+      \field{year}{2007}
+      \field{pages}{1\bibrangedash 186}
+      \range{pages}{186}
+    \endentry
+    \entry{Metropolis1949}{article}{}
+      \name{author}{2}{}{%
+        {{hash=2b73f47a1a84dd52f45fe57c381c3786}{%
+           family={Metropolis},
+           familyi={M\bibinitperiod},
+           given={Nicholas},
+           giveni={N\bibinitperiod}}}%
+        {{hash=8d9ac49de0c3f3a38001916b81561993}{%
+           family={Ulam},
+           familyi={U\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{c934f479d57b4c43a1d4c06ef5d6d255}
+      \strng{fullhash}{c934f479d57b4c43a1d4c06ef5d6d255}
+      \strng{authornamehash}{c934f479d57b4c43a1d4c06ef5d6d255}
+      \strng{authorfullhash}{c934f479d57b4c43a1d4c06ef5d6d255}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We shall present here the motivation and a general description of a method dealing with a class of problems in mathematical physics. The method is, essentially, a statistical approach to the study of differential equations, or more generally, of integro-differential equations that occur in various branches of the natural sciences.}
+      \field{eprinttype}{arXiv}
+      \field{isbn}{0226767493}
+      \field{issn}{1537274X}
+      \field{journaltitle}{Journal of the American Statistical Association}
+      \field{number}{247}
+      \field{title}{{The Monte Carlo Method}}
+      \field{volume}{44}
+      \field{year}{1949}
+      \field{pages}{335\bibrangedash 341}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1080/01621459.1949.10483310
+      \endverb
+      \verb{eprint}
+      \verb 44:335?341
+      \endverb
+    \endentry
+    \entry{Newman1999}{book}{}
+      \name{author}{2}{}{%
+        {{hash=0a16346451c6daa65e56cfac8dfc576d}{%
+           family={Newman},
+           familyi={N\bibinitperiod},
+           given={Mark\bibnamedelimb E.\bibnamedelimi J.},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=17d2e7317324f05907c3afdf55c18a15}{%
+           family={Barkema},
+           familyi={B\bibinitperiod},
+           given={Gt},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{599fe8a962d33c60f29526c58eef1939}
+      \strng{fullhash}{599fe8a962d33c60f29526c58eef1939}
+      \strng{authornamehash}{599fe8a962d33c60f29526c58eef1939}
+      \strng{authorfullhash}{599fe8a962d33c60f29526c58eef1939}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This book provides an introduction to Monte Carlo simulations in classical statistical physics and is aimed both at students beginning work in the field and at more experienced researchers who wish to learn more about Monte Carlo methods. It includes methods for both equilibrium and out of equilibrium systems, and discusses in detail such common algorithms as the Metropolis and heat-bath algorithms, as well as more sophisticated ones such as continuous time Monte Carlo, cluster algorithms, multigrid methods, entropic sampling and simulated tempering. Data analysis techniques are also explained starting with straightforward measurement and error-estimation techniques and progressing to topics such as the single and multiple histogram methods and finite size scaling. The last few chapters of the book are devoted to implementation issues, including lattice representations, efficient implementation of data structures, multispin coding, parallelization of Monte Carlo algorithms, and random number generation. The book also includes example programs which show how to apply these techniques to a variety of well-known models.}
+      \field{booktitle}{Monte Carlo methods in statistical {\ldots}}
+      \field{isbn}{0198517971}
+      \field{title}{{Monte Carlo methods in statistical physics}}
+      \field{year}{1999}
+      \field{pages}{475}
+      \range{pages}{1}
+      \verb{url}
+      \verb http://adsabs.harvard.edu/abs/1999mcms.book.....N
+      \endverb
+    \endentry
+    \entry{Kosztin1996}{article}{}
+      \name{author}{1}{}{%
+        {{hash=c3691697b082b2e69d55f72f11728420}{%
+           family={Kosztin},
+           familyi={K\bibinitperiod},
+           given={Ioan},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{c3691697b082b2e69d55f72f11728420}
+      \strng{fullhash}{c3691697b082b2e69d55f72f11728420}
+      \strng{authornamehash}{c3691697b082b2e69d55f72f11728420}
+      \strng{authorfullhash}{c3691697b082b2e69d55f72f11728420}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A self-contained and tutorial presentation of the diffusion Monte Carlo method for determining the ground state energy and wave function of quantum systems is provided. First, the theoretical basis of the method is derived and then a numerical algorithm is formulated. The algorithm is applied to determine the ground state of the harmonic oscillator, the Morse oscillator, the hydrogen atom, and the electronic ground state of the H2+ ion and of the H2 molecule. A computer program on which the sample calculations are based is available upon request.}
+      \field{eprintclass}{physics}
+      \field{eprinttype}{arXiv}
+      \field{isbn}{0002-9505}
+      \field{issn}{00029505}
+      \field{journaltitle}{American Journal of Physics}
+      \field{number}{5}
+      \field{title}{{Introduction to the diffusion Monte Carlo method}}
+      \field{volume}{64}
+      \field{year}{1996}
+      \field{pages}{633}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1119/1.18168
+      \endverb
+      \verb{eprint}
+      \verb 9702023
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/physics/9702023%7B%5C%%7D5Cnhttp://link.aip.org/link/?AJP/64/633/1%7B%5C&%7DAgg=doi
+      \endverb
+    \endentry
+    \entry{Toulouse2016}{incollection}{}
+      \name{author}{3}{}{%
+        {{hash=98787e43f1ddbbf4d2098cb04ecdfe79}{%
+           family={Toulouse},
+           familyi={T\bibinitperiod},
+           given={Julien},
+           giveni={J\bibinitperiod}}}%
+        {{hash=b7aa35054a0f0489b38136d79525abee}{%
+           family={Assaraf},
+           familyi={A\bibinitperiod},
+           given={Roland},
+           giveni={R\bibinitperiod}}}%
+        {{hash=e6d0b5458e477f37a8fb3a5250f0910d}{%
+           family={Umrigar},
+           familyi={U\bibinitperiod},
+           given={Cyrus\bibnamedelima J.},
+           giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{405a896adccbd48ec7f99e777fae8237}
+      \strng{fullhash}{9743a52c6853230c30bebda9d67a5467}
+      \strng{authornamehash}{405a896adccbd48ec7f99e777fae8237}
+      \strng{authorfullhash}{9743a52c6853230c30bebda9d67a5467}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We provide a pedagogical introduction to the two main variants of real-space quantum Monte Carlo methods for electronic structure calculations: variational Monte Carlo (VMC) and diffusion Monte Carlo (DMC). Assuming no prior knowledge on the subject, we review in depth the Metropolis-Hastings algorithm used in VMC for sampling the square of an approximate wave function, discussing details important for applications to electronic systems. We also review in detail the more sophisticated DMC algorithm within the fixed-node approximation, introduced to avoid the infamous Fermionic sign problem, which allows one to sample a more accurate approximation to the ground-state wave function. Throughout this review, we discuss the statistical methods used for evaluating expectation values and statistical uncertainties. In particular, we show how to estimate nonlinear functions of expectation values and their statistical uncertainties. {{$\copyright$}} 2016 Elsevier Inc.}
+      \field{booktitle}{Advances in Quantum Chemistry}
+      \field{eprinttype}{arXiv}
+      \field{isbn}{9780128030608}
+      \field{issn}{00653276}
+      \field{title}{{Introduction to the Variational and Diffusion Monte Carlo Methods}}
+      \field{volume}{73}
+      \field{year}{2016}
+      \field{pages}{285\bibrangedash 314}
+      \range{pages}{30}
+      \verb{doi}
+      \verb 10.1016/bs.aiq.2015.07.003
+      \endverb
+      \verb{eprint}
+      \verb 1508.02989
+      \endverb
+      \keyw{Electronic structure calculations,Fixed-node approximation,Metropolis-Hastings algorithm,Quantum Monte Carlo,Statistical methods}
+    \endentry
+    \entry{Pang2016}{book}{}
+      \name{author}{1}{}{%
+        {{hash=15bfbfe1db67917fc953926d49afd752}{%
+           family={Pang},
+           familyi={P\bibinitperiod},
+           given={Tao},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Morgan}%
+        {Claypool Publishers}%
+      }
+      \strng{namehash}{15bfbfe1db67917fc953926d49afd752}
+      \strng{fullhash}{15bfbfe1db67917fc953926d49afd752}
+      \strng{authornamehash}{15bfbfe1db67917fc953926d49afd752}
+      \strng{authorfullhash}{15bfbfe1db67917fc953926d49afd752}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{An Introduction to Quantum Monte Carlo Methods}}
+      \field{year}{2016}
+    \endentry
+    \entry{Bai2006}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=c6671f91bba6616eeaa975ace4ac0de8}{%
+           family={Bai},
+           familyi={B\bibinitperiod},
+           given={Z},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=2bdd48dc68b3d7c9d63e3844f2459fd6}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={W},
+           giveni={W\bibinitperiod}}}%
+        {{hash=a9363be5898cc2728693f11f91f3d9af}{%
+           family={Scalettar},
+           familyi={S\bibinitperiod},
+           given={R},
+           giveni={R\bibinitperiod}}}%
+        {{hash=0c048bdaad611ff1f77b22a2cf345e87}{%
+           family={Yamazaki},
+           familyi={Y\bibinitperiod},
+           given={I},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{3076261154d4f58a95dd5b5cd138dba3}
+      \strng{fullhash}{43e7748cabe314eed59e3daeba8fbf5e}
+      \strng{authornamehash}{3076261154d4f58a95dd5b5cd138dba3}
+      \strng{authorfullhash}{43e7748cabe314eed59e3daeba8fbf5e}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{One of the core problems in materials science is how the interactions between electrons in a solid give rise to properties like magnetism, superconductivity, and metal-insulator transitions? Our ability to solve this central question in quantum statistical mechanics numerically is presently limited to systems of a few hundred electrons. While simulations at this scale have taught us a considerable amount about certain classes of materials, they have very significant limitations, especially for recently discovered materials which have mesoscopic magnetic and charge order. In this paper, we begin with an introduction to the Hub- bard model and quantum Monte Carlo simulations. The Hubbard model is a simple and effective model that has successfully cap- tured many of the qualitative features of materials, such as tran- sition metal monoxides, and high temperature superconductors. Because of its voluminous contents, we are not be able to cover all topics in detail; instead we focus on explaining basic ideas, concepts and methodology of quantum Monte Carlo simulation and leave various part for further study. Parts of this paper are our recent work on numerical linear algebra methods for quantum Monte Carlo simulations.}
+      \field{booktitle}{Lecture Notes from the Shangai Summer School of Mathematics}
+      \field{title}{{Numerical methods for quantum Monte Carlo simulations of the Hubbard model}}
+      \field{year}{2006}
+      \verb{url}
+      \verb http://web.cs.ucdavis.edu/%7B~%7Dbai/publications/bcsy09.pdf
+      \endverb
+    \endentry
+    \entry{Hirsch1983}{article}{}
+      \name{author}{1}{}{%
+        {{hash=27721911a943f5ec1f064fb72073f7c6}{%
+           family={Hirsch},
+           familyi={H\bibinitperiod},
+           given={J.\bibnamedelimi E.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{27721911a943f5ec1f064fb72073f7c6}
+      \strng{fullhash}{27721911a943f5ec1f064fb72073f7c6}
+      \strng{authornamehash}{27721911a943f5ec1f064fb72073f7c6}
+      \strng{authorfullhash}{27721911a943f5ec1f064fb72073f7c6}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We discuss a new functional-integral formulation of interacting fermion systems on a lattice such as the Anderson or Hubbard models: the fermion-fermion interaction is eliminated by introducing auxiliary Ising variables. The resulting model for a d-dimensional quantum system is a (d+1)-dimensional Ising model with complicated interactions. The new transformation is particularly useful for performing numerical studies of these models using Monte Carlo techniques. We study its convergence properties and compare it with the usual Gaussian formulation for the case of the Hubbard model.}
+      \field{isbn}{0163-1829}
+      \field{issn}{01631829}
+      \field{journaltitle}{Physical Review B}
+      \field{number}{7}
+      \field{title}{{Discrete Hubbard-Stratonovich transformation for fermion lattice models}}
+      \field{volume}{28}
+      \field{year}{1983}
+      \field{pages}{4059\bibrangedash 4061}
+      \range{pages}{3}
+      \verb{doi}
+      \verb 10.1103/PhysRevB.28.4059
+      \endverb
+    \endentry
+    \entry{Santos2003}{article}{}
+      \name{author}{1}{}{%
+        {{hash=d0957d2ac9be28d09febeccd19b2c71c}{%
+           family={Santos},
+           familyi={S\bibinitperiod},
+           given={Raimundo\bibnamedelima R.},
+           giveni={R\bibinitperiod\bibinitdelim R\bibinitperiod},
+           prefix={dos},
+           prefixi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{d0957d2ac9be28d09febeccd19b2c71c}
+      \strng{fullhash}{d0957d2ac9be28d09febeccd19b2c71c}
+      \strng{authornamehash}{d0957d2ac9be28d09febeccd19b2c71c}
+      \strng{authorfullhash}{d0957d2ac9be28d09febeccd19b2c71c}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We tutorially review the determinantal Quantum Monte Carlo method for fermionic systems, using the Hubbard model as a case study. Starting with the basic ingredients of Monte Carlo simulations for classical systems, we introduce aspects such as importance sampling, sources of errors, and finite-size scaling analyses. We then set up the preliminary steps to prepare for the simulations, showing that they are actually carried out by sampling discrete Hubbard-Stratonovich auxiliary fields. In this process the Green's function emerges as a fundamental tool, since it is used in the updating process, and, at the same time, it is directly related to the quantities probing magnetic, charge, metallic, and superconducting behaviours. We also discuss the as yet unresolved "minus-sign problem", and two ways to stabilize the algorithm at low temperatures.}
+      \field{eprintclass}{cond-mat}
+      \field{eprinttype}{arXiv}
+      \field{isbn}{0103-9733 UL - http://www.scielo.br/scielo.php?script=sci{\_}arttext{\&}pid=S0103-97332003000100003{\&}nrm=iso}
+      \field{issn}{0103-9733}
+      \field{journaltitle}{Brazilian Journal of Physics}
+      \field{number}{1}
+      \field{title}{{Introduction to quantum Monte Carlo simulations for fermionic systems}}
+      \field{volume}{33}
+      \field{year}{2003}
+      \field{pages}{36\bibrangedash 54}
+      \range{pages}{19}
+      \verb{doi}
+      \verb 10.1590/S0103-97332003000100003
+      \endverb
+      \verb{eprint}
+      \verb 0303551
+      \endverb
+      \verb{url}
+      \verb http://www.scielo.br/scielo.php?script=sci%7B%5C_%7Darttext%7B%5C&%7Dpid=S0103-97332003000100003%7B%5C&%7Dlng=en%7B%5C&%7Dnrm=iso%7B%5C&%7Dtlng=en
+      \endverb
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

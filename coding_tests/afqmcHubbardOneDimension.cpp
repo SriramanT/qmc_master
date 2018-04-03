@@ -21,8 +21,9 @@
 #include <time.h>
 #include <Eigen/Dense>
 #include <unsupported/Eigen/MatrixFunctions>
+#include <fstream>
 
-#define NSITES 5
+#define NSITES 10
 
 using namespace Eigen;
 using namespace std;
@@ -78,9 +79,11 @@ int main()
 {
     cout << "\nAuxiliary field QMC for 1D Hubbard chain\n" << endl;
     
+    cout << "\nNumber of sites: " << NSITES << endl;
+    
     // Toggle prints
     
-    int printsOn = 1;                                               // 0 - NO PRINTS, 1 - PRINTS
+    int printsOn = 0;                                               // 0 - NO PRINTS, 1 - PRINTS
     
     //  Usual general use variables
     
@@ -100,15 +103,20 @@ int main()
     
     //  Monte Carlo specific variables
     
-    const static int totalMCSteps = 30;
+    const static int totalMCSteps = 50000;
     
     //  Physical parameters
     
-    const static int L = 5;                                    //  number of imaginary time subintervals
-    const static double beta = 1.;                              //  imaginary time interval or equivalent maximum temperature of the (d+1) classical system
+    const static int L = 5;                                     //  number of imaginary time subintervals
+    cout << "L: " << L << endl;
+    const static double beta = 2.;                              //  imaginary time interval or equivalent maximum temperature of the (d+1) classical system
+    cout << "beta: " << beta << endl;
     const static double dt = beta/L;                            //  time subinterval width
+    cout << "dt: " << dt << endl;
     const static double t = 1.;                                 //  hopping parameters
-    const static double U = 50.;                                 //  interaction energy
+    cout << "t: " << t << endl;
+    const static double U = 50.;                                //  interaction energy
+    cout << "U: " << U << endl;
     double nu = acosh( exp( U * dt / 2 ) );                     //  Hubbard Stratonovich transformation parameter
     
     // Initialize the HS field at all time slices in [0, beta] with +1 and -1 randomly
@@ -188,10 +196,12 @@ int main()
     double detOldPlus = MPlusOld.determinant();
     double detOldMinus = MMinusOld.determinant();
     double detsProdOld = abs( detOldPlus * detOldMinus );
-    double detsProdNew;
+    double detsProdNew = detsProdOld;
     double detNewPlus;
     double detNewMinus;
     double acceptanceRatio;
+    
+    VectorXd weights(totalMCSteps);
     
     //  inititialize chosen entry of HS field matrix to (0, 0)
     l_chosen = 0;
@@ -201,6 +211,10 @@ int main()
     {
 //        cout << "Chosen l: " << l_chosen << endl;
 //        cout << "Chosen i: " << i_chosen << endl;
+        
+        // save weight of the configuration to see convergence
+        
+        weights(step) = detsProdNew;
         
         // flip
         h_new(l_chosen, i_chosen) *= -1;
@@ -334,6 +348,15 @@ int main()
             }
         }
         
+        
+    }
+    
+    // Save weights of accepted configurations to file
+    
+    std::ofstream file("test.txt");
+    if (file.is_open())
+    {
+        file << weights << '\n';
     }
     
     return 0;

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.25)  3 APR 2018 12:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.25)  3 APR 2018 17:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -463,7 +463,241 @@ Package multicol Warning: May not work with the twocolumn option on input line
 \mult@nat@firstbox=\box59
 \colbreak@box=\box60
 \mc@col@check@num=\count129
-) (./hubbardQMC.aux)
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2016/12/05 v3.7 programmable bibliographies (PK/JW/AB)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2017/01/02 v2.4 e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count130
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count131
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+(/usr/local/texlive/2017/texmf-dist/tex/generic/xstring/xstring.sty
+(/usr/local/texlive/2017/texmf-dist/tex/generic/xstring/xstring.tex
+\@xs@message=\write3
+\integerpart=\count132
+\decimalpart=\count133
+)
+Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
+)
+\c@tabx@nest=\count134
+\c@listtotal=\count135
+\c@listcount=\count136
+\c@liststart=\count137
+\c@liststop=\count138
+\c@citecount=\count139
+\c@citetotal=\count140
+\c@multicitecount=\count141
+\c@multicitetotal=\count142
+\c@instcount=\count143
+\c@maxnames=\count144
+\c@minnames=\count145
+\c@maxitems=\count146
+\c@minitems=\count147
+\c@citecounter=\count148
+\c@savedcitecounter=\count149
+\c@uniquelist=\count150
+\c@uniquename=\count151
+\c@refsection=\count152
+\c@refsegment=\count153
+\c@maxextratitle=\count154
+\c@maxextratitleyear=\count155
+\c@maxextrayear=\count156
+\c@maxextraalpha=\count157
+\c@abbrvpenalty=\count158
+\c@highnamepenalty=\count159
+\c@lownamepenalty=\count160
+\c@maxparens=\count161
+\c@parenlevel=\count162
+\blx@tempcnta=\count163
+\blx@tempcntb=\count164
+\blx@tempcntc=\count165
+\blx@maxsection=\count166
+\blx@maxsegment@0=\count167
+\blx@notetype=\count168
+\blx@parenlevel@text=\count169
+\blx@parenlevel@foot=\count170
+\blx@sectionciteorder@0=\count171
+\labelnumberwidth=\skip72
+\labelalphawidth=\skip73
+\biblabelsep=\skip74
+\bibitemsep=\skip75
+\bibnamesep=\skip76
+\bibinitsep=\skip77
+\bibparsep=\skip78
+\bibhang=\skip79
+\blx@bcfin=\read1
+\blx@bcfout=\write4
+\c@mincomprange=\count172
+\c@maxcomprange=\count173
+\c@mincompwidth=\count174
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex/blx-dm.def)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'nature.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count175
+\c@savedafterword=\count176
+\c@annotator=\count177
+\c@savedannotator=\count178
+\c@author=\count179
+\c@savedauthor=\count180
+\c@bookauthor=\count181
+\c@savedbookauthor=\count182
+\c@commentator=\count183
+\c@savedcommentator=\count184
+\c@editor=\count185
+\c@savededitor=\count186
+\c@editora=\count187
+\c@savededitora=\count188
+\c@editorb=\count189
+\c@savededitorb=\count190
+\c@editorc=\count191
+\c@savededitorc=\count192
+\c@foreword=\count193
+\c@savedforeword=\count194
+\c@holder=\count195
+\c@savedholder=\count196
+\c@introduction=\count197
+\c@savedintroduction=\count198
+\c@namea=\count199
+\c@savednamea=\count266
+\c@nameb=\count267
+\c@savednameb=\count268
+\c@namec=\count269
+\c@savednamec=\count270
+\c@translator=\count271
+\c@savedtranslator=\count272
+\c@shortauthor=\count273
+\c@savedshortauthor=\count274
+\c@shorteditor=\count275
+\c@savedshorteditor=\count276
+\c@labelname=\count277
+\c@savedlabelname=\count278
+\c@institution=\count279
+\c@savedinstitution=\count280
+\c@lista=\count281
+\c@savedlista=\count282
+\c@listb=\count283
+\c@savedlistb=\count284
+\c@listc=\count285
+\c@savedlistc=\count286
+\c@listd=\count287
+\c@savedlistd=\count288
+\c@liste=\count289
+\c@savedliste=\count290
+\c@listf=\count291
+\c@savedlistf=\count292
+\c@location=\count293
+\c@savedlocation=\count294
+\c@organization=\count295
+\c@savedorganization=\count296
+\c@origlocation=\count297
+\c@savedoriglocation=\count298
+\c@origpublisher=\count299
+\c@savedorigpublisher=\count300
+\c@publisher=\count301
+\c@savedpublisher=\count302
+\c@language=\count303
+\c@savedlanguage=\count304
+\c@pageref=\count305
+\c@savedpageref=\count306
+\shorthandwidth=\skip80
+\shortjournalwidth=\skip81
+\shortserieswidth=\skip82
+\shorttitlewidth=\skip83
+\shortauthorwidth=\skip84
+\shorteditorwidth=\skip85
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2016/12/05 v3.7 biblatex compatibility (PK/JW/AB)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2016/12/05 v3.7 biblatex compatibility (PK/JW/AB)
+\c@textcitecount=\count307
+\c@textcitetotal=\count308
+\c@textcitemaxnames=\count309
+\c@biburlnumpenalty=\count310
+\c@biburlucpenalty=\count311
+\c@biburllcpenalty=\count312
+\c@smartand=\count313
+)
+Package biblatex Info: Trying to load bibliography style 'nature'...
+Package biblatex Info: ... file 'nature.bbx' found.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex-nature/nature.bbx
+File: nature.bbx 2017/03/01 v1.3b biblatex bibliography style
+Package biblatex Info: Trying to load bibliography style 'numeric-comp'...
+Package biblatex Info: ... file 'numeric-comp.bbx' found.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex/bbx/numeric-comp.bbx
+File: numeric-comp.bbx 2016/12/05 v3.7 biblatex bibliography style (PK/JW/AB)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
+File: numeric.bbx 2016/12/05 v3.7 biblatex bibliography style (PK/JW/AB)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2016/12/05 v3.7 biblatex bibliography style (PK/JW/AB)
+\c@bbx:relatedcount=\count314
+\c@bbx:relatedtotal=\count315
+))))
+Package biblatex Info: Trying to load citation style 'nature'...
+Package biblatex Info: ... file 'nature.cbx' found.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex-nature/nature.cbx
+File: nature.cbx 2017/03/01 v1.3b biblatex citation style
+Package biblatex Info: Trying to load citation style 'numeric-comp'...
+Package biblatex Info: ... file 'numeric-comp.cbx' found.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex/cbx/numeric-comp.cbx
+File: numeric-comp.cbx 2016/12/05 v3.7 biblatex citation style (PK/JW/AB)
+\c@cbx@tempcnta=\count316
+\c@cbx@tempcntb=\count317
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+))
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+))
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2016/12/05 v3.7 biblatex localization (PK/JW/AB)
+)
+\@quotelevel=\count318
+\@quotereset=\count319
+
+(./hubbardQMC.aux)
 \openout1 = `hubbardQMC.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
@@ -483,16 +717,16 @@ LaTeX Font Info:    ... okay on input line 31.
 
 (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count130
+\scratchcounter=\count320
 \scratchdimen=\dimen136
 \scratchbox=\box61
-\nofMPsegments=\count131
-\nofMParguments=\count132
+\nofMPsegments=\count321
+\nofMParguments=\count322
 \everyMPshowfont=\toks31
-\MPscratchCnt=\count133
+\MPscratchCnt=\count323
 \MPscratchDim=\dimen137
-\MPnumerator=\count134
-\makeMPintoPDFobject=\count135
+\MPnumerator=\count324
+\makeMPintoPDFobject=\count325
 \everyMPtoPDFconversion=\toks32
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -553,18 +787,30 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count136
+\c@section@level=\count326
 )
 LaTeX Info: Redefining \ref on input line 31.
 LaTeX Info: Redefining \pageref on input line 31.
 LaTeX Info: Redefining \nameref on input line 31.
 
 (./hubbardQMC.out) (./hubbardQMC.out)
-\@outlinefile=\write3
-\openout3 = `hubbardQMC.out'.
+\@outlinefile=\write5
+\openout5 = `hubbardQMC.out'.
 
  ABD: EverySelectfont initializing macros
 LaTeX Info: Redefining \selectfont on input line 31.
+Package biblatex Info: No input encoding detected.
+(biblatex)             Assuming 'ascii'.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'ascii'.
+\openout4 = `hubbardQMC.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'hubbardQMC.bbl' found.
+
+(./hubbardQMC.bbl)
+Package biblatex Info: Reference section=0 on input line 31.
+Package biblatex Info: Reference segment=0 on input line 31.
 LaTeX Font Info:    Try loading font information for U+msa on input line 37.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -582,30 +828,7 @@ Left:0.0pt
 Right:0.0pt
 Output:0.0pt
 
-
-LaTeX Warning: Citation `hubbard' on page 1 undefined on input line 55.
-
-
-LaTeX Warning: Citation `someManyBodyBooks' on page 1 undefined on input line 5
-5.
-
-
 Underfull \vbox (badness 4899) has occurred while \output is active []
-
-
-
-LaTeX Warning: Citation `referencesThereInHubbard)' on page 1 undefined on inpu
-t line 59.
-
-
-LaTeX Warning: Citation `examplesOfThis' on page 1 undefined on input line 59.
-
-
-LaTeX Warning: Citation `BetheHubbard' on page 1 undefined on input line 59.
-
-
-LaTeX Warning: Citation `examplesOfNumericalSolutions' on page 1 undefined on i
-nput line 59.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -613,37 +836,18 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [1
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-
-LaTeX Warning: Citation `TMDstuff' on page 2 undefined on input line 61.
-
-
-LaTeX Warning: Citation `magneticTMD' on page 2 undefined on input line 61.
-
-
-LaTeX Warning: Citation `topoSuper' on page 2 undefined on input line 61.
-
-
-LaTeX Warning: Citation `ashcroft' on page 2 undefined on input line 67.
-
-
-LaTeX Warning: Citation `Mott' on page 2 undefined on input line 67.
-
-
-LaTeX Warning: Citation `heitlerLondon' on page 2 undefined on input line 69.
-
-
-Underfull \hbox (badness 5147) in paragraph at lines 71--71
+Underfull \hbox (badness 5147) in paragraph at lines 68--68
 []\T1/cmr/bx/n/12 Electron cor-re-la-tions in nar-row
  []
 
-[2] <Hydrogen_Density_Plots.png, id=52, 1761.58125pt x 1190.4475pt>
+[2] <Hydrogen_Density_Plots.png, id=87, 1761.58125pt x 1190.4475pt>
 File: Hydrogen_Density_Plots.png Graphic file (type png)
 
 <use Hydrogen_Density_Plots.png>
-Package pdftex.def Info: Hydrogen_Density_Plots.png used on input line 77.
+Package pdftex.def Info: Hydrogen_Density_Plots.png used on input line 74.
 (pdftex.def)             Requested size: 233.3125pt x 157.66997pt.
 
-Underfull \hbox (badness 1688) in paragraph at lines 81--82
+Underfull \hbox (badness 1688) in paragraph at lines 78--79
 []\T1/cmr/m/n/10 Experimentally, $\OML/cmm/m/it/10 d\OMS/cmsy/m/n/10 ^^@$\T1/cm
 r/m/n/10 electrons of tran-si-tion met-als
  []
@@ -653,101 +857,94 @@ has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.92 
+l.87 
       <./Hydrogen_Density_Plots.png>]
-Underfull \vbox (badness 3612) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 2277) has occurred while \output is active []
 
  [4]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+
+Underfull \vbox (badness 5316) has occurred while \output is active []
+
  [5]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Warning: Citation `hubbard' on page 6 undefined on input line 226.
+ [6]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 273.
 
-[6]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 276.
 
- (/usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 276.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 273.
 
-<hubbardOneHoleOneDoublyOc.png, id=121, 250.9375pt x 248.93pt>
+<hubbardOneHoleOneDoublyOc.png, id=157, 250.9375pt x 248.93pt>
 File: hubbardOneHoleOneDoublyOc.png Graphic file (type png)
 
 <use hubbardOneHoleOneDoublyOc.png>
-Package pdftex.def Info: hubbardOneHoleOneDoublyOc.png used on input line 286.
+Package pdftex.def Info: hubbardOneHoleOneDoublyOc.png used on input line 283.
 (pdftex.def)             Requested size: 142.26378pt x 141.1319pt.
  [7pdfTeX warning (ext4): destination with the same identifier (name{figure.2})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.308 
+l.294 
        <./hubbardOneHoleOneDoublyOc.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [8]
-[9]
-LaTeX Font Info:    Try loading font information for U+bbm on input line 487.
- (/usr/local/texlive/2017/texmf-dist/tex/latex/bbm-macros/ubbm.fd
+Underfull \vbox (badness 3449) has occurred while \output is active []
+
+ [9]
+LaTeX Font Info:    Try loading font information for U+bbm on input line 484.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 ) [10]
-[11]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1596) has occurred while \output is active []
 
- [12]
-Underfull \vbox (badness 7186) has occurred while \output is active []
-
-
-Underfull \vbox (badness 1163) has occurred while \output is active []
-
- [13]
-Underfull \hbox (badness 2359) in paragraph at lines 826--827
+ [11]
+[12] [13]
+Underfull \hbox (badness 2359) in paragraph at lines 823--824
 []\T1/cmr/m/n/10 The $[]$-operators are equally valid elec-tron cre-
  []
 
 
-Underfull \vbox (badness 1527) has occurred while \output is active []
-
-
-Overfull \hbox (1.66359pt too wide) in paragraph at lines 871--871
+Overfull \hbox (1.66359pt too wide) in paragraph at lines 868--868
 [] 
  []
 
 [14]
+Underfull \vbox (badness 1348) has occurred while \output is active []
 
-LaTeX Warning: Citation `metropolis' on page 15 undefined on input line 918.
-
-[15]
-
-LaTeX Warning: Citation `newman_barkema' on page 16 undefined on input line 963
-.
-
-
-Underfull \vbox (badness 2753) has occurred while \output is active []
+ [15]
+Underfull \vbox (badness 2351) has occurred while \output is active []
 
  [16]
-
-LaTeX Warning: Citation `kosztin' on page 17 undefined on input line 1019.
-
-
-LaTeX Warning: Citation `vmc' on page 17 undefined on input line 1021.
-
-
-Underfull \vbox (badness 6428) has occurred while \output is active []
+Underfull \vbox (badness 4927) has occurred while \output is active []
 
  [17]
 [18]
-Overfull \hbox (0.72491pt too wide) in paragraph at lines 1189--1189
+Underfull \vbox (badness 3623) has occurred while \output is active []
+
+
+Underfull \vbox (badness 1226) has occurred while \output is active []
+
+ [19]
+Overfull \hbox (0.72491pt too wide) in paragraph at lines 1186--1186
 [] 
  []
 
 
-LaTeX Warning: Citation `discreteHS' on page 19 undefined on input line 1191.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[19] [20]
+ [20]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -758,9 +955,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [22]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 1460.
+put line 1457.
 
-Overfull \hbox (5.04219pt too wide) in paragraph at lines 1471--1472
+Overfull \hbox (5.04219pt too wide) in paragraph at lines 1468--1469
 []$[]$
  []
 
@@ -774,13 +971,43 @@ Underfull \vbox (badness 1910) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [25]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1690.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 1687
+.
 
-[26]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1690.
- (./hubbardQMC.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1690.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1690.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+) [26]
+Underfull \hbox (badness 1152) in paragraph at lines 1688--1688
+\T1/cmr/m/n/10 metal dichalco-genides: Sta-bil-ity and elec-tronic
+ []
+
+
+Underfull \hbox (badness 3302) in paragraph at lines 1688--1688
+[]\T1/cmr/m/n/10 Yazyev, O. V. Emer-gence of mag-netism in
+ []
+
+
+Underfull \hbox (badness 5316) in paragraph at lines 1688--1688
+[]\T1/cmr/m/n/10 Ashcroft, N. W. & Mer-min, N. D. \T1/cmr/m/it/10 Solid
+ []
+
+
+Underfull \hbox (badness 3029) in paragraph at lines 1688--1688
+[]\T1/cmr/m/n/10 Newman, M. E. J. & Barkema, G. \T1/cmr/m/it/10 Monte
+ []
+
+[27]
+Underfull \hbox (badness 4291) in paragraph at lines 1688--1688
+[]\T1/cmr/m/n/10 Hirsch, J. E. Dis-crete Hubbard-Stratonovich
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1689.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1689.
+[28
+
+] (./hubbardQMC.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1689.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1689.
 
 Package rerunfilecheck Info: File `hubbardQMC.out' has not changed.
 (rerunfilecheck)             Checksum: 7ABFDFC4B4FD0866D98682621E1194CF;141.
@@ -788,16 +1015,24 @@ Package rerunfilecheck Info: File `hubbardQMC.out' has not changed.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1690.
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                hubbardQMC
+(biblatex)                and rerun LaTeX afterwards.
+
+Package logreq Info: Writing requests to 'hubbardQMC.run.xml'.
+\openout1 = `hubbardQMC.run.xml'.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1689.
  ) 
 Here is how much of TeX's memory you used:
- 8940 strings out of 492995
- 129550 string characters out of 6132703
- 265738 words of memory out of 5000000
- 12042 multiletter control sequences out of 15000+600000
- 26216 words of font info for 77 fonts, out of 8000000 for 9000
+ 15509 strings out of 492995
+ 252222 string characters out of 6132703
+ 744849 words of memory out of 5000000
+ 18505 multiletter control sequences out of 15000+600000
+ 27202 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 33i,26n,39p,1528b,751s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,26n,45p,2710b,1274s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
  </Users/franciscobrito/Library/texlive/2017/texmf-var/fonts/pk/ljfour/public/b
 bm/bbm10.600pk></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/
@@ -829,17 +1064,19 @@ fb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx0800.pfb
 ></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><
 /usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></u
 sr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr
-/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/l
-ocal/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/loc
-al/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local
-/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/t
-exlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/tex
-live/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texli
-ve/2017/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on hubbardQMC.pdf (26 pages, 1371870 bytes).
+/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb></usr/l
+ocal/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/loc
+al/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local
+/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/t
+exlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/tex
+live/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texli
+ve/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive
+/2017/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2
+017/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on hubbardQMC.pdf (28 pages, 1437890 bytes).
 PDF statistics:
- 650 PDF objects out of 1000 (max. 8388607)
- 574 compressed objects within 6 object streams
- 277 named destinations out of 1000 (max. 500000)
+ 780 PDF objects out of 1000 (max. 8388607)
+ 699 compressed objects within 7 object streams
+ 315 named destinations out of 1000 (max. 500000)
  35 words of extra memory for PDF output out of 10000 (max. 10000000)
 
