@@ -23,7 +23,7 @@
 #include <unsupported/Eigen/MatrixFunctions>
 #include <fstream>
 
-#define NSITES 10
+#define NSITES 100
 
 using namespace Eigen;
 using namespace std;
@@ -103,19 +103,19 @@ int main()
     
     //  Monte Carlo specific variables
     
-    const static int totalMCSteps = 50000;
+    const static int totalMCSteps = 10000;
     
     //  Physical parameters
     
-    const static int L = 5;                                     //  number of imaginary time subintervals
+    const static int L = 10;                                     //  number of imaginary time subintervals
     cout << "L: " << L << endl;
-    const static double beta = 2.;                              //  imaginary time interval or equivalent maximum temperature of the (d+1) classical system
+    const static double beta = 1.;                              //  imaginary time interval or equivalent maximum temperature of the (d+1) classical system
     cout << "beta: " << beta << endl;
     const static double dt = beta/L;                            //  time subinterval width
     cout << "dt: " << dt << endl;
     const static double t = 1.;                                 //  hopping parameters
     cout << "t: " << t << endl;
-    const static double U = 50.;                                //  interaction energy
+    const static double U = 10.;                                //  interaction energy
     cout << "U: " << U << endl;
     double nu = acosh( exp( U * dt / 2 ) );                     //  Hubbard Stratonovich transformation parameter
     
@@ -271,17 +271,18 @@ int main()
         
         if (acceptanceRatio >= 1 )
         {
+            //update everything
+            BpOld[l_chosen] = BpNew[l_chosen];
+            BmOld[l_chosen] = BmNew[l_chosen];
+            MPlusOld = MPlusNew;
+            MMinusOld = MMinusNew;
+            h(l_chosen, i_chosen) = h_new(l_chosen, i_chosen);
+            detsProdOld = detsProdNew;
+            
             if (printsOn == 1)
             {
                 cout << "Accepted\n" << endl;
             }
-            // revert changes
-            BpNew[l_chosen] = BpOld[l_chosen];
-            BmNew[l_chosen] = BmOld[l_chosen];
-            MPlusNew = MPlusOld;
-            MMinusNew = MMinusOld;
-            h_new(l_chosen, i_chosen) = h(l_chosen, i_chosen);
-            detsProdNew = detsProdOld;
         }
         else
         {

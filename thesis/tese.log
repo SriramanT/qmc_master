@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.25)  20 FEB 2018 17:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.25)  3 APR 2018 23:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -229,21 +229,21 @@ y dummy files at wish.
 (/usr/local/texlive/2017/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2017/05/19 3.10 The Babel package
 
-(/usr/local/texlive/2017/texmf-dist/tex/generic/babel-english/english.ldf
-Language: english 2017/01/24 v3.3q English support from the babel system
+(/usr/local/texlive/2017/texmf-dist/tex/generic/babel-portuges/portuges.ldf
+Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
 
 (/usr/local/texlive/2017/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2017/05/19 3.10 Babel common definitions
 \babel@savecnt=\count102
 \U@D=\dimen133
 )
+Package babel Info: Making " an active character on input line 145.
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/01/24 v3.3q English support from the babel system
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
-)
-(/usr/local/texlive/2017/texmf-dist/tex/generic/babel-portuges/portuges.ldf
-Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
-Package babel Info: Making " an active character on input line 145.
 ))
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
@@ -1475,13 +1475,13 @@ Package rerunfilecheck Info: File `tese.out' has not changed.
 (rerunfilecheck)             Checksum: 3B9E43907AE6670A2344DA10A422AB4B;1559.
  ) 
 Here is how much of TeX's memory you used:
- 13837 strings out of 492995
- 197606 string characters out of 6132703
- 347032 words of memory out of 5000000
- 16690 multiletter control sequences out of 15000+600000
+ 13839 strings out of 492995
+ 197634 string characters out of 6132703
+ 347017 words of memory out of 5000000
+ 16691 multiletter control sequences out of 15000+600000
  64987 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,20n,92p,1051b,470s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,20n,92p,1051b,468s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/te
 xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/tex
@@ -1495,7 +1495,7 @@ ist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2017/texmf-dist/fon
 ts/type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/typ
 e1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/
 helvetic/uhvro8a.pfb>
-Output written on tese.pdf (30 pages, 162232 bytes).
+Output written on tese.pdf (30 pages, 162216 bytes).
 PDF statistics:
  362 PDF objects out of 1000 (max. 8388607)
  311 compressed objects within 4 object streams
