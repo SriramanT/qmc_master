@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.25)  3 APR 2018 17:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.25)  4 APR 2018 17:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1011,15 +1011,6 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1689.
 
 Package rerunfilecheck Info: File `hubbardQMC.out' has not changed.
 (rerunfilecheck)             Checksum: 7ABFDFC4B4FD0866D98682621E1194CF;141.
-
-
-LaTeX Warning: There were undefined references.
-
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                hubbardQMC
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'hubbardQMC.run.xml'.
 \openout1 = `hubbardQMC.run.xml'.
 
@@ -1028,7 +1019,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1689.
 Here is how much of TeX's memory you used:
  15509 strings out of 492995
  252222 string characters out of 6132703
- 744849 words of memory out of 5000000
+ 744803 words of memory out of 5000000
  18505 multiletter control sequences out of 15000+600000
  27202 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1073,7 +1064,7 @@ live/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texli
 ve/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive
 /2017/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2
 017/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on hubbardQMC.pdf (28 pages, 1437890 bytes).
+Output written on hubbardQMC.pdf (28 pages, 1437812 bytes).
 PDF statistics:
  780 PDF objects out of 1000 (max. 8388607)
  699 compressed objects within 7 object streams
