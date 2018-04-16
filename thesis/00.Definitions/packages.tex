@@ -15,6 +15,17 @@
 \typeout{--------------------------------------------------------------}
 \typeout{}
 
+% MY OWN PACKAGES
+\usepackage{cuted}
+\usepackage{bm}
+\usepackage{bbm}
+\usepackage{setspace}
+\pagenumbering{arabic}
+\usepackage{scrextend}
+\usepackage{ragged2e}
+\usepackage{xcolor}
+\usepackage{dirtytalk}
+
 % Defines an additional alphabet... not required in most cases
 % ------------------------------------------------------------
 % \DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
@@ -97,8 +108,8 @@
 % PACKAGE algorithmic, algorithm
 % ------------------------------
 % These packages are required if you need to describe an algorithm.
-% \usepackage{algorithmic}
-% \usepackage[chapter]{algorithm}
+ \usepackage{algorithmic}
+ \usepackage[chapter]{algorithm}
 
 % PACKAGE natbib/cite/biblatex
 % -------------------
@@ -153,6 +164,7 @@
              pdfcreator={Document Creator Name},
              pdfkeywords={Template, Latex, Thesis}}
 \usepackage{float}
+\usepackage{url}
 %\usepackage[final]{00.listofsymbols}
 \usepackage{00.symlist}
 
@@ -164,3 +176,4 @@
 \newcommand{\tableref}[1]{Table (\ref{#1})}
 
 \newcommand{\textreg}{$\textsuperscript{\textregistered}$}
+

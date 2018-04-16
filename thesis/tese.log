@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.25)  3 APR 2018 23:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.25)  16 APR 2018 14:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -226,6 +226,121 @@ Important: Use all files in the archive, since this is based in all them. Modif
 y dummy files at wish. 
 --------------------------------------------------------------
 
+(/usr/local/texlive/2017/texmf-dist/tex/latex/sttools/cuted.sty
+Package: cuted 2012/10/04 v1.5 Mixing onecolumn and twocolumn modes
+\At@ViperColsBreak=\toks28
+\v@aaa=\box33
+\v@ccc=\box34
+\lastskip@a=\skip50
+\lastskip@b=\skip51
+\lastskip@d=\skip52
+\lastbox@a=\box35
+\stripsep=\skip53
+\@viper=\box36
+\viper@penalty=\count102
+\hold@viper=\box37
+\ht@viper=\dimen133
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2017/01/16 v1.2c Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup6
+\symboldletters=\mathgroup7
+\symboldsymbols=\mathgroup8
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
+LaTeX Info: Redefining \bm on input line 207.
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/bbm-macros/bbm.sty
+Package: bbm 1999/03/15 V 1.2 provides fonts for set symbols - TH
+LaTeX Font Info:    Overwriting math alphabet `\mathbbm' in version `bold'
+(Font)                  U/bbm/m/n --> U/bbm/bx/n on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
+(Font)                  U/bbmss/m/n --> U/bbmss/bx/n on input line 35.
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/koma-script/scrextend.sty
+Package: scrextend 2017/04/13 v3.23 KOMA-Script package (extend other classes w
+ith features of KOMA-Script classes)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/koma-script/scrkbase.sty
+Package: scrkbase 2017/04/13 v3.23 KOMA-Script package (KOMA-Script-dependent b
+asics and keyval usage)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/koma-script/scrbase.sty
+Package: scrbase 2017/04/13 v3.23 KOMA-Script package (KOMA-Script-independent 
+basics and keyval usage)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/koma-script/scrlfile.sty
+Package: scrlfile 2017/04/13 v3.23 KOMA-Script package (loading files)
+
+Package scrlfile, 2017/04/13 v3.23 KOMA-Script package (loading files)
+                  Copyright (C) Markus Kohm
+
+)))
+LaTeX Info: Redefining \textsubscript on input line 1298.
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/ms/ragged2e.sty
+Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/ms/everysel.sty
+Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
+)
+\CenteringLeftskip=\skip54
+\RaggedLeftLeftskip=\skip55
+\RaggedRightLeftskip=\skip56
+\CenteringRightskip=\skip57
+\RaggedLeftRightskip=\skip58
+\RaggedRightRightskip=\skip59
+\CenteringParfillskip=\skip60
+\RaggedLeftParfillskip=\skip61
+\RaggedRightParfillskip=\skip62
+\JustifyingParfillskip=\skip63
+\CenteringParindent=\skip64
+\RaggedLeftParindent=\skip65
+\RaggedRightParindent=\skip66
+\JustifyingParindent=\skip67
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+LaTeX Info: Redefining \color on input line 709.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/dirtytalk/dirtytalk.sty
+Package: dirtytalk 2010/11/21 A package making "quoting" easier
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+\c@dirtytalk@qdepth=\count103
+)
 (/usr/local/texlive/2017/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2017/05/19 3.10 The Babel package
 
@@ -234,8 +349,8 @@ Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
 
 (/usr/local/texlive/2017/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2017/05/19 3.10 Babel common definitions
-\babel@savecnt=\count102
-\U@D=\dimen133
+\babel@savecnt=\count104
+\U@D=\dimen134
 )
 Package babel Info: Making " an active character on input line 145.
 )
@@ -247,8 +362,8 @@ Language: english 2017/01/24 v3.3q English support from the babel system
 ))
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
-\inpenc@prehook=\toks28
-\inpenc@posthook=\toks29
+\inpenc@prehook=\toks29
+\inpenc@posthook=\toks30
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
@@ -575,7 +690,7 @@ Package: datetime 2015/03/20 v2.60 Date Time Package
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2017/01/02 v2.4 e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count103
+\etb@tempcnta=\count105
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/fmtcount/fmtcount.sty
 Package: fmtcount 2015/05/05 v3.01
@@ -585,10 +700,10 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 
 (/usr/local/texlive/2017/texmf-dist/tex/generic/xkeyval/xkeyval.tex
 (/usr/local/texlive/2017/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks30
-\XKV@tempa@toks=\toks31
+\XKV@toks=\toks31
+\XKV@tempa@toks=\toks32
 )
-\XKV@depth=\count104
+\XKV@depth=\count106
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (/usr/local/texlive/2017/texmf-dist/tex/latex/fmtcount/fcprefix.sty
@@ -596,13 +711,13 @@ Package: fcprefix 2012/09/28
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/fmtcount/fcnumparser.sty
 Package: fcnumparser 2012/09/28
-\fc@digit@counter=\count105
+\fc@digit@counter=\count107
 ))
 (/usr/local/texlive/2017/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\c@padzeroesN=\count106
-\fc@tmpcatcode=\count107
+\c@padzeroesN=\count108
+\fc@tmpcatcode=\count109
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/fmtcount/fc-english.def
 File: fc-english.def 2013/08/17
@@ -610,92 +725,83 @@ File: fc-english.def 2013/08/17
 (/usr/local/texlive/2017/texmf-dist/tex/latex/fmtcount/fc-portuges.def
 File: fc-portuges.def 2014/06/09
 )
-\@DT@modctr=\count108
-\@ordinalctr=\count109
-\@orgargctr=\count110
-\@strctr=\count111
-\@tmpstrctr=\count112
-\@DT@loopN=\count113
-\@DT@X=\count114
+\@DT@modctr=\count110
+\@ordinalctr=\count111
+\@orgargctr=\count112
+\@strctr=\count113
+\@tmpstrctr=\count114
+\@DT@loopN=\count115
+\@DT@X=\count116
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/datetime/datetime-defaults.sty
 Package: datetime-defaults 2013/09/10
 )
-\@day=\count115
-\@month=\count116
-\@year=\count117
-\c@HOUR=\count118
-\c@HOURXII=\count119
-\c@MINUTE=\count120
-\c@TOHOUR=\count121
-\c@TOMINUTE=\count122
-\c@SECOND=\count123
-\currenthour=\count124
-\currentminute=\count125
-\currentsecond=\count126
+\@day=\count117
+\@month=\count118
+\@year=\count119
+\c@HOUR=\count120
+\c@HOURXII=\count121
+\c@MINUTE=\count122
+\c@TOHOUR=\count123
+\c@TOMINUTE=\count124
+\c@SECOND=\count125
+\currenthour=\count126
+\currentminute=\count127
+\currentsecond=\count128
 Package datetime Info: No datetime.cfg file found, using default settings on in
 put line 308.
-\@dtctr=\count127
-\dayofyear=\count128
-\dayofweek=\count129
+\@dtctr=\count129
+\dayofyear=\count130
+\dayofweek=\count131
 LaTeX Info: Redefining \today on input line 736.
-\dt@a=\toks32
-\dt@b=\toks33
+\dt@a=\toks33
+\dt@b=\toks34
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/latexsym.sty
 Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
-\symlasy=\mathgroup6
+\symlasy=\mathgroup9
 LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
 (Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
-\multirow@colwidth=\skip50
-\multirow@cntb=\count130
-\multirow@dima=\skip51
-\bigstrutjot=\dimen134
+\multirow@colwidth=\skip68
+\multirow@cntb=\count132
+\multirow@dima=\skip69
+\bigstrutjot=\dimen135
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/colortbl/colortbl.sty
 Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/tools/array.sty
 Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
-\col@sep=\dimen135
-\extrarowheight=\dimen136
-\NC@list=\toks34
-\extratabsurround=\skip52
-\backup@length=\skip53
+\col@sep=\dimen136
+\extrarowheight=\dimen137
+\NC@list=\toks35
+\extratabsurround=\skip70
+\backup@length=\skip71
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
-LaTeX Info: Redefining \color on input line 86.
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package color Info: Driver file: pdftex.def on input line 147.
-)
-\everycr=\toks35
-\minrowclearance=\skip54
+\everycr=\toks36
+\minrowclearance=\skip72
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/supertabular/supertabular.sty
 Package: supertabular 2004/02/20 v4.1e the supertabular environment
-\c@tracingst=\count131
-\ST@wd=\dimen137
-\ST@rightskip=\skip55
-\ST@leftskip=\skip56
-\ST@parfillskip=\skip57
-\ST@pageleft=\dimen138
-\ST@headht=\dimen139
-\ST@tailht=\dimen140
-\ST@pagesofar=\dimen141
-\ST@pboxht=\dimen142
-\ST@lineht=\dimen143
-\ST@stretchht=\dimen144
-\ST@prevht=\dimen145
-\ST@toadd=\dimen146
-\ST@dimen=\dimen147
-\ST@pbox=\box33
+\c@tracingst=\count133
+\ST@wd=\dimen138
+\ST@rightskip=\skip73
+\ST@leftskip=\skip74
+\ST@parfillskip=\skip75
+\ST@pageleft=\dimen139
+\ST@headht=\dimen140
+\ST@tailht=\dimen141
+\ST@pagesofar=\dimen142
+\ST@pboxht=\dimen143
+\ST@lineht=\dimen144
+\ST@stretchht=\dimen145
+\ST@prevht=\dimen146
+\ST@toadd=\dimen147
+\ST@dimen=\dimen148
+\ST@pbox=\box38
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/pdflscape.sty
 Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
@@ -710,68 +816,59 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/epsfig.sty
 Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
-\epsfxsize=\dimen148
-\epsfysize=\dimen149
+\epsfxsize=\dimen149
+\epsfysize=\dimen150
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/subfigure/subfigure.sty
 Package: subfigure 2002/03/15 v2.1.5 subfigure package
-\subfigtopskip=\skip58
-\subfigcapskip=\skip59
-\subfigcaptopadj=\dimen150
-\subfigbottomskip=\skip60
-\subfigcapmargin=\dimen151
-\subfiglabelskip=\skip61
-\c@subfigure=\count132
-\c@lofdepth=\count133
-\c@subtable=\count134
-\c@lotdepth=\count135
+\subfigtopskip=\skip76
+\subfigcapskip=\skip77
+\subfigcaptopadj=\dimen151
+\subfigbottomskip=\skip78
+\subfigcapmargin=\dimen152
+\subfiglabelskip=\skip79
+\c@subfigure=\count134
+\c@lofdepth=\count135
+\c@subtable=\count136
+\c@lotdepth=\count137
 
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
 (/usr/local/texlive/2017/texmf-dist/tex/latex/subfigure/subfigure.cfg)
-\subfig@top=\skip62
-\subfig@bottom=\skip63
+\subfig@top=\skip80
+\subfig@bottom=\skip81
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/tools/dcolumn.sty
 Package: dcolumn 2014/10/28 v1.06 decimal alignment package (DPC)
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/bm.sty
-Package: bm 2017/01/16 v1.2c Bold Symbol Support (DPC/FMi)
-\symboldoperators=\mathgroup7
-\symboldletters=\mathgroup8
-\symboldsymbols=\mathgroup9
-\symboldlasy=\mathgroup10
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
-LaTeX Info: Redefining \bm on input line 207.
-)
 (/usr/local/texlive/2017/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2016/04/27 v1.618033 publication quality tables
-\heavyrulewidth=\dimen152
-\lightrulewidth=\dimen153
-\cmidrulewidth=\dimen154
-\belowrulesep=\dimen155
-\belowbottomsep=\dimen156
-\aboverulesep=\dimen157
-\abovetopsep=\dimen158
-\cmidrulesep=\dimen159
-\cmidrulekern=\dimen160
-\defaultaddspace=\dimen161
-\@cmidla=\count136
-\@cmidlb=\count137
-\@aboverulesep=\dimen162
-\@belowrulesep=\dimen163
-\@thisruleclass=\count138
-\@lastruleclass=\count139
-\@thisrulewidth=\dimen164
+\heavyrulewidth=\dimen153
+\lightrulewidth=\dimen154
+\cmidrulewidth=\dimen155
+\belowrulesep=\dimen156
+\belowbottomsep=\dimen157
+\aboverulesep=\dimen158
+\abovetopsep=\dimen159
+\cmidrulesep=\dimen160
+\cmidrulekern=\dimen161
+\defaultaddspace=\dimen162
+\@cmidla=\count138
+\@cmidlb=\count139
+\@aboverulesep=\dimen163
+\@belowrulesep=\dimen164
+\@thisruleclass=\count140
+\@lastruleclass=\count141
+\@thisrulewidth=\dimen165
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/rotating.sty
 Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
-\c@r@tfl@t=\count140
-\rotFPtop=\skip64
-\rotFPbot=\skip65
-\rot@float@box=\box34
-\rot@mess@toks=\toks36
+\c@r@tfl@t=\count142
+\rotFPtop=\skip82
+\rotFPbot=\skip83
+\rot@float@box=\box39
+\rot@mess@toks=\toks37
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
@@ -779,25 +876,49 @@ Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 (/usr/local/texlive/2017/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 67.
-\captionmargin=\dimen165
-\captionmargin@=\dimen166
-\captionwidth=\dimen167
-\caption@tempdima=\dimen168
-\caption@indent=\dimen169
-\caption@parindent=\dimen170
-\caption@hangindent=\dimen171
+\captionmargin=\dimen166
+\captionmargin@=\dimen167
+\captionwidth=\dimen168
+\caption@tempdima=\dimen169
+\caption@indent=\dimen170
+\caption@parindent=\dimen171
+\caption@hangindent=\dimen172
 )
-\c@ContinuedFloat=\count141
+\c@ContinuedFloat=\count143
 Package caption Info: rotating package is loaded.
 Package caption Info: subfigure package is loaded.
 Package caption Info: supertabular package is loaded.
 )
+(/usr/local/texlive/2017/texmf-dist/tex/latex/algorithms/algorithmic.sty
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+\c@ALC@unique=\count144
+\c@ALC@line=\count145
+\c@ALC@rem=\count146
+\c@ALC@depth=\count147
+\ALC@tlm=\skip84
+\algorithmicindent=\skip85
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count148
+\float@exts=\toks38
+\float@box=\box40
+\@float@everytoks=\toks39
+\@floatcapt=\box41
+)
+\@float@every@algorithm=\toks40
+\c@algorithm=\count149
+)
 (/usr/local/texlive/2017/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip66
-\bibsep=\skip67
+\bibhang=\skip86
+\bibsep=\skip87
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count142
+\c@NAT@ctr=\count150
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/acronym/acronym.sty
 Package: acronym 2015/03/21 v1.41 Support for acronyms (Tobias Oetiker)
@@ -808,18 +929,18 @@ Package: suffix 2006/07/15 1.5a Variant command support
 (/usr/local/texlive/2017/texmf-dist/tex/generic/xstring/xstring.sty
 (/usr/local/texlive/2017/texmf-dist/tex/generic/xstring/xstring.tex
 \@xs@message=\write3
-\integerpart=\count143
-\decimalpart=\count144
+\integerpart=\count151
+\decimalpart=\count152
 )
 Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 )
-\AC@clearlist=\toks37
+\AC@clearlist=\toks41
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/appendix/appendix.sty
 Package: appendix 2009/09/02 v1.2b extra appendix facilities
-\c@@pps=\count145
-\c@@ppsavesec=\count146
-\c@@ppsaveapp=\count147
+\c@@pps=\count153
+\c@@ppsavesec=\count154
+\c@@ppsaveapp=\count155
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/chappg/chappg.sty
 Package: chappg 2006/05/09 v2.1b page numbering by chapter number pages by chap
@@ -837,17 +958,17 @@ Package: mtcmess 2006/03/14
 Package minitoc Info: I0001
 (minitoc)             *** minitoc package, version 61 ***.
 \tf@mtc=\write4
-\mtcindent=\skip68
-\mtcskipamount=\skip69
+\mtcindent=\skip88
+\mtcskipamount=\skip89
 Package minitoc Info: I0005
 (minitoc)             compatible with hyperref.
 Package minitoc Info: I0023
 (minitoc)             part level macros available.
 Package minitoc Info: I0003
 (minitoc)             chapter level macros available.
-\mtc@toks=\toks38
-\mtc@strutbox=\box35
-\mtc@hstrutbox=\box36
+\mtc@toks=\toks42
+\mtc@strutbox=\box42
+\mtc@hstrutbox=\box43
 Package minitoc Info: I0002
 (minitoc)             Autoconfiguration of extensions.
 \openout4 = `tese.mtc0'.
@@ -864,11 +985,11 @@ Package minitoc Info: I0031
 
 \openout4 = `tese.mtc0'.
 
-\c@mtc=\count148
-\c@minitocdepth=\count149
-\c@ptc=\count150
-\c@parttocdepth=\count151
-\ptcindent=\skip70
+\c@mtc=\count156
+\c@minitocdepth=\count157
+\c@ptc=\count158
+\c@parttocdepth=\count159
+\ptcindent=\skip90
 Package minitoc Info: I0010
 (minitoc)             The english language is selected.
 (minitoc)              on input line 4909.
@@ -878,17 +999,10 @@ File: english.mld 2006/01/13
 (/usr/local/texlive/2017/texmf-dist/tex/latex/minitoc/english.mld
 File: english.mld 2006/01/13
 ))
-(/usr/local/texlive/2017/texmf-dist/tex/latex/bbm-macros/bbm.sty
-Package: bbm 1999/03/15 V 1.2 provides fonts for set symbols - TH
-LaTeX Font Info:    Overwriting math alphabet `\mathbbm' in version `bold'
-(Font)                  U/bbm/m/n --> U/bbm/bx/n on input line 33.
-LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
-(Font)                  U/bbmss/m/n --> U/bbmss/bx/n on input line 35.
-)
 (/usr/local/texlive/2017/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks39
-\verbatim@line=\toks40
+\every@verbatim=\toks43
+\verbatim@line=\toks44
 \verbatim@in@stream=\read2
 ))
 (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/hyperref.sty
@@ -903,18 +1017,13 @@ Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
 Package hobsub Info: Skipping package `ltxcmds' (already loaded).
-Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
+Package hobsub Info: Skipping package `ifluatex' (already loaded).
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
 Package hobsub Info: Skipping package `ifpdf' (already loaded).
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package hobsub Info: Skipping package `etexcmds' (already loaded).
+Package hobsub Info: Skipping package `kvsetkeys' (already loaded).
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
 Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -940,19 +1049,16 @@ Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
 (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/auxhook.sty
 Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
-)
-\@linkdim=\dimen172
-\Hy@linkcounter=\count152
-\Hy@pagecounter=\count153
+\@linkdim=\dimen173
+\Hy@linkcounter=\count160
+\Hy@pagecounter=\count161
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2017/03/14 v6.85a Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count154
+\Hy@SavedSpaceFactor=\count162
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -965,17 +1071,17 @@ Package hyperref Info: Plain pages OFF on input line 4513.
 Package hyperref Info: Backreferencing OFF on input line 4518.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4751.
-\c@Hy@tempcnt=\count155
+\c@Hy@tempcnt=\count163
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5104.
-\XeTeXLinkMargin=\dimen173
-\Fld@menulength=\count156
-\Field@Width=\dimen174
-\Fld@charsize=\dimen175
+\XeTeXLinkMargin=\dimen174
+\Fld@menulength=\count164
+\Field@Width=\dimen175
+\Fld@charsize=\dimen176
 Package hyperref Info: Hyper figures OFF on input line 6358.
 Package hyperref Info: Link nesting OFF on input line 6363.
 Package hyperref Info: Hyper index ON on input line 6366.
@@ -985,72 +1091,92 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6383.
 Package hyperref Info: PDF/A mode OFF on input line 6388.
 LaTeX Info: Redefining \ref on input line 6428.
 LaTeX Info: Redefining \pageref on input line 6432.
-\Hy@abspage=\count157
-\c@Item=\count158
-\c@Hfootnote=\count159
+\Hy@abspage=\count165
+\c@Item=\count166
+\c@Hfootnote=\count167
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2017/03/14 v6.85a Hyperref driver for pdfTeX
-\Fld@listcount=\count160
-\c@bookmark@seq@number=\count161
+\Fld@listcount=\count168
+\c@bookmark@seq@number=\count169
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip71
+\Hy@SectionHShift=\skip91
 )
-Package hyperref Info: Option `colorlinks' set `false' on input line 154.
-Package hyperref Info: Option `breaklinks' set `true' on input line 154.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 154.
+Package hyperref Info: Option `colorlinks' set `false' on input line 165.
+Package hyperref Info: Option `breaklinks' set `true' on input line 165.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 165.
 
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 154.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 165.
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/float/float.sty
-Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count162
-\float@exts=\toks41
-\float@box=\box37
-\@float@everytoks=\toks42
-\@floatcapt=\box38
-)
 (./00.symlist.sty
 Package: 00.symlist 2008/03/11 v1.1 Symbol List package
-\LOS@cnt=\count163
-\LOS@wd=\dimen176
+\LOS@cnt=\count170
+\LOS@wd=\dimen177
 )) (./00.Definitions/pagesetup.tex
 (/usr/local/texlive/2017/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
-\Gm@cnth=\count164
-\Gm@cntv=\count165
-\c@Gm@tempcnt=\count166
-\Gm@bindingoffset=\dimen177
-\Gm@wd@mp=\dimen178
-\Gm@odd@mp=\dimen179
-\Gm@even@mp=\dimen180
-\Gm@layoutwidth=\dimen181
-\Gm@layoutheight=\dimen182
-\Gm@layouthoffset=\dimen183
-\Gm@layoutvoffset=\dimen184
-\Gm@dimlist=\toks43
+\Gm@cnth=\count171
+\Gm@cntv=\count172
+\c@Gm@tempcnt=\count173
+\Gm@bindingoffset=\dimen178
+\Gm@wd@mp=\dimen179
+\Gm@odd@mp=\dimen180
+\Gm@even@mp=\dimen181
+\Gm@layoutwidth=\dimen182
+\Gm@layoutheight=\dimen183
+\Gm@layouthoffset=\dimen184
+\Gm@layoutvoffset=\dimen185
+\Gm@dimlist=\toks45
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2016/09/06 3.8 Extensive control of page headers and footers
-\fancy@headwidth=\skip72
-\f@ncyO@elh=\skip73
-\f@ncyO@erh=\skip74
-\f@ncyO@olh=\skip75
-\f@ncyO@orh=\skip76
-\f@ncyO@elf=\skip77
-\f@ncyO@erf=\skip78
-\f@ncyO@olf=\skip79
-\f@ncyO@orf=\skip80
+\fancy@headwidth=\skip92
+\f@ncyO@elh=\skip93
+\f@ncyO@erh=\skip94
+\f@ncyO@olh=\skip95
+\f@ncyO@orh=\skip96
+\f@ncyO@elf=\skip97
+\f@ncyO@erf=\skip98
+\f@ncyO@olf=\skip99
+\f@ncyO@orf=\skip100
 ))
-(./tese.aux)
+(./tese.aux
+
+LaTeX Warning: Label `sec:sectiona' multiply defined.
+
+
+LaTeX Warning: Label `subsec:subasectionA' multiply defined.
+
+
+LaTeX Warning: Label `fig:dummyfigure1' multiply defined.
+
+
+LaTeX Warning: Label `sec:sectionb' multiply defined.
+
+
+LaTeX Warning: Label `subsec:subasectionB' multiply defined.
+
+
+LaTeX Warning: Label `eq:dummyeq1' multiply defined.
+
+
+LaTeX Warning: Label `eq:dummyeq2' multiply defined.
+
+
+LaTeX Warning: Label `subsec:subbsectionB' multiply defined.
+
+
+LaTeX Warning: Label `tab:dummytable' multiply defined.
+
+)
 \openout1 = `tese.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
@@ -1073,17 +1199,17 @@ File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count167
-\scratchdimen=\dimen185
-\scratchbox=\box39
-\nofMPsegments=\count168
-\nofMParguments=\count169
-\everyMPshowfont=\toks44
-\MPscratchCnt=\count170
-\MPscratchDim=\dimen186
-\MPnumerator=\count171
-\makeMPintoPDFobject=\count172
-\everyMPtoPDFconversion=\toks45
+\scratchcounter=\count174
+\scratchdimen=\dimen186
+\scratchbox=\box44
+\nofMPsegments=\count175
+\nofMParguments=\count176
+\everyMPshowfont=\toks46
+\MPscratchCnt=\count177
+\MPscratchDim=\dimen187
+\MPnumerator=\count178
+\makeMPintoPDFobject=\count179
+\everyMPtoPDFconversion=\toks47
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -1101,18 +1227,19 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-ABD: EveryShipout initializing macros
+ABD: EveryShipout initializing macros ABD: EverySelectfont initializing macros
+LaTeX Info: Redefining \selectfont on input line 14.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@minilofdepth=\count173
-\c@minilotdepth=\count174
-\c@partlofdepth=\count175
-\c@partlotdepth=\count176
-\c@sectlofdepth=\count177
-\c@sectlotdepth=\count178
-\AtBeginShipoutBox=\box40
+\c@minilofdepth=\count180
+\c@minilotdepth=\count181
+\c@partlofdepth=\count182
+\c@partlotdepth=\count183
+\c@sectlofdepth=\count184
+\c@sectlotdepth=\count185
+\AtBeginShipoutBox=\box45
 Package hyperref Info: Link coloring OFF on input line 14.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -1121,7 +1248,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count179
+\c@section@level=\count186
 )
 LaTeX Info: Redefining \ref on input line 14.
 LaTeX Info: Redefining \pageref on input line 14.
@@ -1167,14 +1294,14 @@ LaTeX Info: Redefining \nameref on input line 14.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 (./0.Inicio/1.cover.tex
-<Figures/Cover/istnewlogo.pdf, id=112, 502.99277pt x 195.67976pt>
+<Figures/Cover/istnewlogo.pdf, id=176, 502.99277pt x 195.67976pt>
 File: Figures/Cover/istnewlogo.pdf Graphic file (type pdf)
 
 <use Figures/Cover/istnewlogo.pdf>
 Package pdftex.def Info: Figures/Cover/istnewlogo.pdf used on input line 9.
 (pdftex.def)             Requested size: 142.26378pt x 55.34532pt.
 
-<Figures/Cover/coverimage.jpg, id=113, 1003.75pt x 567.11874pt>
+<Figures/Cover/coverimage.jpg, id=177, 1003.75pt x 567.11874pt>
 File: Figures/Cover/coverimage.jpg Graphic file (type jpg)
 
 <use Figures/Cover/coverimage.jpg>
@@ -1190,6 +1317,7 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
 es/Cover/istnewlogo.pdf> <./Figures/Cover/coverimage.jpg>] [2
 
 
+
 ]) (./0.Inicio/2.citation.tex
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 4.
@@ -1198,6 +1326,7 @@ LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <9> not available
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <9> not available
 (Font)              Font shape `T1/phv/b/sl' tried instead on input line 4.
  [1] [2
+
 
 
 ])
@@ -1211,6 +1340,7 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <9> not available
  [3] [4
 
 
+
 ]) (./0.Inicio/4.Abstract.tex
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <24.88> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 1.
@@ -1218,6 +1348,7 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <24.88> not available
 (./0.Inicio/5.Keywords.tex [5
 
 ] [6
+
 
 
 ]) (./0.Inicio/4.Resumo.tex
@@ -1237,6 +1368,7 @@ Package babel Info: Redefining portuges shorthand "|
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 6.
  [8
+
 
 
 ]) (./0.Inicio/6.Tables.tex
@@ -1262,6 +1394,10 @@ Package minitoc Info: I0033
 (minitoc)             Writing tese.mtc5.
 \openout4 = `tese.mtc5'.
 
+Package minitoc Info: I0033
+(minitoc)             Writing tese.mtc6.
+\openout4 = `tese.mtc6'.
+
 Package minitoc Info: I0034
 (minitoc)             PREPARING MINILOFS FROM tese.lof on input line 4.
 Package minitoc Info: I0033
@@ -1279,6 +1415,10 @@ Package minitoc Info: I0033
 Package minitoc Info: I0033
 (minitoc)             Writing tese.mlf4.
 \openout4 = `tese.mlf4'.
+
+Package minitoc Info: I0033
+(minitoc)             Writing tese.mlf5.
+\openout4 = `tese.mlf5'.
 
 Package minitoc Info: I0037
 (minitoc)             PREPARING MINILOTS FROM tese.lot on input line 5.
@@ -1298,6 +1438,10 @@ Package minitoc Info: I0033
 (minitoc)             Writing tese.mlt4.
 \openout4 = `tese.mlt4'.
 
+Package minitoc Info: I0033
+(minitoc)             Writing tese.mlt5.
+\openout4 = `tese.mlt5'.
+
  (./tese.toc
 LaTeX Font Info:    Try loading font information for U+msa on input line 8.
 
@@ -1313,28 +1457,24 @@ LaTeX Font Info:    Try loading font information for U+lasy on input line 8.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-)
-LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 8.
-LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 8.
-)
+) [9
+
+])
 \tf@toc=\write6
 \openout6 = `tese.toc'.
 
- [9
-
-] [10
-
-
-]
+ [10]
 (./tese.lof)
 \tf@lof=\write7
 \openout7 = `tese.lof'.
 
  [11
 
+
+
+
 ] [12
+
 
 
 ] (./tese.lot)
@@ -1346,10 +1486,12 @@ LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
 ] [14
 
 
+
 ]) (./0.Inicio/7.Acronim.tex
 [15
 
 ] [16
+
 
 
 ]) (./0.Inicio/8.symbols.tex (./tese.los)
@@ -1359,6 +1501,7 @@ LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
  [17
 
 ] [18
+
 
 
 ])
@@ -1385,10 +1528,6 @@ LaTeX Font Info:    Font shape `T1/pbk/b/n' in size <150> not available
 
 \openout4 = `tese.mtc'.
 
-LaTeX Font Info:    Font shape `U/lasy/b/n' in size <9> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 4.
-LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 4.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 4.
  (./tese.mtc1)
@@ -1405,6 +1544,7 @@ Chapter 2.
 (./tese.mtc2) [3
 
 
+
 ]
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 11.
@@ -1418,7 +1558,7 @@ although it is yet undefined on input line 9.
 
 Package natbib Warning: Citation `wiki' on page 4 undefined on input line 24.
 
-<Figures/2.Chapter/dummy.pdf, id=260, 459.7175pt x 117.43875pt>
+<Figures/2.Chapter/dummy.pdf, id=345, 459.7175pt x 117.43875pt>
 File: Figures/2.Chapter/dummy.pdf Graphic file (type pdf)
 
 <use Figures/2.Chapter/dummy.pdf>
@@ -1438,24 +1578,118 @@ LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <7> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 30.
 ) [4 <./Figures/2.Chapter/dummy.pdf>] [5] [6
 
-]) (./99.Conclusions/conclusions.tex
-Chapter 3.
-Package minitoc Info: I0006
-(minitoc)             tese.mtc3 is empty on input line 4.
-[7
 
-] [8])
-No file tese.bbl.
-(./Appendices/appendixA.tex
+]) (./3.Chapter/main.tex
+Chapter 3.
+\openout4 = `tese.mtc'.
+
+\openout4 = `tese.mtc'.
+
+(./tese.mtc3) [7
+
+] (./3.Chapter/1.sectiona.tex
+
+Package natbib Warning: Citation `dummy' on page 8 undefined on input line 7.
+
+Package acronym Info: Label `acro:acro' overridden on input line 9.
+
+Package natbib Warning: Citation `wiki' on page 8 undefined on input line 24.
+
+
+LaTeX Warning: Reference `eq:projection' on page 8 undefined on input line 31.
+
+
+LaTeX Warning: Reference `exactSolutions' on page 8 undefined on input line 37.
+
+
+
+Package natbib Warning: Citation `Bai2006' on page 8 undefined on input line 37
+.
+
+
+LaTeX Warning: Reference `eq:hubbard' on page 8 undefined on input line 39.
+
+[8]
+
+LaTeX Warning: Reference `eq:z_asEigen' on page 9 undefined on input line 62.
+
+
+LaTeX Warning: Reference `exactSolutions' on page 9 undefined on input line 62.
+
+
+[9] [10]
+
+Package natbib Warning: Citation `Hirsch1983' on page 11 undefined on input lin
+e 151.
+
+
+Package natbib Warning: Citation `Bai2006' on page 11 undefined on input line 1
+53.
+
+[11]
+
+Package natbib Warning: Citation `Hirsch1985' on page 12 undefined on input lin
+e 216.
+
+[12]
+LaTeX Font Info:    Try loading font information for U+bbm on input line 265.
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/bbm-macros/ubbm.fd
+File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
+) [13]
+[14] [15] [16]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 420.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <8> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 433.
+
+
+Package natbib Warning: Citation `Bai2006' on page 17 undefined on input line 4
+53.
+
+[17] [18]
+
+Package natbib Warning: Citation `Santos2003' on page 19 undefined on input lin
+e 542.
+
+[19] [20]
+
+Package natbib Warning: Citation `Santos2003' on page 21 undefined on input lin
+e 594.
+
+[21]
+File: Figures/2.Chapter/dummy.pdf Graphic file (type pdf)
+ <use Figures/2.Chapter/dummy.pdf>
+Package pdftex.def Info: Figures/2.Chapter/dummy.pdf used on input line 650.
+(pdftex.def)             Requested size: 221.93158pt x 56.69429pt.
+
+
+Package natbib Warning: Citation `site' on page 22 undefined on input line 655.
+
+
+) (./3.Chapter/2.sectionb.tex [22]) [23] [24
+
+
+])
+(./99.Conclusions/conclusions.tex
+Chapter 4.
+Package minitoc Info: I0006
+(minitoc)             tese.mtc4 is empty on input line 4.
+[25
+
+] [26]) (./tese.bbl) (./Appendices/appendixA.tex
 Appendix A.
 Package minitoc Info: I0006
-(minitoc)             tese.mtc4 is empty on input line 1.
+(minitoc)             tese.mtc5 is empty on input line 1.
 [1
 
 
 
 
+
+
+
 ]) [2
+
 
 ]
 
@@ -1466,39 +1700,71 @@ Package minitoc Info: I0009
 (minitoc)             Creating the tese.maf file.
 \openout4 = `tese.maf'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 65.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 65.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 66.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 66.
 (./tese.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 65.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 65.
-Package rerunfilecheck Info: File `tese.out' has not changed.
-(rerunfilecheck)             Checksum: 3B9E43907AE6670A2344DA10A422AB4B;1559.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 66.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 66.
+
+
+Package rerunfilecheck Warning: File `tese.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `tese.out':
+(rerunfilecheck)             Before: E5312F959CAA0159EE94DD40D0F6A448;2814
+(rerunfilecheck)             After:  59CD02C91997E786F77BE2E80057D750;2746.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 13839 strings out of 492995
- 197634 string characters out of 6132703
- 347017 words of memory out of 5000000
- 16691 multiletter control sequences out of 15000+600000
- 64987 words of font info for 92 fonts, out of 8000000 for 9000
+ 15967 strings out of 492995
+ 234296 string characters out of 6132703
+ 399267 words of memory out of 5000000
+ 18607 multiletter control sequences out of 15000+600000
+ 73733 words of font info for 110 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,20n,92p,1051b,468s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/te
-xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/tex
-live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texl
-ive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texliv
-e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2
-017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
-17/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2017
-/texmf-dist/fonts/type1/urw/bookman/ubkd8a.pfb></usr/local/texlive/2017/texmf-d
-ist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2017/texmf-dist/fon
-ts/type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/typ
-e1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/
-helvetic/uhvro8a.pfb>
-Output written on tese.pdf (30 pages, 162216 bytes).
+ 59i,26n,100p,1051b,880s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{paragraph.3.1.2.0.1} has been referenced but does
+ not exist, replaced by a fixed one
+
+ </Users/franciscobrito/Library/texlive/2017/texmf-var/fonts/pk/ljfour/public/b
+bm/bbm10.600pk>{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
+/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
+usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb
+></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></
+usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></us
+r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/
+local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/lo
+cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/lo
+cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib5.pfb></us
+r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb>
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.
+pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pf
+b></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><
+/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></us
+r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/l
+ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
+cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/loca
+l/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/
+texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/te
+xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texl
+ive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/
+texlive/2017/texmf-dist/fonts/type1/urw/bookman/ubkd8a.pfb></usr/local/texlive/
+2017/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2017/te
+xmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2017/texmf-di
+st/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2017/texmf-dist/font
+s/type1/urw/helvetic/uhvro8a.pfb>
+Output written on tese.pdf (48 pages, 376720 bytes).
 PDF statistics:
- 362 PDF objects out of 1000 (max. 8388607)
- 311 compressed objects within 4 object streams
- 71 named destinations out of 1000 (max. 500000)
- 232 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 744 PDF objects out of 1000 (max. 8388607)
+ 656 compressed objects within 7 object streams
+ 203 named destinations out of 1000 (max. 500000)
+ 360 words of extra memory for PDF output out of 10000 (max. 10000000)
 

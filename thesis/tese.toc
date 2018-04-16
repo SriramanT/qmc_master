@@ -18,6 +18,21 @@
 \contentsline {section}{\numberline {2.2}Section B}{4}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Subsection A}{4}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Subsection B}{5}{subsection.2.2.2}
-\contentsline {chapter}{\numberline {3}Conclusions and Future Work}{7}{chapter.3}
-\contentsline {chapter}{Bibliography}{A-1}{section*.11}
+\contentsline {chapter}{\numberline {3}Finite Temperature Auxiliary Field Quantum Monte Carlo}{7}{chapter.3}
+\contentsline {section}{\numberline {3.1}Section A}{8}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Subsection A}{8}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Auxiliary field QMC}{8}{subsection.3.1.2}
+\contentsline {subsubsection}{\numberline {3.1.2.A}Hubbard-Stratonovich transformation}{8}{subsubsection.3.1.2.1}
+\contentsline {paragraph}{\numberline {A~--}}{8}{paragraph.3.1.2.1.1}
+\contentsline {subsubsection}{\numberline {3.1.2.B}Monte Carlo sampling of the HS-field}{17}{subsubsection.3.1.2.2}
+\contentsline {paragraph}{\numberline {A~--}}{17}{paragraph.3.1.2.2.1}
+\contentsline {subsubsection}{\numberline {3.1.2.C}Making measurements}{19}{subsubsection.3.1.2.3}
+\contentsline {paragraph}{\numberline {A~--}}{19}{paragraph.3.1.2.3.1}
+\contentsline {subsubsection}{\numberline {3.1.2.D}Correlation functions}{21}{subsubsection.3.1.2.4}
+\contentsline {paragraph}{\numberline {A~--}}{21}{paragraph.3.1.2.4.1}
+\contentsline {section}{\numberline {3.2}Section B}{22}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Subsection A}{22}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Subsection B}{23}{subsection.3.2.2}
+\contentsline {chapter}{\numberline {4}Conclusions and Future Work}{25}{chapter.4}
+\contentsline {chapter}{Bibliography}{A-1}{section*.14}
 \contentsline {chapter}{Appendix \numberline {A}Title of AppendixA}{A-1}{appendix.A}
