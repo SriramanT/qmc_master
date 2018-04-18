@@ -1,0 +1,3 @@
+# huy-nguyen's description
+
+This paper probably comes the closest to the topic of my thesis. Here the authors used the Constrained Path Monte Carlo method (with the most general Hubbard-Stratonovich transformation) and the method by Feldbacher (above) to calculate the imaginary-time Green’s function of the jellium model. There are great discussions of the properties of Slater determinants, how to express a two-body operators as sums of square of one-body operators, the importance-sampling transformation, the back-propagation technique and so on.
