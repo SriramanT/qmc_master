@@ -92,4 +92,16 @@ https://en.wikipedia.org/wiki/Time-evolving_block_decimation#Errors_coming_from_
 
 https://en.wikipedia.org/wiki/Baker%E2%80%93Campbell%E2%80%93Hausdorff_formula
 
+## Emergence in CMP at Perimeter
+
+https://www.perimeterinstitute.ca/videos/emergence-and-minimal-models-condensed-matter-physics-and-biology
+
+## TMDs topology
+
+http://physics.berkeley.edu/news-events/events/20161107/new-topological-phases-in-transition-metal-dichalcogenides
+
+## Emergence in CMP Witten
+
+https://www.youtube.com/watch?v=n1hheYEPzjw
+
 
