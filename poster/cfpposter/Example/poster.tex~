@@ -1,0 +1,290 @@
+%---------------------------------------------------------------------------
+% A0 Poster Using cfpposter style
+%---------------------------------------------------------------------------
+
+%---------------------------------------------------------------------------
+% --- Preamble
+%---------------------------------------------------------------------------
+\documentclass[a0,portrait]{a0poster}
+\usepackage{times}
+\usepackage{cfpposter}
+\usepackage[utf8]{inputenc} % Only if you need international characters
+\usepackage{multicol}
+%\usepackage{float}
+\usepackage{amsmath}
+%\usepackage{amssymb}
+\usepackage[pdf]{pstricks}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{braket}
+
+\usepackage{babel}
+
+\begin{document}
+
+%---------------------------------------------------------------------------
+% --- Front Matter
+%---------------------------------------------------------------------------
+
+% The title of your poster:
+\title{An Equation of Motion Approach to Excitons in Semiconductors}
+
+% The author(s)
+\author{C. D. Monteiro Fernandes }
+
+% The affiliation(s). You can use the macro \cfpaddress or fill in any other
+% appropriate address.
+\affiliation{\cfpaddress}
+
+% Your email:
+\email{up201306412@fc.up.pt}
+
+% Whatever you want to put in the footer box
+\thanks{\hfill \Wemail \hfill $\bullet$ \hfill Conference Name \hfill $\bullet$ \hfill Typeset with \LaTeXe \hfill}
+
+\makeheader
+
+
+%---------------------------------------------------------------------------
+% --- The Poster Contents
+%---------------------------------------------------------------------------
+
+% You can choose how many columns you want by setting the second argument 
+% below to that number. The multicol package distributes the text automatically
+% between the columns. You can have nested multicols or multicols followed
+% by other muticols with different numbers of columns, etc.
+
+\begin{multicols}{3}  % This defines a 3 column environment
+
+\section{Introduction \label{intro}}
+
+When studying the dynamics of electrons in semiconductors the excitation
+of an electron from a valence band to a conduction band, can be seen
+as the creation of two particles, a negatively charged conduction
+electron and a hole with a charge opposite
+to that of the electron. Their masses will be proportional to the curvature
+of the conduction and valence bands respectively.
+
+In elementary treatments, one usually ignores the interactions between
+these quasiparticles. However, when we introduce the Coulomb interaction
+in our models a new class of phenomena are identified. The most noticeable
+is the presence of hydrogen-like spectral lines below the band gap,
+which are due to the appearance of electron-hole pairs bounded by the Coulomb attraction. 
+Additionally, the spectrum above the band
+gap is also modified. This last effect is particularly more important in 2D materials.
+
+\section{Polarization Function \label{polarization}}
+
+We know from Maxwell's equations that the response to an electric field can be described by the electric
+dipole density it causes in the medium. Therefore, this is the quantity we must calculate if
+we want to find out the optical proprieties of a material.
+We will work in the dipole approximation and consider that the semiconductor responds uniformly to a uniform electric field, i.e. the polarization is not a function of the position. 
+In second quantization the polarization operator is given by:
+\begin{equation}
+\mathbf{P}(t)=\sum_{kcv}\mathbf{d}_{kcv}\left\langle a_{k,c}^{\dagger}a_{k,v}\right\rangle 
+\end{equation}. 
+
+\section{Equation of Motion}
+
+In order to calculate the polarization, we must determine the time-evolution
+of $P_{kcv}=\left\langle a_{k,c}^{\dagger}a_{k,v}\right\rangle $, which is done by averaging the Heisenberg equation.
+
+\begin{align}
+i\hbar\frac{d\left\langle a_{k,c}^{\dagger}a_{k,v}\right\rangle }{dt}=\left\langle \left[H_{0}, a_{k,c}^{\dagger}a_{k,v}\right]+\right.&\left[H_{I}, a_{k,c}^{\dagger}a_{k,v}\right]+ \\
+					+&\left.\left[H_{ee}, a_{k,c}^{\dagger}a_{k,v}\right]\right\rangle \nonumber
+\end{align}
+
+The Hamiltonian is the sum of a kinetic term, an interaction
+with the electric field and the Coulomb electron-electron interaction
+term.
+
+These are written as:
+
+\begin{align}
+H_{0} & =\sum_{k\lambda}E_{k\lambda}a_{k\lambda}^{\dagger}a_{k\lambda}\\
+H_{I} & =-\sum_{k}\mathbf{E}(t)\cdot\mathbf{d}_{kcv}a_{k,c}^{\dagger}a_{k,v}+h.c.\\
+H_{ee} & =\sum_{k,k',\lambda,\lambda',q\neq0}\frac{1}{2}V(q)a_{k+q,\lambda}^{\dagger}a_{k'-q,\lambda'}^{\dagger}a_{k'\lambda'}a_{k\lambda}
+\end{align}
+
+After calculating the commutators, we get:
+
+\begin{align}
+i\hbar\frac{d\langle a_{k,c}^{\dagger}a_{k,v}\rangle}{dt}   	&=(\varepsilon_{kv}-\varepsilon_{kc})\left \langle a_{kc}^{\dagger}a_{kv}\right\rangle \label{coiso} \\
+																	 & +\mathbf{E}(t)\cdot\mathbf{d}_{kcv}\left\langle a_{kv}^{\dagger}a_{kv}-a_{kc}^{\dagger}a_{kc}\right\rangle=\nonumber    \\
+																	  =\sum_{k',q}V(q)&\left\langle a_{k-q,c}^{\dagger}a_{k'+q,v}^{\dagger}a_{kv}a_{k'v}-a_{k,c}^{\dagger}a_{k'-q,c}^{\dagger}a_{k-q,v}a_{k'c}\right.  \nonumber  &   \\
+																	 +& \left.a_{k-q,c}^{\dagger}a_{k'+q,c}^{\dagger}a_{kv}a_{k'c}-a_{k,c}^{\dagger}a_{k'-q,v}^{\dagger}a_{k-q,v}a_{k',v}\right \rangle \nonumber
+\end{align}
+
+This expression couples the two operator terms with four operator
+terms. If we used the same method to calculate the equation of motion
+for four operator terms it would be coupled to six operator terms
+and so on.
+
+Therefore we must truncate this hierarchy of equations. We will do
+this by taking the average of equation (\ref{coiso}) and factorizing
+the four operator terms in two operator terms. This would be exact
+if the the averages were taken in non-interacting states but in our
+case it's a necessary approximation. We then get:
+
+\begin{align}
+i\hbar\frac{d}{dt}P_{k,cv}(t)  &=(\tilde{\varepsilon}_{kv}-\tilde{\varepsilon}_{kc})P_{k,cv}(t)+ (n_{k,v}-n_{k,c}) \times \nonumber \\
+										    & \times \left(\mathbf{E}(t)\cdot\mathbf{d}_{kcv}+\sum_{q\neq0}V(q)P_{k-q,cv}(t)\right) \label{eq:7}
+\end{align}
+
+Where $n_{k,\lambda}\equiv\left\langle a_{k,\lambda}^{\dagger}a_{k,\lambda}\right\rangle $
+is the occupation number of the $\left|k,\lambda\right\rangle $ state
+and $\tilde{\varepsilon}_{k\lambda}\equiv\varepsilon_{k\lambda}-\sum_{q}V(q)n_{k-q,\lambda}$
+is the renormalized energy of that state.
+
+In a semiconductor near thermal equilibrium and for low values of
+the electric field we can ignore the dynamics of the occupation number
+and approximate them by a Fermi-Dirac distribution.
+
+Using a quadric band gap approximation and at zero temperature equation
+(\ref{eq:7}) becomes.
+
+\begin{align}
+i\hbar\frac{d}{dt}P_{k,cv} =(\varepsilon_{kv}&-\sum_{q\neq0}V(q)-\varepsilon_{kc})P_{k,cv}+ \nonumber \\
+				&+\mathbf{E}(t)\cdot\mathbf{d}_{kcv}+\sum_{q\neq0}V(q)P_{k-q,cv}\label{eq:8}
+\end{align}
+
+\begin{align}
+\left(-\hbar(\omega+i0^{+})+E_{G}^{'}\right)&P_{k,cv}(\omega) =-\frac{\hbar^{2}k^{2}}{2m_{r}}P_{k,cv}(\omega)+\label{eq:9}\\
+									+&\mathbf{E}(\omega)\cdot\mathbf{d}_{kcv}+\sum_{q\neq0}V(q)P_{k-q,cv}(\omega)\nonumber
+\end{align}
+
+Where we took a Fourier transform to go from (\ref{eq:8}) to (\ref{eq:9}).
+\section{Wannier Equation}
+
+We have now a linear algebraic equation, whose only complication is
+that different values of $k$ are couple making this an integral equation. 
+
+This can be solved by taking a Fourier transform in $k$ space.
+
+\begin{align}
+\left[-\hbar(\omega+i0^{+})+E_{G}^{'}\right]&P(r)_{cv} =-\left[-\frac{\hbar^{2}}{2m_{r}}\nabla^{2}-V(r)\right]\times \nonumber \\
+									&\times P(r)_{cv} +\mathbf{E}(\omega)\cdot\mathbf{d}_{cv}V\delta(0)  \label{eq:10}
+\end{align}
+
+This equation is called the Wannier equation and it's simply the Schrödinger
+equation for a hydrogen atom with an inhomogeneous term.
+
+The solutions of the homogeneous equation are simply the hydrogen
+orbitals (with a modified Bohr radius) together with the continuum
+wave functions.
+
+We then write $P_{k,cv}$ as a sum of eigenfunction of the homogeneous
+case with energy $E_{n}$.
+
+\begin{equation}
+P_{cv}(r,\omega)=\sum_{n}b_{n}(\omega)\phi_{n}(r)
+\end{equation}
+
+We now find the $b_{n}$ coefficients by taking the inner product
+of (\ref{eq:10}) with an hydrogen wave function:
+
+\begin{equation}
+b_{n}(\omega)=-\frac{V\mathbf{E}(\omega)\cdot\mathbf{d}_{cv}\phi_{n}^{*}(0)}{\hbar(\omega+i0^{+})-E_{G}^{'}-E_{n}}
+\end{equation}
+
+As we can see, only the functions which are non zero at the origin
+contribute to the optical response; those functions are the $\ell=0$
+functions.
+
+We now can derive a formula for the polarization and susceptibility.
+
+\begin{align}
+\mathbf{P}(\omega) & =\sum_{k}\mathbf{d}_{vc}P_{k,vc}(\omega)+\mathbf{d}_{vc}^{*}P_{k,vc}^{*}(-\omega)\nonumber \\
+& =-2V\mathbf{d}_{cv}\mathbf{d}_{vc}\sum_{n}\left|\phi_{n}(0)\right|^{2}\mathbf{E}(\omega)\times \\
+\times& \left(\frac{1}{\hbar\omega+i0^{+}-E_{G}^{'}-E_{n}}-\frac{1}{\hbar\omega+i0^{+}+E_{G}^{'}+E_{n}}\right) \nonumber
+\end{align}
+
+\begin{align}
+\chi(\omega) & \equiv\frac{1}{V}\frac{d\mathbf{P}(\omega)}{d\mathbf{E}(\omega)}=-2\mathbf{d}_{cv}\mathbf{d}_{vc}\sum_{n}\left|\phi_{n}(0)\right|^{2}\times \\
+\times&\left(\frac{1}{\hbar\omega+i0^{+}+E_{G}^{'}+E_{n}}-\frac{1}{\hbar\omega+i0^{+}-E_{G}^{'}-E_{n}}\right)\nonumber
+\end{align}
+
+Since we are interested in the positive values of $\omega$ we can
+drop the contribution of the first term and only take into account
+the second term where the resonances are.
+
+In that case the contribution of excitonic bound states in 3D takes
+the following form.
+\begin{equation}
+\chi(\omega)=-\sum_{n}\frac{2\mathbf{d}_{cv}\mathbf{d}_{vc}}{\pi a_{0}^{3}}\frac{1}{n^{3}}\frac{1}{\hbar\omega+i0^{+}-E_{G}^{'}-E_{n}}
+\end{equation}
+
+In three dimension $E_{n}=-\frac{e^{4}m_{\mu}}{2\epsilon^{2}\hbar^{2}n^{2}}\equiv\frac{E_{0}}{n}$
+$a_{0}=\frac{\epsilon\hbar^{2}}{e^{2}m_{\mu}}$
+
+To fully compute the response we have to take into account the contribution
+of continuum states:
+
+\begin{equation}
+\chi(\omega)=\frac{\mathbf{d}_{cv}\mathbf{d}_{vc}}{\pi a_{0}^{3}}\int dx\frac{xe^{\frac{\pi}{x}}}{sinh(\frac{\pi}{x})}\frac{E_{0}}{\hbar\omega+i0^{+}-E_{G}^{'}-E_{0}x^{2}}
+\end{equation}
+
+\section{Results}
+
+The absorption is related to the imaginary part of the susceptibility
+in S.I units according to:
+
+\begin{align}
+\alpha(\omega) & =\frac{\omega}{n_{b}c}\mathfrak{I}(\chi(\omega))\nonumber \\
+& =\frac{2|\mathbf{d}_{cv}|^{2}}{nca_{0}^{3}}\frac{\hbar\omega}{E_{0}}\left[\sum_{0}^{\infty}\frac{1}{n^{3}}\delta\left(\frac{\hbar\omega-E_{g}^{'}}{E_{0}}-\frac{1}{n^{2}}\right)+\right.\nonumber \\
+& \left.+\sum_{0}^{\infty}H\left(\hbar\omega-E_{G}^{'}\right)\left(1-exp\left(-\frac{2\pi}{\sqrt{\frac{\hbar\omega-E_{G}^{'}}{E_{0}}}}\right)\right)^{-1}\right]
+\end{align}
+Where $H(x)$ is the Heavyside step function.
+
+\begin{figure}
+	\includegraphics[height=160mm,bb=100 285 500
+	570]{Excitonlines.eps}
+	\caption{Plot of the contribution of exciton states to the absorbance below the band gap for a relaxation constant of $0.01$. The vertical lines are drawn at the $-\frac{1}{n^{2}}$ resonance frequencies. }
+	\label{vis}          
+\end{figure}
+
+\begin{figure}
+	\includegraphics[height=160mm,bb=100 285 500
+	570]{AbsFinal.eps}
+	\caption{Plot of the absorption coefficient as a function of frequency above the band gap for the free case(blue line) and with excitons(orange line).}
+	\label{vis}          
+\end{figure}
+
+
+The behaviour of the absorption obtained is qualitatively different
+to that of a free electron on a semiconductor. There are now excitonic
+peaks below the band gap, with heights proportional to $n^{-2}$.
+Furthermore the behaviour of the absorption above the gap is different.
+In the free electron case the absorption goes as $\sqrt{\hbar\omega-E_{G}^{'}}$,
+in the presence of excitons it behaves as a constant near the gap.
+This method can be applied also applied to 2D materials, leading to
+similar observation of excitons below the gap and a larger absorption
+above the gap. 
+%---------------------------------------------------------------------------
+% --- Bibliography
+%---------------------------------------------------------------------------
+
+\bibliographystyle{plain}
+
+\begin{thebibliography}{1}
+	\bibitem{key-1}Stephan W. Koch Hartmut Haug. Quantum theory of the
+	optical and electronic properties of semiconductors. World Scientific,
+	2004.
+	
+	\bibitem{key-2}Mark Fox. Optical Properties of Solids. Oxford University
+	Press, 2001.
+\end{thebibliography}
+
+\end{multicols}
+
+% Make a footer line/box:
+\makefooter
+
+\end{document}
+
+
+
+
+
