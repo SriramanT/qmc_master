@@ -2,7 +2,7 @@
 
 This is a MSc Physics Engineering final project consisting of applying Quantum Monte Carlo (QMC) to a problem of interacting fermions.
 
-Capturing the effects of electron correlations is not an easy task. The difficulty lies in devising a numerical method to solve the many-body Schrödinger equation in a reasonable amount of computer time. Naive methods have exponential complexity in the system size. The development and application of unbiased methods is a central point in correlated electron systems, particularly in 2D, the case in point.
+Capturing the effects of electron correlations is not an easy task. The difficulty lies in devising a numerical method to solve the many-body Schrödinger equation in a reasonable amount of computer time. Naive methods have exponential complexity in the system size. The development and application of unbiased methods is a central point in correlated electron systems, particularly in 2D.
 
 QMC methods are among the few unbiased methods available to date. In general, they circumvent the exponential complexity hurdle making it algebraic instead. However, for fermionic systems, a sign oscillation deems the algorithm exponential again and hence not very effective. This is due to the antisymmetric nature of the many-fermion wavefunction. One of the main tasks of this project is to investigate how to solve this issue. Some approximations exist and they perform differently depending on the problem at hand.
 
