@@ -1,0 +1,10 @@
+\babel@toc {american}{}
+\babel@toc {american}{}
+\babel@toc {american}{}
+\beamer@sectionintoc {1}{Beyond graphene: TMD nanoribbons}{2}{0}{1}
+\beamer@sectionintoc {2}{Monte Carlo}{11}{0}{2}
+\beamer@sectionintoc {3}{Variational Monte Carlo}{19}{0}{3}
+\beamer@sectionintoc {4}{Diffusion Monte Carlo}{21}{0}{4}
+\beamer@sectionintoc {5}{The sign problem for many-fermion systems}{24}{0}{5}
+\beamer@sectionintoc {6}{Determinantal / Auxiliary Field QMC}{26}{0}{6}
+\beamer@sectionintoc {7}{Why QMC? Emergence from strong electron correlations}{28}{0}{7}

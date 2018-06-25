@@ -1,0 +1,1177 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{none/global/}
+    \entry{graphene}{article}{}
+      \name{author}{1}{}{%
+        {{hash=a51c7385d3aaba04fa2b4d4df866e797}{%
+           family={Katsnelson},
+           familyi={K\bibinitperiod},
+           given={Mikhail\bibnamedelima I.},
+           giveni={M\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+      }
+      \strng{namehash}{a51c7385d3aaba04fa2b4d4df866e797}
+      \strng{fullhash}{a51c7385d3aaba04fa2b4d4df866e797}
+      \strng{authornamehash}{a51c7385d3aaba04fa2b4d4df866e797}
+      \strng{authorfullhash}{a51c7385d3aaba04fa2b4d4df866e797}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Materials Today}
+      \field{number}{1-2}
+      \field{title}{{Graphene: carbon in two dimensions}}
+      \field{volume}{10}
+      \field{year}{1995}
+      \field{pages}{20\bibrangedash 27}
+      \range{pages}{8}
+    \endentry
+    \entry{graphene_nobel}{article}{}
+      \name{author}{1}{}{%
+        {{hash=fd00e063aeb5f746d318d66587b84e5e}{%
+           family={Nobel\bibnamedelimb Prize\bibnamedelimb in\bibnamedelimb Physics\bibnamedelima 2010},
+           familyi={N\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim i\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim 2\bibinitperiod},
+           given={Scientific\bibnamedelima Background},
+           giveni={S\bibinitperiod\bibinitdelim B\bibinitperiod},
+           prefix={on\bibnamedelima the},
+           prefixi={o\bibinitperiod\bibinitdelim t\bibinitperiod}}}%
+      }
+      \strng{namehash}{fd00e063aeb5f746d318d66587b84e5e}
+      \strng{fullhash}{fd00e063aeb5f746d318d66587b84e5e}
+      \strng{authornamehash}{fd00e063aeb5f746d318d66587b84e5e}
+      \strng{authorfullhash}{fd00e063aeb5f746d318d66587b84e5e}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Royal Swedish Academy of Sciences}
+      \field{title}{{Graphene}}
+      \field{year}{2010}
+    \endentry
+    \entry{tmd_family1}{article}{}
+      \name{author}{4}{}{%
+        {{hash=1a17bd9734faf817109cdada6c2aa66f}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Xiaodong},
+           giveni={X\bibinitperiod}}}%
+        {{hash=bca84b8be8dfdf75206a80fe59c55e35}{%
+           family={Yao},
+           familyi={Y\bibinitperiod},
+           given={Wang},
+           giveni={W\bibinitperiod}}}%
+        {{hash=cc1352d1711338afe7b3f3b971e85c13}{%
+           family={Xiao},
+           familyi={X\bibinitperiod},
+           given={Di},
+           giveni={D\bibinitperiod}}}%
+        {{hash=c802474f1601595d3477aace9f8a88e0}{%
+           family={Heinz},
+           familyi={H\bibinitperiod},
+           given={Tony\bibnamedelima F.},
+           giveni={T\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \strng{namehash}{85d5c8a715b705b59f1583e5ed5588c6}
+      \strng{fullhash}{e3d19f772fa54baa5b39760b9f62c8f4}
+      \strng{authornamehash}{85d5c8a715b705b59f1583e5ed5588c6}
+      \strng{authorfullhash}{e3d19f772fa54baa5b39760b9f62c8f4}
+      \field{sortinit}{4}
+      \field{sortinithash}{d221becdd544034cf9082056cd6e6d2d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature Physics}
+      \field{title}{{Spin and pseudospins in layered transition metal dichalcogenides}}
+      \field{volume}{10}
+      \field{year}{2014}
+      \field{pages}{343 EP -}
+      \range{pages}{-1}
+      \warn{\item Range field 'pages' in entry 'tmd_family1' is malformed, falling back to literal}
+    \endentry
+    \entry{tmd_family2}{article}{}
+      \name{author}{6}{}{%
+        {{hash=81380064cdd29a1a2fe59d560cc7da31}{%
+           family={Rold\'{a}n},
+           familyi={R\bibinitperiod},
+           given={Rafael},
+           giveni={R\bibinitperiod}}}%
+        {{hash=6fc1808536c47f308f82cb79ae30ff25}{%
+           family={Silva-Guill\'{e}n},
+           familyi={S\bibinithyphendelim G\bibinitperiod},
+           given={Jose\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=ffd5ddcd4b6bbc83a6ef9276907a7994}{%
+           family={L\'{o}pez-Sancho},
+           familyi={L\bibinithyphendelim S\bibinitperiod},
+           given={M.\bibnamedelimi Pilar},
+           giveni={M\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=c9231fa5e008c1129681a9dab96cfbb3}{%
+           family={Guinea},
+           familyi={G\bibinitperiod},
+           given={Francisco},
+           giveni={F\bibinitperiod}}}%
+        {{hash=9dd9bf976f04fcaaa62ed92c8b1e564b}{%
+           family={Cappelluti},
+           familyi={C\bibinitperiod},
+           given={Emmanuele},
+           giveni={E\bibinitperiod}}}%
+        {{hash=3923014e591a1544e3db6eae60c7dba6}{%
+           family={Ordej\'{o}n},
+           familyi={O\bibinitperiod},
+           given={Pablo},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{448ff02c2207587570adb2ab2fc743b2}
+      \strng{fullhash}{27470439a203d2c081e2ed477d1a0e82}
+      \strng{authornamehash}{448ff02c2207587570adb2ab2fc743b2}
+      \strng{authorfullhash}{27470439a203d2c081e2ed477d1a0e82}
+      \field{sortinit}{4}
+      \field{sortinithash}{d221becdd544034cf9082056cd6e6d2d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Annalen der Physik}
+      \field{number}{9-10}
+      \field{title}{Electronic properties of single-layer and multilayer transition metal dichalcogenides $MX_2$ ($M = Mo$, $W$ and $X = S, Se$)}
+      \field{volume}{526}
+      \field{year}{2014}
+      \field{pages}{347\bibrangedash 357}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1002/andp.201400128
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1002/andp.201400128
+      \endverb
+    \endentry
+    \entry{tmd_family3}{article}{}
+      \name{author}{5}{}{%
+        {{hash=6a60c2a339ec4b82a3b41a706bf017db}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Qing\bibnamedelima Hua},
+           giveni={Q\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=d7d5a635cc192cda2f463996876b9fd0}{%
+           family={Kalantar-Zadeh},
+           familyi={K\bibinithyphendelim Z\bibinitperiod},
+           given={Kourosh},
+           giveni={K\bibinitperiod}}}%
+        {{hash=0d65d8b35c25b1f6df1c09159676aab6}{%
+           family={Kis},
+           familyi={K\bibinitperiod},
+           given={Andras},
+           giveni={A\bibinitperiod}}}%
+        {{hash=d2d7d4be913f2b0265b88d2e5642831b}{%
+           family={Coleman},
+           familyi={C\bibinitperiod},
+           given={Jonathan\bibnamedelima N.},
+           giveni={J\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=b529fce56e5d16b325fb107342d94d5a}{%
+           family={Strano},
+           familyi={S\bibinitperiod},
+           given={Michael\bibnamedelima S.},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{2ccdb6c0006be4c33122a9af1b6ce751}
+      \strng{fullhash}{6cf8f1f79ad0093af22add1d233540b3}
+      \strng{authornamehash}{2ccdb6c0006be4c33122a9af1b6ce751}
+      \strng{authorfullhash}{6cf8f1f79ad0093af22add1d233540b3}
+      \field{sortinit}{4}
+      \field{sortinithash}{d221becdd544034cf9082056cd6e6d2d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature Nanotechnology}
+      \field{title}{{Electronics and optoelectronics of two-dimensional transition metal dichalcogenides}}
+      \field{volume}{7}
+      \field{year}{2012}
+      \field{pages}{699 EP -}
+      \range{pages}{-1}
+      \warn{\item Range field 'pages' in entry 'tmd_family3' is malformed, falling back to literal}
+    \endentry
+    \entry{topological}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=2fdfd960f7691cd772c651cf4012741a}{%
+           family={Hsu},
+           familyi={H\bibinitperiod},
+           given={Yi-Ting},
+           giveni={Y\bibinithyphendelim T\bibinitperiod}}}%
+      }
+      \strng{namehash}{0b4536b243e829e9dd08b8257b471e7d}
+      \strng{fullhash}{0b4536b243e829e9dd08b8257b471e7d}
+      \strng{authornamehash}{0b4536b243e829e9dd08b8257b471e7d}
+      \strng{authorfullhash}{0b4536b243e829e9dd08b8257b471e7d}
+      \field{sortinit}{5}
+      \field{sortinithash}{c9df3c9fb8f555dd9201cedc5e343021}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature Communications}
+      \field{title}{{Topological superconductivity in monolayer transition metal dichalcogenides}}
+      \field{volume}{8}
+      \field{year}{2017}
+      \field{pages}{14985}
+      \range{pages}{1}
+    \endentry
+    \entry{tmd_magnetism}{article}{}
+      \name{author}{1}{}{%
+        {{hash=897d2bd0dafca8813c51a33936469aac}{%
+           family={Jo\~{a}o\bibnamedelimb E.\bibnamedelimi H.\bibnamedelimi Braz},
+           familyi={J\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Eduardo\bibnamedelimb V.\bibnamedelimi Castro},
+           giveni={E\bibinitperiod\bibinitdelim V\bibinitperiod\bibinitdelim C\bibinitperiod},
+           suffix={B.\bibnamedelimi Amorim},
+           suffixi={B\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{897d2bd0dafca8813c51a33936469aac}
+      \strng{fullhash}{897d2bd0dafca8813c51a33936469aac}
+      \strng{authornamehash}{897d2bd0dafca8813c51a33936469aac}
+      \strng{authorfullhash}{897d2bd0dafca8813c51a33936469aac}
+      \field{sortinit}{6}
+      \field{sortinithash}{02bbed3ed82f61ae046619460488516d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{\emph{https://arxiv.org/abs/1712.07157} (Submitted on 19 Dec 2017)}
+      \field{title}{{Valley polarized magnetic state in hole-doped mono layers of transition metal dichalcogenides}}
+      \field{year}{2017}
+    \endentry
+    \entry{chen}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=6ef5e83f2df66e076ce95e343216ee14}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Yuxuan},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{6df7867741141bdec88cb9c3fb541baa}
+      \strng{fullhash}{6df7867741141bdec88cb9c3fb541baa}
+      \strng{authornamehash}{6df7867741141bdec88cb9c3fb541baa}
+      \strng{authorfullhash}{6df7867741141bdec88cb9c3fb541baa}
+      \field{sortinit}{7}
+      \field{sortinithash}{6ac7fe70cdec8cba8f65694411ce2532}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature Communications}
+      \field{title}{{Fabrication of $MoSe_2$ nanoribbons via an unusual morphological phase transition}}
+      \field{volume}{8}
+      \field{year}{2017}
+      \field{pages}{15135}
+      \range{pages}{1}
+    \endentry
+    \entry{yazyev}{article}{}
+      \name{author}{1}{}{%
+        {{hash=38d19e2e86f99e81b4e790157e0b4d1f}{%
+           family={Yazyev},
+           familyi={Y\bibinitperiod},
+           given={Oleg},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{38d19e2e86f99e81b4e790157e0b4d1f}
+      \strng{fullhash}{38d19e2e86f99e81b4e790157e0b4d1f}
+      \strng{authornamehash}{38d19e2e86f99e81b4e790157e0b4d1f}
+      \strng{authorfullhash}{38d19e2e86f99e81b4e790157e0b4d1f}
+      \field{sortinit}{9}
+      \field{sortinithash}{2999ebab86052e6d71b434385f8b4ed2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Reports on Progress in Physics}
+      \field{number}{5}
+      \field{title}{{Emergence of magnetism in graphene materials and nanostructures}}
+      \field{volume}{73}
+      \field{year}{2010}
+      \field{pages}{056501}
+      \range{pages}{1}
+    \endentry
+    \entry{qmc_results1}{article}{}
+      \name{author}{6}{}{%
+        {{hash=504331015369150db40c6f862d8cf8f7}{%
+           family={Feldner},
+           familyi={F\bibinitperiod},
+           given={H\'{e}l\`{e}ne},
+           giveni={H\bibinitperiod}}}%
+        {{hash=6ee0d31a67f4d947a2dee2c06c77e4dd}{%
+           family={Meng},
+           familyi={M\bibinitperiod},
+           given={Zi\bibnamedelima Yang},
+           giveni={Z\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+        {{hash=4d7ed7ad40607d73d7f7674f23c48d1f}{%
+           family={Lang},
+           familyi={L\bibinitperiod},
+           given={Thomas\bibnamedelima C.},
+           giveni={T\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=f7a4b116051e5e414c553aabeeb069fe}{%
+           family={Assaad},
+           familyi={A\bibinitperiod},
+           given={Fakher\bibnamedelima F.},
+           giveni={F\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=83b6f28cea7f5150b33a4e5eca11b51a}{%
+           family={Wessel},
+           familyi={W\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=882a8883e463c92e9f0fbc40517b2c8f}{%
+           family={Honecker},
+           familyi={H\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{820792bdc4142c3fb0c3458609fec7ef}
+      \strng{fullhash}{e26703082ce1d3764b14620a1bf8215a}
+      \strng{authornamehash}{820792bdc4142c3fb0c3458609fec7ef}
+      \strng{authorfullhash}{e26703082ce1d3764b14620a1bf8215a}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{22}
+      \field{journaltitle}{Phys. Rev. Lett.}
+      \field{title}{Dynamical Signatures of Edge-State Magnetism on Graphene Nanoribbons}
+      \field{volume}{106}
+      \field{year}{2011}
+      \field{pages}{226401}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevLett.106.226401
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevLett.106.226401
+      \endverb
+    \endentry
+    \entry{qmc_results2}{article}{}
+      \name{author}{3}{}{%
+        {{hash=171f52bd0614b4176c51cc0882262404}{%
+           family={Golor},
+           familyi={G\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=4d7ed7ad40607d73d7f7674f23c48d1f}{%
+           family={Lang},
+           familyi={L\bibinitperiod},
+           given={Thomas\bibnamedelima C.},
+           giveni={T\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=83b6f28cea7f5150b33a4e5eca11b51a}{%
+           family={Wessel},
+           familyi={W\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{c24596cf1a502db47fec1177c7bbe3fe}
+      \strng{fullhash}{91a2338725147d198a0a035732c60259}
+      \strng{authornamehash}{c24596cf1a502db47fec1177c7bbe3fe}
+      \strng{authorfullhash}{91a2338725147d198a0a035732c60259}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{15}
+      \field{journaltitle}{Phys. Rev. B}
+      \field{title}{Quantum Monte Carlo studies of edge magnetism in chiral graphene nanoribbons}
+      \field{volume}{87}
+      \field{year}{2013}
+      \field{pages}{155441}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevB.87.155441
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevB.87.155441
+      \endverb
+    \endentry
+    \entry{qmc_results3}{article}{}
+      \name{author}{4}{}{%
+        {{hash=de2aefa88381589790fa1c942e09f169}{%
+           family={Cheng},
+           familyi={C\bibinitperiod},
+           given={Shuai},
+           giveni={S\bibinitperiod}}}%
+        {{hash=b26de8d9a50900733652d56bdff68af9}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Jinming},
+           giveni={J\bibinitperiod}}}%
+        {{hash=632e04dac7b45b0ae3587e0001f4d5a6}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Tianxing},
+           giveni={T\bibinitperiod}}}%
+        {{hash=226bc29b600d3889dbb8ad265fc31b2d}{%
+           family={Peres},
+           familyi={P\bibinitperiod},
+           given={N.\bibnamedelimi M.\bibnamedelimi R.},
+           giveni={N\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{1df7bf2c1c44170de42df8406b825884}
+      \strng{fullhash}{fb2372ad8a8a89b6e97e278898a19062}
+      \strng{authornamehash}{1df7bf2c1c44170de42df8406b825884}
+      \strng{authorfullhash}{fb2372ad8a8a89b6e97e278898a19062}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{7}
+      \field{journaltitle}{Phys. Rev. B}
+      \field{title}{Strain-induced edge magnetism at the zigzag edge of a graphene quantum dot}
+      \field{volume}{91}
+      \field{year}{2015}
+      \field{pages}{075410}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevB.91.075410
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevB.91.075410
+      \endverb
+    \endentry
+    \entry{qmc_results4}{article}{}
+      \name{author}{2}{}{%
+        {{hash=329d70389aac124790e479f64cc9abe4}{%
+           family={Raczkowski},
+           familyi={R\bibinitperiod},
+           given={Marcin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=f7a4b116051e5e414c553aabeeb069fe}{%
+           family={Assaad},
+           familyi={A\bibinitperiod},
+           given={Fakher\bibnamedelima F.},
+           giveni={F\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{13c37595f84604ddea6882d758b089d7}
+      \strng{fullhash}{13c37595f84604ddea6882d758b089d7}
+      \strng{authornamehash}{13c37595f84604ddea6882d758b089d7}
+      \strng{authorfullhash}{13c37595f84604ddea6882d758b089d7}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{11}
+      \field{journaltitle}{Phys. Rev. B}
+      \field{title}{Interplay between the edge-state magnetism and long-range Coulomb interaction in zigzag graphene nanoribbons: Quantum Monte Carlo study}
+      \field{volume}{96}
+      \field{year}{2017}
+      \field{pages}{115155}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevB.96.115155
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevB.96.115155
+      \endverb
+    \endentry
+    \entry{qmc_results5}{article}{}
+      \name{author}{5}{}{%
+        {{hash=11a33b1aa9e89479e304318dff521b9c}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Guang},
+           giveni={G\bibinitperiod}}}%
+        {{hash=27ab7330fbd30c8559533dab86a5490b}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Baoyue},
+           giveni={B\bibinitperiod}}}%
+        {{hash=25bbf4047d900f3760c65b01ee899dba}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod}}}%
+        {{hash=f18c66e037df1194674c380d8ae5adae}{%
+           family={Ye},
+           familyi={Y\bibinitperiod},
+           given={Miao},
+           giveni={M\bibinitperiod}}}%
+        {{hash=632e04dac7b45b0ae3587e0001f4d5a6}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Tianxing},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{f417e8a65f8cc3f417c43e53877ac454}
+      \strng{fullhash}{c7a4370bebc051bb90cc0d25db16b320}
+      \strng{authornamehash}{f417e8a65f8cc3f417c43e53877ac454}
+      \strng{authorfullhash}{c7a4370bebc051bb90cc0d25db16b320}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Using the determinant quantum Monte-Carlo method, we elucidate the strain tuning of edge magnetism in zigzag graphene nanoribbons. Our intensive numerical results show that a relatively weak Coulomb interaction may induce a ferromagnetic-like behaviour with a proper strain, and the edge magnetism can be enhanced greatly as the strain along the zigzag edge increases, which provides another way to control graphene magnetism even at room temperature.}
+      \field{journaltitle}{Journal of Physics: Condensed Matter}
+      \field{number}{36}
+      \field{title}{Strain-tuning of edge magnetism in zigzag graphene nanoribbons}
+      \field{volume}{29}
+      \field{year}{2017}
+      \field{pages}{365601}
+      \range{pages}{1}
+      \verb{url}
+      \verb http://stacks.iop.org/0953-8984/29/i=36/a=365601
+      \endverb
+    \endentry
+    \entry{nanoribbon}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=1a6826e0e3a42e54a924a3c69fa31cee}{%
+           family={Davelou},
+           familyi={D\bibinitperiod},
+           given={Daphne},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{efc1d474fa907f73e3ca75297ab15694}
+      \strng{fullhash}{efc1d474fa907f73e3ca75297ab15694}
+      \strng{authornamehash}{efc1d474fa907f73e3ca75297ab15694}
+      \strng{authorfullhash}{efc1d474fa907f73e3ca75297ab15694}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Phys. Rev. B}
+      \field{title}{{Nanoribbon edges of transition-metal dichalcogenides: Stability and electronic properties}}
+      \field{volume}{96}
+      \field{year}{2017}
+      \field{pages}{165436}
+      \range{pages}{1}
+    \endentry
+    \entry{metropolis}{article}{}
+      \name{author}{1}{}{%
+        {{hash=4383d07a859fd9bca7d07feea34f7d72}{%
+           family={Nicolas\bibnamedelima Metropolis},
+           familyi={N\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={S.Ulam},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{4383d07a859fd9bca7d07feea34f7d72}
+      \strng{fullhash}{4383d07a859fd9bca7d07feea34f7d72}
+      \strng{authornamehash}{4383d07a859fd9bca7d07feea34f7d72}
+      \strng{authorfullhash}{4383d07a859fd9bca7d07feea34f7d72}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the American Statistical Association}
+      \field{number}{247}
+      \field{title}{{The Monte Carlo Method}}
+      \field{volume}{44}
+      \field{year}{1949}
+      \field{pages}{335\bibrangedash 341}
+      \range{pages}{7}
+    \endentry
+    \entry{newman_barkema}{book}{}
+      \name{author}{1}{}{%
+        {{hash=1e0408f1965f70bf1c6b07704ef7b941}{%
+           family={M.\bibnamedelimi E.\bibnamedelimi J.\bibnamedelimi Newman},
+           familyi={M\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim N\bibinitperiod},
+           given={G.\bibnamedelimi T.\bibnamedelimi Barkema},
+           giveni={G\bibinitperiod\bibinitdelim T\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Clarendon Press}%
+      }
+      \strng{namehash}{1e0408f1965f70bf1c6b07704ef7b941}
+      \strng{fullhash}{1e0408f1965f70bf1c6b07704ef7b941}
+      \strng{authornamehash}{1e0408f1965f70bf1c6b07704ef7b941}
+      \strng{authorfullhash}{1e0408f1965f70bf1c6b07704ef7b941}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Monte Carlo Methods in Statistical Physics}
+      \field{year}{1999}
+    \endentry
+    \entry{tao}{book}{}
+      \name{author}{1}{}{%
+        {{hash=15bfbfe1db67917fc953926d49afd752}{%
+           family={Pang},
+           familyi={P\bibinitperiod},
+           given={Tao},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Morgan}%
+        {Claypool Publishers}%
+      }
+      \strng{namehash}{15bfbfe1db67917fc953926d49afd752}
+      \strng{fullhash}{15bfbfe1db67917fc953926d49afd752}
+      \strng{authornamehash}{15bfbfe1db67917fc953926d49afd752}
+      \strng{authorfullhash}{15bfbfe1db67917fc953926d49afd752}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{An Introduction to Quantum Monte Carlo Methods}
+      \field{year}{2016}
+    \endentry
+    \entry{umrigar}{article}{}
+      \name{author}{2}{}{%
+        {{hash=340ce8510a217b7bbfb10542e0873038}{%
+           family={Umrigar\bibnamedelimb C\bibnamedelima J},
+           familyi={U\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim J\bibinitperiod},
+           given={Wilson\bibnamedelimb K\bibnamedelima G},
+           giveni={W\bibinitperiod\bibinitdelim K\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=8d04b315ddbd09dc719ce1cf60d5c66a}{%
+           family={W},
+           familyi={W\bibinitperiod},
+           given={Wilkins\bibnamedelima J},
+           giveni={W\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{ddf7d908ee468e15e6897b57f5451e7b}
+      \strng{fullhash}{ddf7d908ee468e15e6897b57f5451e7b}
+      \strng{authornamehash}{ddf7d908ee468e15e6897b57f5451e7b}
+      \strng{authorfullhash}{ddf7d908ee468e15e6897b57f5451e7b}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physical Review Letters}
+      \field{title}{{Optimized trial wave functions for quantum Monte Carlo calculations}}
+      \field{volume}{60}
+      \field{year}{1988}
+      \field{pages}{1719\bibrangedash 22}
+      \range{pages}{4}
+    \endentry
+    \entry{mahan}{book}{}
+      \name{author}{1}{}{%
+        {{hash=81d32806d7a90404406f799053737b69}{%
+           family={G},
+           familyi={G\bibinitperiod},
+           given={Mahan},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin}%
+      }
+      \strng{namehash}{81d32806d7a90404406f799053737b69}
+      \strng{fullhash}{81d32806d7a90404406f799053737b69}
+      \strng{authornamehash}{81d32806d7a90404406f799053737b69}
+      \strng{authorfullhash}{81d32806d7a90404406f799053737b69}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Many Particle Physics 3rd ed}
+      \field{year}{2000}
+    \endentry
+    \entry{kosztin}{article}{}
+      \name{author}{2}{}{%
+        {{hash=63866fb811dd4d929fd65741b573a00a}{%
+           family={Ioan\bibnamedelima Kosztin},
+           familyi={I\bibinitperiod\bibinitdelim K\bibinitperiod},
+           given={Byron\bibnamedelima Faber},
+           giveni={B\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=fd251781d5b08598251387a7a775e009}{%
+           family={Schulten},
+           familyi={S\bibinitperiod},
+           given={Klaus},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{9507f2b74f20f31b51ad9cd8c852d79b}
+      \strng{fullhash}{9507f2b74f20f31b51ad9cd8c852d79b}
+      \strng{authornamehash}{9507f2b74f20f31b51ad9cd8c852d79b}
+      \strng{authorfullhash}{9507f2b74f20f31b51ad9cd8c852d79b}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{American Journal of Physics}
+      \field{number}{5}
+      \field{title}{{Introduction to the Diffusion Monte Carlo Method}}
+      \field{volume}{64}
+      \field{year}{1995}
+      \field{pages}{633\bibrangedash 643}
+      \range{pages}{11}
+    \endentry
+    \entry{vmc}{article}{}
+      \name{author}{3}{}{%
+        {{hash=98787e43f1ddbbf4d2098cb04ecdfe79}{%
+           family={Toulouse},
+           familyi={T\bibinitperiod},
+           given={Julien},
+           giveni={J\bibinitperiod}}}%
+        {{hash=b7aa35054a0f0489b38136d79525abee}{%
+           family={Assaraf},
+           familyi={A\bibinitperiod},
+           given={Roland},
+           giveni={R\bibinitperiod}}}%
+        {{hash=f45f6c15e0cb9ca8f1779e399c06f743}{%
+           family={J.\bibnamedelimi Umrigar},
+           familyi={J\bibinitperiod\bibinitdelim U\bibinitperiod},
+           given={C},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{405a896adccbd48ec7f99e777fae8237}
+      \strng{fullhash}{1d47796128dbe37eafe8dfd62c3e7cf1}
+      \strng{authornamehash}{405a896adccbd48ec7f99e777fae8237}
+      \strng{authorfullhash}{1d47796128dbe37eafe8dfd62c3e7cf1}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Advances in Quantum Chemistry}
+      \field{title}{{Introduction to the variational and diffusion Monte Carlo methods}}
+      \field{volume}{1}
+      \field{year}{2005}
+    \endentry
+    \entry{vmc_review}{article}{}
+      \name{author}{1}{}{%
+        {{hash=c959109242915c190693a5154b80d666}{%
+           family={L\"{u}chow},
+           familyi={L\bibinitperiod},
+           given={Arne},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{c959109242915c190693a5154b80d666}
+      \strng{fullhash}{c959109242915c190693a5154b80d666}
+      \strng{authornamehash}{c959109242915c190693a5154b80d666}
+      \strng{authorfullhash}{c959109242915c190693a5154b80d666}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{WIREs Comput Mol Sci}
+      \field{title}{{Quantum Monte Carlo methods}}
+      \field{volume}{1}
+      \field{year}{2011}
+      \field{pages}{388\bibrangedash 402}
+      \range{pages}{15}
+    \endentry
+    \entry{constrained2}{article}{}
+      \name{author}{2}{}{%
+        {{hash=7c9e48db9004602e0bd7c73b238d34e4}{%
+           family={J.\bibnamedelimi Carlson},
+           familyi={J\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={G.\bibnamedelimi Ortiz},
+           giveni={G\bibinitperiod\bibinitdelim O\bibinitperiod},
+           suffix={J.\bibnamedelimi E.\bibnamedelimi Gubernatis},
+           suffixi={J\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=d158b265cf5ee9e7959e886a2c0cc1a5}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Shiwei},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{cad30392e34482471d5c0a38f1c13ec1}
+      \strng{fullhash}{cad30392e34482471d5c0a38f1c13ec1}
+      \strng{authornamehash}{cad30392e34482471d5c0a38f1c13ec1}
+      \strng{authorfullhash}{cad30392e34482471d5c0a38f1c13ec1}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physical Review B}
+      \field{number}{20}
+      \field{title}{{Issues and observations on applications of the constrained-path Monte Carlo method to many-fermion systems}}
+      \field{volume}{59}
+      \field{year}{1999}
+      \field{pages}{12788\bibrangedash 12798}
+      \range{pages}{11}
+    \endentry
+    \entry{constrained}{article}{}
+      \name{author}{2}{}{%
+        {{hash=2b9815d77ee22e60a709a15fe69d8a1f}{%
+           family={Shiwei\bibnamedelima Zhang},
+           familyi={S\bibinitperiod\bibinitdelim Z\bibinitperiod},
+           given={J.\bibnamedelimi Carlson},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=d046779dd3822256f9d8865d0e0ab4d2}{%
+           family={Gubernatis},
+           familyi={G\bibinitperiod},
+           given={J.\bibnamedelimi E.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{1763a6fa08c672a3b71f4b7dc15d0be2}
+      \strng{fullhash}{1763a6fa08c672a3b71f4b7dc15d0be2}
+      \strng{authornamehash}{1763a6fa08c672a3b71f4b7dc15d0be2}
+      \strng{authorfullhash}{1763a6fa08c672a3b71f4b7dc15d0be2}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physical Review B}
+      \field{number}{12}
+      \field{title}{{Constrained path Monte Carlo method for fermion ground states}}
+      \field{volume}{55}
+      \field{year}{1997}
+      \field{pages}{7464\bibrangedash 7477}
+      \range{pages}{14}
+    \endentry
+    \entry{qmc}{book}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=1152022ae21c42723dbd02ef3e840663}{%
+           family={Bai},
+           familyi={B\bibinitperiod},
+           given={Zhaojun},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Lecture Notes from the Shangai Summer School of Mathematics}%
+      }
+      \strng{namehash}{528a3fda56821a6a9fe15e44f335246a}
+      \strng{fullhash}{528a3fda56821a6a9fe15e44f335246a}
+      \strng{authornamehash}{528a3fda56821a6a9fe15e44f335246a}
+      \strng{authorfullhash}{528a3fda56821a6a9fe15e44f335246a}
+      \field{sortinit}{3}
+      \field{sortinithash}{197da6d6c34c6b20ce45c4d4baace5a4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Numerical Methods for Quantum Monte Carlo Simulations of the Hubbard Model}
+      \field{year}{2006}
+    \endentry
+    \entry{sugiyama}{article}{}
+      \name{author}{2}{}{%
+        {{hash=c56556a5beef30545c038f1ce9da1c99}{%
+           family={Sugiyama},
+           familyi={S\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=e1cc427b08dacf69a56395ba4fe303ea}{%
+           family={Koonin},
+           familyi={K\bibinitperiod},
+           given={S.\bibnamedelimi E.},
+           giveni={S\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{865e9a1a0bbdac13ce9465e6f3be4581}
+      \strng{fullhash}{865e9a1a0bbdac13ce9465e6f3be4581}
+      \strng{authornamehash}{865e9a1a0bbdac13ce9465e6f3be4581}
+      \strng{authorfullhash}{865e9a1a0bbdac13ce9465e6f3be4581}
+      \field{sortinit}{3}
+      \field{sortinithash}{197da6d6c34c6b20ce45c4d4baace5a4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Annals of Physics}
+      \field{title}{{Auxiliary Field Monte-Carlo for Quantum Many-Body Ground States}}
+      \field{volume}{168}
+      \field{year}{1986}
+      \field{pages}{1\bibrangedash 26}
+      \range{pages}{26}
+    \endentry
+    \entry{zhang}{article}{}
+      \name{author}{2}{}{%
+        {{hash=d158b265cf5ee9e7959e886a2c0cc1a5}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Shiwei},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f705bc83b3bd2f8f5d0b0223bbef5d59}{%
+           family={Krakauer},
+           familyi={K\bibinitperiod},
+           given={Henry},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{544a098cba6eb5b864837e98130157a8}
+      \strng{fullhash}{544a098cba6eb5b864837e98130157a8}
+      \strng{authornamehash}{544a098cba6eb5b864837e98130157a8}
+      \strng{authorfullhash}{544a098cba6eb5b864837e98130157a8}
+      \field{sortinit}{3}
+      \field{sortinithash}{197da6d6c34c6b20ce45c4d4baace5a4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physical Review Letters}
+      \field{number}{13}
+      \field{title}{{Quantum Monte Carlo Method using Phase-Free Random Walks with Slater Determinants}}
+      \field{volume}{90}
+      \field{year}{2003}
+      \field{pages}{136401-1\bibrangedash 136404-4}
+      \range{pages}{-1}
+    \endentry
+    \entry{zphase}{article}{}
+      \name{author}{2}{}{%
+        {{hash=041fdca86c07807f926f8e19704365d6}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={W\bibnamedelima A\bibnamedelima Al-Saidi},
+           giveni={W\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim A\bibinithyphendelim S\bibinitperiod},
+           suffix={H\bibnamedelima Krakauer},
+           suffixi={H\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=3bf51287083e22fe84db86a205e3f9c2}{%
+           family={M\bibnamedelima Suewattana},
+           familyi={M\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={S},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{86853ef6f87d5698a2dbd25bde116669}
+      \strng{fullhash}{86853ef6f87d5698a2dbd25bde116669}
+      \strng{authornamehash}{86853ef6f87d5698a2dbd25bde116669}
+      \strng{authorfullhash}{86853ef6f87d5698a2dbd25bde116669}
+      \field{sortinit}{3}
+      \field{sortinithash}{197da6d6c34c6b20ce45c4d4baace5a4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computational Physics Communication}
+      \field{number}{394}
+      \field{title}{{Quantum simulations of realistic systems by auxiliary fields}}
+      \field{volume}{164}
+      \field{year}{2005}
+    \endentry
+    \entry{troyer}{article}{}
+      \name{author}{1}{}{%
+        {{hash=76e4af500e7efd3ae82d297185ea6fd0}{%
+           family={Matthias\bibnamedelima Troyer},
+           familyi={M\bibinitperiod\bibinitdelim T\bibinitperiod},
+           given={Uwe-Jens\bibnamedelima Wiese},
+           giveni={U\bibinithyphendelim J\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{76e4af500e7efd3ae82d297185ea6fd0}
+      \strng{fullhash}{76e4af500e7efd3ae82d297185ea6fd0}
+      \strng{authornamehash}{76e4af500e7efd3ae82d297185ea6fd0}
+      \strng{authorfullhash}{76e4af500e7efd3ae82d297185ea6fd0}
+      \field{sortinit}{3}
+      \field{sortinithash}{197da6d6c34c6b20ce45c4d4baace5a4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physical Review Letters}
+      \field{title}{{Computational Complexity and Fundamental Limitations to Fermionic Quantum Monte Carlo Simulations }}
+      \field{volume}{94}
+      \field{year}{2005}
+      \field{pages}{170201}
+      \range{pages}{1}
+    \endentry
+    \entry{wiese}{article}{}
+      \name{author}{2}{}{%
+        {{hash=60ee992bf5224c3a98aef62e2784e03b}{%
+           family={Chandrasekharan},
+           familyi={C\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=7b3b7776c86f51a5289c20f39b6d6495}{%
+           family={Wiese},
+           familyi={W\bibinitperiod},
+           given={U.-J.},
+           giveni={U\bibinithyphendelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{99bc88f9a091c3e7989f3d82423ae40b}
+      \strng{fullhash}{99bc88f9a091c3e7989f3d82423ae40b}
+      \strng{authornamehash}{99bc88f9a091c3e7989f3d82423ae40b}
+      \strng{authorfullhash}{99bc88f9a091c3e7989f3d82423ae40b}
+      \field{sortinit}{3}
+      \field{sortinithash}{197da6d6c34c6b20ce45c4d4baace5a4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physical Review Letters}
+      \field{title}{{Meron-Cluster Solution of Fermion Sign Problems}}
+      \field{volume}{83}
+      \field{year}{1999}
+      \field{pages}{3116}
+      \range{pages}{1}
+    \endentry
+    \entry{arnow}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=8708118b2cf18400d8e77ad093fc7e9a}{%
+           family={Arnow},
+           familyi={A\bibinitperiod},
+           given={D\bibnamedelima M},
+           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{d190f524c2c0deff7001cd62a43c98ae}
+      \strng{fullhash}{d190f524c2c0deff7001cd62a43c98ae}
+      \strng{authornamehash}{d190f524c2c0deff7001cd62a43c98ae}
+      \strng{authorfullhash}{d190f524c2c0deff7001cd62a43c98ae}
+      \field{sortinit}{3}
+      \field{sortinithash}{197da6d6c34c6b20ce45c4d4baace5a4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Chemical Physics}
+      \field{title}{{Green's Function Monte Carlo for few fermion problems}}
+      \field{volume}{77}
+      \field{year}{1982}
+      \field{pages}{5562}
+      \range{pages}{1}
+    \endentry
+    \entry{kalos}{article}{}
+      \name{author}{2}{}{%
+        {{hash=62956dd411dbd5eb2fa64b2f4bc8ab92}{%
+           family={Kalos},
+           familyi={K\bibinitperiod},
+           given={M.\bibnamedelimi H.},
+           giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=dcd160e5958e8280f90fa2a4365d8524}{%
+           family={Pederiva},
+           familyi={P\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{0247a50a30692e8796e8ad53823d1e8b}
+      \strng{fullhash}{0247a50a30692e8796e8ad53823d1e8b}
+      \strng{authornamehash}{0247a50a30692e8796e8ad53823d1e8b}
+      \strng{authorfullhash}{0247a50a30692e8796e8ad53823d1e8b}
+      \field{sortinit}{3}
+      \field{sortinithash}{197da6d6c34c6b20ce45c4d4baace5a4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physical Review Letters}
+      \field{title}{{Exact Monte Carlo Method for Continuum Fermion Systems}}
+      \field{volume}{85}
+      \field{year}{2000}
+      \field{pages}{3547}
+      \range{pages}{1}
+    \endentry
+    \entry{optical}{article}{}
+      \name{author}{2}{}{%
+        {{hash=2cd19d30de9c4e49b3bfeebb729acf62}{%
+           family={McKay},
+           familyi={M\bibinitperiod},
+           given={D\bibnamedelima C},
+           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=50257a1babc12692bc0d8162938235b3}{%
+           family={DeMarco},
+           familyi={D\bibinitperiod},
+           given={B},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{c2a4cbc305a0191426b684514aa51247}
+      \strng{fullhash}{c2a4cbc305a0191426b684514aa51247}
+      \strng{authornamehash}{c2a4cbc305a0191426b684514aa51247}
+      \strng{authorfullhash}{c2a4cbc305a0191426b684514aa51247}
+      \field{sortinit}{3}
+      \field{sortinithash}{197da6d6c34c6b20ce45c4d4baace5a4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Reports on Progress in Physics}
+      \field{number}{5}
+      \field{title}{{Cooling in strongly correlated optical lattices: prospects and challenges}}
+      \field{volume}{74}
+      \field{year}{2011}
+    \endentry
+    \entry{quest}{book}{}
+      \name{author}{1}{}{%
+        {{hash=68a25994503c0f5b54a23ffe77e8deba}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Che-Rung},
+           giveni={C\bibinithyphendelim R\bibinitperiod}}}%
+      }
+      \list{publisher}{0}{%
+      }
+      \strng{namehash}{68a25994503c0f5b54a23ffe77e8deba}
+      \strng{fullhash}{68a25994503c0f5b54a23ffe77e8deba}
+      \strng{authornamehash}{68a25994503c0f5b54a23ffe77e8deba}
+      \strng{authorfullhash}{68a25994503c0f5b54a23ffe77e8deba}
+      \field{sortinit}{4}
+      \field{sortinithash}{d221becdd544034cf9082056cd6e6d2d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{QUEST Users' Guide Version 1.0}
+      \field{year}{2008}
+    \endentry
+    \entry{montepython}{article}{}
+      \name{author}{1}{}{%
+        {{hash=20eb6e595e0cd2093be12e4999d0172c}{%
+           family={Nilsen},
+           familyi={N\bibinitperiod},
+           given={J.K.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{20eb6e595e0cd2093be12e4999d0172c}
+      \strng{fullhash}{20eb6e595e0cd2093be12e4999d0172c}
+      \strng{authornamehash}{20eb6e595e0cd2093be12e4999d0172c}
+      \strng{authorfullhash}{20eb6e595e0cd2093be12e4999d0172c}
+      \field{sortinit}{4}
+      \field{sortinithash}{d221becdd544034cf9082056cd6e6d2d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computer Physics Communications}
+      \field{title}{{MontePython: Implementing Quantum Monte Carlo using Python}}
+      \field{volume}{177}
+      \field{year}{2006}
+      \field{pages}{799\bibrangedash 814}
+      \range{pages}{16}
+    \endentry
+    \entry{alps}{online}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{d221becdd544034cf9082056cd6e6d2d}
+      \field{labeltitlesource}{title}
+      \field{title}{Alps open source libraries}
+      \field{urlday}{4}
+      \field{urlmonth}{12}
+      \field{urlyear}{2017}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb http://alps.comp-phys.org/mediawiki/index.php/Main_Page
+      \endverb
+    \endentry
+    \entry{alf}{book}{}
+      \name{author}{2}{}{%
+        {{hash=8d8101727ff8e79c10954a7de4ff6577}{%
+           family={Martin\bibnamedelima Bercx},
+           familyi={M\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={J\bibnamedelima S\bibnamedelima Hofmann},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim H\bibinitperiod},
+           suffix={F\bibnamedelima Goth},
+           suffixi={F\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=b41ffb734c3bf10e1b46f13aa356e6f8}{%
+           family={Assaad},
+           familyi={A\bibinitperiod},
+           given={F\bibnamedelima F},
+           giveni={F\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {SciPost Physics}%
+      }
+      \strng{namehash}{2cf5f2001b21b8923d65964e510f187d}
+      \strng{fullhash}{2cf5f2001b21b8923d65964e510f187d}
+      \strng{authornamehash}{2cf5f2001b21b8923d65964e510f187d}
+      \strng{authorfullhash}{2cf5f2001b21b8923d65964e510f187d}
+      \field{sortinit}{4}
+      \field{sortinithash}{d221becdd544034cf9082056cd6e6d2d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ALF Documentation for the auxiliary field quantum Monte Carlo code}
+      \field{year}{2017}
+    \endentry
+    \entry{springer}{book}{}
+      \name{author}{1}{}{%
+        {{hash=d158b265cf5ee9e7959e886a2c0cc1a5}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Shiwei},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{d158b265cf5ee9e7959e886a2c0cc1a5}
+      \strng{fullhash}{d158b265cf5ee9e7959e886a2c0cc1a5}
+      \strng{authornamehash}{d158b265cf5ee9e7959e886a2c0cc1a5}
+      \strng{authorfullhash}{d158b265cf5ee9e7959e886a2c0cc1a5}
+      \field{sortinit}{4}
+      \field{sortinithash}{d221becdd544034cf9082056cd6e6d2d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Theoretical Methods for Strongly Correlated Electrons ch. 2}
+      \field{year}{2004}
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

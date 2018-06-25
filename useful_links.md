@@ -2,11 +2,15 @@
 
 (consulted at the end of 2017)
 
+## https://youtu.be/7t1SpqE46o4
+
+is a link to a video of me outlining of the thesis.
+
 ## https://github.com/masumhabib/quest/wiki/Tutorial-1-:-Graphene-and-TI
 
 is a github repository I found while installing the linear algebra package armadillo.
 
-It uses QUEST to do something on graphene. It might be interesting. 
+It uses QUEST to do something on graphene. It might be interesting.
 
 ## https://github.com/Foadsf/Cmathtuts
 
@@ -103,5 +107,3 @@ http://physics.berkeley.edu/news-events/events/20161107/new-topological-phases-i
 ## Emergence in CMP Witten
 
 https://www.youtube.com/watch?v=n1hheYEPzjw
-
-

@@ -1,0 +1,24 @@
+[0] Config.pm:354> INFO - This is Biber 2.7
+[1] Config.pm:357> INFO - Logfile is 'main.blg'
+[77] biber-darwin:303> INFO - === Tue May 15, 2018, 21:20:11
+[120] Biber.pm:359> INFO - Reading 'main.bcf'
+[288] Biber.pm:835> INFO - Found 39 citekeys in bib section 0
+[316] Biber.pm:3670> INFO - Processing section 0
+[341] Biber.pm:3840> INFO - Looking for bibtex format file 'thesis_outline.bib' for section 0
+[346] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
+[358] bibtex.pm:1292> INFO - Found BibTeX data source 'thesis_outline.bib'
+[371] Utils.pm:164> WARN - Range field 'pages' in entry 'tmd_family1' is malformed, falling back to literal
+[388] Utils.pm:164> WARN - Range field 'pages' in entry 'tmd_family3' is malformed, falling back to literal
+[464] Utils.pm:164> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[464] Utils.pm:164> WARN - BibTeX subsystem: author, warning: comma(s) at end of name (removing)
+[507] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[507] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[507] Biber.pm:3499> INFO - Sorting list 'none/global/' of type 'entry' with scheme 'none' and locale 'en-US'
+[507] Biber.pm:3505> INFO - No sort tailoring available for locale 'en-US'
+[545] bbl.pm:608> INFO - Writing 'main.bbl' with encoding 'ascii'
+[552] Utils.pm:164> WARN - The entry 'tmd_family2' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
+[555] Utils.pm:164> WARN - The entry 'tmd_magnetism' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
+[558] Utils.pm:164> WARN - The entry 'qmc_results1' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
+[561] Utils.pm:164> WARN - The entry 'vmc_review' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
+[565] bbl.pm:712> INFO - Output to main.bbl
+[565] Biber.pm:109> INFO - WARNINGS: 8
