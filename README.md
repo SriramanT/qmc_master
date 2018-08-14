@@ -1,122 +1,75 @@
 # qmc_master
 
-This repository is part of a MSc Physics Engineering final project consisting of applying Quantum Monte Carlo (QMC) to a problem of interacting fermions.
+This repository is part of a MSc in Physics Engineering final project consisting of applying Quantum Monte Carlo (QMC) to a problem of interacting fermions. We refer the interested reader to the thesis available at
+
+[Thesis](https://github.com/fmonteir/qmc_master_thesis/blob/master/thesis/thesis.pdf)
+
+The aim of this work was to carry out a theoretical study (with particular emphasis on numerical aspects) of the properties of a TMD (transition metal dichalcogenide) nanoribbon - a graphene-like 2D nanostructure where electron interactions are particularly relevant - using a QMC method.
 
 ## Getting started
 
-In an attempt to mimic an usual practice in computer science, I decided to write a readme file to help me (and others) navigate through my project folders. The idea is to organize and document the material I found and created over the course of my research on this topic. The content of the project folders is exhaustively explained and every relevant folder or file is briefly commented in the corresponding repositories.
+In an attempt to mimic a usual practice in computer science, I decided to write a readme file to help me (and others) navigate through my project directories. The idea was to organize and document the material I found and created over the course of my research on this topic. The content of the project directories are exhaustively explained and every relevant folder or file is briefly commented in the corresponding repositories.
+
+I divided my work in three repositories:
+
+[Thesis itself](https://github.com/fmonteir/qmc_master_thesis)
+
+[References](https://github.com/fmonteir/msc_references)
+
+[Code](https://github.com/fmonteir/qmc_master_code)
+
 
 ## This repo
 
-In this repository I gathered all the 'miscellaneous' material related to my thesis: presentations, rough lecture notes, posters, etc.
+In this repository I gathered all the 'miscellaneous' material related to my thesis: presentations, rough lecture notes, posters, early attempts at implementing the code, etc.
 
-## Useful Links
+## Possibly interesting links
 
-(consulted at the end of 2017)
+(consulted between the end of 2017 and the summer of 2018)
 
-### https://youtu.be/7t1SpqE46o4
+[Outline](https://youtu.be/7t1SpqE46o4)
 
 is a link to a video of me outlining of the thesis.
 
-### https://github.com/masumhabib/quest/wiki/Tutorial-1-:-Graphene-and-TI
+[Wiki QMC](https://en.wikipedia.org/wiki/Quantum_Monte_Carlo)
 
-is a github repository I found while installing the linear algebra package armadillo.
+The wikipedia page on QMC (and references therein :) ) is a good start to begin learning about QMC.
 
-It uses QUEST to do something on graphene. It might be interesting.
+[AFQMC](https://en.wikipedia.org/wiki/Auxiliary-field_Monte_Carlo)
 
-### https://github.com/Foadsf/Cmathtuts
+More specifically, we use auxiliary field QMC. Wikipedia has little information, but it does point to
+some useful references.
 
-is another repository containing examples of linear algebra package usage.
+[ALPS](http://alps.comp-phys.org/mediawiki/index.php/Main_Page)
 
-### https://en.wikipedia.org/wiki/Quantum_Monte_Carlo is a good start (and references therein! :) )
+The homepage of Alps contains many interesting explorations having to do
+with methods for strongly correlated systems in general, not only Monte Carlo.
 
-I should check out this book
+[Monte Python](https://code.google.com/archive/p/montepython/)
 
-### http://www.springer.com/fr/book/9780792355519
+The homepage of Monte Python, a QMC software written in Python.
 
-This is an interesting paper
+[Casino](https://vallico.net/casinoqmc/)
 
-### https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.73.33
-
-This is the homepage of Alps
-
-### http://alps.comp-phys.org/mediawiki/index.php/Main_Page
-
-The homepage of Monte Python
-
-### https://code.google.com/archive/p/montepython/
-
-QMC Cambridge
-
-### https://vallico.net/casinoqmc/introductory-and-review-material/
-
-Applications of QCM to CMP
-
-### http://iopscience.iop.org/article/10.1088/0034-4885/74/2/026502/meta
-
-Collection of books on QMC and stuff
-
-### http://freescience.info/books.php?id=35
-
-### http://freescience.info/go.php?pagename=books&id=225
-
-### http://freescience.info/go.php?pagename=books&id=1072
-
-Another package, maybe not relevant
-
-### https://en.wikipedia.org/wiki/QMC@Home
-
-AFQMC
-
-### https://en.wikipedia.org/wiki/Auxiliary-field_Monte_Carlo
-
-Many-fermion QMC
-
-### http://adsabs.harvard.edu/abs/1977PhRvB..16.3081C
-
-Nonlinear Markov processes and kinetic
-equations
-
-### https://pdfs.semanticscholar.org/223d/19f836333f8f7c2f89949b387e0322225f28.pdf
-
-Buffon's classic!
-
-### https://play.google.com/books/reader?id=2bKGb0YswGYC&printsec=frontcover&output=reader&hl=pt_PT&pg=GBS.PP1
-
-### https://en.wikipedia.org/wiki/Buffon%27s_needle
-
-Sign problem
-
-### http://iopscience.iop.org/article/10.1088/0953-4075/40/5/003/meta
+QMC at Cambridge
 
 
-### https://phys.org/news/2016-02-graphene-superconductiveelectrons-mass-resistance.html
+[Trotter](https://en.wikipedia.org/wiki/Time-evolving_block_decimation#Errors_coming_from_the_Suzuki-Trotter_expansion)
 
-Superconductivity in graphene.
+Wikipedia has a very interesting page on the Trotter Suzuki decomposition, and more general schemes used in
+quantum simulations.
 
-### http://web.ornl.gov/~kentpr/thesis/pkthnode17.html
+[BCH](https://en.wikipedia.org/wiki/Baker%E2%80%93Campbell%E2%80%93Hausdorff_formula)
 
-Overview of QMC methods.
+Zassenhaus or BCH formula.
 
-### https://en.wikipedia.org/wiki/Time-evolving_block_decimation#Errors_coming_from_the_Suzuki-Trotter_expansion
+[Emergence](https://www.perimeterinstitute.ca/videos/emergence-and-minimal-models-condensed-matter-physics-and-biology)
 
-Trotter Suzuki decomposition. Wikipedia has a very interesting page on it
+Emergence in CMP at Perimeter. An interesting lecture on emergence in CMP.
 
-### https://en.wikipedia.org/wiki/Baker%E2%80%93Campbell%E2%80%93Hausdorff_formula
+[Lecture on Emergence](https://www.youtube.com/watch?v=n1hheYEPzjw)
 
-Zassenhaus or BCH formula
-
-### https://www.perimeterinstitute.ca/videos/emergence-and-minimal-models-condensed-matter-physics-and-biology
-
-Emergence in CMP at Perimeter
-
-### http://physics.berkeley.edu/news-events/events/20161107/new-topological-phases-in-transition-metal-dichalcogenides
-
-TMDs topology
-
-### https://www.youtube.com/watch?v=n1hheYEPzjw
-
-Emergence in CMP Witten
+Another lecture on emergence in CMP by Witten.
 
 ## Built with
 
@@ -132,7 +85,7 @@ Emergence in CMP Witten
 
 ## Versioning
 
-v1 - latest update 23.07.2018
+v1 - latest update 14.08.2018
 
 ## Authors
 
