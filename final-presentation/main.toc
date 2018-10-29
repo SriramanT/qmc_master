@@ -1,0 +1,4 @@
+\babel@toc {american}{}
+\babel@toc {american}{}
+\babel@toc {american}{}
+\beamer@sectionintoc {1}{Beyond graphene: TMD nanoribbons}{2}{0}{1}
